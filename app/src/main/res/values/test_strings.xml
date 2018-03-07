@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="know_type">Know my type</string>
+    <string name="not_all_questions_answered">Answer to all questions</string>
+
+    <string name="test_question_logic_first">Вы считаете себя вдумчивым человеком?</string>
+    <string name="test_question_logic_second">Вы доверяете своему разуму?</string>
+    <string name="test_question_logic_third">Вас раздражает глупость?</string>
+    <string name="test_question_logic_forth">Вы с доверием относитесь к логике?</string>
+    <string name="test_question_logic_fifth">Вы самостоятельны в своем мышлении?</string>
+    <string name="test_question_logic_sixth">Вы подчиняете свою жизнь своим воззрениям?</string>
+    <string name="test_question_logic_seventh">Вам интересна научная информация?</string>
+    <string name="test_question_logic_eighth">Радуют ли Вас проявления сильной мысли?</string>
+    <string name="test_question_logic_ninth">Вы уверенно чувствуете себя во время дискуссий?</string>
+    <string name="test_question_logic_tenth">Сами Вы верите в строгость своих логических построений?</string>
+    <string name="test_question_emotion_first">Вы считаете себя эмоциональным человеком?</string>
+    <string name="test_question_emotion_second">Вы любите театр?</string>
+    <string name="test_question_emotion_third">Вы влюбчивы?</string>
+    <string name="test_question_emotion_forth">Резко ли меняются Ваши настроения?</string>
+    <string name="test_question_emotion_fifth">Вы суеверны?</string>
+    <string name="test_question_emotion_sixth">Чувства властны над Вами?</string>
+    <string name="test_question_emotion_seventh">Склонны ли Вы к актерству?</string>
+    <string name="test_question_emotion_eighth">Вам присуща реакция слезами на происходящее?</string>
+    <string name="test_question_emotion_ninth">Вы доверяете астрологии?</string>
+    <string name="test_question_emotion_tenth">Есть ли у Вас тяга к искусству?</string>
+    <string name="test_question_physics_first">Вы считаете себя физически крепким человеком?</string>
+    <string name="test_question_physics_second">Вы прижимисты?</string>
+    <string name="test_question_physics_third">Тяга к физическим нагрузкам присуща Вам?</string>
+    <string name="test_question_physics_forth">Вы склонны к насилию?</string>
+    <string name="test_question_physics_fifth">Спорт занимает(л) в Вашей жизни значительное место?</string>
+    <string name="test_question_physics_sixth">Серьезно ли Вы относитесь к деньгам?</string>
+    <string name="test_question_physics_seventh">Вы собственник?</string>
+    <string name="test_question_physics_eighth">Можно ли Вас назвать гурманом?</string>
+    <string name="test_question_physics_ninth">Вас заботит Ваше здоровье?</string>
+    <string name="test_question_physics_tenth">Вы сексуальны?</string>
+    <string name="test_question_will_first">Вы считаете себя волевым человеком?</string>
+    <string name="test_question_will_second">Вам легко руководить людьми?</string>
+    <string name="test_question_will_third">Вы человек независимый?</string>
+    <string name="test_question_will_forth">Вы решительны?</string>
+    <string name="test_question_will_fifth">Вы всегда контролируете свое поведение?</string>
+    <string name="test_question_will_sixth">Считаете ли Вы себя настойчивым человеком?</string>
+    <string name="test_question_will_seventh">Вам всегда удается исполнять принятые решения?</string>
+    <string name="test_question_will_eighth">Вы ответственный человек?</string>
+    <string name="test_question_will_ninth">Вы любопытны?</string>
+    <string name="test_question_will_tenth">Вы уверены в своем праве вести за собой людей?</string>
+</resources>

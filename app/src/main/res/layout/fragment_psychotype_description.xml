@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="fragment" type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeDescriptionFragment"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/psychotype_image"
+            android:layout_width="@dimen/psychotype_full_image_size"
+            android:layout_height="@dimen/psychotype_full_image_size"
+            android:src="@{fragment.imageForType}"
+            android:layout_margin="@dimen/basic_margin"/>
+
+        <TextView
+            android:id="@+id/psychotype_short_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{fragment.shortDescription}"
+            android:layout_toEndOf="@+id/psychotype_image"
+            android:layout_margin="@dimen/basic_margin"/>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/psychotype_image"
+            android:layout_above="@+id/related_positions">
+            <TextView
+                android:id="@+id/psychotype_full_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{fragment.description}"
+                android:layout_margin="@dimen/basic_margin"/>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/related_positions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:weightSum="1.0">
+
+            <Button
+                android:id="@+id/related_first_position"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/basic_margin"
+                android:layout_margin="@dimen/basic_margin"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:text="@{fragment.firstFunction}"
+                android:layout_weight="0.25"
+                android:onClick="@{() -> fragment.relatedFirstFunction()}"/>
+
+            <Button
+                android:id="@+id/related_second_position"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/basic_margin"
+                android:layout_margin="@dimen/basic_margin"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:text="@{fragment.secondFunction}"
+                android:layout_weight="0.25"
+                android:onClick="@{() -> fragment.relatedSecondFunction()}"/>
+
+            <Button
+                android:id="@+id/related_third_position"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/basic_margin"
+                android:layout_margin="@dimen/basic_margin"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:text="@{fragment.thirdFunction}"
+                android:layout_weight="0.25"
+                android:onClick="@{() -> fragment.relatedThirdFunction()}"/>
+
+            <Button
+                android:id="@+id/related_forth_position"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/basic_margin"
+                android:layout_margin="@dimen/basic_margin"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:text="@{fragment.forthFunction}"
+                android:layout_weight="0.25"
+                android:onClick="@{() -> fragment.relatedForthFunction()}"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="fragment" type="com.laushkina.anastasia.psychosophy.view.test.TestFragment"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/test_questions_recycler"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/calculate_type"/>
+
+        <Button
+            android:id="@+id/calculate_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/basic_margin"
+            android:layout_margin="@dimen/basic_margin"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/know_type"
+            android:onClick="@{() -> fragment.runTest()}"/>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Psychosophy</string>
+
+    <string name="welcome_activity">Welcome</string>
+
+    <string name="test">Test</string>
+    <string name="psychotypes">Psychotypes</string>
+    <string name="psychotype_description">Psychotype description</string>
+    <string name="relationships">Relationships</string>
+    <string name="about">About</string>
+    <string name="introduction">Introduction</string>
+    <string name="functions">Functions</string>
+
+    <string name="menu_header">Welcome!</string>
+    <string name="menu_header_info">To the app devoted to Psychosophy</string>
+
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+</resources>

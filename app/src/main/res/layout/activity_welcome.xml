@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="activity" type="com.laushkina.anastasia.psychosophy.view.welcome.WelcomeActivity"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.welcome.WelcomeActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/test_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_test"
+                android:padding="@dimen/basic_margin"
+                android:layout_margin="@dimen/basic_margin"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:onClick="@{() -> activity.startTest()}"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/study_theory"
+                android:padding="@dimen/basic_margin"
+                android:layout_margin="@dimen/basic_margin"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:onClick="@{() -> activity.learnTheory()}"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
