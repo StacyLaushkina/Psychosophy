@@ -29,7 +29,7 @@ public class WelcomeActivity extends Activity {
 
     public void learnTheory(){
         Intent startTest = new Intent(this, MainActivity.class);
-        startTest.putExtra(MainActivity.screenNameExtra, Screen.psychotypes);
+        startTest.putExtra(MainActivity.screenNameExtra, Screen.introduction);
         startActivity(startTest);
     }
 }

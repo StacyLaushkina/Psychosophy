@@ -4,5 +4,9 @@ public enum Function {
     Logic,
     Emotion,
     Physics,
-    Will
+    Will;
+
+    public Character shortName(){
+        return name().toCharArray()[0];
+    }
 }

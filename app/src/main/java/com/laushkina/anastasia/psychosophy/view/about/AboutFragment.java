@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.FragmentAboutBinding;
-import com.laushkina.anastasia.psychosophy.databinding.FragmentRelationshipsBinding;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 
 public class AboutFragment extends BaseFragment{

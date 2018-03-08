@@ -44,9 +44,11 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
         switch (screen) {
             case test:
                 NavigationHelper.showTest(getFragmentManager());
+                getNavigationView().setCheckedItem(R.id.nav_test);
                 break;
-            case psychotypes:
-                NavigationHelper.showTypes(getFragmentManager());
+            case introduction:
+                NavigationHelper.showIntroduction(getFragmentManager());
+                getNavigationView().setCheckedItem(R.id.nav_introduction);
         }
     }
 
@@ -56,6 +58,9 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
         int id = item.getItemId();
 
         switch (id) {
+            case R.id.nav_introduction:
+                NavigationHelper.showIntroduction(getFragmentManager());
+                break;
             case R.id.nav_test:
                 NavigationHelper.showTest(getFragmentManager());
                 break;
@@ -104,4 +109,5 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
     private DrawerLayout getDrawerLayout(){
         return (DrawerLayout) findViewById(R.id.drawer_layout);
     }
+
 }

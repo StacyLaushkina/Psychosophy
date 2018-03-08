@@ -8,6 +8,7 @@ import android.os.Bundle;
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.view.about.AboutFragment;
 import com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment;
+import com.laushkina.anastasia.psychosophy.view.introduction.IntroductionFragment;
 import com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeDescriptionFragment;
 import com.laushkina.anastasia.psychosophy.view.psychotypes.PsychotypesFragment;
 import com.laushkina.anastasia.psychosophy.view.relationships.RelationshipsFragment;
@@ -31,6 +32,10 @@ public final class NavigationHelper {
 
     public static void showAbout(FragmentManager manager){
         changeContent(new AboutFragment(), manager);
+    }
+
+    public static void showIntroduction(FragmentManager manager){
+        changeContent(new IntroductionFragment(), manager);
     }
 
     public static void showTypeDescription(Serializable type, FragmentManager manager) {

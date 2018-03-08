@@ -4,17 +4,23 @@
         <variable name="fragment" type="com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment"/>
     </data>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="relationships"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
+        <com.laushkina.anastasia.psychosophy.view.utils.SlidingTabLayout
+            android:id="@+id/sliding_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v4.view.ViewPager
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/functions_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 
-    </RelativeLayout>
+    </LinearLayout>
 </layout>

@@ -52,19 +52,19 @@ public class PsychotypeDescriptionFragment extends BaseFragment {
     }
 
     public String getFirstFunction(){
-        return "1" + psychotype.asFunctionsArray()[0].name();
+        return "1" + psychotype.asFunctionsArray()[0].shortName();
     }
 
     public String getSecondFunction(){
-        return "2" + psychotype.asFunctionsArray()[1].name();
+        return "2" + psychotype.asFunctionsArray()[1].shortName();
     }
 
     public String getThirdFunction(){
-        return "3" + psychotype.asFunctionsArray()[2].name();
+        return "3" + psychotype.asFunctionsArray()[2].shortName();
     }
 
     public String getForthFunction(){
-        return "4" + psychotype.asFunctionsArray()[3].name();
+        return "4" + psychotype.asFunctionsArray()[3].shortName();
     }
 
     public void relatedFirstFunction(){

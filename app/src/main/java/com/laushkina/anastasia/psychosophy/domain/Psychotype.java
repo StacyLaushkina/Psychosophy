@@ -40,6 +40,38 @@ public enum Psychotype {
         this.functions = functions;
     }
 
+    public static String[] names(){
+        return new String[] {
+                "Augustine",
+                "Pascal",
+                "Berthier",
+                "Plato",
+                "Lao",
+                "Einstein",
+
+                "Anderson",
+                "Rousseau",
+                "Bukharin",
+                "Pushkin",
+                "Ghazali",
+                "Parsnip",
+
+                "Aristippus",
+                "Epicurus",
+                "Borgia",
+                "Dumas",
+                "Goethe",
+                "Chekhov",
+
+                "Akhmatova",
+                "Tolstoy",
+                "Lenin",
+                "Socrates",
+                "Napoleon",
+                "Twardowski"
+        };
+    }
+
     public Function[] asFunctionsArray(){
         return functions;
     }

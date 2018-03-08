@@ -1,20 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable name="fragment" type="com.laushkina.anastasia.psychosophy.view.relationships.RelationshipsFragment"/>
     </data>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/first_type_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="First type:"/>
+
+        <Spinner
+            android:id="@+id/first_type_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_type_label"
+            android:layout_margin="@dimen/basic_margin"/>
+
+        <TextView
+            android:id="@+id/second_type_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/first_type_spinner"
+            android:text="Second type:"/>
+
+        <Spinner
+            android:id="@+id/second_type_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second_type_label"
+            android:layout_margin="@dimen/basic_margin"/>
+
+        <Button
+            android:id="@+id/calculate_relationships"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="relationships"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
-
+            android:layout_below="@+id/second_type_spinner"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/basic_margin"
+            android:onClick="@{() -> fragment.calculate()}"
+            android:text="Calc" />
 
     </RelativeLayout>
 </layout>
