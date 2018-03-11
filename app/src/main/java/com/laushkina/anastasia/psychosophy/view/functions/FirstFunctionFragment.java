@@ -25,8 +25,6 @@ public class FirstFunctionFragment extends BaseFragment {
     }
 
     private void initialize(View view){
-        setTitle();
-
         TextView desc = view.findViewById(R.id.order_function_description);
         desc.setText(R.string.first_function_description);
 
@@ -42,6 +40,6 @@ public class FirstFunctionFragment extends BaseFragment {
 
     @Override
     protected String getTitle() {
-        return getString(R.string.first_function_title);
+        throw new UnsupportedOperationException();
     }
 }

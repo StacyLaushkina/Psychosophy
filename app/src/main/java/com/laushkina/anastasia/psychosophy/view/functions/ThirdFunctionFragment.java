@@ -24,8 +24,6 @@ public class ThirdFunctionFragment extends BaseFragment {
     }
 
     private void initialize(View view){
-        setTitle();
-
         TextView desc = view.findViewById(R.id.order_function_description);
         desc.setText(R.string.third_function_description);
 
@@ -41,6 +39,6 @@ public class ThirdFunctionFragment extends BaseFragment {
 
     @Override
     protected String getTitle() {
-        return getString(R.string.third_function_title);
+        throw new UnsupportedOperationException();
     }
 }

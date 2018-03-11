@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="lignt_grey">#AAAAAA</color>
+    <color name="dark_grey">#777777</color>
 </resources>

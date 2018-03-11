@@ -24,7 +24,6 @@ public class ForthFunctionFragment extends BaseFragment {
     }
 
     private void initialize(View view){
-        setTitle();
 
         TextView desc = view.findViewById(R.id.order_function_description);
         desc.setText(R.string.forth_function_description);
@@ -41,6 +40,6 @@ public class ForthFunctionFragment extends BaseFragment {
 
     @Override
     protected String getTitle() {
-        return getString(R.string.forth_function_title);
+        throw new UnsupportedOperationException();
     }
 }

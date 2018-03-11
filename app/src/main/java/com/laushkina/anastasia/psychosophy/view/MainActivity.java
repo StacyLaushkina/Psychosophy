@@ -34,7 +34,7 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
         openRequestedContent(intent);
     }
 
-    // Only test and psychotypes fragments can be requested
+    // Only test and psychotypes fragments can be requested (from welcome activity)
     private void openRequestedContent(Intent intent){
         if (intent.getExtras() == null) return;
 

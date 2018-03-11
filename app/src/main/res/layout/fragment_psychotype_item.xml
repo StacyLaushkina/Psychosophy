@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <android.support.v7.widget.CardView
         android:id="@+id/psychotype_card"
         android:layout_width="match_parent"
         android:layout_height="@dimen/psychotype_card_size"
-        style="@style/PsychotypeCardStyle">
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@android:color/transparent">
 
         <RelativeLayout
             android:layout_height="match_parent"
@@ -17,8 +18,9 @@
                 android:id="@+id/psychotype_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_action_name"
-                android:layout_above="@+id/psychotype_title"/>
+                android:src="@drawable/ic_elpw"
+                android:layout_above="@+id/psychotype_title"
+                android:paddingTop="@dimen/basic_small_margin"/>
 
             <TextView
                 android:id="@+id/psychotype_title"
@@ -27,7 +29,7 @@
                 android:layout_alignParentBottom="true"
                 android:text="@string/psychotype_description"
                 android:textColor="@android:color/white"
-                android:background="@color/colorPrimary"
+                android:background="@color/dark_grey"
                 android:padding="@dimen/basic_small_margin"/>
 
         </RelativeLayout>

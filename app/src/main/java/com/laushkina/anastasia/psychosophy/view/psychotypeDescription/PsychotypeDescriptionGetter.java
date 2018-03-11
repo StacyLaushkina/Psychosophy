@@ -65,9 +65,67 @@ final class PsychotypeDescriptionGetter {
         }
     }
 
+    static String getTitle(Psychotype psychotype, Context context) {
+        if (psychotype == null || context == null)
+            throw new RuntimeException("Cannot get psychotype title");
+
+        switch (psychotype) {
+            case LEPW:
+                return context.getResources().getString(R.string.LEPW_title);
+            case ELWP:
+                return context.getResources().getString(R.string.ELWP_title);
+            case PLWE:
+                return context.getResources().getString(R.string.PLWE_title);
+            case WELP:
+                return context.getResources().getString(R.string.WELP_title);
+            case LPEW:
+                return context.getResources().getString(R.string.LPEW_title);
+            case PELW:
+                return context.getResources().getString(R.string.PELW_title);
+            case EPLW:
+                return context.getResources().getString(R.string.EPLW_title);
+            case EWLP:
+                return context.getResources().getString(R.string.EWLP_title);
+            case PWLE:
+                return context.getResources().getString(R.string.PWLE_title);
+            case PEWL:
+                return context.getResources().getString(R.string.PEWL_title);
+            case WLPE:
+                return context.getResources().getString(R.string.WLPE_title);
+            case LWPE:
+                return context.getResources().getString(R.string.LWPE_title);
+            case WPLE:
+                return context.getResources().getString(R.string.WPLE_title);
+            case LEWP:
+                return context.getResources().getString(R.string.LEWP_title);
+            case EWPL:
+                return context.getResources().getString(R.string.EWPL_title);
+            case LPWE:
+                return context.getResources().getString(R.string.LPWE_title);
+            case EPWL:
+                return context.getResources().getString(R.string.EPWL_title);
+            case ELPW:
+                return context.getResources().getString(R.string.ELPW_title);
+            case WLEP:
+                return context.getResources().getString(R.string.WLEP_title);
+            case WEPL:
+                return context.getResources().getString(R.string.WEPL_title);
+            case WPEL:
+                return context.getResources().getString(R.string.WPEL_title);
+            case PWEL:
+                return context.getResources().getString(R.string.PWEL_title);
+            case LWEP:
+                return context.getResources().getString(R.string.LWEP_title);
+            case PLEW:
+                return context.getResources().getString(R.string.PLEW_title);
+            default:
+                return "";
+        }
+    }
+
     static String getShort(Psychotype psychotype, Context context) {
         if (psychotype == null || context == null)
-            throw new RuntimeException("Cannot get full psychotype description");
+            throw new RuntimeException("Cannot get short psychotype description");
 
         switch (psychotype) {
             case LEPW:

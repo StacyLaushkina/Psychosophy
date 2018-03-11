@@ -1,7 +1,5 @@
 package com.laushkina.anastasia.psychosophy.view.functions;
 
-import android.app.ActionBar;
-import android.app.FragmentTransaction;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,6 +14,9 @@ import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 import com.laushkina.anastasia.psychosophy.view.utils.SlidingTabLayout;
 
 public class FunctionsFragment extends BaseFragment {
+
+    public static final String REQUESTED_TAB = "tabExtra";
+    private static final int NO_TAB_REQUESTED = -1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
@@ -34,16 +35,25 @@ public class FunctionsFragment extends BaseFragment {
     private void initialize(View view){
         setTitle();
 
-        FunctionsAdapter adapter = new FunctionsAdapter(getActivity().getFragmentManager());
+        FunctionsAdapter adapter = new FunctionsAdapter(getChildFragmentManager());
         ViewPager pager = view.findViewById(R.id.functions_pager);
         pager.setAdapter(adapter);
 
         SlidingTabLayout tabLayout = view.findViewById(R.id.sliding_tabs);
         tabLayout.setViewPager(pager);
+
+        Integer requestedTab = getRequestedTab();
+        if (requestedTab != NO_TAB_REQUESTED) {
+            pager.setCurrentItem(requestedTab);
+        }
     }
 
     @Override
     protected String getTitle(){
         return getResources().getString(R.string.functions);
+    }
+
+    private Integer getRequestedTab(){
+        return getArguments() == null ? NO_TAB_REQUESTED : getArguments().getInt(REQUESTED_TAB, NO_TAB_REQUESTED);
     }
 }

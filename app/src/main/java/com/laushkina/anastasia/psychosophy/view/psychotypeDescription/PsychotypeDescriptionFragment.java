@@ -1,81 +1,77 @@
 package com.laushkina.anastasia.psychosophy.view.psychotypeDescription;
 
-import android.databinding.DataBindingUtil;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.laushkina.anastasia.psychosophy.R;
-import com.laushkina.anastasia.psychosophy.databinding.FragmentPsychotypeDescriptionBinding;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
-import com.laushkina.anastasia.psychosophy.view.PsychotypeImageGetter;
+import com.laushkina.anastasia.psychosophy.view.psychotypes.PsychotypesFragment;
 
 public class PsychotypeDescriptionFragment extends BaseFragment {
-
-    public static final String psychotypeExtra = "psychotypeEtra";
-    private Psychotype psychotype;
+    private ViewPager descriptionViewPager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
         super.onCreateView(inflater, container, savedInstanceState);
 
-        FragmentPsychotypeDescriptionBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_psychotype_description,
-                container, false);
-        binding.setFragment(this);
+        View view = inflater.inflate(R.layout.fragment_psychotype_description, container, false);
+        initialize(view);
 
-        setTitle();
-        return binding.getRoot();
+        return view;
+    }
+
+    private void initialize(View view) {
+        descriptionViewPager = getDescriptionsViewPager(view);
+        descriptionViewPager.setAdapter(new PsychotypeDescriptionAdapter(getChildFragmentManager(), getPsychotype()));
+
+        getSwitchButton(view).setOnClickListener(v -> switchPage());
+    }
+
+    private void switchPage(){
+        int current = descriptionViewPager.getCurrentItem();
+        switch (current) {
+            case PsychotypeDescriptionAdapter.PREVIEW_DESCRIPTION: {
+                getSwitchButton().setText("Less");
+                descriptionViewPager.setCurrentItem(PsychotypeDescriptionAdapter.FULL_TEXT_DESCRIPTION);
+                break;
+            }
+            case PsychotypeDescriptionAdapter.FULL_TEXT_DESCRIPTION:{
+                getSwitchButton().setText("More");
+                descriptionViewPager.setCurrentItem(PsychotypeDescriptionAdapter.PREVIEW_DESCRIPTION);
+                break;
+            }
+        }
     }
 
     @Override
     protected String getTitle(){
-        if (getArguments() == null) return getResources().getString(R.string.psychotype_description);
-
-        psychotype = (Psychotype)getArguments().getSerializable(psychotypeExtra);
-        return psychotype == null ? getResources().getString(R.string.psychotype_description) : psychotype.getDescription();
+        return getResources().getString(R.string.psychotype_description);
     }
 
-    public Drawable getImageForType(){
-        return PsychotypeImageGetter.get(psychotype, getActivity());
+    private ViewPager getDescriptionsViewPager(View view){
+        return view.findViewById(R.id.description_pager);
     }
 
-    public String getShortDescription(){
-        return PsychotypeDescriptionGetter.getShort(psychotype, getActivity());
+    private ViewPager getDescriptionsViewPager(){
+        return getActivity().findViewById(R.id.description_pager);
     }
 
-    public String getDescription(){
-        return PsychotypeDescriptionGetter.getFull(psychotype, getActivity());
+    private Psychotype getPsychotype(){
+        return (Psychotype)getArguments().getSerializable(PsychotypesFragment.psychotypeExtra);
     }
 
-    public String getFirstFunction(){
-        return "1" + psychotype.asFunctionsArray()[0].shortName();
+    private Button getSwitchButton(){
+        return getActivity().findViewById(R.id.switch_button);
     }
 
-    public String getSecondFunction(){
-        return "2" + psychotype.asFunctionsArray()[1].shortName();
+    private Button getSwitchButton(View view) {
+        return view.findViewById(R.id.switch_button);
     }
 
-    public String getThirdFunction(){
-        return "3" + psychotype.asFunctionsArray()[2].shortName();
-    }
-
-    public String getForthFunction(){
-        return "4" + psychotype.asFunctionsArray()[3].shortName();
-    }
-
-    public void relatedFirstFunction(){
-    }
-
-    public void relatedSecondFunction(){
-    }
-
-    public void relatedThirdFunction(){
-    }
-
-    public void relatedForthFunction(){
-    }
 }

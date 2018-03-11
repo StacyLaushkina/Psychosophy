@@ -6,12 +6,13 @@ import android.support.v13.app.FragmentPagerAdapter;
 
 public class FunctionsAdapter extends FragmentPagerAdapter {
 
-    private static final int FIRST_FUNCTION = 0;
-    private static final int SECOND_FUNCTION = 1;
-    private static final int THIRD_FUNCTION = 2;
-    private static final int FORTH_FUNCTION = 3;
+    public static final int FIRST_FUNCTION = 0;
+    public static final int SECOND_FUNCTION = 1;
+    public static final int THIRD_FUNCTION = 2;
+    public static final int FORTH_FUNCTION = 3;
+    private static final int PAGE_AMOUNT = 4;
 
-    public FunctionsAdapter(FragmentManager fm) {
+    FunctionsAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -33,7 +34,7 @@ public class FunctionsAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 4;
+        return PAGE_AMOUNT;
     }
 
     @Override

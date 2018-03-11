@@ -5,6 +5,23 @@
     <string name="third_function_title">Third function</string>
     <string name="forth_function_title">Forth function</string>
 
+    <string name="first_emotion_name">ЭМОЦИЯ ("романтик")</string>
+    <string name="second_emotion_name">ЭМОЦИЯ	("актер")</string>
+    <string name="third_emotion_name">ЭМОЦИЯ ("сухарь")</string>
+    <string name="forth_emotion_name">ЭМОЦИЯ ("зевака")</string>
+    <string name="first_logic_name">ЛОГИКА ("догматик")</string>
+    <string name="second_logic_name">ЛОГИКА ("ритор")</string>
+    <string name="third_logic_name">ЛОГИКА ("скептик")</string>
+    <string name="forth_logic_name">ЛОГИКА ("школяр")</string>
+    <string name="first_physics_name"> ФИЗИКА ("собственник")</string>
+    <string name="second_physics_name">ФИЗИКА ("труженик")</string>
+    <string name="third_physics_name">ФИЗИКА ("недотрога")</string>
+    <string name="forth_physics_name">ФИЗИКА ("лентяй")</string>
+    <string name="first_will_name">ВОЛЯ ("царь")</string>
+    <string name="second_will_name">ВОЛЯ ("дворянин")</string>
+    <string name="third_will_name">ВОЛЯ ("мещанин")</string>
+    <string name="forth_will_name">ВОЛЯ ("крепостной")</string>
+
     <string name="first_function_description">
         Это самая главная, сильная и типичная сторона нашей натуры, наше самое главное оружие выживания:
 
