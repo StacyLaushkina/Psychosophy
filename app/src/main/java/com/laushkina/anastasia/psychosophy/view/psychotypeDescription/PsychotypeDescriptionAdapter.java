@@ -31,7 +31,7 @@ public class PsychotypeDescriptionAdapter extends FragmentPagerAdapter {
         Fragment fragment;
         switch (position){
             case PREVIEW_DESCRIPTION: {
-                fragment = new PsychotypePreviewDescriptionFragment();
+                fragment = new PsychotypeOverviewDescriptionFragment();
                 break;
             }
             case FULL_TEXT_DESCRIPTION: {

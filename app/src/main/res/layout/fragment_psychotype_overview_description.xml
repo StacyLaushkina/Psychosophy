@@ -4,7 +4,7 @@
         <variable name="viewModel" type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.DescriptionViewModel"/>
     <variable
         name="fragment"
-        type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypePreviewDescriptionFragment"/>
+        type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeOverviewDescriptionFragment"/>
     </data>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"

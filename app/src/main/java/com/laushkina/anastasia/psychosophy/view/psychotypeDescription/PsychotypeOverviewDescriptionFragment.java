@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.laushkina.anastasia.psychosophy.R;
-import com.laushkina.anastasia.psychosophy.databinding.FragmentPsychotypePreviewDescriptionBinding;
+import com.laushkina.anastasia.psychosophy.databinding.FragmentPsychotypeOverviewDescriptionBinding;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 import com.laushkina.anastasia.psychosophy.view.NavigationHelper;
@@ -17,13 +17,13 @@ import com.laushkina.anastasia.psychosophy.view.functions.FunctionTitleGetter;
 import com.laushkina.anastasia.psychosophy.view.functions.FunctionsAdapter;
 import com.laushkina.anastasia.psychosophy.view.psychotypes.PsychotypesFragment;
 
-public class PsychotypePreviewDescriptionFragment extends BaseFragment {
+public class PsychotypeOverviewDescriptionFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
         super.onCreateView(inflater, container, savedInstanceState);
 
-        FragmentPsychotypePreviewDescriptionBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_psychotype_preview_description,
+        FragmentPsychotypeOverviewDescriptionBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_psychotype_overview_description,
                 container, false);
         binding.setViewModel(getViewModel());
         binding.setFragment(this);

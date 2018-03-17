@@ -1,45 +1,72 @@
 package com.laushkina.anastasia.psychosophy.view.functions;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
+import android.graphics.drawable.Drawable;
 
 import com.laushkina.anastasia.psychosophy.R;
-import com.laushkina.anastasia.psychosophy.view.BaseFragment;
+import com.laushkina.anastasia.psychosophy.domain.test.Function;
 
-public class FirstFunctionFragment extends BaseFragment {
+public class FirstFunctionFragment extends FunctionsOrderFragment {
+
+    private static final String FUNCTION_NUMBER_PREFIX = "1 ";
+
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
-        super.onCreateView(inflater, container, savedInstanceState);
-
-
-        View view = inflater.inflate(R.layout.fragment_functions_order, container, false);
-        initialize(view);
-
-        return view;
-    }
-
-    private void initialize(View view){
-        TextView desc = view.findViewById(R.id.order_function_description);
-        desc.setText(R.string.first_function_description);
-
-        Button logic = view.findViewById(R.id.logic_position);
-        logic.setText("1L");
-        Button emotion = view.findViewById(R.id.emotion_position);
-        emotion.setText("1E");
-        Button physics = view.findViewById(R.id.physics_position);
-        physics.setText("1P");
-        Button will = view.findViewById(R.id.will_position);
-        will.setText("1W");
+    public Drawable getImage() {
+        return getResources().getDrawable(R.drawable.ic_hammer);
     }
 
     @Override
-    protected String getTitle() {
-        throw new UnsupportedOperationException();
+    public String getFunctionDescription() {
+        return getString(R.string.first_function_description);
+    }
+
+    @Override
+    public String getEmotionTitle() {
+        return FunctionTitleGetter.getFirstFunctionTitle(Function.Emotion, getActivity());
+    }
+
+    @Override
+    public String getEmotionFullDescription() {
+        return getResources().getString(R.string.first_emotion_description);
+    }
+
+    @Override
+    public String getLogicTitle() {
+        return FunctionTitleGetter.getFirstFunctionTitle(Function.Logic, getActivity());
+    }
+
+    @Override
+    public String getLogicFullDescription() {
+        return getResources().getString(R.string.first_logic_description);
+    }
+
+    @Override
+    public String getPhysicsTitle() {
+        return FunctionTitleGetter.getFirstFunctionTitle(Function.Physics, getActivity());
+    }
+
+    @Override
+    public String getPhysicsFullDescription() {
+        return getResources().getString(R.string.first_physics_description);
+    }
+
+    @Override
+    public String getWillTitle() {
+        return FunctionTitleGetter.getFirstFunctionTitle(Function.Will, getActivity());
+    }
+
+    @Override
+    public String getWillFullDescription() {
+        return getResources().getString(R.string.first_will_description);
+    }
+
+    @Override
+    public String getFunctionPrefix() {
+        return FUNCTION_NUMBER_PREFIX;
+    }
+
+    @Override
+    FunctionsOrderFragment getFragment() {
+        return this;
     }
 }

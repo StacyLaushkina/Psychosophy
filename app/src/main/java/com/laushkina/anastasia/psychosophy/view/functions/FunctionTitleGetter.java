@@ -31,7 +31,7 @@ final public class FunctionTitleGetter {
         return getForthFunctionTitle(functionsArray[3], context);
     }
 
-    private static String getFirstFunctionTitle(Function firstFunction, Context context) {
+    static String getFirstFunctionTitle(Function firstFunction, Context context) {
         switch (firstFunction){
             case Logic:
                 return context.getResources().getString(R.string.first_logic_name);
@@ -45,7 +45,7 @@ final public class FunctionTitleGetter {
         throw new RuntimeException("Couldn't find function");
     }
 
-    private static String getSecondFunctionTitle(Function secondFunction, Context context) {
+    static String getSecondFunctionTitle(Function secondFunction, Context context) {
         switch (secondFunction){
             case Logic:
                 return context.getResources().getString(R.string.second_logic_name);
@@ -59,7 +59,7 @@ final public class FunctionTitleGetter {
         throw new RuntimeException("Couldn't find function");
     }
 
-    private static String getThirdFunctionTitle(Function thirdFunction, Context context) {
+    static String getThirdFunctionTitle(Function thirdFunction, Context context) {
         switch (thirdFunction){
             case Logic:
                 return context.getResources().getString(R.string.third_logic_name);
@@ -73,7 +73,7 @@ final public class FunctionTitleGetter {
         throw new RuntimeException("Couldn't find function");
     }
 
-    private static String getForthFunctionTitle(Function forthFunction, Context context) {
+    static String getForthFunctionTitle(Function forthFunction, Context context) {
         switch (forthFunction){
             case Logic:
                 return context.getResources().getString(R.string.forth_logic_name);
