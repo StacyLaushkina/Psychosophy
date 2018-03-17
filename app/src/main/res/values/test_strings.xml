@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="know_type">Know my type</string>
-    <string name="not_all_questions_answered">Answer to all questions</string>
+    <string name="know_type">Вычислить</string>
+    <string name="not_all_questions_answered">Ответьте на все вопросы.</string>
+    <string name="test_title">Да\tВозможно\tИногда\tНет</string>
 
     <string name="test_question_logic_first">Вы считаете себя вдумчивым человеком?</string>
     <string name="test_question_logic_second">Вы доверяете своему разуму?</string>
@@ -43,4 +44,10 @@
     <string name="test_question_will_eighth">Вы ответственный человек?</string>
     <string name="test_question_will_ninth">Вы любопытны?</string>
     <string name="test_question_will_tenth">Вы уверены в своем праве вести за собой людей?</string>
+
+    <string name="test_results_warning">Тесты не дают 100% гарантии правильного результата.
+        Рекомендуется ознакомиться с теорией и пройти консультацию.</string>
+    <string name="test_results_exception_one_result">Ваш тип:</string>
+    <string name="test_results_exception_several_results">Возможные типы:</string>
+    <string name="test_results_exception_too_many_results">Пожалуйста, пройдите тест еще раз. Результаты неоднозначны.</string>
 </resources>

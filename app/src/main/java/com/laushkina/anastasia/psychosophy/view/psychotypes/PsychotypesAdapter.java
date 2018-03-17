@@ -13,6 +13,7 @@ import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.view.NavigationHelper;
 import com.laushkina.anastasia.psychosophy.view.PsychotypeImageGetter;
+import com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeDescriptionGetter;
 
 public class PsychotypesAdapter extends RecyclerView.Adapter<PsychotypesAdapter.ViewHolder>{
 
@@ -20,7 +21,7 @@ public class PsychotypesAdapter extends RecyclerView.Adapter<PsychotypesAdapter.
     private Context context;
     private FragmentManager fragmentManager;
 
-    PsychotypesAdapter(Psychotype[] psychotypes, Context context, FragmentManager fragmentManager){
+    public PsychotypesAdapter(Psychotype[] psychotypes, Context context, FragmentManager fragmentManager){
         this.psychotypes = psychotypes;
         this.context = context;
         this.fragmentManager = fragmentManager;
@@ -36,8 +37,8 @@ public class PsychotypesAdapter extends RecyclerView.Adapter<PsychotypesAdapter.
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        holder.textView.setText(psychotypes[position].getDescription());
-        holder.imageView.setImageDrawable(PsychotypeImageGetter.get(psychotypes[position], context));
+        holder.typeTitle.setText(PsychotypeDescriptionGetter.getTitle(psychotypes[position], context));
+        holder.typeImage.setImageDrawable(PsychotypeImageGetter.get(psychotypes[position], context));
         holder.cardView.setOnClickListener(view -> onClick(position));
     }
 
@@ -47,14 +48,14 @@ public class PsychotypesAdapter extends RecyclerView.Adapter<PsychotypesAdapter.
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView imageView;
-        private TextView textView;
+        private ImageView typeImage;
+        private TextView typeTitle;
         private View cardView;
 
         ViewHolder(View view) {
             super(view);
-            this.imageView = view.findViewById(R.id.psychotype_image);
-            this.textView = view.findViewById(R.id.psychotype_title);
+            this.typeImage = view.findViewById(R.id.psychotype_image);
+            this.typeTitle = view.findViewById(R.id.psychotype_title);
             this.cardView = view;
         }
     }

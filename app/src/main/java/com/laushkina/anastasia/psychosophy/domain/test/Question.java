@@ -10,6 +10,12 @@ public class Question {
         this.type = type;
     }
 
+    public Question(String text, Function type, QuestionAnswer answer) {
+        this.text = text;
+        this.type = type;
+        this.answer = answer;
+    }
+
     public void setAnswer(QuestionAnswer answer) {
         this.answer = answer;
     }

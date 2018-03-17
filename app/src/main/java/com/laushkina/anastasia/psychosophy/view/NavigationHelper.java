@@ -13,6 +13,12 @@ import com.laushkina.anastasia.psychosophy.view.psychotypeDescription.Psychotype
 import com.laushkina.anastasia.psychosophy.view.psychotypes.PsychotypesFragment;
 import com.laushkina.anastasia.psychosophy.view.relationships.RelationshipsFragment;
 import com.laushkina.anastasia.psychosophy.view.test.TestFragment;
+import com.laushkina.anastasia.psychosophy.view.test.TestResultsFragment;
+
+import junit.framework.TestResult;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public final class NavigationHelper {
 
@@ -45,6 +51,16 @@ public final class NavigationHelper {
 
     public static void showIntroduction(FragmentManager manager){
         changeContent(new IntroductionFragment(), manager);
+    }
+
+    public static void showTestResults(Psychotype[] results, FragmentManager manager){
+        Bundle bundle = new Bundle(1);
+        bundle.putParcelableArray(TestResultsFragment.testResultsExtra, results);
+
+        TestResultsFragment fragment = new TestResultsFragment();
+        fragment.setArguments(bundle);
+
+        changeContent(fragment, manager);
     }
 
     public static void showTypeDescription(Psychotype type, FragmentManager manager) {

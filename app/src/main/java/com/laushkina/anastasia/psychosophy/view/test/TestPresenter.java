@@ -1,16 +1,15 @@
 package com.laushkina.anastasia.psychosophy.view.test;
 
 import android.content.Context;
-import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.test.AnswersValidation;
 import com.laushkina.anastasia.psychosophy.domain.test.PsychotypeCalculator;
 import com.laushkina.anastasia.psychosophy.domain.test.Question;
-import com.laushkina.anastasia.psychosophy.domain.test.QuestionAnswer;
 import com.laushkina.anastasia.psychosophy.domain.test.QusetionsComposer;
 
 class TestPresenter {
@@ -27,8 +26,13 @@ class TestPresenter {
 
     void onTestResultRequested(List<Question> questions){
         if (AnswersValidation.areValid(questions)) {
-            Psychotype psychotype = PsychotypeCalculator.calculate(questions);
-            testView.showTypeDescription(psychotype);
+            List<Psychotype> psychotypes = PsychotypeCalculator.calculate(questions);
+            if (psychotypes == null) {
+                testView.showExceptionResultDescription();
+            } else {
+                testView.showTypeDescription(psychotypes.toArray(new Psychotype[psychotypes.size()]));
+            }
+
         } else {
             testView.showMissingAnswersMessage();
         }

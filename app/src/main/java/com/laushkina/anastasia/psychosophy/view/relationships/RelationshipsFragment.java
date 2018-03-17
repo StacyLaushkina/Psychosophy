@@ -14,6 +14,7 @@ import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.FragmentRelationshipsBinding;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
+import com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeDescriptionGetter;
 
 public class RelationshipsFragment extends BaseFragment{
 
@@ -59,7 +60,7 @@ public class RelationshipsFragment extends BaseFragment{
         });
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),
-                android.R.layout.simple_spinner_dropdown_item, Psychotype.names());
+                android.R.layout.simple_spinner_dropdown_item, PsychotypeDescriptionGetter.getAllDescriptions(getActivity()));
         firstTypeSpinner.setAdapter(adapter);
         secondTypeSpinner.setAdapter(adapter);
     }

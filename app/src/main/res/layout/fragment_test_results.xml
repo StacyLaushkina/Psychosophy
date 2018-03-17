@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/results_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/test_results_exception_one_result"
+        android:gravity="center"
+        android:padding="@dimen/basic_margin"
+        android:textSize="16sp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/test_results_recycler"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/results_description"
+        android:layout_above="@+id/test_warning"/>
+
+    <TextView
+        android:id="@+id/test_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/test_results_warning"
+        android:padding="@dimen/basic_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

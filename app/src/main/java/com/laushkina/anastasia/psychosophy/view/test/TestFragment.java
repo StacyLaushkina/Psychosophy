@@ -10,13 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.laushkina.anastasia.psychosophy.domain.test.Question;
-import com.laushkina.anastasia.psychosophy.domain.test.QuestionAnswer;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.FragmentTestBinding;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.view.NavigationHelper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestFragment extends BaseFragment implements TestView {
 
@@ -70,7 +71,12 @@ public class TestFragment extends BaseFragment implements TestView {
     }
 
     @Override
-    public void showTypeDescription(Psychotype psychotype) {
-        NavigationHelper.showTypeDescription(psychotype, getFragmentManager());
+    public void showTypeDescription(Psychotype[] psychotypes) {
+        NavigationHelper.showTestResults(psychotypes, getFragmentManager());
+    }
+
+    @Override
+    public void showExceptionResultDescription(){
+        NavigationHelper.showTestResults(null, getFragmentManager());
     }
 }

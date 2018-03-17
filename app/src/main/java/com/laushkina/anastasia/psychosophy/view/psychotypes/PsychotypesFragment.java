@@ -14,7 +14,7 @@ import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 
 public class PsychotypesFragment extends BaseFragment {
 
-    public static final String psychotypeExtra = "psychotypeEtra";
+    public static final String psychotypeExtra = "psychotypeExtra";
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){

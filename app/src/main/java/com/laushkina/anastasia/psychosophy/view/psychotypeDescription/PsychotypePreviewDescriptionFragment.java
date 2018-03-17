@@ -34,8 +34,7 @@ public class PsychotypePreviewDescriptionFragment extends BaseFragment {
 
     @Override
     protected String getTitle(){
-        Psychotype psychotype = getPsychotype();
-        return PsychotypeDescriptionGetter.getTitle(psychotype, getActivity());
+        return PsychotypeDescriptionGetter.getTitle(getPsychotype(), getActivity());
     }
 
     //TODO navigatiors interface
@@ -56,18 +55,14 @@ public class PsychotypePreviewDescriptionFragment extends BaseFragment {
         NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FORTH_FUNCTION);
     }
 
-    public void showMore(){
-
-    }
-
     private DescriptionViewModel getViewModel(){
         Psychotype psychotype = getPsychotype();
 
         return new DescriptionViewModel.Builder()
-                .firstFunctionDescription(FunctionTitleGetter.getFirstFunctionTitle(psychotype.asFunctionsArray(), getActivity()))
-                .secondFunctionDescription(FunctionTitleGetter.getSecondFunctionTitle(psychotype.asFunctionsArray(), getActivity()))
-                .thirdFunctionDescription(FunctionTitleGetter.getThirdFunctionTitle(psychotype.asFunctionsArray(), getActivity()))
-                .forthFunctionDescription(FunctionTitleGetter.getForthFunctionTitle(psychotype.asFunctionsArray(), getActivity()))
+                .firstFunctionDescription(FunctionTitleGetter.getFirstFunctionTitle(psychotype.getFunctions(), getActivity()))
+                .secondFunctionDescription(FunctionTitleGetter.getSecondFunctionTitle(psychotype.getFunctions(), getActivity()))
+                .thirdFunctionDescription(FunctionTitleGetter.getThirdFunctionTitle(psychotype.getFunctions(), getActivity()))
+                .forthFunctionDescription(FunctionTitleGetter.getForthFunctionTitle(psychotype.getFunctions(), getActivity()))
                 .shortDescription(PsychotypeDescriptionGetter.getShort(psychotype, getActivity()))
                 .image(PsychotypeImageGetter.get(psychotype, getActivity()))
                 .build();

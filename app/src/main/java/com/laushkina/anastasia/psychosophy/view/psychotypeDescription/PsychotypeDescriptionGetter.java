@@ -5,122 +5,154 @@ import android.content.Context;
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 
-final class PsychotypeDescriptionGetter {
+import java.util.ArrayList;
+import java.util.List;
+
+public final class PsychotypeDescriptionGetter {
 
     static String getFull(Psychotype psychotype, Context context) {
         if (psychotype == null || context == null)
             throw new RuntimeException("Cannot get full psychotype description");
 
         switch (psychotype) {
-            case LEPW:
+            case Augustine:
                 return context.getResources().getString(R.string.LEPW_full);
-            case ELWP:
+            case Anderson:
                 return context.getResources().getString(R.string.ELWP_full);
-            case PLWE:
+            case Aristippus:
                 return context.getResources().getString(R.string.PLWE_full);
-            case WELP:
+            case Akhmatova:
                 return context.getResources().getString(R.string.WELP_full);
-            case LPEW:
+            case Berthier:
                 return context.getResources().getString(R.string.LPEW_full);
-            case PELW:
+            case Borgia:
                 return context.getResources().getString(R.string.PELW_full);
-            case EPLW:
+            case Bukharin:
                 return context.getResources().getString(R.string.EPLW_full);
-            case EWLP:
+            case Ghazali:
                 return context.getResources().getString(R.string.EWLP_full);
-            case PWLE:
+            case Goethe:
                 return context.getResources().getString(R.string.PWLE_full);
-            case PEWL:
+            case Dumas:
                 return context.getResources().getString(R.string.PEWL_full);
-            case WLPE:
+            case Lenin:
                 return context.getResources().getString(R.string.WLPE_full);
-            case LWPE:
+            case Lao:
                 return context.getResources().getString(R.string.LWPE_full);
-            case WPLE:
+            case Napoleon:
                 return context.getResources().getString(R.string.WPLE_full);
-            case LEWP:
+            case Pascal:
                 return context.getResources().getString(R.string.LEWP_full);
-            case EWPL:
+            case Parsnip:
                 return context.getResources().getString(R.string.EWPL_full);
-            case LPWE:
+            case Plato:
                 return context.getResources().getString(R.string.LPWE_full);
-            case EPWL:
+            case Pushkin:
                 return context.getResources().getString(R.string.EPWL_full);
-            case ELPW:
+            case Rousseau:
                 return context.getResources().getString(R.string.ELPW_full);
-            case WLEP:
+            case Socrates:
                 return context.getResources().getString(R.string.WLEP_full);
-            case WEPL:
+            case Tolstoy:
                 return context.getResources().getString(R.string.WEPL_full);
-            case WPEL:
+            case Twardowski:
                 return context.getResources().getString(R.string.WPEL_full);
-            case PWEL:
+            case Chekhov:
                 return context.getResources().getString(R.string.PWEL_full);
-            case LWEP:
+            case Einstein:
                 return context.getResources().getString(R.string.LWEP_full);
-            case PLEW:
+            case Epicurus:
                 return context.getResources().getString(R.string.PLEW_full);
             default:
-                return "";
+                throw new AssertionError();
         }
     }
 
-    static String getTitle(Psychotype psychotype, Context context) {
+    public static String getTitle(Psychotype psychotype, Context context) {
         if (psychotype == null || context == null)
             throw new RuntimeException("Cannot get psychotype title");
 
         switch (psychotype) {
-            case LEPW:
+            case Augustine:
                 return context.getResources().getString(R.string.LEPW_title);
-            case ELWP:
+            case Anderson:
                 return context.getResources().getString(R.string.ELWP_title);
-            case PLWE:
+            case Aristippus:
                 return context.getResources().getString(R.string.PLWE_title);
-            case WELP:
+            case Akhmatova:
                 return context.getResources().getString(R.string.WELP_title);
-            case LPEW:
+            case Berthier:
                 return context.getResources().getString(R.string.LPEW_title);
-            case PELW:
+            case Borgia:
                 return context.getResources().getString(R.string.PELW_title);
-            case EPLW:
+            case Bukharin:
                 return context.getResources().getString(R.string.EPLW_title);
-            case EWLP:
+            case Ghazali:
                 return context.getResources().getString(R.string.EWLP_title);
-            case PWLE:
+            case Goethe:
                 return context.getResources().getString(R.string.PWLE_title);
-            case PEWL:
+            case Dumas:
                 return context.getResources().getString(R.string.PEWL_title);
-            case WLPE:
+            case Lenin:
                 return context.getResources().getString(R.string.WLPE_title);
-            case LWPE:
+            case Lao:
                 return context.getResources().getString(R.string.LWPE_title);
-            case WPLE:
+            case Napoleon:
                 return context.getResources().getString(R.string.WPLE_title);
-            case LEWP:
+            case Pascal:
                 return context.getResources().getString(R.string.LEWP_title);
-            case EWPL:
+            case Parsnip:
                 return context.getResources().getString(R.string.EWPL_title);
-            case LPWE:
+            case Plato:
                 return context.getResources().getString(R.string.LPWE_title);
-            case EPWL:
+            case Pushkin:
                 return context.getResources().getString(R.string.EPWL_title);
-            case ELPW:
+            case Rousseau:
                 return context.getResources().getString(R.string.ELPW_title);
-            case WLEP:
+            case Socrates:
                 return context.getResources().getString(R.string.WLEP_title);
-            case WEPL:
+            case Tolstoy:
                 return context.getResources().getString(R.string.WEPL_title);
-            case WPEL:
+            case Twardowski:
                 return context.getResources().getString(R.string.WPEL_title);
-            case PWEL:
+            case Chekhov:
                 return context.getResources().getString(R.string.PWEL_title);
-            case LWEP:
+            case Einstein:
                 return context.getResources().getString(R.string.LWEP_title);
-            case PLEW:
+            case Epicurus:
                 return context.getResources().getString(R.string.PLEW_title);
             default:
-                return "";
+                throw new AssertionError();
         }
+    }
+
+    public static List<String> getAllDescriptions(Context context){
+        return new ArrayList<String>() {{
+            add(context.getResources().getString(R.string.LEPW_title));
+            add(context.getResources().getString(R.string.ELWP_title));
+            add(context.getResources().getString(R.string.PLWE_title));
+            add(context.getResources().getString(R.string.WELP_title));
+            add(context.getResources().getString(R.string.LPEW_title));
+            add(context.getResources().getString(R.string.PELW_title));
+            add(context.getResources().getString(R.string.EPLW_title));
+            add(context.getResources().getString(R.string.EWLP_title));
+            add(context.getResources().getString(R.string.PWLE_title));
+            add(context.getResources().getString(R.string.PEWL_title));
+            add(context.getResources().getString(R.string.WLPE_title));
+            add(context.getResources().getString(R.string.LWPE_title));
+            add(context.getResources().getString(R.string.WPLE_title));
+            add(context.getResources().getString(R.string.LEWP_title));
+            add(context.getResources().getString(R.string.EWPL_title));
+            add(context.getResources().getString(R.string.LPWE_title));
+            add(context.getResources().getString(R.string.EPWL_title));
+            add(context.getResources().getString(R.string.ELPW_title));
+            add(context.getResources().getString(R.string.WLEP_title));
+            add(context.getResources().getString(R.string.WEPL_title));
+            add(context.getResources().getString(R.string.WPEL_title));
+            add(context.getResources().getString(R.string.PWEL_title));
+            add(context.getResources().getString(R.string.LWEP_title));
+            add(context.getResources().getString(R.string.PLEW_title));
+        }};
     }
 
     static String getShort(Psychotype psychotype, Context context) {
@@ -128,56 +160,56 @@ final class PsychotypeDescriptionGetter {
             throw new RuntimeException("Cannot get short psychotype description");
 
         switch (psychotype) {
-            case LEPW:
+            case Augustine:
                 return context.getResources().getString(R.string.LEPW_short);
-            case ELWP:
+            case Anderson:
                 return context.getResources().getString(R.string.ELWP_short);
-            case PLWE:
+            case Aristippus:
                 return context.getResources().getString(R.string.PLWE_short);
-            case WELP:
+            case Akhmatova:
                 return context.getResources().getString(R.string.WELP_short);
-            case LPEW:
+            case Berthier:
                 return context.getResources().getString(R.string.LPEW_short);
-            case PELW:
+            case Borgia:
                 return context.getResources().getString(R.string.PELW_short);
-            case EPLW:
+            case Bukharin:
                 return context.getResources().getString(R.string.EPLW_short);
-            case EWLP:
+            case Ghazali:
                 return context.getResources().getString(R.string.EWLP_short);
-            case PWLE:
+            case Goethe:
                 return context.getResources().getString(R.string.PWLE_short);
-            case PEWL:
+            case Dumas:
                 return context.getResources().getString(R.string.PEWL_short);
-            case WLPE:
+            case Lenin:
                 return context.getResources().getString(R.string.WLPE_short);
-            case LWPE:
+            case Lao:
                 return context.getResources().getString(R.string.LWPE_short);
-            case WPLE:
+            case Napoleon:
                 return context.getResources().getString(R.string.WPLE_short);
-            case LEWP:
+            case Pascal:
                 return context.getResources().getString(R.string.LEWP_short);
-            case EWPL:
+            case Parsnip:
                 return context.getResources().getString(R.string.EWPL_short);
-            case LPWE:
+            case Plato:
                 return context.getResources().getString(R.string.LPWE_short);
-            case EPWL:
+            case Pushkin:
                 return context.getResources().getString(R.string.EPWL_short);
-            case ELPW:
+            case Rousseau:
                 return context.getResources().getString(R.string.ELPW_short);
-            case WLEP:
+            case Socrates:
                 return context.getResources().getString(R.string.WLEP_short);
-            case WEPL:
+            case Tolstoy:
                 return context.getResources().getString(R.string.WEPL_short);
-            case WPEL:
+            case Twardowski:
                 return context.getResources().getString(R.string.WPEL_short);
-            case PWEL:
+            case Chekhov:
                 return context.getResources().getString(R.string.PWEL_short);
-            case LWEP:
+            case Einstein:
                 return context.getResources().getString(R.string.LWEP_short);
-            case PLEW:
+            case Epicurus:
                 return context.getResources().getString(R.string.PLEW_short);
             default:
-                return "";
+                throw new AssertionError();
         }
     }
 }

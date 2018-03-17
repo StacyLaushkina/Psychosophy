@@ -4,6 +4,7 @@
     <string name="welcome_activity">Welcome</string>
 
     <string name="test">Test</string>
+    <string name="test_results">Test results</string>
     <string name="psychotypes">Psychotypes</string>
     <string name="psychotype_description">Psychotype description</string>
     <string name="relationships">Relationships</string>

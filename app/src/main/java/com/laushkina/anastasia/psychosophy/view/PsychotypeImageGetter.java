@@ -13,53 +13,53 @@ public final class PsychotypeImageGetter {
             throw new RuntimeException("Cannot get psychotype image");
 
         switch (psychotype) {
-            case LEPW:
+            case Augustine:
                 return context.getResources().getDrawable(R.drawable.ic_lepw);
-            case ELWP:
+            case Anderson:
                 return context.getResources().getDrawable(R.drawable.ic_elwp);
-            case PLWE:
+            case Aristippus:
                 return context.getResources().getDrawable(R.drawable.ic_plwe);
-            case WELP:
+            case Akhmatova:
                 return context.getResources().getDrawable(R.drawable.ic_welp);
-            case LPEW:
+            case Berthier:
                 return context.getResources().getDrawable(R.drawable.ic_lpew);
-            case PELW:
+            case Borgia:
                 return context.getResources().getDrawable(R.drawable.ic_pelw);
-            case EPLW:
+            case Bukharin:
                 return context.getResources().getDrawable(R.drawable.ic_eplw);
-            case EWLP:
+            case Ghazali:
                 return context.getResources().getDrawable(R.drawable.ic_ewlp);
-            case PWLE:
+            case Goethe:
                 return context.getResources().getDrawable(R.drawable.ic_pwle);
-            case PEWL:
+            case Dumas:
                 return context.getResources().getDrawable(R.drawable.ic_pewl);
-            case WLPE:
+            case Lenin:
                 return context.getResources().getDrawable(R.drawable.ic_wlpe);
-            case LWPE:
+            case Lao:
                 return context.getResources().getDrawable(R.drawable.ic_lwpe);
-            case WPLE:
+            case Napoleon:
                 return context.getResources().getDrawable(R.drawable.ic_wple);
-            case LEWP:
+            case Pascal:
                 return context.getResources().getDrawable(R.drawable.ic_lewp);
-            case EWPL:
+            case Parsnip:
                 return context.getResources().getDrawable(R.drawable.ic_ewpl);
-            case LPWE:
+            case Plato:
                 return context.getResources().getDrawable(R.drawable.ic_lpwe);
-            case EPWL:
+            case Pushkin:
                 return context.getResources().getDrawable(R.drawable.ic_epwl);
-            case ELPW:
+            case Rousseau:
                 return context.getResources().getDrawable(R.drawable.ic_elpw);
-            case WLEP:
+            case Socrates:
                 return context.getResources().getDrawable(R.drawable.ic_wlep);
-            case WEPL:
+            case Tolstoy:
                 return context.getResources().getDrawable(R.drawable.ic_wepl);
-            case WPEL:
+            case Twardowski:
                 return context.getResources().getDrawable(R.drawable.ic_wpel);
-            case PWEL:
+            case Chekhov:
                 return context.getResources().getDrawable(R.drawable.ic_pwel);
-            case LWEP:
+            case Einstein:
                 return context.getResources().getDrawable(R.drawable.ic_lwep);
-            case PLEW:
+            case Epicurus:
                 return context.getResources().getDrawable(R.drawable.ic_plew);
             default:
                 return null;
