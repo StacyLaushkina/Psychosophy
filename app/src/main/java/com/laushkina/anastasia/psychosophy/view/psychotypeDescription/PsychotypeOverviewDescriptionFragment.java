@@ -40,19 +40,23 @@ public class PsychotypeOverviewDescriptionFragment extends BaseFragment {
     //TODO navigatiors interface
     public void navigateToFirstFunction(){
         // Switch between drawer's tabs, so level of activity's fragment manager is needed
-        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FIRST_FUNCTION);
+        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FIRST_FUNCTION,
+                                       getPsychotype().getFunctions()[0]);
     }
 
     public void navigateToSecondFunction(){
-        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.SECOND_FUNCTION);
+        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.SECOND_FUNCTION,
+                                       getPsychotype().getFunctions()[1]);
     }
 
     public void navigateToThirdFunction(){
-        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.THIRD_FUNCTION);
+        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.THIRD_FUNCTION,
+                                       getPsychotype().getFunctions()[2]);
     }
 
     public void navigateToForthFunction(){
-        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FORTH_FUNCTION);
+        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FORTH_FUNCTION,
+                                       getPsychotype().getFunctions()[3]);
     }
 
     private DescriptionViewModel getViewModel(){

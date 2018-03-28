@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="fragment"
+            type="com.laushkina.anastasia.psychosophy.view.functions.FunctionsDescriptionFragment"/>
+
+        <variable
+            name="viewModel"
+            type="com.laushkina.anastasia.psychosophy.view.functions.FunctionViewModel" />
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/function_description_scroller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/function_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/function_image"
+                    android:layout_width="@dimen/function_image_size"
+                    android:layout_height="wrap_content"
+                    android:src="@{viewModel.functionImage}"
+                    android:scaleType="fitCenter"
+                    android:layout_margin="@dimen/basic_margin"/>
+
+                <TextView
+                    android:id="@+id/function_description_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.functionTitle}"
+                    android:layout_toEndOf="@+id/function_image"
+                    android:layout_alignTop="@+id/function_image"
+                    android:layout_alignBottom="@+id/function_image"
+                    android:gravity="center"
+                    style="@style/TitleTextStyle"
+                    android:layout_margin="@dimen/basic_margin"
+                    android:fontFamily="sans-serif"/>
+
+                <TextView
+                    android:id="@+id/function_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.functionDescription}"
+                    android:layout_below="@+id/function_image"
+                    style="@style/MediumSizeTextStyle"
+                    android:layout_margin="@dimen/basic_margin" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <GridLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/psychotype_emotion_function"
+                android:text="@{viewModel.emotionTitle}"
+                android:onClick="@{() -> fragment.onEmotionClick()}"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="@dimen/basic_small_margin"/>
+
+            <Button
+                android:id="@+id/psychotype_logic_function"
+                android:text="@{viewModel.logicTitle}"
+                android:onClick="@{() -> fragment.onLogicClick()}"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="@dimen/basic_small_margin"/>
+
+            <Button
+                android:id="@+id/psychotype_physics_function"
+                android:text="@{viewModel.physicsTitle}"
+                android:onClick="@{() -> fragment.onPhysicsClick()}"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="@dimen/basic_small_margin"/>
+
+            <Button
+                android:id="@+id/psychotype_forth_function"
+                android:text="@{viewModel.willTitle}"
+                android:onClick="@{() -> fragment.onWillClick()}"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_columnWeight="1"/>
+        </GridLayout>
+
+    </RelativeLayout>
+
+</layout>

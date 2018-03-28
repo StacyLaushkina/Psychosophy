@@ -6,19 +6,16 @@ import android.os.Bundle;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
+import com.laushkina.anastasia.psychosophy.domain.test.Function;
 import com.laushkina.anastasia.psychosophy.view.about.AboutFragment;
 import com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment;
+import com.laushkina.anastasia.psychosophy.view.functions.FunctionsDescriptionFragment;
 import com.laushkina.anastasia.psychosophy.view.introduction.IntroductionFragment;
 import com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeDescriptionFragment;
 import com.laushkina.anastasia.psychosophy.view.psychotypes.PsychotypesFragment;
 import com.laushkina.anastasia.psychosophy.view.relationships.RelationshipsFragment;
 import com.laushkina.anastasia.psychosophy.view.test.TestFragment;
 import com.laushkina.anastasia.psychosophy.view.test.TestResultsFragment;
-
-import junit.framework.TestResult;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public final class NavigationHelper {
 
@@ -34,10 +31,11 @@ public final class NavigationHelper {
         changeContent(new FunctionsFragment(), manager);
     }
 
-    public static void showFunctions(FragmentManager manager, int requestedTab){
+    public static void showFunctions(FragmentManager manager, int requestedTab, Function requestedFunction){
         // TODO getNavigationView().setCheckedItem(R.id.nav_test);
-        Bundle bundle = new Bundle(1);
+        Bundle bundle = new Bundle(2);
         bundle.putInt(FunctionsFragment.REQUESTED_TAB, requestedTab);
+        bundle.putSerializable(FunctionsDescriptionFragment.requestedFunctionExtra, requestedFunction);
 
         FunctionsFragment fragment = new FunctionsFragment();
         fragment.setArguments(bundle);

@@ -1,9 +1,17 @@
 package com.laushkina.anastasia.psychosophy.view.functions;
 
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
+import android.databinding.PropertyChangeRegistry;
 import android.graphics.drawable.Drawable;
+import android.text.SpannableString;
 
-public class FunctionViewModel {
-    private String functionDescription;
+import com.laushkina.anastasia.psychosophy.BR;
+
+
+public class FunctionViewModel extends BaseObservable {
+    private CharSequence functionTitle;
+    private CharSequence functionDescription;
     private Drawable functionImage;
     private String emotionTitle;
     private String logicTitle;
@@ -11,6 +19,7 @@ public class FunctionViewModel {
     private String willTitle;
 
     private FunctionViewModel(Builder builder) {
+        functionTitle = builder.functionTitle;
         functionDescription = builder.functionDescription;
         functionImage = builder.functionImage;
         emotionTitle = builder.emotionTitle;
@@ -19,12 +28,34 @@ public class FunctionViewModel {
         willTitle = builder.willTitle;
     }
 
-    public String getFunctionDescription() {
+    @Bindable
+    public CharSequence getFunctionTitle() {
+        return functionTitle;
+    }
+
+    void setFunctionTitle(CharSequence functionTitle) {
+        this.functionTitle = functionTitle;
+        notifyPropertyChanged(BR.functionTitle);
+    }
+
+    @Bindable
+    public CharSequence getFunctionDescription() {
         return functionDescription;
     }
 
+    void setFunctionDescription(CharSequence functionDescription) {
+        this.functionDescription = functionDescription;
+        notifyPropertyChanged(BR.functionDescription);
+    }
+
+    @Bindable
     public Drawable getFunctionImage() {
         return functionImage;
+    }
+
+    void setFunctionImage(Drawable functionImage) {
+        this.functionImage = functionImage;
+        notifyPropertyChanged(BR.functionImage);
     }
 
     public String getEmotionTitle() {
@@ -44,7 +75,8 @@ public class FunctionViewModel {
     }
 
     public static class Builder {
-        private String functionDescription;
+        private CharSequence functionTitle;
+        private CharSequence functionDescription;
         private Drawable functionImage;
         private String emotionTitle;
         private String logicTitle;
@@ -53,7 +85,12 @@ public class FunctionViewModel {
 
         public Builder() {}
 
-        public Builder functionDescription(String functionDescription) {
+        public Builder functionTitle(CharSequence functionTitle){
+            this.functionTitle = functionTitle;
+            return this;
+        }
+
+        public Builder functionDescription(CharSequence functionDescription) {
             this.functionDescription = functionDescription;
             return this;
         }

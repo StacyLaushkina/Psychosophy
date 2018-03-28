@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.FragmentFunctionsBinding;
+import com.laushkina.anastasia.psychosophy.domain.test.Function;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 import com.laushkina.anastasia.psychosophy.view.utils.SlidingTabLayout;
 
@@ -35,7 +36,7 @@ public class FunctionsFragment extends BaseFragment {
     private void initialize(View view){
         setTitle();
 
-        FunctionsAdapter adapter = new FunctionsAdapter(getChildFragmentManager());
+        FunctionsAdapter adapter = new FunctionsAdapter(getChildFragmentManager(), getActivity(), getRequestedFunction());
         ViewPager pager = view.findViewById(R.id.functions_pager);
         pager.setAdapter(adapter);
 
@@ -55,5 +56,9 @@ public class FunctionsFragment extends BaseFragment {
 
     private Integer getRequestedTab(){
         return getArguments() == null ? NO_TAB_REQUESTED : getArguments().getInt(REQUESTED_TAB, NO_TAB_REQUESTED);
+    }
+
+    private Function getRequestedFunction(){
+        return getArguments() == null ? null : (Function)getArguments().getSerializable(FunctionsDescriptionFragment.requestedFunctionExtra);
     }
 }

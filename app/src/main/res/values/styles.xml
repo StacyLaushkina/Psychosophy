@@ -8,4 +8,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MediumSizeTextStyle" parent="TextViewStyle">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="TitleTextStyle" parent="TextViewStyle">
+        <item name="android:textSize">@dimen/text_size_big</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
 </resources>

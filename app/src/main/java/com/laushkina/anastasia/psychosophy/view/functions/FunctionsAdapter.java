@@ -2,7 +2,12 @@ package com.laushkina.anastasia.psychosophy.view.functions;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Context;
+import android.os.Bundle;
 import android.support.v13.app.FragmentPagerAdapter;
+
+import com.laushkina.anastasia.psychosophy.R;
+import com.laushkina.anastasia.psychosophy.domain.test.Function;
 
 public class FunctionsAdapter extends FragmentPagerAdapter {
 
@@ -12,24 +17,41 @@ public class FunctionsAdapter extends FragmentPagerAdapter {
     public static final int FORTH_FUNCTION = 3;
     private static final int PAGE_AMOUNT = 4;
 
-    FunctionsAdapter(FragmentManager fm) {
+    private Function requestedFunction;
+    private Context context;
+
+    FunctionsAdapter(FragmentManager fm, Context context, Function requestedFunction) {
         super(fm);
+        this.context = context;
+        this.requestedFunction = requestedFunction;
     }
 
     @Override
     public Fragment getItem(int position) {
+        Bundle bundle = new Bundle(2);
+        bundle.putSerializable(FunctionsDescriptionFragment.requestedFunctionExtra, requestedFunction);
+
+        FunctionsDescriptionFragment fragment;
+
         switch (position){
             case FIRST_FUNCTION:
-                return new FirstFunctionFragment();
+                fragment = new FirstFunctionFragment();
+                break;
             case SECOND_FUNCTION:
-                return new SecondFunctionFragment();
+                fragment = new SecondFunctionFragment();
+                break;
             case THIRD_FUNCTION:
-                return new ThirdFunctionFragment();
+                fragment = new ThirdFunctionFragment();
+                break;
             case FORTH_FUNCTION:
-                return new ForthFunctionFragment();
+                fragment = new ForthFunctionFragment();
+                break;
             default:
-                return null;
+                throw new AssertionError();
         }
+        fragment.setArguments(bundle);
+
+        return fragment;
     }
 
     @Override
@@ -39,6 +61,12 @@ public class FunctionsAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return "Function " + (position + 1);
+        switch (position){
+            case 0: return context.getResources().getString(R.string.first_function_title);
+            case 1: return context.getResources().getString(R.string.second_function_title);
+            case 2: return context.getResources().getString(R.string.third_function_title);
+            case 3: return context.getResources().getString(R.string.forth_function_title);
+            default: return null;
+        }
     }
 }

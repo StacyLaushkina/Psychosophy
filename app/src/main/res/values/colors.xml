@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="lignt_grey">#AAAAAA</color>
+    <color name="black">#000000</color>
+    <color name="dark_white">#EEEEEE</color>
+    <color name="light_grey">#AAAAAA</color>
     <color name="dark_grey">#777777</color>
 </resources>
