@@ -6,19 +6,15 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.SpannableString;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.FragmentFunctionsDescriptionBinding;
 import com.laushkina.anastasia.psychosophy.domain.test.Function;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
-import com.laushkina.anastasia.psychosophy.view.utils.ImageWrapper;
 import com.laushkina.anastasia.psychosophy.view.utils.TextStylezer;
 
 public abstract class FunctionsDescriptionFragment extends BaseFragment {
@@ -26,7 +22,6 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment {
     public static final String requestedFunctionExtra = "requestedFunctionExtra";
 
     private FunctionViewModel viewModel;
-    private ImageWrapper imageWrapper;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
@@ -36,19 +31,13 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment {
                 container, false);
         binding.setFragment(getFragment());
 
-        View view = binding.getRoot();
-        initialize(view);
+        initialize();
         binding.setViewModel(viewModel);
-        return view;
+        return binding.getRoot();
     }
 
-    private void initialize(View view){
+    private void initialize(){
         Drawable functionImage = getImage();
-
-        // Size of image do not change, so we can rely on it and use
-        imageWrapper = new ImageWrapper(functionImage.getMinimumHeight(),
-                                        getLineHeight(getDescriptionTextView(view)),
-                                        functionImage.getMinimumWidth());
         viewModel = getViewModel(functionImage);
     }
 

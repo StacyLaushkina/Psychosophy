@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="first_function_title">1 функция</string>
-    <string name="second_function_title">2 функция</string>
-    <string name="third_function_title">3 функция</string>
-    <string name="forth_function_title">4 функция</string>
+    <string name="first_function_title">Первая</string>
+    <string name="second_function_title">Вторая</string>
+    <string name="third_function_title">Третья</string>
+    <string name="forth_function_title">Четвертая</string>
 
     <string name="common_description_title">Общее описание</string>
+    <string name="functions_at_position_hint">Узнать больше</string>
 
     <string name="first_emotion_name">ЭМОЦИЯ ("романтик")</string>
     <string name="second_emotion_name">ЭМОЦИЯ	("актер")</string>
