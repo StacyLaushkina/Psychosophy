@@ -2,21 +2,17 @@ package com.laushkina.anastasia.psychosophy.view.relationships;
 
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 
-class RelationshipsPresenter {
-    private Psychotype fistType;
-    private Psychotype secondTYpe;
+import dagger.Module;
+import dagger.Provides;
 
-    RelationshipsPresenter(){}
-
-    void setFistType(Psychotype fistType) {
-        this.fistType = fistType;
+@Module
+public class RelationshipsPresenter {
+    @Provides
+    public static RelationshipsPresenter provideRelationshipsPresenter(){
+        return new RelationshipsPresenter();
     }
 
-    void setSecondTYpe(Psychotype secondTYpe) {
-        this.secondTYpe = secondTYpe;
-    }
-
-    String calcRelationships(){
+    String calcRelationships(Psychotype fistType, Psychotype secondTYpe){
         return "Some type";
     }
 }

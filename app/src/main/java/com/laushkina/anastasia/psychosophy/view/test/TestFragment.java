@@ -16,23 +16,23 @@ import com.laushkina.anastasia.psychosophy.databinding.FragmentTestBinding;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.view.NavigationHelper;
 
-import java.util.ArrayList;
-import java.util.List;
 
-public class TestFragment extends BaseFragment implements TestView {
+import javax.inject.Inject;
 
-    private TestPresenter presenter;
+public class TestFragment extends BaseFragment implements ITestResultsObserver {
+
+    @Inject TestPresenter presenter;
     private TestQuestionsAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
         super.onCreateView(inflater, container, savedInstanceState);
 
-        presenter = new TestPresenter(this);
-
         FragmentTestBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_test,
                 container, false);
         binding.setFragment(this);
+
+        presenter = DaggerTestComponent.create().getPresenter();
 
         View view = binding.getRoot();
         initialize(view);
@@ -58,7 +58,7 @@ public class TestFragment extends BaseFragment implements TestView {
     }
 
     public void runTest(){
-        presenter.onTestResultRequested(adapter.getQuestions());
+        presenter.onTestResultRequested(adapter.getQuestions(), this);
     }
 
     private RecyclerView getQuestionsRecyclerView(View view){

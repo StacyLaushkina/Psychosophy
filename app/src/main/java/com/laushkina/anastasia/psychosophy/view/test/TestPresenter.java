@@ -2,8 +2,6 @@ package com.laushkina.anastasia.psychosophy.view.test;
 
 import android.content.Context;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
@@ -12,29 +10,31 @@ import com.laushkina.anastasia.psychosophy.domain.test.PsychotypeCalculator;
 import com.laushkina.anastasia.psychosophy.domain.test.Question;
 import com.laushkina.anastasia.psychosophy.domain.test.QusetionsComposer;
 
+import dagger.Module;
+import dagger.Provides;
+
+@Module
 class TestPresenter {
 
-    private TestView testView;
-
-    TestPresenter(TestView testView) {
-        this.testView = testView;
+    @Provides synchronized TestPresenter provideTestPresenter(){
+        return new TestPresenter();
     }
 
     List<Question> getQuestions(Context context){
         return QusetionsComposer.compose(context);
     }
 
-    void onTestResultRequested(List<Question> questions){
+    void onTestResultRequested(List<Question> questions, ITestResultsObserver resultsObserver){
         if (AnswersValidation.areValid(questions)) {
             List<Psychotype> psychotypes = PsychotypeCalculator.calculate(questions);
             if (psychotypes == null) {
-                testView.showExceptionResultDescription();
+                resultsObserver.showExceptionResultDescription();
             } else {
-                testView.showTypeDescription(psychotypes.toArray(new Psychotype[psychotypes.size()]));
+                resultsObserver.showTypeDescription(psychotypes.toArray(new Psychotype[psychotypes.size()]));
             }
 
         } else {
-            testView.showMissingAnswersMessage();
+            resultsObserver.showMissingAnswersMessage();
         }
     }
 }
