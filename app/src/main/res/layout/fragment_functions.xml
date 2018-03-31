@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <variable name="fragment" type="com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment"/>
-    </data>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.laushkina.anastasia.psychosophy.view.utils.SlidingTabLayout
+        android:id="@+id/sliding_tabs"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content" />
 
-        <com.laushkina.anastasia.psychosophy.view.utils.SlidingTabLayout
-            android:id="@+id/sliding_tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <android.support.v4.view.ViewPager
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/functions_pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/functions_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
-    </LinearLayout>
-</layout>
+</LinearLayout>

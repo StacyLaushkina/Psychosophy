@@ -2,7 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="fragment" type="com.laushkina.anastasia.psychosophy.view.relationships.RelationshipsFragment"/>
+        <variable
+            name="calculator"
+            type="com.laushkina.anastasia.psychosophy.view.relationships.IRelationshipsCalculator"/>
     </data>
 
     <RelativeLayout
@@ -45,7 +47,7 @@
             android:layout_below="@+id/second_type_spinner"
             android:layout_centerHorizontal="true"
             android:layout_margin="@dimen/basic_margin"
-            android:onClick="@{() -> fragment.calculate()}"
+            android:onClick="@{() -> calculator.calculate()}"
             android:text="Calc" />
 
     </RelativeLayout>

@@ -11,7 +11,6 @@ public class FirstFunctionFragment extends FunctionsDescriptionFragment {
 
     private static final String FUNCTION_NUMBER_PREFIX = "1 ";
 
-
     @Override
     public Drawable getImage() {
         return getResources().getDrawable(R.drawable.ic_hammer);
@@ -69,8 +68,4 @@ public class FirstFunctionFragment extends FunctionsDescriptionFragment {
         return FUNCTION_NUMBER_PREFIX;
     }
 
-    @Override
-    FunctionsDescriptionFragment getFragment() {
-        return this;
-    }
 }

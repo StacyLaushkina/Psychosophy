@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
     <data>
-        <variable name="fragment" type="com.laushkina.anastasia.psychosophy.view.test.TestFragment"/>
+        <variable
+            name="testCalculator"
+            type="com.laushkina.anastasia.psychosophy.view.test.ITypeCalculator"/>
     </data>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -35,7 +37,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:text="@string/know_type"
-            android:onClick="@{() -> fragment.runTest()}"/>
+            android:onClick="@{() -> testCalculator.calculate()}"/>
 
 
     </RelativeLayout>

@@ -17,7 +17,7 @@ import com.laushkina.anastasia.psychosophy.domain.test.Function;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 import com.laushkina.anastasia.psychosophy.view.utils.TextStylezer;
 
-public abstract class FunctionsDescriptionFragment extends BaseFragment {
+public abstract class FunctionsDescriptionFragment extends BaseFragment implements IFunctionSelectListener {
 
     public static final String requestedFunctionExtra = "requestedFunctionExtra";
 
@@ -29,7 +29,7 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment {
 
         FragmentFunctionsDescriptionBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_functions_description,
                 container, false);
-        binding.setFragment(getFragment());
+        binding.setSelectListener(this);
 
         initialize();
         binding.setViewModel(viewModel);
@@ -86,8 +86,6 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment {
 
     public abstract String getFunctionPrefix();
 
-    abstract FunctionsDescriptionFragment getFragment();
-
     private String getTitle(Function function) {
         switch (function) {
             case Will: return getWillTitle();
@@ -100,6 +98,7 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment {
     private String getFunctionTitle(){
         return getResources().getString(R.string.common_description_title);
     }
+
 
     public void onEmotionClick(){
         onFullDescriptionRequested(getFullDescription(Function.Emotion), getEmotionTitle(), getImage(Function.Emotion));
@@ -130,20 +129,5 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment {
 
     private Function getRequestedFunction(){
         return getArguments() == null ? null : (Function)getArguments().getSerializable(requestedFunctionExtra);
-    }
-
-    private SpannableString getWrappedTextView(CharSequence string){
-        SpannableString spannableString = new SpannableString(string);
-     //   spannableString.setSpan(imageWrapper, 0, spannableString.length(), 0);
-        return spannableString;
-    }
-
-    /** Returns height of one line of the textView  */
-    private int getLineHeight(@NonNull TextView textView){
-        return (int) (textView.getPaint().getFontMetrics().bottom - textView.getPaint().getFontMetrics().top);
-    }
-
-    private TextView getDescriptionTextView(@NonNull View parentView){
-        return parentView.findViewById(R.id.function_description);
     }
 }

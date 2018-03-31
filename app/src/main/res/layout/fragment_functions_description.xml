@@ -2,8 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
-            name="fragment"
-            type="com.laushkina.anastasia.psychosophy.view.functions.FunctionsDescriptionFragment"/>
+            name="selectListener"
+            type="com.laushkina.anastasia.psychosophy.view.functions.IFunctionSelectListener"/>
 
         <variable
             name="viewModel"
@@ -85,7 +85,7 @@
                 <Button
                     android:id="@+id/psychotype_emotion_function"
                     android:text="@{viewModel.emotionTitle}"
-                    android:onClick="@{() -> fragment.onEmotionClick()}"
+                    android:onClick="@{() -> selectListener.onEmotionClick()}"
                     android:layout_column="0"
                     android:layout_row="0"
                     android:layout_columnWeight="1"
@@ -95,7 +95,7 @@
                 <Button
                     android:id="@+id/psychotype_logic_function"
                     android:text="@{viewModel.logicTitle}"
-                    android:onClick="@{() -> fragment.onLogicClick()}"
+                    android:onClick="@{() -> selectListener.onLogicClick()}"
                     android:layout_column="1"
                     android:layout_row="0"
                     android:layout_columnWeight="1"
@@ -105,7 +105,7 @@
                 <Button
                     android:id="@+id/psychotype_physics_function"
                     android:text="@{viewModel.physicsTitle}"
-                    android:onClick="@{() -> fragment.onPhysicsClick()}"
+                    android:onClick="@{() -> selectListener.onPhysicsClick()}"
                     android:layout_column="0"
                     android:layout_row="1"
                     android:layout_columnWeight="1"
@@ -115,7 +115,7 @@
                 <Button
                     android:id="@+id/psychotype_forth_function"
                     android:text="@{viewModel.willTitle}"
-                    android:onClick="@{() -> fragment.onWillClick()}"
+                    android:onClick="@{() -> selectListener.onWillClick()}"
                     android:layout_column="1"
                     android:layout_row="1"
                     android:layout_columnWeight="1"

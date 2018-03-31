@@ -66,9 +66,4 @@ public class SecondFunctionFragment extends FunctionsDescriptionFragment {
     public String getFunctionPrefix() {
         return FUNCTION_NUMBER_PREFIX;
     }
-
-    @Override
-    FunctionsDescriptionFragment getFragment() {
-        return this;
-    }
 }

@@ -19,7 +19,7 @@ import com.laushkina.anastasia.psychosophy.view.NavigationHelper;
 
 import javax.inject.Inject;
 
-public class TestFragment extends BaseFragment implements ITestResultsObserver {
+public class TestFragment extends BaseFragment implements ITestResultsObserver, ITypeCalculator{
 
     @Inject TestPresenter presenter;
     private TestQuestionsAdapter adapter;
@@ -30,7 +30,7 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver {
 
         FragmentTestBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_test,
                 container, false);
-        binding.setFragment(this);
+        binding.setTestCalculator(this);
 
         presenter = DaggerTestComponent.create().getPresenter();
 
@@ -57,7 +57,7 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver {
         return getResources().getString(R.string.test);
     }
 
-    public void runTest(){
+    public void calculate(){
         presenter.onTestResultRequested(adapter.getQuestions(), this);
     }
 
@@ -65,17 +65,14 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver {
         return view.findViewById(R.id.test_questions_recycler);
     }
 
-    @Override
     public void showMissingAnswersMessage() {
         Toast.makeText(getActivity(), R.string.not_all_questions_answered, Toast.LENGTH_LONG).show();
     }
 
-    @Override
     public void showTypeDescription(Psychotype[] psychotypes) {
         NavigationHelper.showTestResults(psychotypes, getFragmentManager());
     }
 
-    @Override
     public void showExceptionResultDescription(){
         NavigationHelper.showTestResults(null, getFragmentManager());
     }

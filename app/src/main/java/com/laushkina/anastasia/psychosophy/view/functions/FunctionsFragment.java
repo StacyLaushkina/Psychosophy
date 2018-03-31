@@ -1,6 +1,5 @@
 package com.laushkina.anastasia.psychosophy.view.functions;
 
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
@@ -9,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.laushkina.anastasia.psychosophy.R;
-import com.laushkina.anastasia.psychosophy.databinding.FragmentFunctionsBinding;
 import com.laushkina.anastasia.psychosophy.domain.test.Function;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 import com.laushkina.anastasia.psychosophy.view.utils.SlidingTabLayout;
@@ -23,11 +21,7 @@ public class FunctionsFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
         super.onCreateView(inflater, container, savedInstanceState);
 
-        FragmentFunctionsBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_functions,
-                container, false);
-        binding.setFragment(this);
-
-        View view = binding.getRoot();
+        View view = inflater.inflate(R.layout.fragment_functions, container, false);
         initialize(view);
 
         return view;

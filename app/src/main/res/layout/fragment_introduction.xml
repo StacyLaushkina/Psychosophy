@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <variable name="fragment" type="com.laushkina.anastasia.psychosophy.view.introduction.IntroductionFragment"/>
-    </data>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"

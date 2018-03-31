@@ -37,11 +37,13 @@ public class PsychotypeDescriptionFragment extends BaseFragment {
         int current = descriptionViewPager.getCurrentItem();
         switch (current) {
             case PsychotypeDescriptionAdapter.PREVIEW_DESCRIPTION: {
+                // TODO images
                 getSwitchButton().setText("Less");
                 descriptionViewPager.setCurrentItem(PsychotypeDescriptionAdapter.FULL_TEXT_DESCRIPTION);
                 break;
             }
             case PsychotypeDescriptionAdapter.FULL_TEXT_DESCRIPTION:{
+                // TODO images
                 getSwitchButton().setText("More");
                 descriptionViewPager.setCurrentItem(PsychotypeDescriptionAdapter.PREVIEW_DESCRIPTION);
                 break;
@@ -56,10 +58,6 @@ public class PsychotypeDescriptionFragment extends BaseFragment {
 
     private ViewPager getDescriptionsViewPager(View view){
         return view.findViewById(R.id.description_pager);
-    }
-
-    private ViewPager getDescriptionsViewPager(){
-        return getActivity().findViewById(R.id.description_pager);
     }
 
     private Psychotype getPsychotype(){

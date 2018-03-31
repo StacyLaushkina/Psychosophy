@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
     <data>
-        <variable name="viewModel" type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.DescriptionViewModel"/>
+        <variable
+            name="viewModel"
+            type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.DescriptionViewModel"/>
     <variable
         name="fragment"
         type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeOverviewDescriptionFragment"/>

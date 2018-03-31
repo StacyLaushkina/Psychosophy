@@ -19,7 +19,6 @@ public class IntroductionFragment extends BaseFragment {
 
         FragmentIntroductionBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_introduction,
                 container, false);
-        binding.setFragment(this);
 
         setTitle();
         return binding.getRoot();

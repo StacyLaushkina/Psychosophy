@@ -10,7 +10,7 @@ import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.ActivityWelcomeBinding;
 import com.laushkina.anastasia.psychosophy.domain.Screen;
 
-public class WelcomeActivity extends Activity {
+public class WelcomeActivity extends Activity implements INavigator {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class WelcomeActivity extends Activity {
         setContentView(R.layout.activity_welcome);
 
         ActivityWelcomeBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_welcome);
-        binding.setActivity(this);
+        binding.setNavigator(this);
     }
 
     public void startTest(){

@@ -20,7 +20,7 @@ import javax.inject.Inject;
 import dagger.Module;
 
 @Module
-public class RelationshipsFragment extends BaseFragment{
+public class RelationshipsFragment extends BaseFragment implements IRelationshipsCalculator{
 
     @Inject RelationshipsPresenter presenter;
 
@@ -30,7 +30,7 @@ public class RelationshipsFragment extends BaseFragment{
 
         FragmentRelationshipsBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_relationships,
                 container, false);
-        binding.setFragment(this);
+        binding.setCalculator(this);
 
         presenter = DaggerRelationshipsComponent.create().getPresenter();
 
