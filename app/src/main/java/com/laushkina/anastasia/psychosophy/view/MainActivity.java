@@ -13,8 +13,6 @@ import android.view.MenuItem;
 
 import com.laushkina.anastasia.psychosophy.R;
 
-import com.laushkina.anastasia.psychosophy.domain.Screen;
-
 public class MainActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String screenNameExtra = "screenNameExtra";

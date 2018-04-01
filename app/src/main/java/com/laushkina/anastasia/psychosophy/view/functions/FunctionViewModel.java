@@ -2,12 +2,9 @@ package com.laushkina.anastasia.psychosophy.view.functions;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.databinding.PropertyChangeRegistry;
 import android.graphics.drawable.Drawable;
-import android.text.SpannableString;
 
 import com.laushkina.anastasia.psychosophy.BR;
-
 
 public class FunctionViewModel extends BaseObservable {
     private CharSequence functionTitle;

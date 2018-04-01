@@ -1,4 +1,4 @@
-package com.laushkina.anastasia.psychosophy.domain;
+package com.laushkina.anastasia.psychosophy.view;
 
 public enum Screen {
     test,

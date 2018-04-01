@@ -3,52 +3,76 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
-            name="calculator"
-            type="com.laushkina.anastasia.psychosophy.view.relationships.IRelationshipsCalculator"/>
+            name="relationships"
+            type="com.laushkina.anastasia.psychosophy.view.relationships.PsychotypeRelationshipsViewModel"/>
     </data>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/first_type_label"
+            android:id="@+id/select_types_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="First type:"/>
+            android:gravity="start"
+            style="@style/MediumSizeTextStyle"
+            android:text="@string/relationships_select_hint"
+            android:padding="@dimen/basic_margin"/>
 
         <Spinner
             android:id="@+id/first_type_spinner"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/first_type_label"
             android:layout_margin="@dimen/basic_margin"/>
-
-        <TextView
-            android:id="@+id/second_type_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_below="@+id/first_type_spinner"
-            android:text="Second type:"/>
 
         <Spinner
             android:id="@+id/second_type_spinner"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/second_type_label"
             android:layout_margin="@dimen/basic_margin"/>
 
-        <Button
-            android:id="@+id/calculate_relationships"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/second_type_spinner"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="@dimen/basic_margin"
-            android:onClick="@{() -> calculator.calculate()}"
-            android:text="Calc" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    style="@style/MediumSizeTextStyle"
+                    android:text="@{relationships.firstFunctionRelationships}"
+                    android:padding="@dimen/basic_margin"/>
 
-    </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    style="@style/MediumSizeTextStyle"
+                    android:text="@{relationships.secondFunctionRelationships}"
+                    android:padding="@dimen/basic_margin"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    style="@style/MediumSizeTextStyle"
+                    android:text="@{relationships.thirdFunctionRelationships}"
+                    android:padding="@dimen/basic_margin"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    style="@style/MediumSizeTextStyle"
+                    android:text="@{relationships.forthFunctionRelationships}"
+                    android:padding="@dimen/basic_margin"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 </layout>

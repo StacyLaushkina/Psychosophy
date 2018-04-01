@@ -8,7 +8,7 @@ import android.os.Bundle;
 import com.laushkina.anastasia.psychosophy.view.MainActivity;
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.ActivityWelcomeBinding;
-import com.laushkina.anastasia.psychosophy.domain.Screen;
+import com.laushkina.anastasia.psychosophy.view.Screen;
 
 public class WelcomeActivity extends Activity implements INavigator {
 
