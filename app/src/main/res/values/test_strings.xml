@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="know_type">Вычислить</string>
-    <string name="not_all_questions_answered">Ответьте на все вопросы.</string>
-    <string name="test_title">Да\tВозможно\tИногда\tНет</string>
+    <string name="finish_title">Завершить</string>
+    <string name="next_question_title">Далее</string>
+
+    <string name="yes_answer_title">Да</string>
+    <string name="maybe_answer_title">Возможно</string>
+    <string name="sometimes_answer_title">Иногда</string>
+    <string name="no_answer_title">Нет</string>
 
     <string name="test_question_logic_first">Вы считаете себя вдумчивым человеком?</string>
     <string name="test_question_logic_second">Вы доверяете своему разуму?</string>

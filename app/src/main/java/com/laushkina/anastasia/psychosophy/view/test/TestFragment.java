@@ -1,5 +1,6 @@
 package com.laushkina.anastasia.psychosophy.view.test;
 
+import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,20 +9,22 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
+import com.laushkina.anastasia.psychosophy.domain.test.QuestionAnswer;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.FragmentTestBinding;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.view.NavigationHelper;
 
+import java.util.List;
 
 import javax.inject.Inject;
 
-public class TestFragment extends BaseFragment implements ITestResultsObserver, ITypeCalculator{
+public class TestFragment extends BaseFragment implements ITestResultsObserver, ITypeCalculator {
 
     @Inject TestPresenter presenter;
+    private TestViewModel viewModel;
     private TestQuestionsAdapter adapter;
 
     @Override
@@ -33,47 +36,62 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
         binding.setTestCalculator(this);
 
         presenter = DaggerTestComponent.create().getPresenter();
-
         View view = binding.getRoot();
         initialize(view);
+        binding.setViewModel(viewModel);
 
         return view;
     }
 
     private void initialize(View view){
         setTitle();
+        viewModel = new TestViewModel(presenter.getNextQuestionText(this));
 
-        RecyclerView questionsRecycler = getQuestionsRecyclerView(view);
+        // Initialize questions
+        RecyclerView questionsRecycler = view.findViewById(R.id.test_questions_recycler);
         questionsRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter = new TestQuestionsAdapter(presenter.getQuestions(getActivity()));
+        adapter = new TestQuestionsAdapter(presenter.getFirstGroupOfQuestions(this), this::onAnswersSelected);
         questionsRecycler.setAdapter(adapter);
+    }
 
-        //TODO enable caching
-        questionsRecycler.setItemViewCacheSize(adapter.getItemCount());
+    void onAnswersSelected() {
+        presenter.onAnswerSelected(this);
+    }
+
+    public void next() {
+        presenter.onNextRequested(adapter.getAnswers(),this);
+    }
+
+    @Override
+    public void showNexGroupOfQuestions(List<CharSequence> questionSet) {
+        adapter.setQuestions(questionSet);
+        viewModel.setProgress(presenter.getProgress());
+        viewModel.setNextButtonText(presenter.getNextQuestionText(this));
+        viewModel.setNextEnabled(false);
+    }
+
+    @Override
+    public void showNextButton() {
+        viewModel.setNextEnabled(true);
+    }
+
+    @Override
+    public void showExceptionResultDescription(){
+        NavigationHelper.showTestResults(null, getFragmentManager());
+    }
+
+    @Override
+    public void showTypeDescription(Psychotype[] psychotypes) {
+        NavigationHelper.showTestResults(psychotypes, getFragmentManager());
+    }
+
+    @Override
+    public Context getContext() {
+        return getActivity();
     }
 
     @Override
     protected String getTitle(){
         return getResources().getString(R.string.test);
-    }
-
-    public void calculate(){
-        presenter.onTestResultRequested(adapter.getQuestions(), this);
-    }
-
-    private RecyclerView getQuestionsRecyclerView(View view){
-        return view.findViewById(R.id.test_questions_recycler);
-    }
-
-    public void showMissingAnswersMessage() {
-        Toast.makeText(getActivity(), R.string.not_all_questions_answered, Toast.LENGTH_LONG).show();
-    }
-
-    public void showTypeDescription(Psychotype[] psychotypes) {
-        NavigationHelper.showTestResults(psychotypes, getFragmentManager());
-    }
-
-    public void showExceptionResultDescription(){
-        NavigationHelper.showTestResults(null, getFragmentManager());
     }
 }

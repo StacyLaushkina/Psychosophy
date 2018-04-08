@@ -9,42 +9,39 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.laushkina.anastasia.psychosophy.R;
-import com.laushkina.anastasia.psychosophy.domain.test.Question;
 import com.laushkina.anastasia.psychosophy.domain.test.QuestionAnswer;
 
 import java.util.List;
 
 public class TestQuestionsAdapter extends RecyclerView.Adapter<TestQuestionsAdapter.ViewHolder>{
 
-    private List<Question> questions;
+    private List<CharSequence> questions;
+    private QuestionAnswer[] lastSelectedAnswers;
+    private OnAnswersSelectedListener listener;
 
-    TestQuestionsAdapter(List<Question> questions) {
+    interface OnAnswersSelectedListener {
+        void onAllAnswersSelected();
+    }
+
+    TestQuestionsAdapter(List<CharSequence> questions, OnAnswersSelectedListener listener) {
         this.questions = questions;
+        this.lastSelectedAnswers = new QuestionAnswer[questions.size()];
+        this.listener = listener;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_test_question_item, parent, false);
+                .inflate(R.layout.fragment_test_item, parent, false);
 
         return new TestQuestionsAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.questionText.setText(questions.get(position).getText());
-
-        holder.answers.setOnCheckedChangeListener(((radioGroup, i) -> onChecked(i, position)));
-
-        if (questions.get(position).getAnswer() == null) {
-            holder.answers.clearCheck();
-            return;
-        }
-
-        holder.answerYes.setChecked(questions.get(position).getAnswer() == QuestionAnswer.Yes);
-        holder.answerMaybe.setChecked(questions.get(position).getAnswer() == QuestionAnswer.Maybe);
-        holder.answerSometimes.setChecked(questions.get(position).getAnswer() == QuestionAnswer.Sometimes);
-        holder.answerNo.setChecked(questions.get(position).getAnswer() == QuestionAnswer.No);
+        holder.questionText.setText(questions.get(position));
+        holder.answers.clearCheck();
+        holder.answers.setOnCheckedChangeListener(((radioGroup, i) -> onChecked(holder, position)));
     }
 
     @Override
@@ -52,43 +49,59 @@ public class TestQuestionsAdapter extends RecyclerView.Adapter<TestQuestionsAdap
         return questions.size();
     }
 
-    List<Question> getQuestions(){
-        return questions;
+    QuestionAnswer[] getAnswers(){
+        return lastSelectedAnswers;
+    }
+
+    public void setQuestions(List<CharSequence> questions) {
+        this.questions = questions;
+        lastSelectedAnswers = new QuestionAnswer[questions.size()];
+        notifyDataSetChanged();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView questionText;
-        private RadioButton answerYes;
-        private RadioButton answerMaybe;
-        private RadioButton answerSometimes;
-        private RadioButton answerNo;
         private RadioGroup answers;
+        private RadioButton yesButton;
+        private RadioButton maybeButton;
+        private RadioButton sometimesButton;
+        private RadioButton noButton;
 
         ViewHolder(View view){
             super(view);
             questionText = view.findViewById(R.id.question_text);
-            answerYes = view.findViewById(R.id.answer_yes);
-            answerMaybe = view.findViewById(R.id.answer_maybe);
-            answerSometimes = view.findViewById(R.id.answer_sometimes);
-            answerNo = view.findViewById(R.id.answer_no);
             answers = view.findViewById(R.id.answers);
+            yesButton = view.findViewById(R.id.answer_yes);
+            maybeButton = view.findViewById(R.id.answer_maybe);
+            sometimesButton = view.findViewById(R.id.answer_sometimes);
+            noButton = view.findViewById(R.id.answer_no);
         }
     }
 
-    private void onChecked(int id, int position){
-        switch (id){
-            case R.id.answer_yes:
-                questions.get(position).setAnswer(QuestionAnswer.Yes);
+    private void onChecked(ViewHolder holder, int position){
+        if (holder.yesButton.isChecked()) {
+            lastSelectedAnswers[position] = QuestionAnswer.Yes;
+        }
+        if (holder.maybeButton.isChecked()) {
+            lastSelectedAnswers[position] = QuestionAnswer.Maybe;
+        }
+        if (holder.sometimesButton.isChecked()) {
+            lastSelectedAnswers[position] = QuestionAnswer.Sometimes;
+        }
+        if (holder.noButton.isChecked()) {
+            lastSelectedAnswers[position] = QuestionAnswer.No;
+        }
+
+        boolean areAllAnswered = true;
+        for (QuestionAnswer answer : lastSelectedAnswers) {
+            if (answer == null) {
+                areAllAnswered = false;
                 break;
-            case R.id.answer_maybe:
-                questions.get(position).setAnswer(QuestionAnswer.Maybe);
-                break;
-            case R.id.answer_sometimes:
-                questions.get(position).setAnswer(QuestionAnswer.Sometimes);
-                break;
-            case R.id.answer_no:
-                questions.get(position).setAnswer(QuestionAnswer.No);
+            }
+        }
+        if (areAllAnswered) {
+            listener.onAllAnswersSelected();
         }
     }
 }

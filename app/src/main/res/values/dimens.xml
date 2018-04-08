@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="basic_big_margin">16dp</dimen>
     <dimen name="basic_margin">8dp</dimen>
     <dimen name="basic_small_margin">4dp</dimen>
 
@@ -9,6 +10,6 @@
     <dimen name="psychotype_full_image_size">150dp</dimen>
     <dimen name="psychotype_card_size">150dp</dimen>
 
-    <dimen name="text_size_big">20sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
     <dimen name="text_size_medium">14sp</dimen>
 </resources>

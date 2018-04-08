@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/basic_big_margin">
+
+    <TextView
+        android:id="@+id/question_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{viewModel.question}"
+        android:gravity="center"
+        style="@style/MediumSizeTextStyle" />
+
+    <RadioGroup
+        android:id="@+id/answers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/basic_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/basic_small_margin"
+            android:text="@string/yes_answer_title"
+            style="@style/MediumSizeTextStyle"/>
+
+        <RadioButton
+            android:id="@+id/answer_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/basic_small_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/basic_small_margin"
+            android:text="@string/maybe_answer_title"
+            style="@style/MediumSizeTextStyle"/>
+
+        <RadioButton
+            android:id="@+id/answer_maybe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/basic_small_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/basic_small_margin"
+            android:text="@string/sometimes_answer_title"
+            style="@style/MediumSizeTextStyle"/>
+
+        <RadioButton
+            android:id="@+id/answer_sometimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/basic_small_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/basic_small_margin"
+            android:text="@string/no_answer_title"
+            style="@style/MediumSizeTextStyle"/>
+
+        <RadioButton
+            android:id="@+id/answer_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/basic_small_margin" />
+    </RadioGroup>
+
+</LinearLayout>
