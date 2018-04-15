@@ -14,18 +14,20 @@
         android:scaleType="fitEnd"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/basic_margin"
-        android:text="@string/menu_header"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/menu_header_info"
+        android:text="@string/menu_header"
         android:textColor="@android:color/white"
-        android:textSize="18sp"/>
+        android:textSize="@dimen/text_size_large"
+        android:padding="@dimen/basic_small_margin"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_header_info"
+        android:gravity="end"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:padding="@dimen/basic_small_margin"/>
 
 </LinearLayout>

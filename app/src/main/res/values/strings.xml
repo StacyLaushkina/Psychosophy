@@ -12,8 +12,8 @@
     <string name="introduction">Вступление</string>
     <string name="functions">Функции</string>
 
-    <string name="menu_header">Добро пожаловать!</string>
-    <string name="menu_header_info">To the app devoted to Psychosophy</string>
+    <string name="menu_header">Психософия и психойога</string>
+    <string name="menu_header_info">Познай самого себя</string>
 
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">Close</string>

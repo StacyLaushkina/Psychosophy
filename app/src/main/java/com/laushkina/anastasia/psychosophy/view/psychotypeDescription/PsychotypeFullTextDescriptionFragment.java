@@ -26,7 +26,7 @@ public class PsychotypeFullTextDescriptionFragment extends BaseFragment {
     }
 
     @Override
-    protected String getTitle(){
+    protected CharSequence getTitle(){
         return getResources().getString(R.string.psychotype_description);
     }
 

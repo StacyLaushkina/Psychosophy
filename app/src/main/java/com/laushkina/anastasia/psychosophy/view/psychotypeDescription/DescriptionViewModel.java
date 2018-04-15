@@ -3,11 +3,11 @@ package com.laushkina.anastasia.psychosophy.view.psychotypeDescription;
 import android.graphics.drawable.Drawable;
 
 public class DescriptionViewModel {
-    private String firstFunctionDescription;
-    private String secondFunctionDescription;
-    private String thirdFunctionDescription;
-    private String forthFunctionDescription;
-    private String shortDescription;
+    private CharSequence firstFunctionDescription;
+    private CharSequence secondFunctionDescription;
+    private CharSequence thirdFunctionDescription;
+    private CharSequence forthFunctionDescription;
+    private CharSequence shortDescription;
     private Drawable image;
 
     private DescriptionViewModel(Builder builder) {
@@ -19,23 +19,23 @@ public class DescriptionViewModel {
         image = builder.image;
     }
 
-    public String getFirstFunctionDescription() {
+    public CharSequence getFirstFunctionDescription() {
         return firstFunctionDescription;
     }
 
-    public String getSecondFunctionDescription() {
+    public CharSequence getSecondFunctionDescription() {
         return secondFunctionDescription;
     }
 
-    public String getThirdFunctionDescription() {
+    public CharSequence getThirdFunctionDescription() {
         return thirdFunctionDescription;
     }
 
-    public String getForthFunctionDescription() {
+    public CharSequence getForthFunctionDescription() {
         return forthFunctionDescription;
     }
 
-    public String getShortDescription() {
+    public CharSequence getShortDescription() {
         return shortDescription;
     }
 
@@ -44,36 +44,36 @@ public class DescriptionViewModel {
     }
 
     public static class Builder {
-        private String firstFunctionDescription;
-        private String secondFunctionDescription;
-        private String thirdFunctionDescription;
-        private String forthFunctionDescription;
-        private String shortDescription;
+        private CharSequence firstFunctionDescription;
+        private CharSequence secondFunctionDescription;
+        private CharSequence thirdFunctionDescription;
+        private CharSequence forthFunctionDescription;
+        private CharSequence shortDescription;
         private Drawable image;
 
         public Builder() {}
 
-        public Builder firstFunctionDescription(String firstFunctionDescription) {
+        public Builder firstFunctionDescription(CharSequence firstFunctionDescription) {
             this.firstFunctionDescription = firstFunctionDescription;
             return this;
         }
 
-        public Builder secondFunctionDescription(String secondFunctionDescription) {
+        public Builder secondFunctionDescription(CharSequence secondFunctionDescription) {
             this.secondFunctionDescription = secondFunctionDescription;
             return this;
         }
 
-        public Builder thirdFunctionDescription(String thirdFunctionDescription) {
+        public Builder thirdFunctionDescription(CharSequence thirdFunctionDescription) {
             this.thirdFunctionDescription = thirdFunctionDescription;
             return this;
         }
 
-        public Builder forthFunctionDescription(String forthFunctionDescription) {
+        public Builder forthFunctionDescription(CharSequence forthFunctionDescription) {
             this.forthFunctionDescription = forthFunctionDescription;
             return this;
         }
 
-        public Builder shortDescription(String shortDescription) {
+        public Builder shortDescription(CharSequence shortDescription) {
             this.shortDescription = shortDescription;
             return this;
         }

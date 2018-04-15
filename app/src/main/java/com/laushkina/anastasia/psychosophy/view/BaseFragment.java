@@ -7,7 +7,7 @@ import com.laushkina.anastasia.psychosophy.R;
 
 public abstract class BaseFragment extends Fragment {
 
-    protected abstract String getTitle();
+    protected abstract CharSequence getTitle();
 
     public void setTitle(){
         Toolbar toolbar = getToolbar();

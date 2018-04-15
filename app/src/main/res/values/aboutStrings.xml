@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="developer_info">Разработчик: Лаушкина Анастасия</string>
+    <string name="developer_info_link">stacy.laushkina@gmail.com</string>
+
+    <string name="afanasiev_info">При поддерже Афанасьевой Е.К.</string>
+    <string name="afanasiev_info_link">http://www.aleafan.org</string>
+
+    <string name="relationships_info">Тексты описания отношений:</string>
+    <string name="relationships_info_link">http://психософия.com</string>
+
+    <string name="introduction_info">Вступление:</string>
+    <string name="introduction_info_link">http://typologies.ru</string>
+</resources>

@@ -1,215 +1,197 @@
 package com.laushkina.anastasia.psychosophy.view.psychotypeDescription;
 
 import android.content.Context;
+import android.text.Html;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
+import com.laushkina.anastasia.psychosophy.view.utils.TextStylezer;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public final class PsychotypeDescriptionGetter {
 
-    static String getFull(Psychotype psychotype, Context context) {
+    static CharSequence getFull(Psychotype psychotype, Context context) {
         if (psychotype == null || context == null)
             throw new RuntimeException("Cannot get full psychotype description");
 
+        String rawText;
         switch (psychotype) {
             case Augustine:
-                return context.getResources().getString(R.string.LEPW_full);
+                rawText = context.getResources().getString(R.string.LEPW_full); break;
             case Anderson:
-                return context.getResources().getString(R.string.ELWP_full);
+                rawText = context.getResources().getString(R.string.ELWP_full); break;
             case Aristippus:
-                return context.getResources().getString(R.string.PLWE_full);
+                rawText = context.getResources().getString(R.string.PLWE_full); break;
             case Akhmatova:
-                return context.getResources().getString(R.string.WELP_full);
+                rawText = context.getResources().getString(R.string.WELP_full); break;
             case Berthier:
-                return context.getResources().getString(R.string.LPEW_full);
+                rawText = context.getResources().getString(R.string.LPEW_full); break;
             case Borgia:
-                return context.getResources().getString(R.string.PELW_full);
+                rawText = context.getResources().getString(R.string.PELW_full); break;
             case Bukharin:
-                return context.getResources().getString(R.string.EPLW_full);
+                rawText = context.getResources().getString(R.string.EPLW_full); break;
             case Ghazali:
-                return context.getResources().getString(R.string.EWLP_full);
+                rawText = context.getResources().getString(R.string.EWLP_full); break;
             case Goethe:
-                return context.getResources().getString(R.string.PWLE_full);
+                rawText = context.getResources().getString(R.string.PWLE_full); break;
             case Dumas:
-                return context.getResources().getString(R.string.PEWL_full);
+                rawText = context.getResources().getString(R.string.PEWL_full); break;
             case Lenin:
-                return context.getResources().getString(R.string.WLPE_full);
+                rawText = context.getResources().getString(R.string.WLPE_full); break;
             case Lao:
-                return context.getResources().getString(R.string.LWPE_full);
+                rawText = context.getResources().getString(R.string.LWPE_full); break;
             case Napoleon:
-                return context.getResources().getString(R.string.WPLE_full);
+                rawText = context.getResources().getString(R.string.WPLE_full); break;
             case Pascal:
-                return context.getResources().getString(R.string.LEWP_full);
+                rawText = context.getResources().getString(R.string.LEWP_full); break;
             case Parsnip:
-                return context.getResources().getString(R.string.EWPL_full);
+                rawText = context.getResources().getString(R.string.EWPL_full); break;
             case Plato:
-                return context.getResources().getString(R.string.LPWE_full);
+                rawText = context.getResources().getString(R.string.LPWE_full); break;
             case Pushkin:
-                return context.getResources().getString(R.string.EPWL_full);
+                rawText = context.getResources().getString(R.string.EPWL_full); break;
             case Rousseau:
-                return context.getResources().getString(R.string.ELPW_full);
+                rawText = context.getResources().getString(R.string.ELPW_full); break;
             case Socrates:
-                return context.getResources().getString(R.string.WLEP_full);
+                rawText = context.getResources().getString(R.string.WLEP_full); break;
             case Tolstoy:
-                return context.getResources().getString(R.string.WEPL_full);
+                rawText = context.getResources().getString(R.string.WEPL_full); break;
             case Twardowski:
-                return context.getResources().getString(R.string.WPEL_full);
+                rawText = context.getResources().getString(R.string.WPEL_full); break;
             case Chekhov:
-                return context.getResources().getString(R.string.PWEL_full);
+                rawText = context.getResources().getString(R.string.PWEL_full); break;
             case Einstein:
-                return context.getResources().getString(R.string.LWEP_full);
+                rawText = context.getResources().getString(R.string.LWEP_full); break;
             case Epicurus:
-                return context.getResources().getString(R.string.PLEW_full);
+                rawText = context.getResources().getString(R.string.PLEW_full); break;
             default:
                 throw new AssertionError();
         }
+
+        return TextStylezer.style(Html.fromHtml(rawText), context);
     }
 
-    public static String getTitle(Psychotype psychotype, Context context) {
+    public static CharSequence getTitle(Psychotype psychotype, Context context) {
         if (psychotype == null || context == null)
             throw new RuntimeException("Cannot get psychotype title");
 
+        String rawText;
         switch (psychotype) {
             case Augustine:
-                return context.getResources().getString(R.string.LEPW_title);
+                rawText = context.getResources().getString(R.string.LEPW_title); break;
             case Anderson:
-                return context.getResources().getString(R.string.ELWP_title);
+                rawText = context.getResources().getString(R.string.ELWP_title); break;
             case Aristippus:
-                return context.getResources().getString(R.string.PLWE_title);
+                rawText = context.getResources().getString(R.string.PLWE_title); break;
             case Akhmatova:
-                return context.getResources().getString(R.string.WELP_title);
+                rawText = context.getResources().getString(R.string.WELP_title); break;
             case Berthier:
-                return context.getResources().getString(R.string.LPEW_title);
+                rawText = context.getResources().getString(R.string.LPEW_title); break;
             case Borgia:
-                return context.getResources().getString(R.string.PELW_title);
+                rawText = context.getResources().getString(R.string.PELW_title); break;
             case Bukharin:
-                return context.getResources().getString(R.string.EPLW_title);
+                rawText = context.getResources().getString(R.string.EPLW_title); break;
             case Ghazali:
-                return context.getResources().getString(R.string.EWLP_title);
+                rawText = context.getResources().getString(R.string.EWLP_title); break;
             case Goethe:
-                return context.getResources().getString(R.string.PWLE_title);
+                rawText = context.getResources().getString(R.string.PWLE_title); break;
             case Dumas:
-                return context.getResources().getString(R.string.PEWL_title);
+                rawText = context.getResources().getString(R.string.PEWL_title); break;
             case Lenin:
-                return context.getResources().getString(R.string.WLPE_title);
+                rawText = context.getResources().getString(R.string.WLPE_title); break;
             case Lao:
-                return context.getResources().getString(R.string.LWPE_title);
+                rawText = context.getResources().getString(R.string.LWPE_title); break;
             case Napoleon:
-                return context.getResources().getString(R.string.WPLE_title);
+                rawText = context.getResources().getString(R.string.WPLE_title); break;
             case Pascal:
-                return context.getResources().getString(R.string.LEWP_title);
+                rawText = context.getResources().getString(R.string.LEWP_title); break;
             case Parsnip:
-                return context.getResources().getString(R.string.EWPL_title);
+                rawText = context.getResources().getString(R.string.EWPL_title); break;
             case Plato:
-                return context.getResources().getString(R.string.LPWE_title);
+                rawText = context.getResources().getString(R.string.LPWE_title); break;
             case Pushkin:
-                return context.getResources().getString(R.string.EPWL_title);
+                rawText = context.getResources().getString(R.string.EPWL_title); break;
             case Rousseau:
-                return context.getResources().getString(R.string.ELPW_title);
+                rawText = context.getResources().getString(R.string.ELPW_title); break;
             case Socrates:
-                return context.getResources().getString(R.string.WLEP_title);
+                rawText = context.getResources().getString(R.string.WLEP_title); break;
             case Tolstoy:
-                return context.getResources().getString(R.string.WEPL_title);
+                rawText = context.getResources().getString(R.string.WEPL_title); break;
             case Twardowski:
-                return context.getResources().getString(R.string.WPEL_title);
+                rawText = context.getResources().getString(R.string.WPEL_title); break;
             case Chekhov:
-                return context.getResources().getString(R.string.PWEL_title);
+                rawText = context.getResources().getString(R.string.PWEL_title); break;
             case Einstein:
-                return context.getResources().getString(R.string.LWEP_title);
+                rawText = context.getResources().getString(R.string.LWEP_title); break;
             case Epicurus:
-                return context.getResources().getString(R.string.PLEW_title);
+                rawText = context.getResources().getString(R.string.PLEW_title); break;
             default:
                 throw new AssertionError();
         }
+
+        return rawText;
     }
 
-    public static List<String> getAllDescriptions(Context context){
-        return new ArrayList<String>() {{
-            add(context.getResources().getString(R.string.LEPW_title));
-            add(context.getResources().getString(R.string.ELWP_title));
-            add(context.getResources().getString(R.string.PLWE_title));
-            add(context.getResources().getString(R.string.WELP_title));
-            add(context.getResources().getString(R.string.LPEW_title));
-            add(context.getResources().getString(R.string.PELW_title));
-            add(context.getResources().getString(R.string.EPLW_title));
-            add(context.getResources().getString(R.string.EWLP_title));
-            add(context.getResources().getString(R.string.PWLE_title));
-            add(context.getResources().getString(R.string.PEWL_title));
-            add(context.getResources().getString(R.string.WLPE_title));
-            add(context.getResources().getString(R.string.LWPE_title));
-            add(context.getResources().getString(R.string.WPLE_title));
-            add(context.getResources().getString(R.string.LEWP_title));
-            add(context.getResources().getString(R.string.EWPL_title));
-            add(context.getResources().getString(R.string.LPWE_title));
-            add(context.getResources().getString(R.string.EPWL_title));
-            add(context.getResources().getString(R.string.ELPW_title));
-            add(context.getResources().getString(R.string.WLEP_title));
-            add(context.getResources().getString(R.string.WEPL_title));
-            add(context.getResources().getString(R.string.WPEL_title));
-            add(context.getResources().getString(R.string.PWEL_title));
-            add(context.getResources().getString(R.string.LWEP_title));
-            add(context.getResources().getString(R.string.PLEW_title));
-        }};
-    }
-
-    static String getShort(Psychotype psychotype, Context context) {
+    static CharSequence getShort(Psychotype psychotype, Context context) {
         if (psychotype == null || context == null)
             throw new RuntimeException("Cannot get short psychotype description");
 
+        String rawText;
         switch (psychotype) {
             case Augustine:
-                return context.getResources().getString(R.string.LEPW_short);
+                rawText = context.getResources().getString(R.string.LEPW_short); break;
             case Anderson:
-                return context.getResources().getString(R.string.ELWP_short);
+                rawText = context.getResources().getString(R.string.ELWP_short); break;
             case Aristippus:
-                return context.getResources().getString(R.string.PLWE_short);
+                rawText = context.getResources().getString(R.string.PLWE_short); break;
             case Akhmatova:
-                return context.getResources().getString(R.string.WELP_short);
+                rawText = context.getResources().getString(R.string.WELP_short); break;
             case Berthier:
-                return context.getResources().getString(R.string.LPEW_short);
+                rawText = context.getResources().getString(R.string.LPEW_short); break;
             case Borgia:
-                return context.getResources().getString(R.string.PELW_short);
+                rawText = context.getResources().getString(R.string.PELW_short); break;
             case Bukharin:
-                return context.getResources().getString(R.string.EPLW_short);
+                rawText = context.getResources().getString(R.string.EPLW_short); break;
             case Ghazali:
-                return context.getResources().getString(R.string.EWLP_short);
+                rawText = context.getResources().getString(R.string.EWLP_short); break;
             case Goethe:
-                return context.getResources().getString(R.string.PWLE_short);
+                rawText = context.getResources().getString(R.string.PWLE_short); break;
             case Dumas:
-                return context.getResources().getString(R.string.PEWL_short);
+                rawText = context.getResources().getString(R.string.PEWL_short); break;
             case Lenin:
-                return context.getResources().getString(R.string.WLPE_short);
+                rawText = context.getResources().getString(R.string.WLPE_short); break;
             case Lao:
-                return context.getResources().getString(R.string.LWPE_short);
+                rawText = context.getResources().getString(R.string.LWPE_short); break;
             case Napoleon:
-                return context.getResources().getString(R.string.WPLE_short);
+                rawText = context.getResources().getString(R.string.WPLE_short); break;
             case Pascal:
-                return context.getResources().getString(R.string.LEWP_short);
+                rawText = context.getResources().getString(R.string.LEWP_short); break;
             case Parsnip:
-                return context.getResources().getString(R.string.EWPL_short);
+                rawText = context.getResources().getString(R.string.EWPL_short); break;
             case Plato:
-                return context.getResources().getString(R.string.LPWE_short);
+                rawText = context.getResources().getString(R.string.LPWE_short); break;
             case Pushkin:
-                return context.getResources().getString(R.string.EPWL_short);
+                rawText = context.getResources().getString(R.string.EPWL_short); break;
             case Rousseau:
-                return context.getResources().getString(R.string.ELPW_short);
+                rawText = context.getResources().getString(R.string.ELPW_short); break;
             case Socrates:
-                return context.getResources().getString(R.string.WLEP_short);
+                rawText = context.getResources().getString(R.string.WLEP_short); break;
             case Tolstoy:
-                return context.getResources().getString(R.string.WEPL_short);
+                rawText = context.getResources().getString(R.string.WEPL_short); break;
             case Twardowski:
-                return context.getResources().getString(R.string.WPEL_short);
+                rawText = context.getResources().getString(R.string.WPEL_short); break;
             case Chekhov:
-                return context.getResources().getString(R.string.PWEL_short);
+                rawText = context.getResources().getString(R.string.PWEL_short); break;
             case Einstein:
-                return context.getResources().getString(R.string.LWEP_short);
+                rawText = context.getResources().getString(R.string.LWEP_short); break;
             case Epicurus:
-                return context.getResources().getString(R.string.PLEW_short);
+                rawText = context.getResources().getString(R.string.PLEW_short); break;
             default:
                 throw new AssertionError();
         }
+
+        return TextStylezer.style(Html.fromHtml(rawText), context);
     }
 }

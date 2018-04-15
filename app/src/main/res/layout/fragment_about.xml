@@ -1,17 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/basic_margin"
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/developer_info"
+        android:layout_marginTop="@dimen/basic_margin"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="about"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/developer_info_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/developer_info_link"
+        android:layout_marginBottom="@dimen/basic_margin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/afanasiev_info"
+        android:layout_marginTop="@dimen/basic_margin"/>
+
+    <TextView
+        android:id="@+id/afanasiev_info_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/afanasiev_info_link"
+        android:layout_marginBottom="@dimen/basic_margin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/relationships_info"
+        android:layout_marginTop="@dimen/basic_margin"/>
+
+    <TextView
+        android:id="@+id/relationships_info_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/relationships_info_link"
+        android:layout_marginBottom="@dimen/basic_margin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/introduction_info"
+        android:layout_marginTop="@dimen/basic_margin"/>
+
+    <TextView
+        android:id="@+id/introduction_info_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/introduction_info_link"
+        android:layout_marginBottom="@dimen/basic_margin"/>
 
 
-    </RelativeLayout>
-</layout>
+</LinearLayout>

@@ -33,7 +33,7 @@ public class PsychotypeOverviewDescriptionFragment extends BaseFragment {
     }
 
     @Override
-    protected String getTitle(){
+    protected CharSequence getTitle(){
         return PsychotypeDescriptionGetter.getTitle(getPsychotype(), getActivity());
     }
 
