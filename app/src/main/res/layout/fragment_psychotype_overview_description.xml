@@ -5,8 +5,8 @@
             name="viewModel"
             type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.DescriptionViewModel"/>
     <variable
-        name="fragment"
-        type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeOverviewDescriptionFragment"/>
+        name="navigator"
+        type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.IFunctionsNavigator"/>
     </data>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{viewModel.firstFunctionDescription}"
-            android:onClick="@{() -> fragment.navigateToFirstFunction()}"
+            android:onClick="@{() -> navigator.navigateToFirstFunction()}"
             android:layout_toEndOf="@+id/psychotype_image"
             android:layout_margin="@dimen/basic_small_margin"/>
 
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{viewModel.secondFunctionDescription}"
-            android:onClick="@{() -> fragment.navigateToSecondFunction()}"
+            android:onClick="@{() -> navigator.navigateToSecondFunction()}"
             android:layout_toEndOf="@+id/psychotype_image"
             android:layout_below="@+id/psychotype_first_function"
             android:layout_margin="@dimen/basic_small_margin"/>
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{viewModel.thirdFunctionDescription}"
-            android:onClick="@{() -> fragment.navigateToThirdFunction()}"
+            android:onClick="@{() -> navigator.navigateToThirdFunction()}"
             android:layout_toEndOf="@+id/psychotype_image"
             android:layout_below="@+id/psychotype_second_function"
             android:layout_margin="@dimen/basic_small_margin"/>
@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{viewModel.forthFunctionDescription}"
-            android:onClick="@{() -> fragment.navigateToForthFunction()}"
+            android:onClick="@{() -> navigator.navigateToForthFunction()}"
             android:layout_toEndOf="@+id/psychotype_image"
             android:layout_below="@+id/psychotype_third_function"
             android:layout_margin="@dimen/basic_small_margin"/>

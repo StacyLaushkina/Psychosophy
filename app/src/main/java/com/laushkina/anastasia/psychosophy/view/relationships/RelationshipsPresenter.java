@@ -17,8 +17,8 @@ public class RelationshipsPresenter {
     PsychotypeRelationships calcRelationships(Psychotype fistType, Psychotype secondType, IRelationshipsResultObserver observer){
         if (fistType == null || secondType == null){
             observer.showHint();
-            return new PsychotypeRelationships("","",
-                    "",""); // nulls cannot be returned because of Html.fromHtml()
+            return new PsychotypeRelationships("","", "", "","",
+                    "","", ""); // nulls cannot be returned because of Html.fromHtml()
         }
         observer.hideHint();
         return RelationshipsCalculator.calcRelationships(fistType, secondType, observer.getContext());

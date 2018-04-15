@@ -32,7 +32,6 @@ public final class NavigationHelper {
     }
 
     public static void showFunctions(FragmentManager manager, int requestedTab, Function requestedFunction){
-        // TODO getNavigationView().setCheckedItem(R.id.nav_test);
         Bundle bundle = new Bundle(2);
         bundle.putInt(FunctionsFragment.REQUESTED_TAB, requestedTab);
         bundle.putSerializable(FunctionsDescriptionFragment.requestedFunctionExtra, requestedFunction);

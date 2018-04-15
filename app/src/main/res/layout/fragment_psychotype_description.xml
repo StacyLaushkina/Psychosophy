@@ -10,13 +10,13 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/switch_button"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/switch_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="More"
         android:background="@android:color/transparent"
-        android:textColor="@color/colorPrimary"
+        android:scaleType="fitEnd"
+        android:src="@drawable/ic_action_more"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:padding="@dimen/basic_margin"/>

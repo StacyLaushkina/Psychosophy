@@ -11,5 +11,6 @@
     <dimen name="psychotype_card_size">150dp</dimen>
 
     <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_big">17sp</dimen>
     <dimen name="text_size_medium">14sp</dimen>
 </resources>

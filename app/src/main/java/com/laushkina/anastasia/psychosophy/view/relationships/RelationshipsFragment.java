@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 
 import com.laushkina.anastasia.psychosophy.R;
@@ -72,6 +73,8 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         calculate();
+        // Scroll to the top
+        getActivity().findViewById(R.id.relationships_scroller).scrollTo(0, 0);
     }
 
     @Override
@@ -91,9 +94,13 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
 
     public void calculate(){
         PsychotypeRelationships relationships = presenter.calcRelationships(getFirstType(),getSecondType(), this);
+        viewModel.setFirstFunctionRelationshipsTitle(relationships.getFirstFunctionRelationshipsTitle());
         viewModel.setFirstFunctionRelationships(relationships.getFirstFunctionRelationships());
+        viewModel.setSecondFunctionRelationshipsTitle(relationships.getSecondFunctionRelationshipsTitle());
         viewModel.setSecondFunctionRelationships(relationships.getSecondFunctionRelationships());
+        viewModel.setThirdFunctionRelationshipsTitle(relationships.getThirdFunctionRelationshipsTitle());
         viewModel.setThirdFunctionRelationships(relationships.getThirdFunctionRelationships());
+        viewModel.setForthFunctionRelationshipsTitle(relationships.getForthFunctionRelationshipsTitle());
         viewModel.setForthFunctionRelationships(relationships.getForthFunctionRelationships());
     }
 

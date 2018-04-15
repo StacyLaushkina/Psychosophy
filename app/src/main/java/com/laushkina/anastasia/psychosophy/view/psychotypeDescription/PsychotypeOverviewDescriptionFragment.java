@@ -17,7 +17,7 @@ import com.laushkina.anastasia.psychosophy.view.functions.FunctionTitleGetter;
 import com.laushkina.anastasia.psychosophy.view.functions.FunctionsAdapter;
 import com.laushkina.anastasia.psychosophy.view.psychotypes.PsychotypesFragment;
 
-public class PsychotypeOverviewDescriptionFragment extends BaseFragment {
+public class PsychotypeOverviewDescriptionFragment extends BaseFragment implements IFunctionsNavigator {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
@@ -26,7 +26,7 @@ public class PsychotypeOverviewDescriptionFragment extends BaseFragment {
         FragmentPsychotypeOverviewDescriptionBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_psychotype_overview_description,
                 container, false);
         binding.setViewModel(getViewModel());
-        binding.setFragment(this);
+        binding.setNavigator(this);
 
         setTitle();
         return binding.getRoot();
@@ -37,23 +37,26 @@ public class PsychotypeOverviewDescriptionFragment extends BaseFragment {
         return PsychotypeDescriptionGetter.getTitle(getPsychotype(), getActivity());
     }
 
-    //TODO navigatiors interface
+    @Override
     public void navigateToFirstFunction(){
         // Switch between drawer's tabs, so level of activity's fragment manager is needed
         NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FIRST_FUNCTION,
                                        getPsychotype().getFunctions()[0]);
     }
 
+    @Override
     public void navigateToSecondFunction(){
         NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.SECOND_FUNCTION,
                                        getPsychotype().getFunctions()[1]);
     }
 
+    @Override
     public void navigateToThirdFunction(){
         NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.THIRD_FUNCTION,
                                        getPsychotype().getFunctions()[2]);
     }
 
+    @Override
     public void navigateToForthFunction(){
         NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FORTH_FUNCTION,
                                        getPsychotype().getFunctions()[3]);
