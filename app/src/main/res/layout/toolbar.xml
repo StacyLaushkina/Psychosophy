@@ -5,5 +5,11 @@
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="?attr/colorPrimary"
-    app:titleTextColor="@android:color/white"/>
+    android:background="?attr/colorPrimary">
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_big"/>
+</android.support.v7.widget.Toolbar>

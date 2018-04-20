@@ -39,7 +39,7 @@ public class PsychotypesFragment extends BaseFragment {
 
     @Override
     protected String getTitle(){
-        return "hgjhghgjhgjhgjhgjhgjhgjg";
+        return getResources().getString(R.string.psychotypes);
     }
 
     private RecyclerView getTypesRecyclerView(View view){
