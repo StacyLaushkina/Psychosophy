@@ -1,123 +1,157 @@
 package com.laushkina.anastasia.psychosophy;
 
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
-import com.laushkina.anastasia.psychosophy.domain.test.Function;
 import com.laushkina.anastasia.psychosophy.domain.test.PsychotypeCalculator;
-import com.laushkina.anastasia.psychosophy.domain.test.Question;
-import com.laushkina.anastasia.psychosophy.domain.test.QuestionAnswer;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Test for checking simple and border cases of psychotype calculator
- */
 public class PsychotypeCalculatorUnitTest {
 
     @Test
-    public void Twardowski() throws Exception {
-        List<Psychotype> actual = PsychotypeCalculator.calculate(getWPELAnswers());
-        assertEquals(Psychotype.Twardowski, actual.get(0));
+    public void Augustine() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Augustine));
+        assertEquals(Psychotype.Augustine, actual.get(0));
+    }
+
+    @Test
+    public void Pascal() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Pascal));
+        assertEquals(Psychotype.Pascal, actual.get(0));
+    }
+
+    @Test
+    public void Berthier() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Berthier));
+        assertEquals(Psychotype.Berthier, actual.get(0));
+    }
+
+    @Test
+    public void Plato() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Plato));
+        assertEquals(Psychotype.Plato, actual.get(0));
+    }
+
+    @Test
+    public void Lao() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Lao));
+        assertEquals(Psychotype.Lao, actual.get(0));
+    }
+
+    @Test
+    public void Einstein() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Einstein));
+        assertEquals(Psychotype.Einstein, actual.get(0));
+    }
+
+    @Test
+    public void Anderson() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Anderson));
+        assertEquals(Psychotype.Anderson, actual.get(0));
     }
 
     @Test
     public void Rousseau() throws Exception {
-        List<Psychotype> actual = PsychotypeCalculator.calculate(getELPWAnswers());
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Rousseau));
         assertEquals(Psychotype.Rousseau, actual.get(0));
     }
 
     @Test
-    public void twoVariants() throws Exception {
-        List<Psychotype> actual = PsychotypeCalculator.calculate(getPEWLorPELWAnswers());
-        List<Psychotype> expected = new ArrayList<Psychotype>() {{
-            add(Psychotype.Borgia);
-            add(Psychotype.Dumas);
-        }};
-        assertEquals(true, areCalculatedTypesEquals(expected, actual));
+    public void Bukharin() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Bukharin));
+        assertEquals(Psychotype.Bukharin, actual.get(0));
     }
 
     @Test
-    public void fourVariants() throws Exception {
-        List<Psychotype> actual = PsychotypeCalculator.calculate(getLWEPorLWPEorWLEPorWLPEAnswers());
-        List<Psychotype> expected = new ArrayList<Psychotype>() {{
-            add(Psychotype.Einstein);
-            add(Psychotype.Lao);
-            add(Psychotype.Socrates);
-            add(Psychotype.Lenin);
-        }};
-        assertEquals(true, areCalculatedTypesEquals(expected, actual));
-    }
-
-    private boolean areCalculatedTypesEquals(List<Psychotype> expectedList, List<Psychotype> actualList){
-        if (expectedList.size() != actualList.size()) return false;
-
-        boolean result = true;
-        for (Psychotype expected : expectedList) {
-            if (!actualList.contains(expected)) {
-                result = false;
-                break;
-            }
-        }
-        return result;
+    public void Pushkin() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Pushkin));
+        assertEquals(Psychotype.Pushkin, actual.get(0));
     }
 
     @Test
-    public void Unreliable() throws Exception {
-        List<Psychotype> actual = PsychotypeCalculator.calculate(getUnreliableAnswers());
-        assertEquals(null, actual);
+    public void Ghazali() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Ghazali));
+        assertEquals(Psychotype.Ghazali, actual.get(0));
     }
 
-    private List<Question> getUnreliableAnswers(){
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question(null, Function.Logic, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Emotion, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Physics, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Will, QuestionAnswer.No));
-
-        return questions;
+    @Test
+    public void Parsnip() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Parsnip));
+        assertEquals(Psychotype.Parsnip, actual.get(0));
     }
 
-    private List<Question> getLWEPorLWPEorWLEPorWLPEAnswers(){
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question(null, Function.Logic, QuestionAnswer.Yes));
-        questions.add(new Question(null, Function.Emotion, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Physics, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Will, QuestionAnswer.Yes));
-
-        return questions;
+    @Test
+    public void Aristippus() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Aristippus));
+        assertEquals(Psychotype.Aristippus, actual.get(0));
     }
 
-    private List<Question> getPEWLorPELWAnswers(){
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question(null, Function.Logic, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Emotion, QuestionAnswer.Maybe));
-        questions.add(new Question(null, Function.Physics, QuestionAnswer.Yes));
-        questions.add(new Question(null, Function.Will, QuestionAnswer.No));
-
-        return questions;
+    @Test
+    public void Epicurus() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Epicurus));
+        assertEquals(Psychotype.Epicurus, actual.get(0));
     }
 
-    private List<Question> getWPELAnswers(){
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question(null, Function.Logic, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Emotion, QuestionAnswer.Sometimes));
-        questions.add(new Question(null, Function.Physics, QuestionAnswer.Maybe));
-        questions.add(new Question(null, Function.Will, QuestionAnswer.Yes));
-
-        return questions;
+    @Test
+    public void Borgia() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Borgia));
+        assertEquals(Psychotype.Borgia, actual.get(0));
     }
 
-    private List<Question> getELPWAnswers(){
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question(null, Function.Logic, QuestionAnswer.Maybe));
-        questions.add(new Question(null, Function.Emotion, QuestionAnswer.Yes));
-        questions.add(new Question(null, Function.Physics, QuestionAnswer.Sometimes));
-        questions.add(new Question(null, Function.Will, QuestionAnswer.No));
+    @Test
+    public void Dumas() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Dumas));
+        assertEquals(Psychotype.Dumas, actual.get(0));
+    }
 
-        return questions;
+    @Test
+    public void Goethe() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Goethe));
+        assertEquals(Psychotype.Goethe, actual.get(0));
+    }
+
+    @Test
+    public void Chekhov() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Chekhov));
+        assertEquals(Psychotype.Chekhov, actual.get(0));
+    }
+
+    @Test
+    public void Akhmatova() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Akhmatova));
+        assertEquals(Psychotype.Akhmatova, actual.get(0));
+    }
+
+    @Test
+    public void Tolstoy() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Tolstoy));
+        assertEquals(Psychotype.Tolstoy, actual.get(0));
+    }
+
+    @Test
+    public void Lenin() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Lenin));
+        assertEquals(Psychotype.Lenin, actual.get(0));
+    }
+
+    @Test
+    public void Socrates() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Socrates));
+        assertEquals(Psychotype.Socrates, actual.get(0));
+    }
+
+    @Test
+    public void Napoleon() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Napoleon));
+        assertEquals(Psychotype.Napoleon, actual.get(0));
+    }
+
+    @Test
+    public void Twardowski() throws Exception {
+        List<Psychotype> actual = PsychotypeCalculator.calculate(PsychotypeAnswersFabric.getAnswers(Psychotype.Twardowski));
+        assertEquals(Psychotype.Twardowski, actual.get(0));
     }
 }
