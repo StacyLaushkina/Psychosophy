@@ -1,7 +1,11 @@
 package com.laushkina.anastasia.psychosophy.view;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
@@ -12,57 +16,63 @@ public final class PsychotypeImageGetter {
         if (psychotype == null || context == null)
             throw new RuntimeException("Cannot get psychotype image");
 
+        int resourceId;
         switch (psychotype) {
             case Augustine:
-                return context.getResources().getDrawable(R.drawable.ic_lepw);
+                resourceId = R.drawable.ic_lepw; break;
             case Anderson:
-                return context.getResources().getDrawable(R.drawable.ic_elwp);
+                resourceId = R.drawable.ic_elwp; break;
             case Aristippus:
-                return context.getResources().getDrawable(R.drawable.ic_plwe);
+                resourceId = R.drawable.ic_plwe; break;
             case Akhmatova:
-                return context.getResources().getDrawable(R.drawable.ic_welp);
+                resourceId = R.drawable.ic_welp; break;
             case Berthier:
-                return context.getResources().getDrawable(R.drawable.ic_lpew);
+                resourceId = R.drawable.ic_lpew; break;
             case Borgia:
-                return context.getResources().getDrawable(R.drawable.ic_pelw);
+                resourceId = R.drawable.ic_pelw; break;
             case Bukharin:
-                return context.getResources().getDrawable(R.drawable.ic_eplw);
+                resourceId = R.drawable.ic_eplw; break;
             case Ghazali:
-                return context.getResources().getDrawable(R.drawable.ic_ewlp);
+                resourceId = R.drawable.ic_ewlp; break;
             case Goethe:
-                return context.getResources().getDrawable(R.drawable.ic_pwle);
+                resourceId = R.drawable.ic_pwle; break;
             case Dumas:
-                return context.getResources().getDrawable(R.drawable.ic_pewl);
+                resourceId = R.drawable.ic_pewl; break;
             case Lenin:
-                return context.getResources().getDrawable(R.drawable.ic_wlpe);
+                resourceId = R.drawable.ic_wlpe; break;
             case Lao:
-                return context.getResources().getDrawable(R.drawable.ic_lwpe);
+                resourceId = R.drawable.ic_lwpe; break;
             case Napoleon:
-                return context.getResources().getDrawable(R.drawable.ic_wple);
+                resourceId = R.drawable.ic_wple; break;
             case Pascal:
-                return context.getResources().getDrawable(R.drawable.ic_lewp);
+                resourceId = R.drawable.ic_lewp; break;
             case Parsnip:
-                return context.getResources().getDrawable(R.drawable.ic_ewpl);
+                resourceId = R.drawable.ic_ewpl; break;
             case Plato:
-                return context.getResources().getDrawable(R.drawable.ic_lpwe);
+                resourceId = R.drawable.ic_lpwe; break;
             case Pushkin:
-                return context.getResources().getDrawable(R.drawable.ic_epwl);
+                resourceId = R.drawable.ic_epwl; break;
             case Rousseau:
-                return context.getResources().getDrawable(R.drawable.ic_elpw);
+                resourceId = R.drawable.ic_elpw; break;
             case Socrates:
-                return context.getResources().getDrawable(R.drawable.ic_wlep);
+                resourceId = R.drawable.ic_wlep; break;
             case Tolstoy:
-                return context.getResources().getDrawable(R.drawable.ic_wepl);
+                resourceId = R.drawable.ic_wepl; break;
             case Twardowski:
-                return context.getResources().getDrawable(R.drawable.ic_wpel);
+                resourceId = R.drawable.ic_wpel; break;
             case Chekhov:
-                return context.getResources().getDrawable(R.drawable.ic_pwel);
+                resourceId = R.drawable.ic_pwel; break;
             case Einstein:
-                return context.getResources().getDrawable(R.drawable.ic_lwep);
+                resourceId = R.drawable.ic_lwep; break;
             case Epicurus:
-                return context.getResources().getDrawable(R.drawable.ic_plew);
+                resourceId = R.drawable.ic_plew; break;
             default:
-                return null;
+                throw new AssertionError("Cannot find image for type" + psychotype.name());
         }
+
+        Bitmap src = BitmapFactory.decodeResource(context.getResources(), resourceId);
+        RoundedBitmapDrawable dr = RoundedBitmapDrawableFactory.create(context.getResources(), src);
+        dr.setCornerRadius(Math.min(src.getWidth(), src.getHeight()) / 2.0f);
+        return dr;
     }
 }

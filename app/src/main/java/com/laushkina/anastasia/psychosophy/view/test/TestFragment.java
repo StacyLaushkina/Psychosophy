@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.laushkina.anastasia.psychosophy.domain.test.QuestionAnswer;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
@@ -52,6 +53,9 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
         questionsRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapter = new TestQuestionsAdapter(presenter.getFirstGroupOfQuestions(this), this::onAnswersSelected);
         questionsRecycler.setAdapter(adapter);
+
+        ProgressBar progressBar = view.findViewById(R.id.test_progress);
+        progressBar.setProgressDrawable(getResources().getDrawable(R.drawable.test_progress_drawable));
     }
 
     void onAnswersSelected() {

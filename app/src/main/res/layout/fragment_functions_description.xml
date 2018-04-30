@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools">
     <data>
         <variable
             name="selectListener"
@@ -80,46 +81,76 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:columnCount="2"
-                android:rowCount="2">
+                android:layout_margin="@dimen/basic_small_margin"
+                android:verticalSpacing="2dp">
 
                 <Button
-                    android:id="@+id/psychotype_emotion_function"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:gravity="center"
+                    android:layout_gravity="fill"
+                    android:layout_width="1dp"
+
                     android:text="@{viewModel.emotionTitle}"
                     android:onClick="@{() -> selectListener.onEmotionClick()}"
-                    android:layout_column="0"
-                    android:layout_row="0"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="@dimen/basic_small_margin"
-                    android:layout_gravity="center"/>
+                    android:background="@color/colorPrimary"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/white"
+
+                    android:maxHeight="@dimen/functions_at_position_button_height"
+                    android:padding="@dimen/basic_small_margin"
+                    android:layout_marginBottom="@dimen/basic_small_margin"/>
 
                 <Button
-                    android:id="@+id/psychotype_logic_function"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:gravity="center"
+                    android:layout_gravity="fill"
+                    android:layout_width="1dp"
+
                     android:text="@{viewModel.logicTitle}"
                     android:onClick="@{() -> selectListener.onLogicClick()}"
-                    android:layout_column="1"
-                    android:layout_row="0"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="@dimen/basic_small_margin"
-                    android:layout_gravity="center"/>
+                    android:background="@color/colorPrimary"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/white"
+
+                    android:maxHeight="@dimen/functions_at_position_button_height"
+                    android:padding="@dimen/basic_small_margin"
+                    android:layout_marginStart="@dimen/basic_small_margin"
+                    android:layout_marginBottom="@dimen/basic_small_margin"/>
 
                 <Button
-                    android:id="@+id/psychotype_physics_function"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:gravity="center"
+                    android:layout_gravity="fill"
+                    android:layout_width="1dp"
+
                     android:text="@{viewModel.physicsTitle}"
                     android:onClick="@{() -> selectListener.onPhysicsClick()}"
-                    android:layout_column="0"
-                    android:layout_row="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="@dimen/basic_small_margin"
-                    android:layout_gravity="center"/>
+                    android:background="@color/colorPrimary"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/white"
+
+                    android:maxHeight="@dimen/functions_at_position_button_height"
+                    android:padding="@dimen/basic_small_margin"/>
 
                 <Button
-                    android:id="@+id/psychotype_forth_function"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:gravity="center"
+                    android:layout_gravity="fill"
+                    android:layout_width="1dp"
+
                     android:text="@{viewModel.willTitle}"
                     android:onClick="@{() -> selectListener.onWillClick()}"
-                    android:layout_column="1"
-                    android:layout_row="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                    android:background="@color/colorPrimary"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/white"
+
+                    android:maxHeight="@dimen/functions_at_position_button_height"
+                    android:padding="@dimen/basic_small_margin"
+                    android:layout_marginStart="@dimen/basic_small_margin"/>
             </GridLayout>
         </LinearLayout>
 

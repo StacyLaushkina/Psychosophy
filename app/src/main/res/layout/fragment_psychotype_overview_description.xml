@@ -29,6 +29,8 @@
             android:layout_height="wrap_content"
             android:text="@{viewModel.firstFunctionDescription}"
             android:onClick="@{() -> navigator.navigateToFirstFunction()}"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
             android:layout_toEndOf="@+id/psychotype_image"
             android:layout_margin="@dimen/basic_small_margin"/>
 
@@ -38,6 +40,8 @@
             android:layout_height="wrap_content"
             android:text="@{viewModel.secondFunctionDescription}"
             android:onClick="@{() -> navigator.navigateToSecondFunction()}"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
             android:layout_toEndOf="@+id/psychotype_image"
             android:layout_below="@+id/psychotype_first_function"
             android:layout_margin="@dimen/basic_small_margin"/>
@@ -48,6 +52,8 @@
             android:layout_height="wrap_content"
             android:text="@{viewModel.thirdFunctionDescription}"
             android:onClick="@{() -> navigator.navigateToThirdFunction()}"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
             android:layout_toEndOf="@+id/psychotype_image"
             android:layout_below="@+id/psychotype_second_function"
             android:layout_margin="@dimen/basic_small_margin"/>
@@ -58,6 +64,8 @@
             android:layout_height="wrap_content"
             android:text="@{viewModel.forthFunctionDescription}"
             android:onClick="@{() -> navigator.navigateToForthFunction()}"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
             android:layout_toEndOf="@+id/psychotype_image"
             android:layout_below="@+id/psychotype_third_function"
             android:layout_margin="@dimen/basic_small_margin"/>

@@ -12,7 +12,9 @@
         android:layout_height="wrap_content"
         android:text="@{viewModel.question}"
         android:gravity="center"
-        style="@style/MediumSizeTextStyle" />
+        style="@style/MediumSizeTextStyle"
+        android:background="@color/mint"
+        android:padding="@dimen/basic_margin"/>
 
     <RadioGroup
         android:id="@+id/answers"
@@ -29,11 +31,12 @@
             android:text="@string/yes_answer_title"
             style="@style/MediumSizeTextStyle"/>
 
-        <RadioButton
+        <android.support.v7.widget.AppCompatRadioButton
             android:id="@+id/answer_yes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/basic_small_margin" />
+            android:padding="@dimen/basic_small_margin"
+            android:buttonTint="@color/colorPrimary"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,11 +45,12 @@
             android:text="@string/maybe_answer_title"
             style="@style/MediumSizeTextStyle"/>
 
-        <RadioButton
+        <android.support.v7.widget.AppCompatRadioButton
             android:id="@+id/answer_maybe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/basic_small_margin" />
+            android:padding="@dimen/basic_small_margin"
+            android:buttonTint="@color/colorPrimary"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -55,11 +59,12 @@
             android:text="@string/sometimes_answer_title"
             style="@style/MediumSizeTextStyle"/>
 
-        <RadioButton
+        <android.support.v7.widget.AppCompatRadioButton
             android:id="@+id/answer_sometimes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/basic_small_margin" />
+            android:padding="@dimen/basic_small_margin"
+            android:buttonTint="@color/colorPrimary"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,11 +73,12 @@
             android:text="@string/no_answer_title"
             style="@style/MediumSizeTextStyle"/>
 
-        <RadioButton
+        <android.support.v7.widget.AppCompatRadioButton
             android:id="@+id/answer_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/basic_small_margin" />
+            android:padding="@dimen/basic_small_margin"
+            android:buttonTint="@color/colorPrimary"/>
     </RadioGroup>
 
 </LinearLayout>

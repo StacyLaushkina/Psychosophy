@@ -9,25 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="@dimen/menu_header_image_size"
-        android:layout_height="@dimen/menu_header_image_size"
-        android:scaleType="fitEnd"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/menu_header"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/text_size_large"
-        android:padding="@dimen/basic_small_margin"/>
-
-    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/menu_header_info"
-        android:gravity="end"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/text_size_medium"
-        android:padding="@dimen/basic_small_margin"/>
+        android:layout_height= "@dimen/menu_header_image_size"
+        android:src="@drawable/ic_menu_logo"/>
 
 </LinearLayout>
