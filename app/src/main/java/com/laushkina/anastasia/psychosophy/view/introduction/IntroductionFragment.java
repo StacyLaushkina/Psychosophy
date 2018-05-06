@@ -1,5 +1,6 @@
 package com.laushkina.anastasia.psychosophy.view.introduction;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.Html;
@@ -9,26 +10,92 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.laushkina.anastasia.psychosophy.R;
+import com.laushkina.anastasia.psychosophy.databinding.FragmentIntroductionBinding;
+import com.laushkina.anastasia.psychosophy.databinding.FragmentRelationshipsBinding;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
+import com.laushkina.anastasia.psychosophy.view.NavigationHelper;
+import com.laushkina.anastasia.psychosophy.view.functions.FunctionsAdapter;
 
-public class IntroductionFragment extends BaseFragment {
+import java.util.concurrent.ConcurrentHashMap;
+
+public class IntroductionFragment extends BaseFragment implements IIntroductionNavigator {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(R.layout.fragment_introduction, container, false);
-        initialize(view);
-        return view;
+
+        FragmentIntroductionBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_introduction,
+                container, false);
+        binding.setViewModel(getViewModel());
+        binding.setNavigator(this);
+
+        setTitle();
+        return binding.getRoot();
     }
 
-    private void initialize(View view){
-        TextView introductionText = view.findViewById(R.id.introduction_text);
-        introductionText.setText(Html.fromHtml(getResources().getString(R.string.introduction_text)));
-        setTitle();
+    private IntroductionViewModel getViewModel(){
+        IntroductionViewModel viewModel = new IntroductionViewModel();
+        viewModel.setPsychosophyDefinition(getPsychosophyDefinition());
+        viewModel.setPersonalitiesDescription(getPersonalitiesDescription());
+        viewModel.setRelationshipsDescription(getRelationshipsDescription());
+
+        return viewModel;
+    }
+
+    private CharSequence getPsychosophyDefinition(){
+        return Html.fromHtml(getResources().getString(R.string.introduction_psychosophy_definition));
+    }
+
+    private CharSequence getPersonalitiesDescription(){
+        return Html.fromHtml(getResources().getString(R.string.introduction_psychosophy_personalities));
+    }
+
+    private CharSequence getRelationshipsDescription(){
+        return Html.fromHtml(getResources().getString(R.string.introduction_psychosophy_relationships));
     }
 
     @Override
     protected String getTitle(){
         return getResources().getString(R.string.introduction);
+    }
+
+    @Override
+    public void navigateToFirstFunction() {
+        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FIRST_FUNCTION,null);
+    }
+
+    @Override
+    public void navigateToSecondFunction() {
+        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.SECOND_FUNCTION,null);
+    }
+
+    @Override
+    public void navigateToThirdFunction() {
+        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.THIRD_FUNCTION,null);
+    }
+
+    @Override
+    public void navigateToForthFunction() {
+        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FORTH_FUNCTION,null);
+    }
+
+    @Override
+    public void navigateToPsychotypes() {
+        NavigationHelper.showTypes(getActivity().getFragmentManager());
+    }
+
+    @Override
+    public void navigateToTest() {
+        NavigationHelper.showTest(getActivity().getFragmentManager());
+    }
+
+    @Override
+    public void navigateToAspectsAnfFunctions() {
+        NavigationHelper.showAspectsAndFunctions(getActivity().getFragmentManager());
+    }
+
+    @Override
+    public void navigateToRelationships() {
+        NavigationHelper.showRelationships(getActivity().getFragmentManager());
     }
 }

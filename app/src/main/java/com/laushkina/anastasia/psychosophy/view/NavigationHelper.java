@@ -8,6 +8,7 @@ import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.test.Function;
 import com.laushkina.anastasia.psychosophy.view.about.AboutFragment;
+import com.laushkina.anastasia.psychosophy.view.aspectsAndFunctions.AspectsAndFunctionsFragment;
 import com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment;
 import com.laushkina.anastasia.psychosophy.view.functions.FunctionsDescriptionFragment;
 import com.laushkina.anastasia.psychosophy.view.introduction.IntroductionFragment;
@@ -71,6 +72,10 @@ public final class NavigationHelper {
 
     public static void showRelationships(FragmentManager manager){
         changeContent(new RelationshipsFragment(), manager);
+    }
+
+    public static void showAspectsAndFunctions(FragmentManager manager){
+        changeContent(new AspectsAndFunctionsFragment(), manager);
     }
 
     private static void changeContent(Fragment fragment, FragmentManager manager){

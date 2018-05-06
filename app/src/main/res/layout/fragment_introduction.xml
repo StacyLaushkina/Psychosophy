@@ -1,17 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.laushkina.anastasia.psychosophy.view.introduction.IntroductionViewModel" />
+        <variable
+            name="navigator"
+            type="com.laushkina.anastasia.psychosophy.view.introduction.IIntroductionNavigator"/>
+    </data>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/introduction_text"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/MediumSizeTextStyle"
-            android:layout_margin="@dimen/basic_margin"/>
+            android:padding="@dimen/basic_margin">
+
+            <TextView
+                android:id="@+id/psychosophy_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                style="@style/TitleTextStyle"
+                android:padding="@dimen/basic_margin"
+                android:text="@string/introduction_title"/>
+
+            <TextView
+                android:id="@+id/psychosophy_definition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:text="@{viewModel.psychosophyDefinition}"
+                android:layout_below="@+id/psychosophy_title"/>
+
+            <!--FIRST FUNCTION-->
+            <TextView
+                android:id="@+id/psychosophy_fist_priority_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/inline_button_height"
+                android:gravity="center"
+                style="@style/MediumSizeTextStyle"
+                android:text="@string/introduction_psychosophy_first_priority"
+                android:layout_below="@+id/psychosophy_definition"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/inline_button_height"
+                android:text="@string/introduction_psychosophy_first_priority_button"
+                android:onClick="@{() -> navigator.navigateToFirstFunction()}"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_toEndOf="@+id/psychosophy_fist_priority_label"
+                android:layout_below="@+id/psychosophy_definition"
+                android:layout_alignTop="@+id/psychosophy_fist_priority_label"
+                android:layout_alignBottom="@+id/psychosophy_fist_priority_label"/>
+
+            <!--SECOND FUNCTION-->
+            <TextView
+                android:id="@+id/second_priority_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/inline_button_height"
+                android:gravity="center"
+                style="@style/MediumSizeTextStyle"
+                android:text="@string/introduction_psychosophy_second_priority"
+                android:layout_below="@+id/psychosophy_fist_priority_label"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/inline_button_height"
+                android:text="@string/introduction_psychosophy_second_priority_button"
+                android:onClick="@{() -> navigator.navigateToSecondFunction()}"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_toEndOf="@+id/second_priority_label"
+                android:layout_alignTop="@+id/second_priority_label"
+                android:layout_alignBottom="@+id/second_priority_label"/>
+
+            <!--THIRD FUNCTION-->
+            <TextView
+                android:id="@+id/third_priority_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/inline_button_height"
+                android:gravity="center"
+                style="@style/MediumSizeTextStyle"
+                android:text="@string/introduction_psychosophy_third_priority"
+                android:layout_below="@+id/second_priority_label"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/inline_button_height"
+                android:text="@string/introduction_psychosophy_third_priority_button"
+                android:onClick="@{() -> navigator.navigateToThirdFunction()}"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_toEndOf="@+id/third_priority_label"
+                android:layout_below="@+id/second_priority_label"
+                android:layout_alignTop="@+id/third_priority_label"
+                android:layout_alignBottom="@+id/third_priority_label"/>
+
+            <!--FORTH FUNCTION-->
+            <TextView
+                android:id="@+id/forth_priority_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/inline_button_height"
+                android:gravity="center"
+                style="@style/MediumSizeTextStyle"
+                android:text="@string/introduction_psychosophy_forth_priority"
+                android:layout_below="@+id/third_priority_label"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/inline_button_height"
+                android:text="@string/introduction_psychosophy_forth_priority_button"
+                android:onClick="@{() -> navigator.navigateToForthFunction()}"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_toEndOf="@+id/forth_priority_label"
+                android:layout_below="@+id/third_priority_label"
+                android:layout_alignTop="@+id/forth_priority_label"
+                android:layout_alignBottom="@+id/forth_priority_label"/>
+
+            <!--PSYCHOTYPES-->
+            <TextView
+                android:id="@+id/psychotypes_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:text="@{viewModel.personalitiesDescription}"
+                android:layout_below="@+id/forth_priority_label"/>
+
+            <Button
+                android:id="@+id/psychotypes_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/inline_button_height"
+                android:text="@string/introduction_psychosophy_psychotypes_button"
+                android:onClick="@{() -> navigator.navigateToPsychotypes()}"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@+id/psychotypes_description"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/inline_button_height"
+                android:text="@string/introduction_psychosophy_my_psychotype_button"
+                android:onClick="@{() -> navigator.navigateToTest()}"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@+id/psychotypes_description"
+                android:layout_alignParentEnd="true"/>
+
+            <!--ASPECTS AND FUNCTIONS-->
+            <TextView
+                android:id="@+id/aspects_and_functions_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:text="@string/introduction_psychosophy_aspects"
+                android:layout_below="@+id/psychotypes_button"/>
+
+            <Button
+                android:id="@+id/aspects_and_functions_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inline_button_height"
+                android:text="@string/introduction_psychosophy_aspects_and_functions"
+                android:onClick="@{() -> navigator.navigateToAspectsAnfFunctions()}"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@+id/aspects_and_functions_text" />
+
+            <!--RELATIONSHIPS-->
+            <TextView
+                android:id="@+id/relationships_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:text="@{viewModel.relationshipsDescription}"
+                android:layout_below="@+id/aspects_and_functions_button"/>
+
+            <Button
+                android:id="@+id/relationships_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inline_button_height"
+                android:text="@string/introduction_psychosophy_relationships_button"
+                android:onClick="@{() -> navigator.navigateToRelationships()}"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@+id/relationships_description" />
+
+        </RelativeLayout>
     </ScrollView>
-</RelativeLayout>
+</layout>

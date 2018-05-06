@@ -9,6 +9,7 @@
     <string name="about">О программе</string>
     <string name="introduction">Коротко о главном</string>
     <string name="functions">Функции</string>
+    <string name="aspects_and_functions">Аспекты и функции</string>
 
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">Close</string>

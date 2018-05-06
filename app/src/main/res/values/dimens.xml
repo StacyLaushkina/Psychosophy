@@ -4,6 +4,7 @@
     <dimen name="basic_margin">8dp</dimen>
     <dimen name="basic_small_margin">4dp</dimen>
 
+    <dimen name="inline_button_height">30dp</dimen>
     <dimen name="functions_at_position_hint_height">40dp</dimen>
     <dimen name="functions_at_position_button_height">60dp</dimen>
     <dimen name="menu_header_image_size">100dp</dimen>

@@ -73,6 +73,9 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
                 break;
             case R.id.nav_about:
                 NavigationHelper.showAbout(getFragmentManager());
+                break;
+            case R.id.nav_aspects_and_functions:
+                NavigationHelper.showAspectsAndFunctions(getFragmentManager());
 
         }
 
