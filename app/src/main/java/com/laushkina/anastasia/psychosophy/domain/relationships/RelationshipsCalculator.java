@@ -2,6 +2,7 @@ package com.laushkina.anastasia.psychosophy.domain.relationships;
 
 import android.content.Context;
 
+import com.crashlytics.android.Crashlytics;
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.test.Function;
@@ -36,6 +37,7 @@ public class RelationshipsCalculator {
             case Physics: return getPhysicsDescription(fistFunctionPosition, secondPosition, context);
         }
 
+        Crashlytics.logException(new RuntimeException("Error"));
         throw new AssertionError();
     }
 
