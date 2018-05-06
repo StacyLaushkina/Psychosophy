@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SlidingPaneLayout;
 import android.text.SpannableString;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,12 +17,14 @@ import com.laushkina.anastasia.psychosophy.databinding.FragmentFunctionsDescript
 import com.laushkina.anastasia.psychosophy.domain.test.Function;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 import com.laushkina.anastasia.psychosophy.view.utils.TextStylezer;
+import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 public abstract class FunctionsDescriptionFragment extends BaseFragment implements IFunctionSelectListener {
 
     public static final String requestedFunctionExtra = "requestedFunctionExtra";
 
     private FunctionViewModel viewModel;
+    private SlidingUpPanelLayout slidingUpPanel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
@@ -31,14 +34,18 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
                 container, false);
         binding.setSelectListener(this);
 
-        initialize();
+        View rootView = binding.getRoot();
+        initialize(rootView);
         binding.setViewModel(viewModel);
-        return binding.getRoot();
+        return rootView;
     }
 
-    private void initialize(){
+    private void initialize(View rootView){
         Drawable functionImage = getImage();
         viewModel = getViewModel(functionImage);
+
+        // Sliding panel is unique for each tab - so it should be initialized every time
+        slidingUpPanel = rootView.findViewById(R.id.sliding_layout);
     }
 
     @Override
@@ -120,6 +127,11 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
         viewModel.setFunctionDescription(TextStylezer.style(fullDescription, getActivity()));
         viewModel.setFunctionTitle(title);
         viewModel.setFunctionImage(image);
+        collapseBottomNavigation();
+    }
+
+    private void collapseBottomNavigation(){
+        slidingUpPanel.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
     }
 
     @Override

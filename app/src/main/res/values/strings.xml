@@ -1,7 +1,5 @@
 <resources>
-    <string name="app_name">Psychosophy</string>
-
-    <string name="welcome_activity">Welcome</string>
+    <string name="app_name">Психософия</string>
 
     <string name="test">Тест</string>
     <string name="test_results">Результаты теста</string>
@@ -9,7 +7,7 @@
     <string name="psychotype_description">Описание псхотипа</string>
     <string name="relationships">Отношения</string>
     <string name="about">О программе</string>
-    <string name="introduction">Вступление</string>
+    <string name="introduction">Коротко о главном</string>
     <string name="functions">Функции</string>
 
     <string name="navigation_drawer_open">Open</string>
