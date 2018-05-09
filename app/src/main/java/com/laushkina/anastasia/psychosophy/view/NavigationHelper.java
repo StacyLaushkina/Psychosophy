@@ -3,13 +3,14 @@ package com.laushkina.anastasia.psychosophy.view;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.test.Function;
 import com.laushkina.anastasia.psychosophy.view.about.AboutFragment;
-import com.laushkina.anastasia.psychosophy.view.aspectsAndFunctions.AspectsAndFunctionsFragment;
-import com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment;
+import com.laushkina.anastasia.psychosophy.view.aspectsAndFunctions.AspectAndFunctionsFragment;
+import com.laushkina.anastasia.psychosophy.view.aspectsAndFunctions.FunctionsFragment;
 import com.laushkina.anastasia.psychosophy.view.functions.FunctionsDescriptionFragment;
 import com.laushkina.anastasia.psychosophy.view.introduction.IntroductionFragment;
 import com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeDescriptionFragment;
@@ -20,38 +21,44 @@ import com.laushkina.anastasia.psychosophy.view.test.TestResultsFragment;
 
 public final class NavigationHelper {
 
-    public static void showTest(FragmentManager manager) {
+    public static void showTest(FragmentManager manager, NavigationView navigationView) {
         changeContent(new TestFragment(), manager);
+        navigationView.setCheckedItem(R.id.nav_test);
     }
 
-    public static void showTypes(FragmentManager manager){
+    public static void showTypes(FragmentManager manager, NavigationView navigationView){
         changeContent(new PsychotypesFragment(), manager);
+        navigationView.setCheckedItem(R.id.nav_psychotypes);
     }
 
-    public static void showFunctions(FragmentManager manager){
-        changeContent(new FunctionsFragment(), manager);
+    public static void showFunctions(FragmentManager manager, NavigationView navigationView){
+        changeContent(new com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment(), manager);
+        navigationView.setCheckedItem(R.id.nav_functions);
     }
 
-    public static void showFunctions(FragmentManager manager, int requestedTab, Function requestedFunction){
+    public static void showFunctions(FragmentManager manager, int requestedTab, Function requestedFunction, NavigationView navigationView){
         Bundle bundle = new Bundle(2);
-        bundle.putInt(FunctionsFragment.REQUESTED_TAB, requestedTab);
+        bundle.putInt(com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment.REQUESTED_TAB, requestedTab);
         bundle.putSerializable(FunctionsDescriptionFragment.requestedFunctionExtra, requestedFunction);
 
-        FunctionsFragment fragment = new FunctionsFragment();
+        com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment fragment = new com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment();
         fragment.setArguments(bundle);
 
         changeContent(fragment, manager);
+        navigationView.setCheckedItem(R.id.nav_functions);
     }
 
-    public static void showAbout(FragmentManager manager){
+    public static void showAbout(FragmentManager manager, NavigationView navigationView){
         changeContent(new AboutFragment(), manager);
+        navigationView.setCheckedItem(R.id.nav_about);
     }
 
-    public static void showIntroduction(FragmentManager manager){
+    public static void showIntroduction(FragmentManager manager, NavigationView navigationView){
         changeContent(new IntroductionFragment(), manager);
+        navigationView.setCheckedItem(R.id.nav_introduction);
     }
 
-    public static void showTestResults(Psychotype[] results, FragmentManager manager){
+    public static void showTestResults(Psychotype[] results, FragmentManager manager, NavigationView navigationView){
         Bundle bundle = new Bundle(1);
         bundle.putParcelableArray(TestResultsFragment.testResultsExtra, results);
 
@@ -59,23 +66,27 @@ public final class NavigationHelper {
         fragment.setArguments(bundle);
 
         changeContent(fragment, manager);
+        navigationView.setCheckedItem(R.id.nav_test);
     }
 
-    public static void showTypeDescription(Psychotype type, FragmentManager manager) {
+    public static void showTypeDescription(Psychotype type, FragmentManager manager, NavigationView navigationView) {
         Bundle bundle = new Bundle(1);
         bundle.putSerializable(PsychotypesFragment.psychotypeExtra, type);
 
         PsychotypeDescriptionFragment fragment = new PsychotypeDescriptionFragment();
         fragment.setArguments(bundle);
         changeContent(fragment, manager);
+        navigationView.setCheckedItem(R.id.nav_psychotypes);
     }
 
-    public static void showRelationships(FragmentManager manager){
+    public static void showRelationships(FragmentManager manager, NavigationView navigationView){
         changeContent(new RelationshipsFragment(), manager);
+        navigationView.setCheckedItem(R.id.nav_relationships);
     }
 
-    public static void showAspectsAndFunctions(FragmentManager manager){
-        changeContent(new AspectsAndFunctionsFragment(), manager);
+    public static void showAspectsAndFunctions(FragmentManager manager, NavigationView navigationView){
+        changeContent(new AspectAndFunctionsFragment(), manager);
+        navigationView.setCheckedItem(R.id.nav_aspects_and_functions);
     }
 
     private static void changeContent(Fragment fragment, FragmentManager manager){

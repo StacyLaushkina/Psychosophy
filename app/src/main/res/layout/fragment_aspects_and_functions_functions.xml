@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/basic_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/functions_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TitleTextStyle"
+            android:text="@string/functions_title"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/basic_margin"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/color_primary_border_background">
+            <ImageView
+                android:id="@+id/first_function_image"
+                android:layout_width="@dimen/aspects_and_functions_image_size"
+                android:layout_height="@dimen/aspects_and_functions_image_size"
+                android:src="@drawable/ic_hammer"
+                android:layout_margin="@dimen/basic_margin"
+                android:scaleType="centerInside"
+                android:layout_alignTop="@+id/first_function_text"
+                android:layout_alignBottom="@+id/first_function_text"/>
+
+            <TextView
+                android:id="@+id/first_function_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:layout_margin="@dimen/basic_margin"
+                android:layout_toEndOf="@+id/first_function_image"/>
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_height="@dimen/line_thickness"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:background="@color/colorPrimary"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/color_primary_border_background">
+            <ImageView
+                android:id="@+id/second_function_image"
+                android:layout_width="@dimen/aspects_and_functions_image_size"
+                android:layout_height="@dimen/aspects_and_functions_image_size"
+                android:src="@drawable/ic_sea_waves"
+                android:layout_margin="@dimen/basic_margin"
+                android:scaleType="centerInside"
+                android:layout_alignTop="@+id/second_function_text"
+                android:layout_alignBottom="@+id/second_function_text"/>
+
+            <TextView
+                android:id="@+id/second_function_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:layout_margin="@dimen/basic_margin"
+                android:layout_toEndOf="@+id/second_function_image"/>
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_height="@dimen/line_thickness"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:background="@color/colorPrimary"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/color_primary_border_background">
+            <ImageView
+                android:id="@+id/third_function_image"
+                android:layout_width="@dimen/aspects_and_functions_image_size"
+                android:layout_height="@dimen/aspects_and_functions_image_size"
+                android:src="@drawable/ic_engine"
+                android:layout_margin="@dimen/basic_margin"
+                android:scaleType="centerInside"
+                android:layout_alignTop="@+id/third_function_text"
+                android:layout_alignBottom="@+id/third_function_text"/>
+
+            <TextView
+                android:id="@+id/third_function_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:layout_margin="@dimen/basic_margin"
+                android:layout_toEndOf="@+id/third_function_image"/>
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_height="@dimen/line_thickness"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:background="@color/colorPrimary"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/color_primary_border_background">
+            <ImageView
+                android:id="@+id/forth_function_image"
+                android:layout_width="@dimen/aspects_and_functions_image_size"
+                android:layout_height="@dimen/aspects_and_functions_image_size"
+                android:src="@drawable/ic_empty_flag"
+                android:layout_margin="@dimen/basic_margin"
+                android:scaleType="centerInside"
+                android:layout_alignTop="@+id/forth_function_text"
+                android:layout_alignBottom="@+id/forth_function_text"/>
+
+            <TextView
+                android:id="@+id/forth_function_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:layout_margin="@dimen/basic_margin"
+                android:layout_toEndOf="@+id/forth_function_image"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/function_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MediumSizeTextStyle"
+            android:layout_margin="@dimen/basic_margin"/>
+
+    </LinearLayout>
+</ScrollView>

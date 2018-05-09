@@ -34,7 +34,7 @@ public class PsychotypesFragment extends BaseFragment {
 
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.basic_margin);
         recyclerView.addItemDecoration(new SpacesPsychotypeItemDecoration(spacingInPixels));
-        recyclerView.setAdapter(new PsychotypesAdapter(Psychotype.values(), getActivity(), getFragmentManager()));
+        recyclerView.setAdapter(new PsychotypesAdapter(Psychotype.values(), getActivity(), getFragmentManager(), getNavigationView()));
     }
 
     @Override

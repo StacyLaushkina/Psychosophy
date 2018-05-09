@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
@@ -34,9 +35,7 @@ public class PsychotypeDescriptionFragment extends BaseFragment {
         descriptionViewPager.addOnPageChangeListener(
                 new ViewPager.OnPageChangeListener() {
                     @Override
-                    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-                    }
+                    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
 
                     @Override
                     public void onPageSelected(int position) {
@@ -44,9 +43,7 @@ public class PsychotypeDescriptionFragment extends BaseFragment {
                     }
 
                     @Override
-                    public void onPageScrollStateChanged(int state) {
-
-                    }
+                    public void onPageScrollStateChanged(int state) {}
                 }
         );
 

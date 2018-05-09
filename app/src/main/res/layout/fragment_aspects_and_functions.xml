@@ -1,37 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent">
-    <LinearLayout
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/aspects_and_functions_pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/basic_margin"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/switch_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/switch_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/aspects_and_functions_switcher_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:background="@drawable/color_primary_border_background">
+
+        <ImageButton
+            android:id="@+id/switch_less_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/basic_margin"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_action_less"
+            android:visibility="invisible"/>
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/TitleTextStyle"
-            android:text="@string/aspects_title"/>
+            android:layout_height="@dimen/aspects_and_functions_switcher_height"
+            android:id="@+id/switch_text_view"
+            style="@style/MediumSizeTextStyle"
+            android:gravity="center"
+            android:text="@string/functions_title"
+            android:layout_toEndOf="@+id/switch_less_button"
+            android:layout_toStartOf="@+id/switch_more_button"/>
 
-        <TextView
-            android:id="@+id/aspects_info_view"
+        <ImageButton
+            android:id="@+id/switch_more_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/MediumSizeTextStyle"/>
+            android:background="@android:color/transparent"
+            android:padding="@dimen/basic_margin"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_action_more"
+            android:layout_alignParentEnd="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/TitleTextStyle"
-            android:text="@string/functions_title"/>
+    </RelativeLayout>
 
-        <TextView
-            android:id="@+id/functions_info_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/MediumSizeTextStyle"/>
 
-    </LinearLayout>
-</ScrollView>
+</RelativeLayout>

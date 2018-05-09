@@ -9,14 +9,27 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/theory_author_info"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/basic_margin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/developer_info"
         android:layout_marginTop="@dimen/basic_margin"/>
 
     <TextView
-        android:id="@+id/developer_info_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/developer_info_link"
+        android:text="@string/designer_info"
+        android:layout_marginTop="@dimen/basic_margin"/>
+
+    <TextView
+        android:id="@+id/designer_info_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/designer_info_link"
         android:layout_marginBottom="@dimen/basic_margin"/>
 
     <TextView

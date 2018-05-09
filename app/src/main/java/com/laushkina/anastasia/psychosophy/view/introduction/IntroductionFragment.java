@@ -61,41 +61,45 @@ public class IntroductionFragment extends BaseFragment implements IIntroductionN
 
     @Override
     public void navigateToFirstFunction() {
-        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FIRST_FUNCTION,null);
+        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FIRST_FUNCTION,
+                null, getNavigationView());
     }
 
     @Override
     public void navigateToSecondFunction() {
-        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.SECOND_FUNCTION,null);
+        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.SECOND_FUNCTION,
+                null, getNavigationView());
     }
 
     @Override
     public void navigateToThirdFunction() {
-        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.THIRD_FUNCTION,null);
+        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.THIRD_FUNCTION,
+                null, getNavigationView());
     }
 
     @Override
     public void navigateToForthFunction() {
-        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FORTH_FUNCTION,null);
+        NavigationHelper.showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FORTH_FUNCTION,
+                null, getNavigationView());
     }
 
     @Override
     public void navigateToPsychotypes() {
-        NavigationHelper.showTypes(getActivity().getFragmentManager());
+        NavigationHelper.showTypes(getActivity().getFragmentManager(), getNavigationView());
     }
 
     @Override
     public void navigateToTest() {
-        NavigationHelper.showTest(getActivity().getFragmentManager());
+        NavigationHelper.showTest(getActivity().getFragmentManager(), getNavigationView());
     }
 
     @Override
     public void navigateToAspectsAnfFunctions() {
-        NavigationHelper.showAspectsAndFunctions(getActivity().getFragmentManager());
+        NavigationHelper.showAspectsAndFunctions(getActivity().getFragmentManager(), getNavigationView());
     }
 
     @Override
     public void navigateToRelationships() {
-        NavigationHelper.showRelationships(getActivity().getFragmentManager());
+        NavigationHelper.showRelationships(getActivity().getFragmentManager(), getNavigationView());
     }
 }

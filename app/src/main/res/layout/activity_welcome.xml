@@ -29,8 +29,8 @@
                 android:text="@string/start_test"
                 android:padding="@dimen/basic_margin"
                 android:layout_margin="@dimen/basic_margin"
-                android:background="@color/light_black"
-                android:textColor="@android:color/white"
+                android:background="@drawable/black_border_ripple_background"
+                android:textColor="@color/text_color"
                 android:onClick="@{() -> navigator.startTest()}"/>
 
             <Button
@@ -39,8 +39,8 @@
                 android:text="@string/study_theory"
                 android:padding="@dimen/basic_margin"
                 android:layout_margin="@dimen/basic_margin"
-                android:background="@color/light_grey"
-                android:textColor="@android:color/white"
+                android:background="@drawable/black_border_ripple_background"
+                android:textColor="@color/text_color"
                 android:onClick="@{() -> navigator.learnTheory()}"/>
         </LinearLayout>
 

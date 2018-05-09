@@ -4,10 +4,16 @@
     <dimen name="basic_margin">8dp</dimen>
     <dimen name="basic_small_margin">4dp</dimen>
 
+    <dimen name="line_thickness">1dp</dimen>
+    <dimen name="button_corner_radius">2dp</dimen>
+    <dimen name="button_border_width">1dp</dimen>
+
     <dimen name="inline_button_height">30dp</dimen>
     <dimen name="functions_at_position_hint_height">40dp</dimen>
+    <dimen name="aspects_and_functions_switcher_height">40dp</dimen>
     <dimen name="functions_at_position_button_height">60dp</dimen>
     <dimen name="menu_header_image_size">100dp</dimen>
+    <dimen name="aspects_and_functions_image_size">100dp</dimen>
     <dimen name="function_image_size">130dp</dimen>
     <dimen name="psychotype_full_image_size">150dp</dimen>
     <dimen name="psychotype_card_size">150dp</dimen>

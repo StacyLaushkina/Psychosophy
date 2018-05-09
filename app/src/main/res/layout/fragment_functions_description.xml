@@ -92,9 +92,9 @@
 
                     android:text="@{viewModel.emotionTitle}"
                     android:onClick="@{() -> selectListener.onEmotionClick()}"
-                    android:background="@color/colorPrimary"
+                    android:background="@drawable/color_primary_border_ripple_background"
+                    android:textColor="@color/colorPrimaryDark"
                     android:ellipsize="end"
-                    android:textColor="@android:color/white"
 
                     android:maxHeight="@dimen/functions_at_position_button_height"
                     android:padding="@dimen/basic_small_margin"
@@ -109,9 +109,9 @@
 
                     android:text="@{viewModel.logicTitle}"
                     android:onClick="@{() -> selectListener.onLogicClick()}"
-                    android:background="@color/colorPrimary"
+                    android:background="@drawable/color_primary_border_ripple_background"
+                    android:textColor="@color/colorPrimaryDark"
                     android:ellipsize="end"
-                    android:textColor="@android:color/white"
 
                     android:maxHeight="@dimen/functions_at_position_button_height"
                     android:padding="@dimen/basic_small_margin"
@@ -127,9 +127,9 @@
 
                     android:text="@{viewModel.physicsTitle}"
                     android:onClick="@{() -> selectListener.onPhysicsClick()}"
-                    android:background="@color/colorPrimary"
+                    android:background="@drawable/color_primary_border_ripple_background"
+                    android:textColor="@color/colorPrimaryDark"
                     android:ellipsize="end"
-                    android:textColor="@android:color/white"
 
                     android:maxHeight="@dimen/functions_at_position_button_height"
                     android:padding="@dimen/basic_small_margin"/>
@@ -143,9 +143,9 @@
 
                     android:text="@{viewModel.willTitle}"
                     android:onClick="@{() -> selectListener.onWillClick()}"
-                    android:background="@color/colorPrimary"
+                    android:background="@drawable/color_primary_border_ripple_background"
+                    android:textColor="@color/colorPrimaryDark"
                     android:ellipsize="end"
-                    android:textColor="@android:color/white"
 
                     android:maxHeight="@dimen/functions_at_position_button_height"
                     android:padding="@dimen/basic_small_margin"

@@ -27,6 +27,13 @@
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
+    <style name="ButtonStyle" parent="android:Widget.Button">
+        <item name="android:background">@drawable/color_primary_border_ripple_background</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:padding">@dimen/basic_small_margin</item>
+        <item name="android:layout_margin">@dimen/basic_small_margin</item>
+    </style>
+
     <style name="NavigationDrawerStyle">
         <item name="android:textSize">20sp</item><!-- text size in menu-->
         <item name="android:fontFamily">sans-serif-thin</item><!-- text size in menu-->

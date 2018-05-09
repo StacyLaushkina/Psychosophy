@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/basic_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/aspects_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TitleTextStyle"
+            android:text="@string/aspects_title"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/basic_margin"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/color_primary_border_background"
+            android:layout_marginBottom="@dimen/basic_small_margin">
+            <ImageView
+                android:id="@+id/will_image"
+                android:layout_width="@dimen/aspects_and_functions_image_size"
+                android:layout_height="@dimen/aspects_and_functions_image_size"
+                android:src="@drawable/ic_will"
+                android:layout_margin="@dimen/basic_margin"
+                android:scaleType="centerInside"
+                android:layout_alignTop="@+id/aspects_info_will"
+                android:layout_alignBottom="@+id/aspects_info_will"/>
+
+            <TextView
+                android:id="@+id/aspects_info_will"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:layout_margin="@dimen/basic_margin"
+                android:layout_toEndOf="@+id/will_image"/>
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_height="@dimen/line_thickness"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:background="@color/colorPrimary"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/color_primary_border_background"
+            android:layout_marginBottom="@dimen/basic_small_margin">
+            <ImageView
+                android:id="@+id/logic_image"
+                android:layout_width="@dimen/aspects_and_functions_image_size"
+                android:layout_height="@dimen/aspects_and_functions_image_size"
+                android:src="@drawable/ic_logic"
+                android:layout_margin="@dimen/basic_margin"
+                android:scaleType="centerInside"
+                android:layout_alignTop="@+id/aspects_info_logic"
+                android:layout_alignBottom="@+id/aspects_info_logic"/>
+
+            <TextView
+                android:id="@+id/aspects_info_logic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:layout_margin="@dimen/basic_margin"
+                android:layout_toEndOf="@+id/logic_image"/>
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_height="@dimen/line_thickness"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:background="@color/colorPrimary"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/color_primary_border_background"
+            android:layout_marginBottom="@dimen/basic_small_margin">
+            <ImageView
+                android:id="@+id/image_emotion"
+                android:layout_width="@dimen/aspects_and_functions_image_size"
+                android:layout_height="@dimen/aspects_and_functions_image_size"
+                android:src="@drawable/ic_emotion"
+                android:layout_margin="@dimen/basic_margin"
+                android:scaleType="centerInside"
+                android:layout_alignTop="@+id/aspects_info_emotion"
+                android:layout_alignBottom="@+id/aspects_info_emotion"/>
+
+            <TextView
+                android:id="@+id/aspects_info_emotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:layout_margin="@dimen/basic_margin"
+                android:layout_toEndOf="@+id/image_emotion"/>
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_height="@dimen/line_thickness"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:background="@color/colorPrimary"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/color_primary_border_background"
+            android:layout_marginBottom="@dimen/basic_small_margin">
+            <ImageView
+                android:id="@+id/physics_image"
+                android:layout_width="@dimen/aspects_and_functions_image_size"
+                android:layout_height="@dimen/aspects_and_functions_image_size"
+                android:src="@drawable/ic_physics"
+                android:layout_margin="@dimen/basic_margin"
+                android:scaleType="centerInside"
+                android:layout_alignTop="@+id/aspects_info_physics"
+                android:layout_alignBottom="@+id/aspects_info_physics"/>
+
+            <TextView
+                android:id="@+id/aspects_info_physics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:layout_margin="@dimen/basic_margin"
+                android:layout_toEndOf="@+id/physics_image"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -2,6 +2,7 @@ package com.laushkina.anastasia.psychosophy.view.psychotypes;
 
 import android.app.FragmentManager;
 import android.content.Context;
+import android.support.design.widget.NavigationView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,11 +21,13 @@ public class PsychotypesAdapter extends RecyclerView.Adapter<PsychotypesAdapter.
     private Psychotype[] psychotypes;
     private Context context;
     private FragmentManager fragmentManager;
+    private NavigationView navigationView;
 
-    public PsychotypesAdapter(Psychotype[] psychotypes, Context context, FragmentManager fragmentManager){
+    public PsychotypesAdapter(Psychotype[] psychotypes, Context context, FragmentManager fragmentManager, NavigationView navigationView){
         this.psychotypes = psychotypes;
         this.context = context;
         this.fragmentManager = fragmentManager;
+        this.navigationView = navigationView;
     }
 
     @Override
@@ -61,6 +64,6 @@ public class PsychotypesAdapter extends RecyclerView.Adapter<PsychotypesAdapter.
     }
 
     private void onClick(int position){
-        NavigationHelper.showTypeDescription(psychotypes[position], fragmentManager);
+        NavigationHelper.showTypeDescription(psychotypes[position], fragmentManager, navigationView);
     }
 }

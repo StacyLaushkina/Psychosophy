@@ -13,7 +13,7 @@
         android:text="@{viewModel.question}"
         android:gravity="center"
         style="@style/MediumSizeTextStyle"
-        android:background="@color/mint"
+        android:background="@drawable/color_primary_border_background"
         android:padding="@dimen/basic_margin"/>
 
     <RadioGroup

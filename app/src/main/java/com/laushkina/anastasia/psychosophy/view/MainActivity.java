@@ -41,12 +41,10 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
 
         switch (screen) {
             case test:
-                NavigationHelper.showTest(getFragmentManager());
-                getNavigationView().setCheckedItem(R.id.nav_test);
+                NavigationHelper.showTest(getFragmentManager(), getNavigationView());
                 break;
             case introduction:
-                NavigationHelper.showIntroduction(getFragmentManager());
-                getNavigationView().setCheckedItem(R.id.nav_introduction);
+                NavigationHelper.showIntroduction(getFragmentManager(), getNavigationView());
         }
     }
 
@@ -57,25 +55,25 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
 
         switch (id) {
             case R.id.nav_introduction:
-                NavigationHelper.showIntroduction(getFragmentManager());
+                NavigationHelper.showIntroduction(getFragmentManager(), getNavigationView());
                 break;
             case R.id.nav_test:
-                NavigationHelper.showTest(getFragmentManager());
+                NavigationHelper.showTest(getFragmentManager(), getNavigationView());
                 break;
             case R.id.nav_psychotypes:
-                NavigationHelper.showTypes(getFragmentManager());
+                NavigationHelper.showTypes(getFragmentManager(), getNavigationView());
                 break;
             case R.id.nav_relationships:
-                NavigationHelper.showRelationships(getFragmentManager());
+                NavigationHelper.showRelationships(getFragmentManager(), getNavigationView());
                 break;
             case R.id.nav_functions:
-                NavigationHelper.showFunctions(getFragmentManager());
+                NavigationHelper.showFunctions(getFragmentManager(), getNavigationView());
                 break;
             case R.id.nav_about:
-                NavigationHelper.showAbout(getFragmentManager());
+                NavigationHelper.showAbout(getFragmentManager(), getNavigationView());
                 break;
             case R.id.nav_aspects_and_functions:
-                NavigationHelper.showAspectsAndFunctions(getFragmentManager());
+                NavigationHelper.showAspectsAndFunctions(getFragmentManager(), getNavigationView());
 
         }
 

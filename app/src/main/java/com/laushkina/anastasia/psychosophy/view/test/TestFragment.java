@@ -81,12 +81,12 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
 
     @Override
     public void showExceptionResultDescription(){
-        NavigationHelper.showTestResults(null, getFragmentManager());
+        NavigationHelper.showTestResults(null, getFragmentManager(), getNavigationView());
     }
 
     @Override
     public void showTypeDescription(Psychotype[] psychotypes) {
-        NavigationHelper.showTestResults(psychotypes, getFragmentManager());
+        NavigationHelper.showTestResults(psychotypes, getFragmentManager(), getNavigationView());
     }
 
     @Override

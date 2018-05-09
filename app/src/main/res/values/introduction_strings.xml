@@ -5,22 +5,13 @@
     <string name="introduction_psychosophy_definition"><![CDATA[
      <p> Типология, которая изучает <u>приоритеты</u>  человека, его собственные представления о своем внутреннем мире и своих возможностях.</p>
 
-    <p>В ней имеется четыре аспекта:<br>
+    <p>В ней имеется четыре аспекта, функции:<br>
     <i>Воля, Логика, Эмоция, Физика.</i><br>
     Им сопостовляются четыре сферы бытия:<br>
     <i> Дух, Разум, Душа и Тело.</i></p>
 
-    Каждый аспект занимает место в списке прироритетов человека:
+   Каждый аспект занимает место в списке прироритетов человека.
     ]]></string>
-
-    <string name="introduction_psychosophy_first_priority">Первое:</string>
-    <string name="introduction_psychosophy_first_priority_button">I функция</string>
-    <string name="introduction_psychosophy_second_priority">Второе:</string>
-    <string name="introduction_psychosophy_second_priority_button">II функция</string>
-    <string name="introduction_psychosophy_third_priority">Третье:</string>
-    <string name="introduction_psychosophy_third_priority_button">III функция</string>
-    <string name="introduction_psychosophy_forth_priority">Четвертое:</string>
-    <string name="introduction_psychosophy_forth_priority_button">IV функция</string>
 
     <string name="introduction_psychosophy_aspects">То, на какую позицию попадет аспект, определяет,
         как человек будет относиться ко всему, что с ним связано, насколько оно будет для него ценным.</string>

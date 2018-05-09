@@ -23,17 +23,17 @@ public class AboutFragment extends BaseFragment{
     }
 
     private void initialize(View view){
-        TextView developerAdressLink = view.findViewById(R.id.developer_info_link);
-        Linkify.addLinks(developerAdressLink, Linkify.WEB_URLS|Linkify.EMAIL_ADDRESSES);
+        TextView designerAddressLink = view.findViewById(R.id.designer_info_link);
+        Linkify.addLinks(designerAddressLink, Linkify.WEB_URLS|Linkify.EMAIL_ADDRESSES);
 
-        TextView afanasievAdressLink = view.findViewById(R.id.afanasiev_info_link);
-        Linkify.addLinks(afanasievAdressLink, Linkify.WEB_URLS);
+        TextView afanasievAddressLink = view.findViewById(R.id.afanasiev_info_link);
+        Linkify.addLinks(afanasievAddressLink, Linkify.WEB_URLS);
 
-        TextView relationshipsAdressLink = view.findViewById(R.id.relationships_info_link);
-        Linkify.addLinks(relationshipsAdressLink, Linkify.WEB_URLS);
+        TextView relationshipsAddressLink = view.findViewById(R.id.relationships_info_link);
+        Linkify.addLinks(relationshipsAddressLink, Linkify.WEB_URLS);
 
-        TextView introductionAdressLink = view.findViewById(R.id.introduction_info_link);
-        Linkify.addLinks(introductionAdressLink, Linkify.WEB_URLS);
+        TextView introductionAddressLink = view.findViewById(R.id.introduction_info_link);
+        Linkify.addLinks(introductionAddressLink, Linkify.WEB_URLS);
         setTitle();
     }
 

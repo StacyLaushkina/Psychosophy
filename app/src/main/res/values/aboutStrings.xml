@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="developer_info">Разработчик: Лаушкина Анастасия</string>
-    <string name="developer_info_link">stacy.laushkina@gmail.com</string>
+    <string name="theory_author_info">Основоположником психософии является Афанасьев Александр Юрьевич, описавший её в своей книге \"Синтаксис любви\".</string>
+
+    <string name="developer_info">Разработчик: Лаушкина А.К.</string>
+
+    <string name="designer_info">Дизайн: Гладкова А.?</string>
+    <string name="designer_info_link">xxx@gmail.com</string>
 
     <string name="afanasiev_info">При поддерже Афанасьевой Е.К.</string>
     <string name="afanasiev_info_link">http://www.aleafan.org</string>

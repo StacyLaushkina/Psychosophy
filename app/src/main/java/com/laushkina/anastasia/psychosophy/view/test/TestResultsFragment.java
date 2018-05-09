@@ -38,7 +38,7 @@ public class TestResultsFragment extends BaseFragment {
 
         RecyclerView recyclerView = getResultsRecyclerView(view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setAdapter(new PsychotypesAdapter(testResult, getActivity(), getFragmentManager()));
+        recyclerView.setAdapter(new PsychotypesAdapter(testResult, getActivity(), getFragmentManager(), getNavigationView()));
     }
 
     private String getTestResultsDescription(Psychotype[] results){

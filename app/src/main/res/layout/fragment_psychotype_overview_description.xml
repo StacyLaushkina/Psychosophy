@@ -29,10 +29,8 @@
             android:layout_height="wrap_content"
             android:text="@{viewModel.firstFunctionDescription}"
             android:onClick="@{() -> navigator.navigateToFirstFunction()}"
-            android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
-            android:layout_toEndOf="@+id/psychotype_image"
-            android:layout_margin="@dimen/basic_small_margin"/>
+            style="@style/ButtonStyle"
+            android:layout_toEndOf="@+id/psychotype_image" />
 
         <Button
             android:id="@+id/psychotype_second_function"
@@ -40,11 +38,9 @@
             android:layout_height="wrap_content"
             android:text="@{viewModel.secondFunctionDescription}"
             android:onClick="@{() -> navigator.navigateToSecondFunction()}"
-            android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
+            style="@style/ButtonStyle"
             android:layout_toEndOf="@+id/psychotype_image"
-            android:layout_below="@+id/psychotype_first_function"
-            android:layout_margin="@dimen/basic_small_margin"/>
+            android:layout_below="@+id/psychotype_first_function"/>
 
         <Button
             android:id="@+id/psychotype_third_function"
@@ -52,11 +48,9 @@
             android:layout_height="wrap_content"
             android:text="@{viewModel.thirdFunctionDescription}"
             android:onClick="@{() -> navigator.navigateToThirdFunction()}"
-            android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
+            style="@style/ButtonStyle"
             android:layout_toEndOf="@+id/psychotype_image"
-            android:layout_below="@+id/psychotype_second_function"
-            android:layout_margin="@dimen/basic_small_margin"/>
+            android:layout_below="@+id/psychotype_second_function"/>
 
         <Button
             android:id="@+id/psychotype_forth_function"
@@ -64,11 +58,9 @@
             android:layout_height="wrap_content"
             android:text="@{viewModel.forthFunctionDescription}"
             android:onClick="@{() -> navigator.navigateToForthFunction()}"
-            android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
+            style="@style/ButtonStyle"
             android:layout_toEndOf="@+id/psychotype_image"
-            android:layout_below="@+id/psychotype_third_function"
-            android:layout_margin="@dimen/basic_small_margin"/>
+            android:layout_below="@+id/psychotype_third_function"/>
 
         <ScrollView
             android:layout_width="wrap_content"
