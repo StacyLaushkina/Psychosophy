@@ -5,7 +5,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/basic_margin"
         android:orientation="vertical">
 
         <TextView
@@ -21,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@drawable/color_primary_border_background">
+            android:layout_marginBottom="@dimen/basic_small_margin">
             <ImageView
                 android:id="@+id/first_function_image"
                 android:layout_width="@dimen/aspects_and_functions_image_size"
@@ -41,16 +40,16 @@
                 android:layout_toEndOf="@+id/first_function_image"/>
         </RelativeLayout>
 
-        <!--<LinearLayout-->
-            <!--android:layout_height="@dimen/line_thickness"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:background="@color/colorPrimary"/>-->
+        <LinearLayout
+            android:layout_height="@dimen/line_thickness"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@drawable/color_primary_border_background">
+            android:layout_marginBottom="@dimen/basic_small_margin">
             <ImageView
                 android:id="@+id/second_function_image"
                 android:layout_width="@dimen/aspects_and_functions_image_size"
@@ -70,16 +69,16 @@
                 android:layout_toEndOf="@+id/second_function_image"/>
         </RelativeLayout>
 
-        <!--<LinearLayout-->
-            <!--android:layout_height="@dimen/line_thickness"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:background="@color/colorPrimary"/>-->
+        <LinearLayout
+            android:layout_height="@dimen/line_thickness"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@drawable/color_primary_border_background">
+            android:layout_marginBottom="@dimen/basic_small_margin">
             <ImageView
                 android:id="@+id/third_function_image"
                 android:layout_width="@dimen/aspects_and_functions_image_size"
@@ -99,16 +98,16 @@
                 android:layout_toEndOf="@+id/third_function_image"/>
         </RelativeLayout>
 
-        <!--<LinearLayout-->
-            <!--android:layout_height="@dimen/line_thickness"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:background="@color/colorPrimary"/>-->
+        <LinearLayout
+            android:layout_height="@dimen/line_thickness"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@drawable/color_primary_border_background">
+            android:layout_marginBottom="@dimen/basic_small_margin">
             <ImageView
                 android:id="@+id/forth_function_image"
                 android:layout_width="@dimen/aspects_and_functions_image_size"
@@ -128,9 +127,14 @@
                 android:layout_toEndOf="@+id/forth_function_image"/>
         </RelativeLayout>
 
+        <LinearLayout
+            android:layout_height="@dimen/line_thickness"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"/>
+
         <TextView
             android:id="@+id/function_info_text"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/MediumSizeTextStyle"
             android:layout_margin="@dimen/basic_margin"/>

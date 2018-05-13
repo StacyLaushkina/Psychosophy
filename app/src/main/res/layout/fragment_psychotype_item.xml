@@ -9,10 +9,11 @@
 
         <ImageView
             android:id="@+id/psychotype_image"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/ic_elpw"
             android:layout_above="@+id/psychotype_title"
+            android:gravity="center"
             android:paddingTop="@dimen/basic_small_margin"
             android:background="@drawable/white_ripple"/>
 
@@ -22,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:text="@string/psychotype_description"
-            android:textColor="@color/light_black"
+            android:textColor="@color/tundora"
             android:gravity="center"
             android:padding="@dimen/basic_small_margin"/>
 

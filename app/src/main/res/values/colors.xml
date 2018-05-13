@@ -6,9 +6,11 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="black">#000000</color>
-    <color name="light_black">#433F40</color>
-    <color name="text_color">@color/light_black</color>
-    <color name="dark_white">#EEEEEE</color>
-    <color name="light_grey">#BFBFBF</color>
-    <color name="dark_grey">#777777</color>
+
+    <color name="tundora">#433F40</color>
+    <color name="thunder">#231F20</color>
+    <color name="text_color">@color/tundora</color>
+    <color name="gallery">#EEEEEE</color>
+    <color name="silver">#BFBFBF</color>
+    <color name="boulder">#777777</color>
 </resources>

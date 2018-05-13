@@ -92,8 +92,8 @@
 
                     android:text="@{viewModel.emotionTitle}"
                     android:onClick="@{() -> selectListener.onEmotionClick()}"
-                    android:background="@drawable/color_primary_border_ripple_background"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/gallery"
                     android:ellipsize="end"
 
                     android:maxHeight="@dimen/functions_at_position_button_height"
@@ -109,8 +109,8 @@
 
                     android:text="@{viewModel.logicTitle}"
                     android:onClick="@{() -> selectListener.onLogicClick()}"
-                    android:background="@drawable/color_primary_border_ripple_background"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/gallery"
                     android:ellipsize="end"
 
                     android:maxHeight="@dimen/functions_at_position_button_height"
@@ -127,8 +127,8 @@
 
                     android:text="@{viewModel.physicsTitle}"
                     android:onClick="@{() -> selectListener.onPhysicsClick()}"
-                    android:background="@drawable/color_primary_border_ripple_background"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/gallery"
                     android:ellipsize="end"
 
                     android:maxHeight="@dimen/functions_at_position_button_height"
@@ -143,8 +143,8 @@
 
                     android:text="@{viewModel.willTitle}"
                     android:onClick="@{() -> selectListener.onWillClick()}"
-                    android:background="@drawable/color_primary_border_ripple_background"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/gallery"
                     android:ellipsize="end"
 
                     android:maxHeight="@dimen/functions_at_position_button_height"

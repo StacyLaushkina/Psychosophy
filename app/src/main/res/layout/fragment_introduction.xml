@@ -49,7 +49,7 @@
                     android:layout_height="@dimen/inline_button_height"
                     android:text="@string/first_function_title"
                     android:onClick="@{() -> navigator.navigateToFirstFunction()}"
-                    style="@style/ButtonStyle"/>
+                    style="@style/InTextButtonStyle"/>
 
                 <Button
                     android:layout_weight="0.25"
@@ -57,7 +57,7 @@
                     android:layout_height="@dimen/inline_button_height"
                     android:text="@string/second_function_title"
                     android:onClick="@{() -> navigator.navigateToSecondFunction()}"
-                    style="@style/ButtonStyle"/>
+                    style="@style/InTextButtonStyle"/>
 
                 <Button
                     android:layout_weight="0.25"
@@ -65,7 +65,7 @@
                     android:layout_height="@dimen/inline_button_height"
                     android:text="@string/third_function_title"
                     android:onClick="@{() -> navigator.navigateToThirdFunction()}"
-                    style="@style/ButtonStyle"/>
+                    style="@style/InTextButtonStyle"/>
 
                 <Button
                     android:layout_weight="0.25"
@@ -73,7 +73,7 @@
                     android:layout_height="@dimen/inline_button_height"
                     android:text="@string/forth_function_title"
                     android:onClick="@{() -> navigator.navigateToForthFunction()}"
-                    style="@style/ButtonStyle"/>
+                    style="@style/InTextButtonStyle"/>
 
             </LinearLayout>
 
@@ -92,7 +92,7 @@
                 android:layout_height="@dimen/inline_button_height"
                 android:text="@string/introduction_psychosophy_aspects_and_functions"
                 android:onClick="@{() -> navigator.navigateToAspectsAnfFunctions()}"
-                style="@style/ButtonStyle"
+                style="@style/InTextButtonStyle"
                 android:layout_below="@+id/aspects_and_functions_text" />
 
             <!--PSYCHOTYPES-->
@@ -117,14 +117,16 @@
                     android:layout_height="@dimen/inline_button_height"
                     android:text="@string/introduction_psychosophy_psychotypes_button"
                     android:onClick="@{() -> navigator.navigateToPsychotypes()}"
-                    style="@style/ButtonStyle"/>
+                    style="@style/InTextButtonStyle"
+                    android:layout_margin="@dimen/basic_margin"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/inline_button_height"
                     android:text="@string/introduction_psychosophy_my_psychotype_button"
                     android:onClick="@{() -> navigator.navigateToTest()}"
-                    style="@style/ButtonStyle"/>
+                    style="@style/InTextButtonStyle"
+                    android:layout_margin="@dimen/basic_margin"/>
             </LinearLayout>
 
             <!--RELATIONSHIPS-->
@@ -142,7 +144,7 @@
                 android:layout_height="@dimen/inline_button_height"
                 android:text="@string/introduction_psychosophy_relationships_button"
                 android:onClick="@{() -> navigator.navigateToRelationships()}"
-                style="@style/ButtonStyle"
+                style="@style/InTextButtonStyle"
                 android:layout_below="@+id/relationships_description" />
 
         </RelativeLayout>

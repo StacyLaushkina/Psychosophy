@@ -1,15 +1,19 @@
 package com.laushkina.anastasia.psychosophy.view.relationships;
 
+import android.animation.Animator;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ScrollView;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
 import com.laushkina.anastasia.psychosophy.R;
@@ -17,9 +21,6 @@ import com.laushkina.anastasia.psychosophy.databinding.FragmentRelationshipsBind
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.relationships.PsychotypeRelationships;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
-import com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeDescriptionGetter;
-
-import java.util.Arrays;
 
 import javax.inject.Inject;
 
@@ -72,9 +73,43 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        calculate();
+        Psychotype firstSelected = getFirstType();
+        if (firstSelected == null) return;
+
+        Psychotype secondSelected = getSecondType();
+        if (secondSelected == null) return;
+
+        animateTypesSelection();
+        calculate(firstSelected, secondSelected);
         // Scroll to the top
-        getActivity().findViewById(R.id.relationships_scroller).scrollTo(0, 0);
+        getRelationshipsContainer().scrollTo(0, 0);
+    }
+
+    private void animateTypesSelection(){
+
+        DisplayMetrics metrics = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+
+        TranslateAnimation anim = new TranslateAnimation(0,0, 0, - getSpinnersContainer().getTop());
+        anim.setDuration(100);
+
+        anim.setAnimationListener(new TranslateAnimation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                getRelationshipsContainer().setVisibility(View.VISIBLE);
+                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)getSpinnersContainer().getLayoutParams();
+                layoutParams.removeRule(RelativeLayout.CENTER_IN_PARENT);
+                getSpinnersContainer().setLayoutParams(layoutParams);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });
+
+        getSpinnersContainer().startAnimation(anim);
     }
 
     @Override
@@ -92,8 +127,8 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
         return (Psychotype) firstTypeSpinner.getSelectedItem();
     }
 
-    public void calculate(){
-        PsychotypeRelationships relationships = presenter.calcRelationships(getFirstType(),getSecondType(), this);
+    public void calculate(Psychotype fistType, Psychotype secondType){
+        PsychotypeRelationships relationships = presenter.calcRelationships(fistType, secondType, this);
         viewModel.setFirstFunctionRelationshipsTitle(relationships.getFirstFunctionRelationshipsTitle());
         viewModel.setFirstFunctionRelationships(relationships.getFirstFunctionRelationships());
         viewModel.setSecondFunctionRelationshipsTitle(relationships.getSecondFunctionRelationshipsTitle());
@@ -123,6 +158,14 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
 
     private Spinner getSecondTypeSpinner(){
         return getActivity().findViewById(R.id.second_type_spinner);
+    }
+
+    private View getSpinnersContainer(){
+        return getActivity().findViewById(R.id.spinner_container);
+    }
+
+    private View getRelationshipsContainer(){
+        return getActivity().findViewById(R.id.relationships_scroller);
     }
 
     @Override

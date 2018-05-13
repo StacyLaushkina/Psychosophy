@@ -2,12 +2,21 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/basic_margin">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/aspects_and_functions_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/switch_layout_separator"/>
+
+    <LinearLayout
+        android:id="@+id/switch_layout_separator"
+        android:layout_height="@dimen/line_thickness"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/silver"
         android:layout_above="@+id/switch_layout"/>
 
     <RelativeLayout
@@ -16,8 +25,7 @@
         android:layout_height="@dimen/aspects_and_functions_switcher_height"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:orientation="horizontal"
-        android:background="@drawable/color_primary_border_background">
+        android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/switch_less_button"

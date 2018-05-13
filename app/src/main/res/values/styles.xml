@@ -25,11 +25,19 @@
     <style name="TextViewStyle" parent="android:Widget.TextView">
         <item name="android:textColor">@color/text_color</item>
         <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingExtra">@dimen/text_line_spacing</item>
+    </style>
+
+    <style name="InTextButtonStyle" parent="android:Widget.Button">
+        <item name="android:background">@drawable/color_primary_border_ripple_background</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:padding">@dimen/basic_small_margin</item>
+        <item name="android:layout_margin">@dimen/basic_small_margin</item>
     </style>
 
     <style name="ButtonStyle" parent="android:Widget.Button">
-        <item name="android:background">@drawable/color_primary_border_ripple_background</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/gallery</item>
         <item name="android:padding">@dimen/basic_small_margin</item>
         <item name="android:layout_margin">@dimen/basic_small_margin</item>
     </style>

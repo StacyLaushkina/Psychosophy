@@ -4,9 +4,9 @@
         <variable
             name="viewModel"
             type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.DescriptionViewModel"/>
-    <variable
-        name="navigator"
-        type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.IFunctionsNavigator"/>
+        <variable
+            name="navigator"
+            type="com.laushkina.anastasia.psychosophy.view.psychotypeDescription.IFunctionsNavigator"/>
     </data>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -23,53 +23,12 @@
             android:layout_alignTop="@+id/psychotype_first_function"
             android:layout_alignBottom="@+id/psychotype_forth_function"/>
 
-        <Button
-            android:id="@+id/psychotype_first_function"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{viewModel.firstFunctionDescription}"
-            android:onClick="@{() -> navigator.navigateToFirstFunction()}"
-            style="@style/ButtonStyle"
-            android:layout_toEndOf="@+id/psychotype_image"
-            android:layout_margin="@dimen/basic_margin"/>
-
-        <Button
-            android:id="@+id/psychotype_second_function"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{viewModel.secondFunctionDescription}"
-            android:onClick="@{() -> navigator.navigateToSecondFunction()}"
-            style="@style/ButtonStyle"
-            android:layout_toEndOf="@+id/psychotype_image"
-            android:layout_below="@+id/psychotype_first_function"
-            android:layout_margin="@dimen/basic_margin"/>
-
-        <Button
-            android:id="@+id/psychotype_third_function"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{viewModel.thirdFunctionDescription}"
-            android:onClick="@{() -> navigator.navigateToThirdFunction()}"
-            style="@style/ButtonStyle"
-            android:layout_toEndOf="@+id/psychotype_image"
-            android:layout_below="@+id/psychotype_second_function"
-            android:layout_margin="@dimen/basic_margin"/>
-
-        <Button
-            android:id="@+id/psychotype_forth_function"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{viewModel.forthFunctionDescription}"
-            android:onClick="@{() -> navigator.navigateToForthFunction()}"
-            style="@style/ButtonStyle"
-            android:layout_toEndOf="@+id/psychotype_image"
-            android:layout_below="@+id/psychotype_third_function"
-            android:layout_margin="@dimen/basic_margin"/>
-
         <ScrollView
+            android:id="@+id/psychotype_short_review_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/psychotype_image"
+            android:layout_toEndOf="@+id/psychotype_image"
+            android:layout_toStartOf="@+id/psychotype_first_function"
             android:layout_margin="@dimen/basic_margin">
             <TextView
                 android:id="@+id/psychotype_short_review"
@@ -78,6 +37,49 @@
                 android:text="@{viewModel.shortDescription}"
                 style="@style/MediumSizeTextStyle"/>
         </ScrollView>
+
+        <Button
+            android:id="@+id/psychotype_first_function"
+            android:layout_width="@dimen/function_button_landscape_width"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.firstFunctionDescription}"
+            android:onClick="@{() -> navigator.navigateToFirstFunction()}"
+            style="@style/ButtonStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/basic_margin"/>
+
+        <Button
+            android:id="@+id/psychotype_second_function"
+            android:layout_width="@dimen/function_button_landscape_width"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.secondFunctionDescription}"
+            android:onClick="@{() -> navigator.navigateToSecondFunction()}"
+            style="@style/ButtonStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/psychotype_first_function"
+            android:layout_margin="@dimen/basic_margin"/>
+
+        <Button
+            android:id="@+id/psychotype_third_function"
+            android:layout_width="@dimen/function_button_landscape_width"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.thirdFunctionDescription}"
+            android:onClick="@{() -> navigator.navigateToThirdFunction()}"
+            style="@style/ButtonStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/psychotype_second_function"
+            android:layout_margin="@dimen/basic_margin"/>
+
+        <Button
+            android:id="@+id/psychotype_forth_function"
+            android:layout_width="@dimen/function_button_landscape_width"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.forthFunctionDescription}"
+            android:onClick="@{() -> navigator.navigateToForthFunction()}"
+            style="@style/ButtonStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/psychotype_third_function"
+            android:layout_margin="@dimen/basic_margin"/>
 
     </RelativeLayout>
 </layout>

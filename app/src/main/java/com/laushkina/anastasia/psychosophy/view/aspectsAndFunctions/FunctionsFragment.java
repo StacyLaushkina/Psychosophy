@@ -38,5 +38,6 @@ public class FunctionsFragment extends Fragment{
 
         TextView moreInfo = view.findViewById(R.id.function_info_text);
         moreInfo.setText(Html.fromHtml(getResources().getString(R.string.functions_info)));
+//        moreInfo.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
     }
 }

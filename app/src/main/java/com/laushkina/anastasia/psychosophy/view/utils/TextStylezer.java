@@ -17,7 +17,7 @@ public class TextStylezer {
             int flags = spannable.getSpanFlags(quoteSpan);
             spannable.removeSpan(quoteSpan);
             spannable.setSpan(new CustomQuoteSpan(
-                            context.getResources().getColor(R.color.dark_white),
+                            context.getResources().getColor(R.color.gallery),
                     context.getResources().getColor(R.color.colorPrimary),
                             10,
                             50),
