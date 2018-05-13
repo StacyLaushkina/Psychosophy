@@ -39,6 +39,10 @@ public class AboutFragment extends BaseFragment{
         Linkify.addLinks(introductionAddressLink, Linkify.WEB_URLS);
         introductionAddressLink.setLinkTextColor(getResources().getColor(R.color.colorPrimaryDark));
 
+        TextView functionGeneralAddressLink = view.findViewById(R.id.function_general_info_link);
+        Linkify.addLinks(functionGeneralAddressLink, Linkify.WEB_URLS);
+        functionGeneralAddressLink.setLinkTextColor(getResources().getColor(R.color.colorPrimaryDark));
+
         setTitle();
     }
 

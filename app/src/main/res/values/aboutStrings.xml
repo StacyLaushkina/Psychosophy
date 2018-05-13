@@ -15,4 +15,7 @@
 
     <string name="introduction_info">Вступление:</string>
     <string name="introduction_info_link">http://typologies.ru</string>
+
+    <string name="function_general_info">Общее описание функций:</string>
+    <string name="function_general_info_link">https://habr.com/company/oleg-bunin/blog/349530/</string>
 </resources>
