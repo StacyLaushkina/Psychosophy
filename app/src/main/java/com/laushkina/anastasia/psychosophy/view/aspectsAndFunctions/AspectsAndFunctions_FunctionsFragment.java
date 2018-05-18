@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 
-public class FunctionsFragment extends Fragment{
+public class AspectsAndFunctions_FunctionsFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){

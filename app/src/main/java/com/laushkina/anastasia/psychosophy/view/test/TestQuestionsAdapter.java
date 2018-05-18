@@ -9,14 +9,14 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.laushkina.anastasia.psychosophy.R;
-import com.laushkina.anastasia.psychosophy.domain.test.QuestionAnswer;
+import com.laushkina.anastasia.psychosophy.domain.test.TestAnswer;
 
 import java.util.List;
 
 public class TestQuestionsAdapter extends RecyclerView.Adapter<TestQuestionsAdapter.ViewHolder>{
 
     private List<CharSequence> questions;
-    private QuestionAnswer[] lastSelectedAnswers;
+    private TestAnswer[] lastSelectedAnswers;
     private OnAnswersSelectedListener listener;
 
     interface OnAnswersSelectedListener {
@@ -25,7 +25,7 @@ public class TestQuestionsAdapter extends RecyclerView.Adapter<TestQuestionsAdap
 
     TestQuestionsAdapter(List<CharSequence> questions, OnAnswersSelectedListener listener) {
         this.questions = questions;
-        this.lastSelectedAnswers = new QuestionAnswer[questions.size()];
+        this.lastSelectedAnswers = new TestAnswer[questions.size()];
         this.listener = listener;
     }
 
@@ -49,13 +49,13 @@ public class TestQuestionsAdapter extends RecyclerView.Adapter<TestQuestionsAdap
         return questions.size();
     }
 
-    QuestionAnswer[] getAnswers(){
+    TestAnswer[] getAnswers(){
         return lastSelectedAnswers;
     }
 
     public void setQuestions(List<CharSequence> questions) {
         this.questions = questions;
-        lastSelectedAnswers = new QuestionAnswer[questions.size()];
+        lastSelectedAnswers = new TestAnswer[questions.size()];
         notifyDataSetChanged();
     }
 
@@ -81,20 +81,20 @@ public class TestQuestionsAdapter extends RecyclerView.Adapter<TestQuestionsAdap
 
     private void onChecked(ViewHolder holder, int position){
         if (holder.yesButton.isChecked()) {
-            lastSelectedAnswers[position] = QuestionAnswer.Yes;
+            lastSelectedAnswers[position] = TestAnswer.Yes;
         }
         if (holder.maybeButton.isChecked()) {
-            lastSelectedAnswers[position] = QuestionAnswer.Maybe;
+            lastSelectedAnswers[position] = TestAnswer.Maybe;
         }
         if (holder.sometimesButton.isChecked()) {
-            lastSelectedAnswers[position] = QuestionAnswer.Sometimes;
+            lastSelectedAnswers[position] = TestAnswer.Sometimes;
         }
         if (holder.noButton.isChecked()) {
-            lastSelectedAnswers[position] = QuestionAnswer.No;
+            lastSelectedAnswers[position] = TestAnswer.No;
         }
 
         boolean areAllAnswered = true;
-        for (QuestionAnswer answer : lastSelectedAnswers) {
+        for (TestAnswer answer : lastSelectedAnswers) {
             if (answer == null) {
                 areAllAnswered = false;
                 break;

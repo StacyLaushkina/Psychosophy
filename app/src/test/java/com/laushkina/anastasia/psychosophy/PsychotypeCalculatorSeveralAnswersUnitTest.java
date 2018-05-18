@@ -3,8 +3,8 @@ package com.laushkina.anastasia.psychosophy;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.test.Function;
 import com.laushkina.anastasia.psychosophy.domain.test.PsychotypeCalculator;
-import com.laushkina.anastasia.psychosophy.domain.test.Question;
-import com.laushkina.anastasia.psychosophy.domain.test.QuestionAnswer;
+import com.laushkina.anastasia.psychosophy.domain.test.TestQuestion;
+import com.laushkina.anastasia.psychosophy.domain.test.TestAnswer;
 
 import org.junit.Test;
 
@@ -59,32 +59,32 @@ public class PsychotypeCalculatorSeveralAnswersUnitTest {
         assertEquals(null, actual);
     }
 
-    private List<Question> getUnreliableAnswers(){
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question(null, Function.Logic, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Emotion, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Physics, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Will, QuestionAnswer.No));
+    private List<TestQuestion> getUnreliableAnswers(){
+        List<TestQuestion> questions = new ArrayList<>();
+        questions.add(new TestQuestion(null, Function.Logic, TestAnswer.No));
+        questions.add(new TestQuestion(null, Function.Emotion, TestAnswer.No));
+        questions.add(new TestQuestion(null, Function.Physics, TestAnswer.No));
+        questions.add(new TestQuestion(null, Function.Will, TestAnswer.No));
 
         return questions;
     }
 
-    private List<Question> getLWEPorLWPEorWLEPorWLPEAnswers(){
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question(null, Function.Logic, QuestionAnswer.Yes));
-        questions.add(new Question(null, Function.Emotion, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Physics, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Will, QuestionAnswer.Yes));
+    private List<TestQuestion> getLWEPorLWPEorWLEPorWLPEAnswers(){
+        List<TestQuestion> questions = new ArrayList<>();
+        questions.add(new TestQuestion(null, Function.Logic, TestAnswer.Yes));
+        questions.add(new TestQuestion(null, Function.Emotion, TestAnswer.No));
+        questions.add(new TestQuestion(null, Function.Physics, TestAnswer.No));
+        questions.add(new TestQuestion(null, Function.Will, TestAnswer.Yes));
 
         return questions;
     }
 
-    private List<Question> getPEWLorPELWAnswers(){
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question(null, Function.Logic, QuestionAnswer.No));
-        questions.add(new Question(null, Function.Emotion, QuestionAnswer.Maybe));
-        questions.add(new Question(null, Function.Physics, QuestionAnswer.Yes));
-        questions.add(new Question(null, Function.Will, QuestionAnswer.No));
+    private List<TestQuestion> getPEWLorPELWAnswers(){
+        List<TestQuestion> questions = new ArrayList<>();
+        questions.add(new TestQuestion(null, Function.Logic, TestAnswer.No));
+        questions.add(new TestQuestion(null, Function.Emotion, TestAnswer.Maybe));
+        questions.add(new TestQuestion(null, Function.Physics, TestAnswer.Yes));
+        questions.add(new TestQuestion(null, Function.Will, TestAnswer.No));
 
         return questions;
     }

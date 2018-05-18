@@ -23,13 +23,13 @@ public class WelcomeActivity extends Activity implements INavigator {
 
     public void startTest(){
         Intent startTest = new Intent(this, MainActivity.class);
-        startTest.putExtra(MainActivity.screenNameExtra, Screen.test);
+        startTest.putExtra(MainActivity.SCREEN_NAME_EXTRA, Screen.test);
         startActivity(startTest);
     }
 
     public void learnTheory(){
         Intent startTest = new Intent(this, MainActivity.class);
-        startTest.putExtra(MainActivity.screenNameExtra, Screen.introduction);
+        startTest.putExtra(MainActivity.SCREEN_NAME_EXTRA, Screen.introduction);
         startActivity(startTest);
     }
 }

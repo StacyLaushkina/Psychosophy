@@ -6,7 +6,7 @@ import android.text.Html;
 
 import com.laushkina.anastasia.psychosophy.BR;
 
-public class PsychotypeRelationshipsViewModel extends BaseObservable {
+public class RelationshipsViewModel extends BaseObservable {
     private CharSequence firstFunctionRelationshipsTitle;
     private CharSequence firstFunctionRelationships;
     private CharSequence secondFunctionRelationshipsTitle;
@@ -16,7 +16,42 @@ public class PsychotypeRelationshipsViewModel extends BaseObservable {
     private CharSequence forthFunctionRelationshipsTitle;
     private CharSequence forthFunctionRelationships;
 
-    PsychotypeRelationshipsViewModel(){}
+    RelationshipsViewModel(){
+        firstFunctionRelationshipsTitle = "";
+        firstFunctionRelationships = "";
+        secondFunctionRelationshipsTitle = "";
+        secondFunctionRelationships = "";
+        thirdFunctionRelationshipsTitle = "";
+        thirdFunctionRelationships = "";
+        forthFunctionRelationshipsTitle = "";
+        forthFunctionRelationships = "";
+    }
+
+    //TODO builder?
+    RelationshipsViewModel(String firstTitle, String firstDescription,
+                           String secondTitle, String secondDescription,
+                           String thirdTitle, String thirdDescription,
+                           String forthTitle, String forthDescription){
+        setFirstFunctionRelationshipsTitle(firstTitle);
+        setFirstFunctionRelationships(firstDescription);
+        setSecondFunctionRelationshipsTitle(secondTitle);
+        setSecondFunctionRelationships(secondDescription);
+        setThirdFunctionRelationshipsTitle(thirdTitle);
+        setThirdFunctionRelationships(thirdDescription);
+        setForthFunctionRelationshipsTitle(forthTitle);
+        setForthFunctionRelationships(forthDescription);
+    }
+
+    public void refreshWith(RelationshipsViewModel newValue){
+        setFirstFunctionRelationshipsTitle(newValue.firstFunctionRelationshipsTitle.toString());
+        setFirstFunctionRelationships(newValue.firstFunctionRelationships.toString());
+        setSecondFunctionRelationshipsTitle(newValue.secondFunctionRelationshipsTitle.toString());
+        setSecondFunctionRelationships(newValue.secondFunctionRelationships.toString());
+        setThirdFunctionRelationshipsTitle(newValue.thirdFunctionRelationshipsTitle.toString());
+        setThirdFunctionRelationships(newValue.thirdFunctionRelationships.toString());
+        setForthFunctionRelationshipsTitle(newValue.forthFunctionRelationshipsTitle.toString());
+        setForthFunctionRelationships(newValue.forthFunctionRelationships.toString());
+    }
 
     @Bindable
     public CharSequence getFirstFunctionRelationships() {
@@ -63,8 +98,8 @@ public class PsychotypeRelationshipsViewModel extends BaseObservable {
         return firstFunctionRelationshipsTitle;
     }
 
-    public void setFirstFunctionRelationshipsTitle(CharSequence firstFunctionRelationshipsTitle) {
-        this.firstFunctionRelationshipsTitle = firstFunctionRelationshipsTitle;
+    public void setFirstFunctionRelationshipsTitle(String firstFunctionRelationshipsTitle) {
+        this.firstFunctionRelationshipsTitle = Html.fromHtml(firstFunctionRelationshipsTitle);
         notifyPropertyChanged(BR.firstFunctionRelationshipsTitle);
     }
 
@@ -73,8 +108,8 @@ public class PsychotypeRelationshipsViewModel extends BaseObservable {
         return secondFunctionRelationshipsTitle;
     }
 
-    public void setSecondFunctionRelationshipsTitle(CharSequence secondFunctionRelationshipsTitle) {
-        this.secondFunctionRelationshipsTitle = secondFunctionRelationshipsTitle;
+    public void setSecondFunctionRelationshipsTitle(String secondFunctionRelationshipsTitle) {
+        this.secondFunctionRelationshipsTitle = Html.fromHtml(secondFunctionRelationshipsTitle);
         notifyPropertyChanged(BR.secondFunctionRelationshipsTitle);
     }
 
@@ -83,8 +118,8 @@ public class PsychotypeRelationshipsViewModel extends BaseObservable {
         return thirdFunctionRelationshipsTitle;
     }
 
-    public void setThirdFunctionRelationshipsTitle(CharSequence thirdFunctionRelationshipsTitle) {
-        this.thirdFunctionRelationshipsTitle = thirdFunctionRelationshipsTitle;
+    public void setThirdFunctionRelationshipsTitle(String thirdFunctionRelationshipsTitle) {
+        this.thirdFunctionRelationshipsTitle = Html.fromHtml(thirdFunctionRelationshipsTitle);
         notifyPropertyChanged(BR.thirdFunctionRelationshipsTitle);
     }
 
@@ -93,8 +128,8 @@ public class PsychotypeRelationshipsViewModel extends BaseObservable {
         return forthFunctionRelationshipsTitle;
     }
 
-    public void setForthFunctionRelationshipsTitle(CharSequence forthFunctionRelationshipsTitle) {
-        this.forthFunctionRelationshipsTitle = forthFunctionRelationshipsTitle;
+    public void setForthFunctionRelationshipsTitle(String forthFunctionRelationshipsTitle) {
+        this.forthFunctionRelationshipsTitle = Html.fromHtml(forthFunctionRelationshipsTitle);
         notifyPropertyChanged(BR.forthFunctionRelationshipsTitle);
     }
 }

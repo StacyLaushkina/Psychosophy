@@ -19,11 +19,11 @@ public class PsychotypeCalculator {
         }
     }
 
-    public static List<Psychotype> calculate(List<Question> questions){
+    public static List<Psychotype> calculate(TestQuestion[] questions){
         List<Pair> pairs = new ArrayList<>();
 
         int[] sums = new int[4];
-        for (Question question : questions){
+        for (TestQuestion question : questions){
             Function function = question.getType();
             sums[function.getNumber()] += question.getAnswer().getNumber();
         }

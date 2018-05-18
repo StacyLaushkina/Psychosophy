@@ -1,5 +1,7 @@
 package com.laushkina.anastasia.psychosophy.view.test;
 
+import android.os.Bundle;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,8 +9,8 @@ import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.test.AnswersValidation;
 import com.laushkina.anastasia.psychosophy.domain.test.PsychotypeCalculator;
-import com.laushkina.anastasia.psychosophy.domain.test.Question;
-import com.laushkina.anastasia.psychosophy.domain.test.QuestionAnswer;
+import com.laushkina.anastasia.psychosophy.domain.test.TestQuestion;
+import com.laushkina.anastasia.psychosophy.domain.test.TestAnswer;
 import com.laushkina.anastasia.psychosophy.domain.test.QusetionsComposer;
 
 import dagger.Module;
@@ -17,10 +19,13 @@ import dagger.Provides;
 @Module
 class TestPresenter {
 
+    private static final String QUESTIONS_SAVED_STATE_EXTRA = "test_questions";
+    private static final String AMOUNT_OF_FINISHED_SAVED_STATE_EXTRA = "test_amount_of_finished";
+
     private static final int QUESTION_AMOUNT = 40;
     private static final int QUESTIONS_IN_GROUP = 4;
 
-    private List<Question> questions;
+    private TestQuestion[] questions;
     private int amountOfFinishedQuestions;
 
     @Provides synchronized TestPresenter provideTestPresenter(){
@@ -38,6 +43,18 @@ class TestPresenter {
         }
     }
 
+    Bundle getTestState(){
+        Bundle state = new Bundle();
+        state.putParcelableArray(QUESTIONS_SAVED_STATE_EXTRA, questions);
+        state.putInt(AMOUNT_OF_FINISHED_SAVED_STATE_EXTRA, amountOfFinishedQuestions);
+        return state;
+    }
+
+    void restoreFromSavedState(Bundle state){
+        questions = (TestQuestion[]) state.getParcelableArray(QUESTIONS_SAVED_STATE_EXTRA);
+        amountOfFinishedQuestions = state.getInt(AMOUNT_OF_FINISHED_SAVED_STATE_EXTRA, 0);
+    }
+
     List<CharSequence> getFirstGroupOfQuestions(ITestResultsObserver resultsObserver){
         questions = QusetionsComposer.compose(resultsObserver.getContext());
         amountOfFinishedQuestions = 0;
@@ -47,7 +64,7 @@ class TestPresenter {
     private List<CharSequence> getNextAnswers(){
         List<CharSequence> result = new ArrayList<>();
         for (int i = 0; i < QUESTIONS_IN_GROUP; i++) {
-            result.add(questions.get(amountOfFinishedQuestions + i).getText());
+            result.add(questions[amountOfFinishedQuestions + i].getText());
         }
         return result;
     }
@@ -56,7 +73,7 @@ class TestPresenter {
         resultsObserver.showNextButton();
     }
 
-    void onNextRequested(QuestionAnswer[] answers, ITestResultsObserver resultsObserver){
+    void onNextRequested(TestAnswer[] answers, ITestResultsObserver resultsObserver){
         saveAnswers(answers);
         boolean isTestFinished = amountOfFinishedQuestions == QUESTION_AMOUNT;
         if (isTestFinished) {
@@ -72,9 +89,9 @@ class TestPresenter {
                             : resultsObserver.getContext().getResources().getString(R.string.finish_title);
     }
 
-    private void saveAnswers(QuestionAnswer[] answers){
+    private void saveAnswers(TestAnswer[] answers){
         for (int i =0; i < QUESTIONS_IN_GROUP; i++) {
-            questions.get(amountOfFinishedQuestions + i).setAnswer(answers[i]);
+            questions[amountOfFinishedQuestions + i].setAnswer(answers[i]);
         }
         amountOfFinishedQuestions += QUESTIONS_IN_GROUP;
     }

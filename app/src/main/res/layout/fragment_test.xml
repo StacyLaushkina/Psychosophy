@@ -31,20 +31,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_below="@+id/test_progress"/>
+            android:layout_below="@+id/test_progress"
+            android:layout_above="@+id/next_question"/>
 
         <Button
             android:id="@+id/next_question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/basic_margin"
-            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/basic_margin"
+            android:layout_marginEnd="@dimen/basic_margin"
+
             android:background="@android:color/transparent"
             android:text="@{viewModel.nextButtonText}"
             android:textColor="@drawable/in_text_border_background"
             android:textSize="@dimen/text_size_medium"
             android:enabled="@{viewModel.nextEnabled}"
             android:onClick="@{() -> testCalculator.next()}"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"/>
 
     </RelativeLayout>

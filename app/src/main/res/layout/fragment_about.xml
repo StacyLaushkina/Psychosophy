@@ -81,6 +81,7 @@
         android:id="@+id/function_general_info_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/function_general_info_link"
         android:layout_marginBottom="@dimen/basic_margin"/>
 

@@ -2,54 +2,27 @@ package com.laushkina.anastasia.psychosophy.domain.relationships;
 
 import android.content.Context;
 
-import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.test.Function;
+import com.laushkina.anastasia.psychosophy.view.utils.RelationshipsToStringFormatter;
 
 public class RelationshipsCalculator {
-    public static PsychotypeRelationships calcRelationships(Psychotype fistType, Psychotype secondType, Context context){
-        String fistFunctionRelation = getFunctionRelationship(fistType.getFunctions()[0], 0, secondType, context);
-        String fistFunctionRelationTitle = getFunctionRelationshipTitle(fistType.getFunctions()[0], 0, secondType, context);
 
-        String secondFunctionRelation = getFunctionRelationship(fistType.getFunctions()[1], 1, secondType, context);
-        String secondFunctionRelationTitle = getFunctionRelationshipTitle(fistType.getFunctions()[1], 1, secondType, context);
-
-        String thirdFunctionRelation = getFunctionRelationship(fistType.getFunctions()[2], 2, secondType, context);
-        String thirdFunctionRelationTitle = getFunctionRelationshipTitle(fistType.getFunctions()[2], 2, secondType, context);
-
-        String forthFunctionRelation = getFunctionRelationship(fistType.getFunctions()[3], 3, secondType, context);
-        String forthFunctionRelationTitle = getFunctionRelationshipTitle(fistType.getFunctions()[3], 3, secondType, context);
-
-        return new PsychotypeRelationships(fistFunctionRelation, fistFunctionRelationTitle,
-                                           secondFunctionRelation, secondFunctionRelationTitle,
-                                           thirdFunctionRelation, thirdFunctionRelationTitle,
-                                           forthFunctionRelation, forthFunctionRelationTitle);
-    }
-
-    private static String getFunctionRelationship(Function firstFunction, int fistFunctionPosition, Psychotype secondType, Context context){
+    public static Relationship getRelationship(Function firstFunction, int fistFunctionPosition, Psychotype secondType){
         // Position of firstFunction for secondType
         int secondPosition = getFunctionPosition(firstFunction, secondType);
         switch (firstFunction) {
-            case Will: return getWillDescription(fistFunctionPosition, secondPosition, context);
-            case Emotion: return getEmotionDescription(fistFunctionPosition, secondPosition, context);
-            case Logic: return getLogicDescription(fistFunctionPosition, secondPosition, context);
-            case Physics: return getPhysicsDescription(fistFunctionPosition, secondPosition, context);
+            case Will:
+                return getWillRelationship(fistFunctionPosition, secondPosition);
+            case Emotion:
+                return getEmotionRelationship(fistFunctionPosition, secondPosition);
+            case Logic:
+                return getLogicRelationship(fistFunctionPosition, secondPosition);
+            case Physics:
+                return getPhysicsRelationship(fistFunctionPosition, secondPosition);
+
+            default: throw new AssertionError();
         }
-
-        throw new AssertionError();
-    }
-
-    private static String getFunctionRelationshipTitle(Function firstFunction, int fistFunctionPosition, Psychotype secondType, Context context){
-        // Position of firstFunction for secondType
-        int secondPosition = getFunctionPosition(firstFunction, secondType);
-        switch (firstFunction) {
-            case Will: return getWillDescriptionTitle(fistFunctionPosition, secondPosition, context);
-            case Emotion: return getEmotionDescriptionTitle(fistFunctionPosition, secondPosition, context);
-            case Logic: return getLogicDescriptionTitle(fistFunctionPosition, secondPosition, context);
-            case Physics: return getPhysicsDescriptionTitle(fistFunctionPosition, secondPosition, context);
-        }
-
-        throw new AssertionError();
     }
 
     private static int getFunctionPosition(Function firstFunction, Psychotype secondType){
@@ -61,218 +34,110 @@ public class RelationshipsCalculator {
         return position;
     }
 
-    private static String getWillDescription(int firstPosition, int secondPosition, Context context) {
+    private static Relationship getWillRelationship(int firstPosition, int secondPosition) {
         if (firstPosition < 0 || firstPosition > 3 || secondPosition < 0 || secondPosition > 3)
             throw new IllegalArgumentException("Positions must be between 0 and 3");
 
-        if (firstPosition == 0 && secondPosition == 0) return context.getString(R.string.philia_1_will);
-        if (firstPosition == 0 && secondPosition == 1) return context.getString(R.string.pseudo_philia_1_2_will);
-        if (firstPosition == 0 && secondPosition == 2) return context.getString(R.string.eros_1_3_will);
-        if (firstPosition == 0 && secondPosition == 3) return context.getString(R.string.agape_1_4_will);
+        if (firstPosition == 0 && secondPosition == 0) return Relationship.Philia_1_Will;
+        if (firstPosition == 0 && secondPosition == 1) return Relationship.PseudoPhilia_1_2_Will;
+        if (firstPosition == 0 && secondPosition == 2) return Relationship.Eros_1_3_Will;
+        if (firstPosition == 0 && secondPosition == 3) return Relationship.Agape_1_4_Will;
 
-        if (firstPosition == 1 && secondPosition == 0) return context.getString(R.string.pseudo_philia_2_1_will);
-        if (firstPosition == 1 && secondPosition == 1) return context.getString(R.string.philia_2_will);
-        if (firstPosition == 1 && secondPosition == 2) return context.getString(R.string.agape_2_3_will);
-        if (firstPosition == 1 && secondPosition == 3) return context.getString(R.string.eros_2_4_will);
+        if (firstPosition == 1 && secondPosition == 0) return Relationship.PseudoPhilia_2_1_Will;
+        if (firstPosition == 1 && secondPosition == 1) return Relationship.Philia_2_Will;
+        if (firstPosition == 1 && secondPosition == 2) return Relationship.Agape_2_3_Will;
+        if (firstPosition == 1 && secondPosition == 3) return Relationship.Eros_2_4_Will;
 
-        if (firstPosition == 2 && secondPosition == 0) return context.getString(R.string.eros_3_1_will);
-        if (firstPosition == 2 && secondPosition == 1) return context.getString(R.string.agape_3_2_will);
-        if (firstPosition == 2 && secondPosition == 2) return context.getString(R.string.philia_3_will);
-        if (firstPosition == 2 && secondPosition == 3) return context.getString(R.string.pseudo_philia_3_4_will);
+        if (firstPosition == 2 && secondPosition == 0) return Relationship.Eros_3_1_Will;
+        if (firstPosition == 2 && secondPosition == 1) return Relationship.Agape_3_2_Will;
+        if (firstPosition == 2 && secondPosition == 2) return Relationship.Philia_3_Will;
+        if (firstPosition == 2 && secondPosition == 3) return Relationship.PseudoPhilia_3_4_Will;
 
-        if (firstPosition == 3 && secondPosition == 0) return context.getString(R.string.agape_4_1_will);
-        if (firstPosition == 3 && secondPosition == 1) return context.getString(R.string.eros_4_2_will);
-        if (firstPosition == 3 && secondPosition == 2) return context.getString(R.string.pseudo_philia_4_3_will);
-        if (firstPosition == 3 && secondPosition == 3) return context.getString(R.string.philia_4_will);
+        if (firstPosition == 3 && secondPosition == 0) return Relationship.Agape_4_1_Will;
+        if (firstPosition == 3 && secondPosition == 1) return Relationship.Eros_4_2_Will;
+        if (firstPosition == 3 && secondPosition == 2) return Relationship.PseudoPhilia_4_3_Will;
+        if (firstPosition == 3 && secondPosition == 3) return Relationship.Philia_4_Will;
 
         throw new AssertionError();
     }
 
-    private static String getWillDescriptionTitle(int firstPosition, int secondPosition, Context context) {
+    private static Relationship getEmotionRelationship(int firstPosition, int secondPosition) {
         if (firstPosition < 0 || firstPosition > 3 || secondPosition < 0 || secondPosition > 3)
             throw new IllegalArgumentException("Positions must be between 0 and 3");
 
-        if (firstPosition == 0 && secondPosition == 0) return context.getString(R.string.philia_1_will_title);
-        if (firstPosition == 0 && secondPosition == 1) return context.getString(R.string.pseudo_philia_1_2_will_title);
-        if (firstPosition == 0 && secondPosition == 2) return context.getString(R.string.eros_1_3_will_title);
-        if (firstPosition == 0 && secondPosition == 3) return context.getString(R.string.agape_1_4_will_title);
+        if (firstPosition == 0 && secondPosition == 0) return Relationship.Philia_1_Emotion;
+        if (firstPosition == 0 && secondPosition == 1) return Relationship.PseudoPhilia_1_2_Emotion;
+        if (firstPosition == 0 && secondPosition == 2) return Relationship.Eros_1_3_Emotion;
+        if (firstPosition == 0 && secondPosition == 3) return Relationship.Agape_1_4_Emotion;
 
-        if (firstPosition == 1 && secondPosition == 0) return context.getString(R.string.pseudo_philia_2_1_will_title);
-        if (firstPosition == 1 && secondPosition == 1) return context.getString(R.string.philia_2_will_title);
-        if (firstPosition == 1 && secondPosition == 2) return context.getString(R.string.agape_2_3_will_title);
-        if (firstPosition == 1 && secondPosition == 3) return context.getString(R.string.eros_2_4_will_title);
+        if (firstPosition == 1 && secondPosition == 0) return Relationship.PseudoPhilia_2_1_Emotion;
+        if (firstPosition == 1 && secondPosition == 1) return Relationship.Philia_2_Emotion;
+        if (firstPosition == 1 && secondPosition == 2) return Relationship.Agape_2_3_Emotion;
+        if (firstPosition == 1 && secondPosition == 3) return Relationship.Eros_2_4_Emotion;
 
-        if (firstPosition == 2 && secondPosition == 0) return context.getString(R.string.eros_3_1_will_title);
-        if (firstPosition == 2 && secondPosition == 1) return context.getString(R.string.agape_3_2_will_title);
-        if (firstPosition == 2 && secondPosition == 2) return context.getString(R.string.philia_3_will_title);
-        if (firstPosition == 2 && secondPosition == 3) return context.getString(R.string.pseudo_philia_3_4_will_title);
+        if (firstPosition == 2 && secondPosition == 0) return Relationship.Eros_3_1_Emotion;
+        if (firstPosition == 2 && secondPosition == 1) return Relationship.Agape_3_2_Emotion;
+        if (firstPosition == 2 && secondPosition == 2) return Relationship.Philia_3_Emotion;
+        if (firstPosition == 2 && secondPosition == 3) return Relationship.PseudoPhilia_3_4_Emotion;
 
-        if (firstPosition == 3 && secondPosition == 0) return context.getString(R.string.agape_4_1_will_title);
-        if (firstPosition == 3 && secondPosition == 1) return context.getString(R.string.eros_4_2_will_title);
-        if (firstPosition == 3 && secondPosition == 2) return context.getString(R.string.pseudo_philia_4_3_will_title);
-        if (firstPosition == 3 && secondPosition == 3) return context.getString(R.string.philia_4_will_title);
+        if (firstPosition == 3 && secondPosition == 0) return Relationship.Agape_4_1_Emotion;
+        if (firstPosition == 3 && secondPosition == 1) return Relationship.Eros_4_2_Emotion;
+        if (firstPosition == 3 && secondPosition == 2) return Relationship.PseudoPhilia_4_3_Emotion;
+        if (firstPosition == 3 && secondPosition == 3) return Relationship.Philia_4_Emotion;
 
         throw new AssertionError();
     }
 
-    private static String getEmotionDescription(int firstPosition, int secondPosition, Context context) {
+    private static Relationship getLogicRelationship(int firstPosition, int secondPosition) {
         if (firstPosition < 0 || firstPosition > 3 || secondPosition < 0 || secondPosition > 3)
             throw new IllegalArgumentException("Positions must be between 0 and 3");
 
-        if (firstPosition == 0 && secondPosition == 0) return context.getString(R.string.philia_1_emotion);
-        if (firstPosition == 0 && secondPosition == 1) return context.getString(R.string.pseudo_philia_1_2_emotion);
-        if (firstPosition == 0 && secondPosition == 2) return context.getString(R.string.eros_1_3_emotion);
-        if (firstPosition == 0 && secondPosition == 3) return context.getString(R.string.agape_1_4_emotion);
+        if (firstPosition == 0 && secondPosition == 0) return Relationship.Philia_1_Logic;
+        if (firstPosition == 0 && secondPosition == 1) return Relationship.PseudoPhilia_1_2_Logic;
+        if (firstPosition == 0 && secondPosition == 2) return Relationship.Eros_1_3_Logic;
+        if (firstPosition == 0 && secondPosition == 3) return Relationship.Agape_1_4_Logic;
 
-        if (firstPosition == 1 && secondPosition == 0) return context.getString(R.string.pseudo_philia_2_1_emotion);
-        if (firstPosition == 1 && secondPosition == 1) return context.getString(R.string.philia_2_emotion);
-        if (firstPosition == 1 && secondPosition == 2) return context.getString(R.string.agape_2_3_emotion);
-        if (firstPosition == 1 && secondPosition == 3) return context.getString(R.string.eros_2_4_emotion);
+        if (firstPosition == 1 && secondPosition == 0) return Relationship.PseudoPhilia_2_1_Logic;
+        if (firstPosition == 1 && secondPosition == 1) return Relationship.Philia_2_Logic;
+        if (firstPosition == 1 && secondPosition == 2) return Relationship.Agape_2_3_Logic;
+        if (firstPosition == 1 && secondPosition == 3) return Relationship.Eros_2_4_Logic;
 
-        if (firstPosition == 2 && secondPosition == 0) return context.getString(R.string.eros_3_1_emotion);
-        if (firstPosition == 2 && secondPosition == 1) return context.getString(R.string.agape_3_2_emotion);
-        if (firstPosition == 2 && secondPosition == 2) return context.getString(R.string.philia_3_emotion);
-        if (firstPosition == 2 && secondPosition == 3) return context.getString(R.string.pseudo_philia_3_4_emotion);
+        if (firstPosition == 2 && secondPosition == 0) return Relationship.Eros_3_1_Logic;
+        if (firstPosition == 2 && secondPosition == 1) return Relationship.Agape_3_2_Logic;
+        if (firstPosition == 2 && secondPosition == 2) return Relationship.Philia_3_Logic;
+        if (firstPosition == 2 && secondPosition == 3) return Relationship.PseudoPhilia_3_4_Logic;
 
-        if (firstPosition == 3 && secondPosition == 0) return context.getString(R.string.agape_4_1_emotion);
-        if (firstPosition == 3 && secondPosition == 1) return context.getString(R.string.eros_4_2_emotion);
-        if (firstPosition == 3 && secondPosition == 2) return context.getString(R.string.pseudo_philia_4_3_emotion);
-        if (firstPosition == 3 && secondPosition == 3) return context.getString(R.string.philia_4_emotion);
+        if (firstPosition == 3 && secondPosition == 0) return Relationship.Agape_4_1_Logic;
+        if (firstPosition == 3 && secondPosition == 1) return Relationship.Eros_4_2_Logic;
+        if (firstPosition == 3 && secondPosition == 2) return Relationship.PseudoPhilia_4_3_Logic;
+        if (firstPosition == 3 && secondPosition == 3) return Relationship.Philia_4_Logic;
 
         throw new AssertionError();
     }
 
-    private static String getEmotionDescriptionTitle(int firstPosition, int secondPosition, Context context) {
+    private static Relationship getPhysicsRelationship(int firstPosition, int secondPosition) {
         if (firstPosition < 0 || firstPosition > 3 || secondPosition < 0 || secondPosition > 3)
             throw new IllegalArgumentException("Positions must be between 0 and 3");
 
-        if (firstPosition == 0 && secondPosition == 0) return context.getString(R.string.philia_1_emotion_title);
-        if (firstPosition == 0 && secondPosition == 1) return context.getString(R.string.pseudo_philia_1_2_emotion_title);
-        if (firstPosition == 0 && secondPosition == 2) return context.getString(R.string.eros_1_3_emotion_title);
-        if (firstPosition == 0 && secondPosition == 3) return context.getString(R.string.agape_1_4_emotion_title);
+        if (firstPosition == 0 && secondPosition == 0) return Relationship.Philia_1_Physics;
+        if (firstPosition == 0 && secondPosition == 1) return Relationship.PseudoPhilia_1_2_Physics;
+        if (firstPosition == 0 && secondPosition == 2) return Relationship.Eros_1_3_Physics;
+        if (firstPosition == 0 && secondPosition == 3) return Relationship.Agape_1_4_Physics;
 
-        if (firstPosition == 1 && secondPosition == 0) return context.getString(R.string.pseudo_philia_2_1_emotion_title);
-        if (firstPosition == 1 && secondPosition == 1) return context.getString(R.string.philia_2_emotion_title);
-        if (firstPosition == 1 && secondPosition == 2) return context.getString(R.string.agape_2_3_emotion_title);
-        if (firstPosition == 1 && secondPosition == 3) return context.getString(R.string.eros_2_4_emotion_title);
+        if (firstPosition == 1 && secondPosition == 0) return Relationship.PseudoPhilia_2_1_Physics;
+        if (firstPosition == 1 && secondPosition == 1) return Relationship.Philia_2_Physics;
+        if (firstPosition == 1 && secondPosition == 2) return Relationship.Agape_2_3_Physics;
+        if (firstPosition == 1 && secondPosition == 3) return Relationship.Eros_2_4_Physics;
 
-        if (firstPosition == 2 && secondPosition == 0) return context.getString(R.string.eros_3_1_emotion_title);
-        if (firstPosition == 2 && secondPosition == 1) return context.getString(R.string.agape_3_2_emotion_title);
-        if (firstPosition == 2 && secondPosition == 2) return context.getString(R.string.philia_3_emotion_title);
-        if (firstPosition == 2 && secondPosition == 3) return context.getString(R.string.pseudo_philia_3_4_emotion_title);
+        if (firstPosition == 2 && secondPosition == 0) return Relationship.Eros_3_1_Physics;
+        if (firstPosition == 2 && secondPosition == 1) return Relationship.Agape_3_2_Physics;
+        if (firstPosition == 2 && secondPosition == 2) return Relationship.Philia_3_Physics;
+        if (firstPosition == 2 && secondPosition == 3) return Relationship.PseudoPhilia_3_4_Physics;
 
-        if (firstPosition == 3 && secondPosition == 0) return context.getString(R.string.agape_4_1_emotion_title);
-        if (firstPosition == 3 && secondPosition == 1) return context.getString(R.string.eros_4_2_emotion_title);
-        if (firstPosition == 3 && secondPosition == 2) return context.getString(R.string.pseudo_philia_4_3_emotion_title);
-        if (firstPosition == 3 && secondPosition == 3) return context.getString(R.string.philia_4_emotion_title);
-
-        throw new AssertionError();
-    }
-
-    private static String getLogicDescription(int firstPosition, int secondPosition, Context context) {
-        if (firstPosition < 0 || firstPosition > 3 || secondPosition < 0 || secondPosition > 3)
-            throw new IllegalArgumentException("Positions must be between 0 and 3");
-
-        if (firstPosition == 0 && secondPosition == 0) return context.getString(R.string.philia_1_logic);
-        if (firstPosition == 0 && secondPosition == 1) return context.getString(R.string.pseudo_philia_1_2_logic);
-        if (firstPosition == 0 && secondPosition == 2) return context.getString(R.string.eros_1_3_logic);
-        if (firstPosition == 0 && secondPosition == 3) return context.getString(R.string.agape_1_4_logic);
-
-        if (firstPosition == 1 && secondPosition == 0) return context.getString(R.string.pseudo_philia_2_1_logic);
-        if (firstPosition == 1 && secondPosition == 1) return context.getString(R.string.philia_2_logic);
-        if (firstPosition == 1 && secondPosition == 2) return context.getString(R.string.agape_2_3_logic);
-        if (firstPosition == 1 && secondPosition == 3) return context.getString(R.string.eros_2_4_logic);
-
-        if (firstPosition == 2 && secondPosition == 0) return context.getString(R.string.eros_3_1_logic);
-        if (firstPosition == 2 && secondPosition == 1) return context.getString(R.string.agape_3_2_logic);
-        if (firstPosition == 2 && secondPosition == 2) return context.getString(R.string.philia_3_logic);
-        if (firstPosition == 2 && secondPosition == 3) return context.getString(R.string.pseudo_philia_3_4_logic);
-
-        if (firstPosition == 3 && secondPosition == 0) return context.getString(R.string.agape_4_1_logic);
-        if (firstPosition == 3 && secondPosition == 1) return context.getString(R.string.eros_4_2_logic);
-        if (firstPosition == 3 && secondPosition == 2) return context.getString(R.string.pseudo_philia_4_3_logic);
-        if (firstPosition == 3 && secondPosition == 3) return context.getString(R.string.philia_4_logic);
-
-        throw new AssertionError();
-    }
-
-    private static String getLogicDescriptionTitle(int firstPosition, int secondPosition, Context context) {
-        if (firstPosition < 0 || firstPosition > 3 || secondPosition < 0 || secondPosition > 3)
-            throw new IllegalArgumentException("Positions must be between 0 and 3");
-
-        if (firstPosition == 0 && secondPosition == 0) return context.getString(R.string.philia_1_logic_title);
-        if (firstPosition == 0 && secondPosition == 1) return context.getString(R.string.pseudo_philia_1_2_logic_title);
-        if (firstPosition == 0 && secondPosition == 2) return context.getString(R.string.eros_1_3_logic_title);
-        if (firstPosition == 0 && secondPosition == 3) return context.getString(R.string.agape_1_4_logic_title);
-
-        if (firstPosition == 1 && secondPosition == 0) return context.getString(R.string.pseudo_philia_2_1_logic_title);
-        if (firstPosition == 1 && secondPosition == 1) return context.getString(R.string.philia_2_logic_title);
-        if (firstPosition == 1 && secondPosition == 2) return context.getString(R.string.agape_2_3_logic_title);
-        if (firstPosition == 1 && secondPosition == 3) return context.getString(R.string.eros_2_4_logic_title);
-
-        if (firstPosition == 2 && secondPosition == 0) return context.getString(R.string.eros_3_1_logic_title);
-        if (firstPosition == 2 && secondPosition == 1) return context.getString(R.string.agape_3_2_logic_title);
-        if (firstPosition == 2 && secondPosition == 2) return context.getString(R.string.philia_3_logic_title);
-        if (firstPosition == 2 && secondPosition == 3) return context.getString(R.string.pseudo_philia_3_4_logic_title);
-
-        if (firstPosition == 3 && secondPosition == 0) return context.getString(R.string.agape_4_1_logic_title);
-        if (firstPosition == 3 && secondPosition == 1) return context.getString(R.string.eros_4_2_logic_title);
-        if (firstPosition == 3 && secondPosition == 2) return context.getString(R.string.pseudo_philia_4_3_logic_title);
-        if (firstPosition == 3 && secondPosition == 3) return context.getString(R.string.philia_4_logic_title);
-
-        throw new AssertionError();
-    }
-
-    private static String getPhysicsDescription(int firstPosition, int secondPosition, Context context) {
-        if (firstPosition < 0 || firstPosition > 3 || secondPosition < 0 || secondPosition > 3)
-            throw new IllegalArgumentException("Positions must be between 0 and 3");
-
-        if (firstPosition == 0 && secondPosition == 0) return context.getString(R.string.philia_1_physics);
-        if (firstPosition == 0 && secondPosition == 1) return context.getString(R.string.pseudo_philia_1_2_physics);
-        if (firstPosition == 0 && secondPosition == 2) return context.getString(R.string.eros_1_3_physics);
-        if (firstPosition == 0 && secondPosition == 3) return context.getString(R.string.agape_1_4_physics);
-
-        if (firstPosition == 1 && secondPosition == 0) return context.getString(R.string.pseudo_philia_2_1_physics);
-        if (firstPosition == 1 && secondPosition == 1) return context.getString(R.string.philia_2_physics);
-        if (firstPosition == 1 && secondPosition == 2) return context.getString(R.string.agape_2_3_physics);
-        if (firstPosition == 1 && secondPosition == 3) return context.getString(R.string.eros_2_4_physics);
-
-        if (firstPosition == 2 && secondPosition == 0) return context.getString(R.string.eros_3_1_physics);
-        if (firstPosition == 2 && secondPosition == 1) return context.getString(R.string.agape_3_2_physics);
-        if (firstPosition == 2 && secondPosition == 2) return context.getString(R.string.philia_3_physics);
-        if (firstPosition == 2 && secondPosition == 3) return context.getString(R.string.pseudo_philia_3_4_physics);
-
-        if (firstPosition == 3 && secondPosition == 0) return context.getString(R.string.agape_4_1_physics);
-        if (firstPosition == 3 && secondPosition == 1) return context.getString(R.string.eros_4_2_physics);
-        if (firstPosition == 3 && secondPosition == 2) return context.getString(R.string.pseudo_philia_4_3_physics);
-        if (firstPosition == 3 && secondPosition == 3) return context.getString(R.string.philia_4_physics);
-
-        throw new AssertionError();
-    }
-
-    private static String getPhysicsDescriptionTitle(int firstPosition, int secondPosition, Context context) {
-        if (firstPosition < 0 || firstPosition > 3 || secondPosition < 0 || secondPosition > 3)
-            throw new IllegalArgumentException("Positions must be between 0 and 3");
-
-        if (firstPosition == 0 && secondPosition == 0) return context.getString(R.string.philia_1_physics_title);
-        if (firstPosition == 0 && secondPosition == 1) return context.getString(R.string.pseudo_philia_1_2_physics_title);
-        if (firstPosition == 0 && secondPosition == 2) return context.getString(R.string.eros_1_3_physics_title);
-        if (firstPosition == 0 && secondPosition == 3) return context.getString(R.string.agape_1_4_physics_title);
-
-        if (firstPosition == 1 && secondPosition == 0) return context.getString(R.string.pseudo_philia_2_1_physics_title);
-        if (firstPosition == 1 && secondPosition == 1) return context.getString(R.string.philia_2_physics_title);
-        if (firstPosition == 1 && secondPosition == 2) return context.getString(R.string.agape_2_3_physics_title);
-        if (firstPosition == 1 && secondPosition == 3) return context.getString(R.string.eros_2_4_physics_title);
-
-        if (firstPosition == 2 && secondPosition == 0) return context.getString(R.string.eros_3_1_physics_title);
-        if (firstPosition == 2 && secondPosition == 1) return context.getString(R.string.agape_3_2_physics_title);
-        if (firstPosition == 2 && secondPosition == 2) return context.getString(R.string.philia_3_physics_title);
-        if (firstPosition == 2 && secondPosition == 3) return context.getString(R.string.pseudo_philia_3_4_physics_title);
-
-        if (firstPosition == 3 && secondPosition == 0) return context.getString(R.string.agape_4_1_physics_title);
-        if (firstPosition == 3 && secondPosition == 1) return context.getString(R.string.eros_4_2_physics_title);
-        if (firstPosition == 3 && secondPosition == 2) return context.getString(R.string.pseudo_philia_4_3_physics_title);
-        if (firstPosition == 3 && secondPosition == 3) return context.getString(R.string.philia_4_physics_title);
+        if (firstPosition == 3 && secondPosition == 0) return Relationship.Agape_4_1_Physics;
+        if (firstPosition == 3 && secondPosition == 1) return Relationship.Eros_4_2_Physics;
+        if (firstPosition == 3 && secondPosition == 2) return Relationship.PseudoPhilia_4_3_Physics;
+        if (firstPosition == 3 && secondPosition == 3) return Relationship.Philia_4_Physics;
 
         throw new AssertionError();
     }

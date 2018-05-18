@@ -15,7 +15,9 @@ import com.laushkina.anastasia.psychosophy.R;
 
 public class MainActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener {
 
-    public static final String screenNameExtra = "screenNameExtra";
+    public static final String SCREEN_NAME_EXTRA = "main_activity_screen_name";
+    private static final String SAVED_PAGE_EXTRA = "main_activity_saved_page";
+    private static final int PAGE_WAS_NOT_SAVED = -1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,13 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
         setContentView(R.layout.activity_main);
 
         initializeLeftMenu();
-        openRequestedContent(getIntent());
+
+        int savedPage = savedInstanceState == null ? PAGE_WAS_NOT_SAVED : savedInstanceState.getInt(SAVED_PAGE_EXTRA, PAGE_WAS_NOT_SAVED);
+        if (savedPage != PAGE_WAS_NOT_SAVED){
+            showSelectedScreen(savedPage);
+        } else {
+            openRequestedContent(getIntent());
+        }
     }
 
     @Override
@@ -36,50 +44,58 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
     private void openRequestedContent(Intent intent){
         if (intent.getExtras() == null) return;
 
-        Screen screen = (Screen)intent.getExtras().getSerializable(screenNameExtra);
+        Screen screen = (Screen)intent.getExtras().getSerializable(SCREEN_NAME_EXTRA);
         if (screen == null) return;
 
         switch (screen) {
             case test:
-                NavigationHelper.showTest(getFragmentManager(), getNavigationView());
+                NavigationHelper.getInstance().showTest(getFragmentManager(), getNavigationView());
                 break;
             case introduction:
-                NavigationHelper.showIntroduction(getFragmentManager(), getNavigationView());
+                NavigationHelper.getInstance().showIntroduction(getFragmentManager(), getNavigationView());
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle bundle){
+        super.onSaveInstanceState(bundle);
+        bundle.putInt(SAVED_PAGE_EXTRA, NavigationHelper.getInstance().getSelectedPage());
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        switch (id) {
-            case R.id.nav_introduction:
-                NavigationHelper.showIntroduction(getFragmentManager(), getNavigationView());
-                break;
-            case R.id.nav_test:
-                NavigationHelper.showTest(getFragmentManager(), getNavigationView());
-                break;
-            case R.id.nav_psychotypes:
-                NavigationHelper.showTypes(getFragmentManager(), getNavigationView());
-                break;
-            case R.id.nav_relationships:
-                NavigationHelper.showRelationships(getFragmentManager(), getNavigationView());
-                break;
-            case R.id.nav_functions:
-                NavigationHelper.showFunctions(getFragmentManager(), getNavigationView());
-                break;
-            case R.id.nav_about:
-                NavigationHelper.showAbout(getFragmentManager(), getNavigationView());
-                break;
-            case R.id.nav_aspects_and_functions:
-                NavigationHelper.showAspectsAndFunctions(getFragmentManager(), getNavigationView());
-
-        }
+        showSelectedScreen(item.getItemId());
 
         DrawerLayout drawer = getDrawerLayout();
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void showSelectedScreen(int selectedItem){
+        switch (selectedItem) {
+            case R.id.nav_introduction:
+                NavigationHelper.getInstance().showIntroduction(getFragmentManager(), getNavigationView());
+                break;
+            case R.id.nav_test:
+                NavigationHelper.getInstance().showTest(getFragmentManager(), getNavigationView());
+                break;
+            case R.id.nav_psychotypes:
+                NavigationHelper.getInstance().showTypes(getFragmentManager(), getNavigationView());
+                break;
+            case R.id.nav_relationships:
+                NavigationHelper.getInstance().showRelationships(getFragmentManager(), getNavigationView());
+                break;
+            case R.id.nav_functions:
+                NavigationHelper.getInstance().showFunctions(getFragmentManager(), getNavigationView());
+                break;
+            case R.id.nav_about:
+                NavigationHelper.getInstance().showAbout(getFragmentManager(), getNavigationView());
+                break;
+            case R.id.nav_aspects_and_functions:
+                NavigationHelper.getInstance().showAspectsAndFunctions(getFragmentManager(), getNavigationView());
+
+        }
     }
 
     private void initializeLeftMenu(){

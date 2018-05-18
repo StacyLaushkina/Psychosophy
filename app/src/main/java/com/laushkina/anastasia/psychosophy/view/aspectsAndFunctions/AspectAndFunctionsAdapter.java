@@ -23,7 +23,7 @@ public class AspectAndFunctionsAdapter extends FragmentPagerAdapter {
                 break;
             }
             case FUNCTIONS: {
-                fragment = new FunctionsFragment();
+                fragment = new AspectsAndFunctions_FunctionsFragment();
                 break;
             }
             default:

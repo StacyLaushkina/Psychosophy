@@ -1,7 +1,5 @@
 package com.laushkina.anastasia.psychosophy.view.relationships;
 
-import android.animation.Animator;
-import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -19,7 +17,6 @@ import android.widget.Spinner;
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.FragmentRelationshipsBinding;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
-import com.laushkina.anastasia.psychosophy.domain.relationships.PsychotypeRelationships;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 
 import javax.inject.Inject;
@@ -30,7 +27,7 @@ import dagger.Module;
 public class RelationshipsFragment extends BaseFragment implements AdapterView.OnItemSelectedListener, IRelationshipsResultObserver{
 
     @Inject RelationshipsPresenter presenter;
-    private PsychotypeRelationshipsViewModel viewModel = new PsychotypeRelationshipsViewModel();
+    private RelationshipsViewModel viewModel = new RelationshipsViewModel();
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
@@ -128,15 +125,8 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
     }
 
     public void calculate(Psychotype fistType, Psychotype secondType){
-        PsychotypeRelationships relationships = presenter.calcRelationships(fistType, secondType, this);
-        viewModel.setFirstFunctionRelationshipsTitle(relationships.getFirstFunctionRelationshipsTitle());
-        viewModel.setFirstFunctionRelationships(relationships.getFirstFunctionRelationships());
-        viewModel.setSecondFunctionRelationshipsTitle(relationships.getSecondFunctionRelationshipsTitle());
-        viewModel.setSecondFunctionRelationships(relationships.getSecondFunctionRelationships());
-        viewModel.setThirdFunctionRelationshipsTitle(relationships.getThirdFunctionRelationshipsTitle());
-        viewModel.setThirdFunctionRelationships(relationships.getThirdFunctionRelationships());
-        viewModel.setForthFunctionRelationshipsTitle(relationships.getForthFunctionRelationshipsTitle());
-        viewModel.setForthFunctionRelationships(relationships.getForthFunctionRelationships());
+        RelationshipsViewModel relationships = presenter.calcRelationships(fistType, secondType, this);
+        viewModel.refreshWith(relationships);
     }
 
     @Override

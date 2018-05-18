@@ -1,12 +1,10 @@
 package com.laushkina.anastasia.psychosophy.domain.test;
 
-import java.util.List;
-
 public class AnswersValidation {
 
-    public static boolean areValid(List<Question> questions) {
+    public static boolean areValid(TestQuestion[] questions) {
         boolean isValid = true;
-        for (Question question : questions) {
+        for (TestQuestion question : questions) {
             if (question.getAnswer() == null) {
                 isValid = false;
                 break;

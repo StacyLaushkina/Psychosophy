@@ -32,9 +32,9 @@
                 <ImageView
                     android:id="@+id/function_image"
                     android:layout_width="@dimen/function_image_size"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/function_image_size"
                     android:src="@{viewModel.functionImage}"
-                    android:scaleType="fitCenter"
+                    android:scaleType="centerInside"
                     android:padding="@dimen/basic_margin"/>
 
                 <TextView

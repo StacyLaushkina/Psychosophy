@@ -23,8 +23,8 @@
             android:layout_marginBottom="@dimen/basic_small_margin">
             <ImageView
                 android:id="@+id/will_image"
-                android:layout_width="@dimen/aspects_and_functions_image_size"
-                android:layout_height="@dimen/aspects_and_functions_image_size"
+                android:layout_width="@dimen/function_image_size"
+                android:layout_height="@dimen/function_image_size"
                 android:src="@drawable/ic_will"
                 android:layout_margin="@dimen/basic_margin"
                 android:scaleType="centerInside"
@@ -52,8 +52,8 @@
             android:layout_marginBottom="@dimen/basic_small_margin">
             <ImageView
                 android:id="@+id/logic_image"
-                android:layout_width="@dimen/aspects_and_functions_image_size"
-                android:layout_height="@dimen/aspects_and_functions_image_size"
+                android:layout_width="@dimen/function_image_size"
+                android:layout_height="@dimen/function_image_size"
                 android:src="@drawable/ic_logic"
                 android:layout_margin="@dimen/basic_margin"
                 android:scaleType="centerInside"
@@ -81,8 +81,8 @@
             android:layout_marginBottom="@dimen/basic_small_margin">
             <ImageView
                 android:id="@+id/image_emotion"
-                android:layout_width="@dimen/aspects_and_functions_image_size"
-                android:layout_height="@dimen/aspects_and_functions_image_size"
+                android:layout_width="@dimen/function_image_size"
+                android:layout_height="@dimen/function_image_size"
                 android:src="@drawable/ic_emotion"
                 android:layout_margin="@dimen/basic_margin"
                 android:scaleType="centerInside"
@@ -110,8 +110,8 @@
             android:layout_marginBottom="@dimen/basic_small_margin">
             <ImageView
                 android:id="@+id/physics_image"
-                android:layout_width="@dimen/aspects_and_functions_image_size"
-                android:layout_height="@dimen/aspects_and_functions_image_size"
+                android:layout_width="@dimen/function_image_size"
+                android:layout_height="@dimen/function_image_size"
                 android:src="@drawable/ic_physics"
                 android:layout_margin="@dimen/basic_margin"
                 android:scaleType="centerInside"

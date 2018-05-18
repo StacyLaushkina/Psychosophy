@@ -14,8 +14,7 @@
     <dimen name="aspects_and_functions_switcher_height">40dp</dimen>
     <dimen name="functions_at_position_button_height">60dp</dimen>
     <dimen name="menu_header_image_size">100dp</dimen>
-    <dimen name="aspects_and_functions_image_size">90dp</dimen>
-    <dimen name="function_image_size">130dp</dimen>
+    <dimen name="function_image_size">90dp</dimen>
     <dimen name="psychotype_full_image_size">160dp</dimen>
     <dimen name="psychotype_card_size">150dp</dimen>
     <dimen name="welcome_button_width">150dp</dimen>

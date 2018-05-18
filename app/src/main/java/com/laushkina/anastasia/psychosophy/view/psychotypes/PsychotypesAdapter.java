@@ -64,6 +64,6 @@ public class PsychotypesAdapter extends RecyclerView.Adapter<PsychotypesAdapter.
     }
 
     private void onClick(int position){
-        NavigationHelper.showTypeDescription(psychotypes[position], fragmentManager, navigationView);
+        NavigationHelper.getInstance().showTypeDescription(psychotypes[position], fragmentManager, navigationView);
     }
 }

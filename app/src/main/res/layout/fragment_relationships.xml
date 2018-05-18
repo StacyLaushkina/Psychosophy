@@ -3,7 +3,7 @@
     <data>
         <variable
             name="relationships"
-            type="com.laushkina.anastasia.psychosophy.view.relationships.PsychotypeRelationshipsViewModel"/>
+            type="com.laushkina.anastasia.psychosophy.view.relationships.RelationshipsViewModel"/>
     </data>
 
     <RelativeLayout

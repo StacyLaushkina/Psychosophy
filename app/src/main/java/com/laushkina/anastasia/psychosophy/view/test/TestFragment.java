@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
-import com.laushkina.anastasia.psychosophy.domain.test.QuestionAnswer;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.FragmentTestBinding;
@@ -24,6 +23,7 @@ import javax.inject.Inject;
 
 public class TestFragment extends BaseFragment implements ITestResultsObserver, ITypeCalculator {
 
+    private static final String TEST_STATE_EXTRA = "test_state";
     @Inject TestPresenter presenter;
     private TestViewModel viewModel;
     private TestQuestionsAdapter adapter;
@@ -44,18 +44,34 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
         return view;
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle bundle){
+        super.onSaveInstanceState(bundle);
+        bundle.putBundle(TEST_STATE_EXTRA, presenter.getTestState());
+    }
+
+    @Override
+    public void onViewStateRestored(Bundle bundle) {
+        super.onViewStateRestored(bundle);
+
+        Bundle savedState = bundle == null ? null : bundle.getBundle(TEST_STATE_EXTRA);
+        if (savedState == null) return;
+
+        presenter.restoreFromSavedState(savedState);
+        viewModel.setProgress(presenter.getProgress());
+    }
+
     private void initialize(View view){
         setTitle();
         viewModel = new TestViewModel(presenter.getNextQuestionText(this));
 
         // Initialize questions
-        RecyclerView questionsRecycler = view.findViewById(R.id.test_questions_recycler);
+        RecyclerView questionsRecycler = getQuestionsRecycler(view);
         questionsRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapter = new TestQuestionsAdapter(presenter.getFirstGroupOfQuestions(this), this::onAnswersSelected);
         questionsRecycler.setAdapter(adapter);
 
-        ProgressBar progressBar = view.findViewById(R.id.test_progress);
-        progressBar.setProgressDrawable(getResources().getDrawable(R.drawable.test_progress_drawable));
+        getProgressBar(view).setProgressDrawable(getResources().getDrawable(R.drawable.test_progress_drawable));
     }
 
     void onAnswersSelected() {
@@ -81,12 +97,12 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
 
     @Override
     public void showExceptionResultDescription(){
-        NavigationHelper.showTestResults(null, getFragmentManager(), getNavigationView());
+        NavigationHelper.getInstance().showTestResults(null, getFragmentManager(), getNavigationView());
     }
 
     @Override
     public void showTypeDescription(Psychotype[] psychotypes) {
-        NavigationHelper.showTestResults(psychotypes, getFragmentManager(), getNavigationView());
+        NavigationHelper.getInstance().showTestResults(psychotypes, getFragmentManager(), getNavigationView());
     }
 
     @Override
@@ -97,5 +113,13 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
     @Override
     protected String getTitle(){
         return getResources().getString(R.string.test);
+    }
+
+    private ProgressBar getProgressBar(View view){
+        return view.findViewById(R.id.test_progress);
+    }
+
+    private RecyclerView getQuestionsRecycler(View view){
+        return view.findViewById(R.id.test_questions_recycler);
     }
 }
