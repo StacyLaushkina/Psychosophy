@@ -35,7 +35,8 @@
             android:padding="@dimen/basic_margin"
             android:scaleType="fitEnd"
             android:src="@drawable/ic_action_less"
-            android:visibility="invisible"/>
+            android:visibility="invisible"
+            android:clickable="false"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,6 +45,7 @@
             style="@style/MediumSizeTextStyle"
             android:gravity="center"
             android:text="@string/functions_title"
+            android:textColor="@color/colorPrimaryDark"
             android:layout_toEndOf="@+id/switch_less_button"
             android:layout_toStartOf="@+id/switch_more_button"/>
 
@@ -55,7 +57,8 @@
             android:padding="@dimen/basic_margin"
             android:scaleType="fitEnd"
             android:src="@drawable/ic_action_more"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:clickable="false"/>
 
     </RelativeLayout>
 

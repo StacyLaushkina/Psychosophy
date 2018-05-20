@@ -81,7 +81,12 @@ class TestPresenter {
             return;
         }
 
-        resultsObserver.showNexGroupOfQuestions(getNextAnswers());
+        resultsObserver.showGroupOfQuestions(getNextAnswers(), true);
+    }
+
+    void onPrevQuestionsRequested(ITestResultsObserver resultsObserver){
+        amountOfFinishedQuestions -= QUESTIONS_IN_GROUP;
+        resultsObserver.showGroupOfQuestions(getNextAnswers(), amountOfFinishedQuestions > 0);
     }
 
     String getNextQuestionText(ITestResultsObserver resultsObserver){

@@ -2,6 +2,7 @@
 <resources>
     <string name="finish_title">Завершить</string>
     <string name="next_question_title">Далее</string>
+    <string name="prev_question_title">Назад</string>
 
     <string name="yes_answer_title">Да</string>
     <string name="maybe_answer_title">Возможно</string>

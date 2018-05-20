@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="relationships_select_hint">Выберите два типа:</string>
+    <string name="relationships_first_type_prompt">Тип 1:</string>
+    <string name="relationships_second_type_prompt">Тип 2:</string>
 </resources>

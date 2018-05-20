@@ -8,8 +8,6 @@ import com.laushkina.anastasia.psychosophy.domain.test.Function;
 
 public class ForthFunctionFragment extends FunctionsDescriptionFragment {
 
-    private static final String FUNCTION_NUMBER_PREFIX = "4 ";
-
     @Override
     public Drawable getImage() {
         return getResources().getDrawable(R.drawable.ic_empty_flag);
@@ -33,8 +31,14 @@ public class ForthFunctionFragment extends FunctionsDescriptionFragment {
 
     @Override
     public String getEmotionTitle() {
-        return FunctionTitleGetter.getForthFunctionTitle(Function.Emotion, getActivity());
+        return FunctionTitleGetter.getForthFunctionTitle(Function.Emotion, getResources());
     }
+
+    @Override
+    public String getEmotionShortTitle() {
+        return FunctionTitleGetter.getForthFunctionShortTitle(Function.Emotion, getResources());
+    }
+
 
     @Override
     public CharSequence getFullDescription(Function function) {
@@ -49,21 +53,32 @@ public class ForthFunctionFragment extends FunctionsDescriptionFragment {
 
     @Override
     public String getLogicTitle() {
-        return FunctionTitleGetter.getForthFunctionTitle(Function.Logic, getActivity());
+        return FunctionTitleGetter.getForthFunctionTitle(Function.Logic, getResources());
+    }
+
+    @Override
+    public String getLogicShortTitle() {
+        return FunctionTitleGetter.getForthFunctionShortTitle(Function.Logic, getResources());
     }
 
     @Override
     public String getPhysicsTitle() {
-        return FunctionTitleGetter.getForthFunctionTitle(Function.Physics, getActivity());
+        return FunctionTitleGetter.getForthFunctionTitle(Function.Physics, getResources());
+    }
+
+    @Override
+    public String getPhysicsShortTitle() {
+        return FunctionTitleGetter.getForthFunctionShortTitle(Function.Physics, getResources());
     }
 
     @Override
     public String getWillTitle() {
-        return FunctionTitleGetter.getForthFunctionTitle(Function.Will, getActivity());
+        return FunctionTitleGetter.getForthFunctionTitle(Function.Will, getResources());
     }
 
     @Override
-    public String getFunctionPrefix() {
-        return FUNCTION_NUMBER_PREFIX;
+    public String getWillShortTitle() {
+        return FunctionTitleGetter.getForthFunctionShortTitle(Function.Will, getResources());
     }
+
 }

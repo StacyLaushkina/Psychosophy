@@ -21,9 +21,9 @@
             <TextView
                 android:id="@+id/select_types_hint"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="start"
-                style="@style/MediumSizeTextStyle"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                style="@style/SubTitleTextStyle"
                 android:text="@string/relationships_select_hint"
                 android:padding="@dimen/basic_margin"/>
 
@@ -35,7 +35,7 @@
                 <Spinner
                     android:id="@+id/first_type_spinner"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp" />
+                    android:layout_height="@dimen/relationships_spinner_height" />
             </LinearLayout>
 
             <LinearLayout
@@ -46,7 +46,7 @@
                 <Spinner
                     android:id="@+id/second_type_spinner"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"/>
+                    android:layout_height="@dimen/relationships_spinner_height"/>
             </LinearLayout>
 
         </LinearLayout>

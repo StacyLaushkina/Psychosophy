@@ -9,15 +9,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/theory_author_info"
-        android:gravity="center"
+        android:text="@string/developer_info"
         android:layout_marginTop="@dimen/basic_margin"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/developer_info"
-        android:layout_marginTop="@dimen/basic_margin"/>
+        android:text="@string/developer_link"
+        android:layout_marginBottom="@dimen/basic_margin"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -84,6 +83,13 @@
         android:gravity="center"
         android:text="@string/function_general_info_link"
         android:layout_marginBottom="@dimen/basic_margin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/theory_author_info"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/basic_margin"/>
 
 
 </LinearLayout>

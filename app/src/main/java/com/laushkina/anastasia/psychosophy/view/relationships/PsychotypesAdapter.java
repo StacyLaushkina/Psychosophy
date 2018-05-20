@@ -14,22 +14,20 @@ import com.laushkina.anastasia.psychosophy.view.psychotypeDescription.Psychotype
 public class PsychotypesAdapter extends ArrayAdapter<Psychotype> {
 
     private int resourceLayout;
+    private String promtTest;
 
-    public PsychotypesAdapter(@NonNull Context context, int resource, Psychotype[] psychotypes) {
+    public PsychotypesAdapter(@NonNull Context context, int resource, Psychotype[] psychotypes, String promtTest) {
         super(context, resource, psychotypes);
         this.resourceLayout = resource;
+        this.promtTest = promtTest;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Psychotype psychotype = getItem(position);
-
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(resourceLayout, null);
         }
-        // First item must e empty
-        ((TextView) convertView.findViewById(android.R.id.text1))
-                .setText(psychotype == null ? null : PsychotypeDescriptionGetter.getTitle(psychotype, getContext()));
+        ((TextView) convertView.findViewById(android.R.id.text1)).setText(getText(position));
         return convertView;
     }
 
@@ -38,12 +36,15 @@ public class PsychotypesAdapter extends ArrayAdapter<Psychotype> {
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(resourceLayout, null);
         }
-        Psychotype psychotype = getItem(position);
 
-        // First item must e empty
-        ((TextView) convertView.findViewById(android.R.id.text1))
-                .setText(psychotype == null ? null : PsychotypeDescriptionGetter.getTitle(psychotype, getContext()));
+        ((TextView) convertView.findViewById(android.R.id.text1)).setText(getText(position));
         return convertView;
+    }
+
+    private CharSequence getText(int position){
+        Psychotype psychotype = getItem(position);
+        //First item is prompt
+        return position == 0 ? promtTest : PsychotypeDescriptionGetter.getTitle(psychotype, getContext());
     }
 
 }

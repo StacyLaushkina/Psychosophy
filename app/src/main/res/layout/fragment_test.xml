@@ -35,6 +35,22 @@
             android:layout_above="@+id/next_question"/>
 
         <Button
+            android:id="@+id/prev_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/basic_margin"
+            android:layout_marginEnd="@dimen/basic_margin"
+
+            android:background="@android:color/transparent"
+            android:text="@{viewModel.prevButtonText}"
+            android:textColor="@drawable/in_text_border_background"
+            android:textSize="@dimen/text_size_medium"
+            android:enabled="@{viewModel.prevEnabled}"
+            android:onClick="@{() -> testCalculator.prev()}"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"/>
+
+        <Button
             android:id="@+id/next_question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

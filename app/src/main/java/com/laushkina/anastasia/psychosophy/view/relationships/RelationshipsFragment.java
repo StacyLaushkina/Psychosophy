@@ -47,29 +47,21 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
     private void initialize(View view){
         setTitle();
 
-        Spinner firstTypeSpinner = getFirstTypeSpinner(view);
-        Spinner secondTypeSpinner = getSecondTypeSpinner(view);
-
-        PsychotypesAdapter adapter = new PsychotypesAdapter(getActivity(), android.R.layout.simple_list_item_1, copyWithFirstNull(Psychotype.values()));
-        firstTypeSpinner.setAdapter(adapter);
-        firstTypeSpinner.setOnItemSelectedListener(this);
-        secondTypeSpinner.setAdapter(adapter);
-        secondTypeSpinner.setOnItemSelectedListener(this);
+        initSpinner(getFirstTypeSpinner(view), getResources().getString(R.string.relationships_first_type_prompt));
+        initSpinner(getSecondTypeSpinner(view), getResources().getString(R.string.relationships_second_type_prompt));
     }
 
-    //TODO move to utils?
-    private Psychotype[] copyWithFirstNull(Psychotype[] array){
-        Psychotype[] newArray = new Psychotype[array.length + 1];
-        int newArrayInd = 1;
-        for (Psychotype psychotype : array) {
-            newArray[newArrayInd] = psychotype;
-            newArrayInd++;
-        }
-        return newArray;
+    private void initSpinner(Spinner spinner, String prompt){
+        PsychotypesAdapter secondAdapter = new PsychotypesAdapter(getActivity(), android.R.layout.simple_list_item_1,
+                presenter.getPsychotypes(), prompt);
+        spinner.setAdapter(secondAdapter);
+        spinner.setOnItemSelectedListener(this);
     }
 
     @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+        if(position == 0) return;
+
         Psychotype firstSelected = getFirstType();
         if (firstSelected == null) return;
 
@@ -83,7 +75,6 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
     }
 
     private void animateTypesSelection(){
-
         DisplayMetrics metrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
 

@@ -8,8 +8,6 @@ import com.laushkina.anastasia.psychosophy.domain.test.Function;
 
 public class ThirdFunctionFragment extends FunctionsDescriptionFragment {
 
-    private static final String FUNCTION_NUMBER_PREFIX = "3 ";
-
     @Override
     public Drawable getImage() {
         return getResources().getDrawable(R.drawable.ic_engine);
@@ -33,7 +31,12 @@ public class ThirdFunctionFragment extends FunctionsDescriptionFragment {
 
     @Override
     public String getEmotionTitle() {
-        return FunctionTitleGetter.getThirdFunctionTitle(Function.Emotion, getActivity());
+        return FunctionTitleGetter.getThirdFunctionTitle(Function.Emotion, getResources());
+    }
+
+    @Override
+    public String getEmotionShortTitle() {
+        return FunctionTitleGetter.getThirdFunctionShortTitle(Function.Emotion, getResources());
     }
 
     @Override
@@ -48,22 +51,33 @@ public class ThirdFunctionFragment extends FunctionsDescriptionFragment {
     }
 
     @Override
+    public String getLogicShortTitle() {
+        return FunctionTitleGetter.getThirdFunctionShortTitle(Function.Logic, getResources());
+    }
+
+    @Override
     public String getLogicTitle() {
-        return FunctionTitleGetter.getThirdFunctionTitle(Function.Logic, getActivity());
+        return FunctionTitleGetter.getThirdFunctionTitle(Function.Logic, getResources());
+    }
+
+    @Override
+    public String getPhysicsShortTitle() {
+        return FunctionTitleGetter.getThirdFunctionShortTitle(Function.Physics, getResources());
     }
 
     @Override
     public String getPhysicsTitle() {
-        return FunctionTitleGetter.getThirdFunctionTitle(Function.Physics, getActivity());
+        return FunctionTitleGetter.getThirdFunctionTitle(Function.Physics, getResources());
+    }
+
+    @Override
+    public String getWillShortTitle() {
+        return FunctionTitleGetter.getThirdFunctionShortTitle(Function.Will, getResources());
     }
 
     @Override
     public String getWillTitle() {
-        return FunctionTitleGetter.getThirdFunctionTitle(Function.Will, getActivity());
+        return FunctionTitleGetter.getThirdFunctionTitle(Function.Will, getResources());
     }
 
-    @Override
-    public String getFunctionPrefix() {
-        return FUNCTION_NUMBER_PREFIX;
-    }
 }

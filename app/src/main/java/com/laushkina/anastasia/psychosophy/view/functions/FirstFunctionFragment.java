@@ -9,8 +9,6 @@ import com.laushkina.anastasia.psychosophy.domain.test.Function;
 
 public class FirstFunctionFragment extends FunctionsDescriptionFragment {
 
-    private static final String FUNCTION_NUMBER_PREFIX = "1 ";
-
     @Override
     public Drawable getImage() {
         return getResources().getDrawable(R.drawable.ic_hammer);
@@ -32,10 +30,6 @@ public class FirstFunctionFragment extends FunctionsDescriptionFragment {
         return Html.fromHtml(getString(R.string.first_function_description));
     }
 
-    @Override
-    public String getEmotionTitle() {
-        return FunctionTitleGetter.getFirstFunctionTitle(Function.Emotion, getActivity());
-    }
 
     @Override
     public Spanned getFullDescription(Function function) {
@@ -49,23 +43,42 @@ public class FirstFunctionFragment extends FunctionsDescriptionFragment {
     }
 
     @Override
+    public String getEmotionTitle() {
+        return FunctionTitleGetter.getFirstFunctionTitle(Function.Emotion, getResources());
+    }
+    @Override
+    public String getEmotionShortTitle() {
+        return FunctionTitleGetter.getFirstFunctionShortTitle(Function.Emotion, getResources());
+    }
+
+    @Override
+    public String getLogicShortTitle() {
+        return FunctionTitleGetter.getFirstFunctionShortTitle(Function.Logic, getResources());
+    }
+
+    @Override
     public String getLogicTitle() {
-        return FunctionTitleGetter.getFirstFunctionTitle(Function.Logic, getActivity());
+        return FunctionTitleGetter.getFirstFunctionTitle(Function.Logic, getResources());
+    }
+
+    @Override
+    public String getPhysicsShortTitle() {
+        return FunctionTitleGetter.getFirstFunctionShortTitle(Function.Physics, getResources());
     }
 
     @Override
     public String getPhysicsTitle() {
-        return FunctionTitleGetter.getFirstFunctionTitle(Function.Physics, getActivity());
+        return FunctionTitleGetter.getFirstFunctionTitle(Function.Physics, getResources());
+    }
+
+    @Override
+    public String getWillShortTitle() {
+        return FunctionTitleGetter.getFirstFunctionShortTitle(Function.Will, getResources());
     }
 
     @Override
     public String getWillTitle() {
-        return FunctionTitleGetter.getFirstFunctionTitle(Function.Will, getActivity());
-    }
-
-    @Override
-    public String getFunctionPrefix() {
-        return FUNCTION_NUMBER_PREFIX;
+        return FunctionTitleGetter.getFirstFunctionTitle(Function.Will, getResources());
     }
 
 }

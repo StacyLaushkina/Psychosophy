@@ -82,11 +82,17 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
         presenter.onNextRequested(adapter.getAnswers(),this);
     }
 
+    public void prev() {
+        presenter.onPrevQuestionsRequested(this);
+    }
+
     @Override
-    public void showNexGroupOfQuestions(List<CharSequence> questionSet) {
+    public void showGroupOfQuestions(List<CharSequence> questionSet, boolean isPrevEnabled) {
         adapter.setQuestions(questionSet);
         viewModel.setProgress(presenter.getProgress());
         viewModel.setNextButtonText(presenter.getNextQuestionText(this));
+        viewModel.setPrevButtonText(getResources().getString(R.string.prev_question_title));
+        viewModel.setPrevEnabled(isPrevEnabled);
         viewModel.setNextEnabled(false);
     }
 

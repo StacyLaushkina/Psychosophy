@@ -62,10 +62,10 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
                 .functionTitle(getFunctionTitle())
                 .functionDescription(TextStylezer.style(getFunctionDescription(), getActivity()))
                 .functionImage(functionImage)
-                .emotionTitle(getFunctionPrefix() + getEmotionTitle())
-                .logicTitle(getFunctionPrefix() + getLogicTitle())
-                .physicsTitle(getFunctionPrefix() + getPhysicsTitle())
-                .willTitle(getFunctionPrefix() + getWillTitle())
+                .emotionTitle(getEmotionShortTitle())
+                .logicTitle(getLogicShortTitle())
+                .physicsTitle(getPhysicsShortTitle())
+                .willTitle(getWillShortTitle())
                 .build();
     }
 
@@ -83,15 +83,17 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
 
     public abstract CharSequence getFullDescription(Function function);
 
+    public abstract String getEmotionShortTitle();
     public abstract String getEmotionTitle();
 
+    public abstract String getLogicShortTitle();
     public abstract String getLogicTitle();
 
+    public abstract String getPhysicsShortTitle();
     public abstract String getPhysicsTitle();
 
+    public abstract String getWillShortTitle();
     public abstract String getWillTitle();
-
-    public abstract String getFunctionPrefix();
 
     private String getTitle(Function function) {
         switch (function) {

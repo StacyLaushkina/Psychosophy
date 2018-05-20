@@ -41,7 +41,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="1.0"
-                android:layout_below="@+id/psychosophy_definition">
+                android:layout_below="@+id/psychosophy_definition"
+                android:layout_margin="@dimen/basic_margin">
 
                 <Button
                     android:layout_weight="0.25"
@@ -49,7 +50,7 @@
                     android:layout_height="@dimen/inline_button_height"
                     android:text="@string/first_function_title"
                     android:onClick="@{() -> navigator.navigateToFirstFunction()}"
-                    style="@style/InTextButtonStyle"/>
+                    style="@style/InTextButtonStyle" />
 
                 <Button
                     android:layout_weight="0.25"
@@ -88,12 +89,15 @@
 
             <Button
                 android:id="@+id/aspects_and_functions_button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/inline_button_height"
                 android:text="@string/introduction_psychosophy_aspects_and_functions"
                 android:onClick="@{() -> navigator.navigateToAspectsAnfFunctions()}"
                 style="@style/InTextButtonStyle"
-                android:layout_below="@+id/aspects_and_functions_text" />
+                android:layout_below="@+id/aspects_and_functions_text"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/basic_margin"
+                android:layout_margin="@dimen/basic_margin" />
 
             <!--PSYCHOTYPES-->
             <TextView
@@ -118,6 +122,7 @@
                     android:text="@string/introduction_psychosophy_psychotypes_button"
                     android:onClick="@{() -> navigator.navigateToPsychotypes()}"
                     style="@style/InTextButtonStyle"
+                    android:padding="@dimen/basic_margin"
                     android:layout_margin="@dimen/basic_margin"/>
 
                 <Button
@@ -126,6 +131,7 @@
                     android:text="@string/introduction_psychosophy_my_psychotype_button"
                     android:onClick="@{() -> navigator.navigateToTest()}"
                     style="@style/InTextButtonStyle"
+                    android:padding="@dimen/basic_margin"
                     android:layout_margin="@dimen/basic_margin"/>
             </LinearLayout>
 
@@ -140,12 +146,15 @@
 
             <Button
                 android:id="@+id/relationships_button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/inline_button_height"
                 android:text="@string/introduction_psychosophy_relationships_button"
                 android:onClick="@{() -> navigator.navigateToRelationships()}"
                 style="@style/InTextButtonStyle"
-                android:layout_below="@+id/relationships_description" />
+                android:layout_below="@+id/relationships_description"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/basic_margin"
+                android:layout_margin="@dimen/basic_margin"/>
 
         </RelativeLayout>
     </ScrollView>

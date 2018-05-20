@@ -17,6 +17,18 @@ public class RelationshipsPresenter {
         return new RelationshipsPresenter();
     }
 
+    Psychotype[] getPsychotypes(){
+        Psychotype[] allTypes = Psychotype.values();
+
+        Psychotype[] typesWithFirstDefault = new Psychotype[allTypes.length + 1];
+        int newArrayInd = 1;
+        for (Psychotype psychotype : allTypes) {
+            typesWithFirstDefault[newArrayInd] = psychotype;
+            newArrayInd++;
+        }
+        return typesWithFirstDefault;
+    }
+
     RelationshipsViewModel calcRelationships(Psychotype fistType, Psychotype secondType, IRelationshipsResultObserver observer){
         if (fistType == null || secondType == null){
             observer.showHint();

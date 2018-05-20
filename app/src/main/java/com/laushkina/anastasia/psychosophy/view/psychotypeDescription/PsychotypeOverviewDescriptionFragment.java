@@ -66,10 +66,10 @@ public class PsychotypeOverviewDescriptionFragment extends BaseFragment implemen
         Psychotype psychotype = getPsychotype();
 
         return new DescriptionViewModel.Builder()
-                .firstFunctionDescription(FunctionTitleGetter.getFirstFunctionTitle(psychotype.getFunctions(), getActivity()))
-                .secondFunctionDescription(FunctionTitleGetter.getSecondFunctionTitle(psychotype.getFunctions(), getActivity()))
-                .thirdFunctionDescription(FunctionTitleGetter.getThirdFunctionTitle(psychotype.getFunctions(), getActivity()))
-                .forthFunctionDescription(FunctionTitleGetter.getForthFunctionTitle(psychotype.getFunctions(), getActivity()))
+                .firstFunctionDescription(FunctionTitleGetter.getFirstFunctionShortTitle(psychotype.getFunctions(), getResources()))
+                .secondFunctionDescription(FunctionTitleGetter.getSecondFunctionShortTitle(psychotype.getFunctions(), getResources()))
+                .thirdFunctionDescription(FunctionTitleGetter.getThirdFunctionShortTitle(psychotype.getFunctions(), getResources()))
+                .forthFunctionDescription(FunctionTitleGetter.getForthFunctionShortTitle(psychotype.getFunctions(), getResources()))
                 .shortDescription(PsychotypeDescriptionGetter.getShort(psychotype, getActivity()))
                 .image(PsychotypeImageGetter.get(psychotype, getActivity()))
                 .build();

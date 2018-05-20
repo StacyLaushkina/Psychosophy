@@ -45,9 +45,9 @@
                     android:layout_toEndOf="@+id/function_image"
                     android:layout_alignTop="@+id/function_image"
                     android:layout_alignBottom="@+id/function_image"
-                    android:gravity="center"
+                    android:gravity="start|center"
                     style="@style/TitleTextStyle"
-                    android:fontFamily="sans-serif"/>
+                    android:layout_margin="@dimen/basic_margin"/>
 
                 <TextView
                     android:id="@+id/function_description"
@@ -72,7 +72,7 @@
                 android:layout_height="@dimen/functions_at_position_hint_height"
                 android:text="@string/functions_at_position_hint"
                 android:gravity="center"
-                android:textColor="@color/black"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/text_size_medium"/>
 
             <GridLayout

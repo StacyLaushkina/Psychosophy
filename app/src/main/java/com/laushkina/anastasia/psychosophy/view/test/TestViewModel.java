@@ -7,8 +7,10 @@ import com.laushkina.anastasia.psychosophy.BR;
 
 public class TestViewModel extends BaseObservable {
     private Boolean isNextEnabled;
+    private Boolean isPrevEnabled;
     private int progress;
     private CharSequence nextButtonText;
+    private CharSequence prevButtonText;
 
     TestViewModel(CharSequence nextButtonText){
         this();
@@ -17,6 +19,7 @@ public class TestViewModel extends BaseObservable {
 
     private TestViewModel(){
         isNextEnabled = false;
+        isPrevEnabled = false;
         progress = 0;
     }
 
@@ -48,5 +51,25 @@ public class TestViewModel extends BaseObservable {
     public void setNextButtonText(CharSequence nextButtonText) {
         this.nextButtonText = nextButtonText;
         notifyPropertyChanged(BR.nextButtonText);
+    }
+
+    @Bindable
+    public CharSequence getPrevButtonText() {
+        return prevButtonText;
+    }
+
+    public void setPrevButtonText(CharSequence prevButtonText) {
+        this.prevButtonText = prevButtonText;
+        notifyPropertyChanged(BR.prevButtonText);
+    }
+
+    @Bindable
+    public Boolean getPrevEnabled() {
+        return isPrevEnabled;
+    }
+
+    public void setPrevEnabled(Boolean prevEnabled) {
+        isPrevEnabled = prevEnabled;
+        notifyPropertyChanged(BR.prevEnabled);
     }
 }
