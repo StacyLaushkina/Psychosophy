@@ -39,17 +39,17 @@ public class RelationshipsPresenter {
     }
 
     private static RelationshipsViewModel calcRelationships(Psychotype fistType, Psychotype secondType, Context context){
-        String fistFunctionRelation = getFunctionRelationship(fistType.getFunctions()[0], 0, secondType, context);
-        String fistFunctionRelationTitle = getFunctionRelationshipTitle(fistType.getFunctions()[0], 0, secondType, context);
+        String fistFunctionRelation = getFunctionRelationship(fistType.getFunctions()[0], fistType, secondType, context);
+        String fistFunctionRelationTitle = getFunctionRelationshipTitle(fistType.getFunctions()[0], fistType, secondType, context);
 
-        String secondFunctionRelation = getFunctionRelationship(fistType.getFunctions()[1], 1, secondType, context);
-        String secondFunctionRelationTitle = getFunctionRelationshipTitle(fistType.getFunctions()[1], 1, secondType, context);
+        String secondFunctionRelation = getFunctionRelationship(fistType.getFunctions()[1], fistType, secondType, context);
+        String secondFunctionRelationTitle = getFunctionRelationshipTitle(fistType.getFunctions()[1], fistType, secondType, context);
 
-        String thirdFunctionRelation = getFunctionRelationship(fistType.getFunctions()[2], 2, secondType, context);
-        String thirdFunctionRelationTitle = getFunctionRelationshipTitle(fistType.getFunctions()[2], 2, secondType, context);
+        String thirdFunctionRelation = getFunctionRelationship(fistType.getFunctions()[2], fistType, secondType, context);
+        String thirdFunctionRelationTitle = getFunctionRelationshipTitle(fistType.getFunctions()[2], fistType, secondType, context);
 
-        String forthFunctionRelation = getFunctionRelationship(fistType.getFunctions()[3], 3, secondType, context);
-        String forthFunctionRelationTitle = getFunctionRelationshipTitle(fistType.getFunctions()[3], 3, secondType, context);
+        String forthFunctionRelation = getFunctionRelationship(fistType.getFunctions()[3], fistType, secondType, context);
+        String forthFunctionRelationTitle = getFunctionRelationshipTitle(fistType.getFunctions()[3], fistType, secondType, context);
 
         return new RelationshipsViewModel(fistFunctionRelationTitle, fistFunctionRelation,
                                           secondFunctionRelationTitle, secondFunctionRelation,
@@ -57,11 +57,11 @@ public class RelationshipsPresenter {
                                           forthFunctionRelationTitle, forthFunctionRelation);
     }
 
-    private static String getFunctionRelationship(Function firstFunction, int fistFunctionPosition, Psychotype secondType, Context context){
-        return RelationshipsToStringFormatter.getDescription(RelationshipsCalculator.getRelationship(firstFunction, fistFunctionPosition, secondType), context.getResources());
+    private static String getFunctionRelationship(Function firstFunction, Psychotype firstType, Psychotype secondType, Context context){
+        return RelationshipsToStringFormatter.getDescription(RelationshipsCalculator.getRelationship(firstFunction, firstType, secondType), context.getResources());
     }
 
-    private static String getFunctionRelationshipTitle(Function firstFunction, int fistFunctionPosition, Psychotype secondType, Context context){
-        return RelationshipsToStringFormatter.getTitle(RelationshipsCalculator.getRelationship(firstFunction, fistFunctionPosition, secondType), context.getResources());
+    private static String getFunctionRelationshipTitle(Function firstFunction, Psychotype firstType, Psychotype secondType, Context context){
+        return RelationshipsToStringFormatter.getTitle(RelationshipsCalculator.getRelationship(firstFunction, firstType, secondType), context.getResources());
     }
 }

@@ -59,32 +59,32 @@ public class PsychotypeCalculatorSeveralAnswersUnitTest {
         assertEquals(null, actual);
     }
 
-    private List<TestQuestion> getUnreliableAnswers(){
-        List<TestQuestion> questions = new ArrayList<>();
-        questions.add(new TestQuestion(null, Function.Logic, TestAnswer.No));
-        questions.add(new TestQuestion(null, Function.Emotion, TestAnswer.No));
-        questions.add(new TestQuestion(null, Function.Physics, TestAnswer.No));
-        questions.add(new TestQuestion(null, Function.Will, TestAnswer.No));
+    private TestQuestion[] getUnreliableAnswers(){
+        TestQuestion[] questions = new TestQuestion[4];
+        questions[0] = new TestQuestion(null, Function.Logic, TestAnswer.No);
+        questions[1] = new TestQuestion(null, Function.Emotion, TestAnswer.No);
+        questions[2] = new TestQuestion(null, Function.Physics, TestAnswer.No);
+        questions[3] = new TestQuestion(null, Function.Will, TestAnswer.No);
 
         return questions;
     }
 
-    private List<TestQuestion> getLWEPorLWPEorWLEPorWLPEAnswers(){
-        List<TestQuestion> questions = new ArrayList<>();
-        questions.add(new TestQuestion(null, Function.Logic, TestAnswer.Yes));
-        questions.add(new TestQuestion(null, Function.Emotion, TestAnswer.No));
-        questions.add(new TestQuestion(null, Function.Physics, TestAnswer.No));
-        questions.add(new TestQuestion(null, Function.Will, TestAnswer.Yes));
+    private TestQuestion[] getLWEPorLWPEorWLEPorWLPEAnswers(){
+        TestQuestion[] questions = new TestQuestion[4];
+        questions[0] = new TestQuestion(null, Function.Logic, TestAnswer.Yes);
+        questions[1] = new TestQuestion(null, Function.Emotion, TestAnswer.No);
+        questions[2] = new TestQuestion(null, Function.Physics, TestAnswer.No);
+        questions[3] = new TestQuestion(null, Function.Will, TestAnswer.Yes);
 
         return questions;
     }
 
-    private List<TestQuestion> getPEWLorPELWAnswers(){
-        List<TestQuestion> questions = new ArrayList<>();
-        questions.add(new TestQuestion(null, Function.Logic, TestAnswer.No));
-        questions.add(new TestQuestion(null, Function.Emotion, TestAnswer.Maybe));
-        questions.add(new TestQuestion(null, Function.Physics, TestAnswer.Yes));
-        questions.add(new TestQuestion(null, Function.Will, TestAnswer.No));
+    private TestQuestion[] getPEWLorPELWAnswers(){
+        TestQuestion[] questions = new TestQuestion[4];
+        questions[0] = new TestQuestion(null, Function.Logic, TestAnswer.No);
+        questions[1] = new TestQuestion(null, Function.Emotion, TestAnswer.Maybe);
+        questions[2] = new TestQuestion(null, Function.Physics, TestAnswer.Yes);
+        questions[3] = new TestQuestion(null, Function.Will, TestAnswer.No);
 
         return questions;
     }

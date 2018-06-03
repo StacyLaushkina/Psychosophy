@@ -1,25 +1,32 @@
 package com.laushkina.anastasia.psychosophy.domain.relationships;
 
-import android.content.Context;
-
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.test.Function;
-import com.laushkina.anastasia.psychosophy.view.utils.RelationshipsToStringFormatter;
 
 public class RelationshipsCalculator {
 
-    public static Relationship getRelationship(Function firstFunction, int fistFunctionPosition, Psychotype secondType){
-        // Position of firstFunction for secondType
-        int secondPosition = getFunctionPosition(firstFunction, secondType);
-        switch (firstFunction) {
+    /** Calculates relationship for the function
+     * @param firstTypeFunction function of the first psychotype
+     * @param firstType second psychotype
+     * @param secondType second psychotype
+     * @return relationships between firstType and secondType based on firstTypeFunction
+     */
+    public static Relationship getRelationship(Function firstTypeFunction, Psychotype firstType,
+                                               Psychotype secondType){
+        // Position of firstTypeFunction in firstType
+        int firstPosition = getFunctionPosition(firstTypeFunction, firstType);
+
+        // Position of firstTypeFunction in secondType
+        int secondPosition = getFunctionPosition(firstTypeFunction, secondType);
+        switch (firstTypeFunction) {
             case Will:
-                return getWillRelationship(fistFunctionPosition, secondPosition);
+                return getWillRelationship(firstPosition, secondPosition);
             case Emotion:
-                return getEmotionRelationship(fistFunctionPosition, secondPosition);
+                return getEmotionRelationship(firstPosition, secondPosition);
             case Logic:
-                return getLogicRelationship(fistFunctionPosition, secondPosition);
+                return getLogicRelationship(firstPosition, secondPosition);
             case Physics:
-                return getPhysicsRelationship(fistFunctionPosition, secondPosition);
+                return getPhysicsRelationship(firstPosition, secondPosition);
 
             default: throw new AssertionError();
         }
