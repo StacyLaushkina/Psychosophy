@@ -43,6 +43,11 @@ public class PsychotypesFragment extends BaseFragment {
         return (int) (displayMetrics.widthPixels / getResources().getDimension(R.dimen.psychotype_card_size));
     }
 
+    public int getColumnAmount() {
+        DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+        return (int) (displayMetrics.widthPixels / getResources().getDimension(R.dimen.psychotype_card_size));
+    }
+
     @Override
     protected String getTitle(){
         return getResources().getString(R.string.psychotypes);

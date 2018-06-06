@@ -2,24 +2,27 @@ package com.laushkina.anastasia.psychosophy.view.utils;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.text.Layout;
 import android.text.style.LeadingMarginSpan;
 import android.text.style.LineBackgroundSpan;
 
 /**
- * android.text.style.QuoteSpan hard-codes the strip color and gap. :(
+ * android.text.style.QuoteSpan hard-codes the strip color and gap.
  */
 public class CustomQuoteSpan implements LeadingMarginSpan, LineBackgroundSpan {
-    private final int backgroundColor;
+    private final int backgroundColor; // Not used for now
     private final int stripeColor;
     private final float stripeWidth;
     private final float gap;
+    private final float padding;
 
-    public CustomQuoteSpan(int backgroundColor, int stripeColor, float stripeWidth, float gap) {
+    public CustomQuoteSpan(int backgroundColor, int stripeColor, float stripeWidth, float gap, float padding) {
         this.backgroundColor = backgroundColor;
         this.stripeColor = stripeColor;
         this.stripeWidth = stripeWidth;
         this.gap = gap;
+        this.padding = padding;
     }
 
     @Override
@@ -46,8 +49,8 @@ public class CustomQuoteSpan implements LeadingMarginSpan, LineBackgroundSpan {
     public void drawBackground(Canvas c, Paint p, int left, int right, int top, int baseline, int bottom,
                                CharSequence text, int start, int end, int lnum) {
         int paintColor = p.getColor();
-        p.setColor(backgroundColor);
-        c.drawRect(left, top, right, bottom, p);
+        c.drawRect(left - padding, top - (lnum == 0 ? padding / 2 : - (padding / 2)),
+                   left, bottom + 8 / 2, p);
         p.setColor(paintColor);
     }
 }

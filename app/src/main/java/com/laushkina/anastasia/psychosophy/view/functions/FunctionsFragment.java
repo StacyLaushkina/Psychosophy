@@ -35,7 +35,6 @@ public class FunctionsFragment extends BaseFragment {
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.second_function_title)));
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.third_function_title)));
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.forth_function_title)));
-//        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         FunctionsAdapter adapter = new FunctionsAdapter(getChildFragmentManager(), getActivity(), getRequestedFunction());
         ViewPager pager = view.findViewById(R.id.functions_pager);

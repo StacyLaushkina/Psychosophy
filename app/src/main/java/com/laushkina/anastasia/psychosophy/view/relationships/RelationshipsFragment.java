@@ -5,9 +5,12 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
+import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
@@ -25,6 +28,8 @@ import dagger.Module;
 
 @Module
 public class RelationshipsFragment extends BaseFragment implements AdapterView.OnItemSelectedListener, IRelationshipsResultObserver{
+
+    private static final int ANIMATION_TIME = 100;
 
     @Inject RelationshipsPresenter presenter;
     private RelationshipsViewModel viewModel = new RelationshipsViewModel();
@@ -53,7 +58,7 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
 
     private void initSpinner(Spinner spinner, String prompt){
         PsychotypesAdapter secondAdapter = new PsychotypesAdapter(getActivity(), android.R.layout.simple_list_item_1,
-                presenter.getPsychotypes(), prompt);
+                presenter.getPsychotypes(), prompt, getResources().getColor(R.color.boulder));
         spinner.setAdapter(secondAdapter);
         spinner.setOnItemSelectedListener(this);
     }
@@ -75,11 +80,22 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
     }
 
     private void animateTypesSelection(){
+        Display display = ((WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+        int rotation = display.getRotation();
+        TranslateAnimation animation = getAnimation(rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180);
+        getSpinnersContainer().startAnimation(animation);
+    }
+
+    private TranslateAnimation getAnimation(boolean isPortrait){
         DisplayMetrics metrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
-        TranslateAnimation anim = new TranslateAnimation(0,0, 0, - getSpinnersContainer().getTop());
-        anim.setDuration(100);
+        TranslateAnimation anim;
+        if (isPortrait) {
+            anim = new TranslateAnimation(0,0, 0, - getSpinnersContainer().getTop());
+        } else {
+            anim = new TranslateAnimation(0, -metrics.heightPixels / 2, 0, 0);
+        }
 
         anim.setAnimationListener(new TranslateAnimation.AnimationListener() {
             @Override
@@ -90,6 +106,9 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
                 getRelationshipsContainer().setVisibility(View.VISIBLE);
                 RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)getSpinnersContainer().getLayoutParams();
                 layoutParams.removeRule(RelativeLayout.CENTER_IN_PARENT);
+                if (!isPortrait) {
+                    layoutParams.addRule(RelativeLayout.CENTER_VERTICAL);
+                }
                 getSpinnersContainer().setLayoutParams(layoutParams);
             }
 
@@ -97,7 +116,8 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
             public void onAnimationRepeat(Animation animation) {}
         });
 
-        getSpinnersContainer().startAnimation(anim);
+        anim.setDuration(ANIMATION_TIME);
+        return anim;
     }
 
     @Override

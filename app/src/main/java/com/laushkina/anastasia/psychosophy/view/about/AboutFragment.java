@@ -23,6 +23,10 @@ public class AboutFragment extends BaseFragment{
     }
 
     private void initialize(View view){
+        TextView developerAddressLink = view.findViewById(R.id.developer_info_link);
+        Linkify.addLinks(developerAddressLink, Linkify.WEB_URLS|Linkify.EMAIL_ADDRESSES);
+        developerAddressLink.setLinkTextColor(getResources().getColor(R.color.colorPrimaryDark));
+
         TextView designerAddressLink = view.findViewById(R.id.designer_info_link);
         Linkify.addLinks(designerAddressLink, Linkify.WEB_URLS|Linkify.EMAIL_ADDRESSES);
         designerAddressLink.setLinkTextColor(getResources().getColor(R.color.colorPrimaryDark));
