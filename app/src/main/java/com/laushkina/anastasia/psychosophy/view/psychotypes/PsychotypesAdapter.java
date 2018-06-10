@@ -21,13 +21,11 @@ public class PsychotypesAdapter extends RecyclerView.Adapter<PsychotypesAdapter.
     private Psychotype[] psychotypes;
     private Context context;
     private FragmentManager fragmentManager;
-    private NavigationView navigationView;
 
-    public PsychotypesAdapter(Psychotype[] psychotypes, Context context, FragmentManager fragmentManager, NavigationView navigationView){
+    public PsychotypesAdapter(Psychotype[] psychotypes, Context context, FragmentManager fragmentManager){
         this.psychotypes = psychotypes;
         this.context = context;
         this.fragmentManager = fragmentManager;
-        this.navigationView = navigationView;
     }
 
     @Override
@@ -64,6 +62,6 @@ public class PsychotypesAdapter extends RecyclerView.Adapter<PsychotypesAdapter.
     }
 
     private void onClick(int position){
-        NavigationHelper.getInstance().showTypeDescription(psychotypes[position], fragmentManager, navigationView);
+        NavigationHelper.getInstance().showTypeDescription(psychotypes[position], fragmentManager);
     }
 }

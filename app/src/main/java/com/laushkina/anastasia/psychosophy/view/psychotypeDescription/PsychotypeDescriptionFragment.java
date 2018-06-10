@@ -85,6 +85,11 @@ public class PsychotypeDescriptionFragment extends BaseFragment {
         return getResources().getString(R.string.psychotype_description);
     }
 
+    @Override
+    protected int getNavigationItemId(){
+        return R.id.nav_psychotypes;
+    }
+
     private ViewPager getDescriptionsViewPager(View view){
         return view.findViewById(R.id.description_pager);
     }

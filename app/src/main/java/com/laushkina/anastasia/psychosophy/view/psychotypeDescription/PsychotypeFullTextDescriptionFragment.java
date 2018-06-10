@@ -30,6 +30,11 @@ public class PsychotypeFullTextDescriptionFragment extends BaseFragment {
         return getResources().getString(R.string.psychotype_description);
     }
 
+    @Override
+    protected int getNavigationItemId(){
+        return R.id.nav_psychotypes;
+    }
+
     private Psychotype getPsychotype(){
         return (Psychotype)getArguments().getSerializable(PsychotypesFragment.psychotypeExtra);
     }

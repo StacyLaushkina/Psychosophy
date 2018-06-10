@@ -7,16 +7,12 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.FragmentIntroductionBinding;
-import com.laushkina.anastasia.psychosophy.databinding.FragmentRelationshipsBinding;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 import com.laushkina.anastasia.psychosophy.view.NavigationHelper;
 import com.laushkina.anastasia.psychosophy.view.functions.FunctionsAdapter;
-
-import java.util.concurrent.ConcurrentHashMap;
 
 public class IntroductionFragment extends BaseFragment implements IIntroductionNavigator {
 
@@ -29,7 +25,7 @@ public class IntroductionFragment extends BaseFragment implements IIntroductionN
         binding.setViewModel(getViewModel());
         binding.setNavigator(this);
 
-        setTitle();
+        initialize();
         return binding.getRoot();
     }
 
@@ -60,46 +56,47 @@ public class IntroductionFragment extends BaseFragment implements IIntroductionN
     }
 
     @Override
+    protected int getNavigationItemId(){
+        return R.id.nav_introduction;
+    }
+
+    @Override
     public void navigateToFirstFunction() {
-        NavigationHelper.getInstance().showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FIRST_FUNCTION,
-                null, getNavigationView());
+        NavigationHelper.getInstance().showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FIRST_FUNCTION,null);
     }
 
     @Override
     public void navigateToSecondFunction() {
-        NavigationHelper.getInstance().showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.SECOND_FUNCTION,
-                null, getNavigationView());
+        NavigationHelper.getInstance().showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.SECOND_FUNCTION,null);
     }
 
     @Override
     public void navigateToThirdFunction() {
-        NavigationHelper.getInstance().showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.THIRD_FUNCTION,
-                null, getNavigationView());
+        NavigationHelper.getInstance().showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.THIRD_FUNCTION,null);
     }
 
     @Override
     public void navigateToForthFunction() {
-        NavigationHelper.getInstance().showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FORTH_FUNCTION,
-                null, getNavigationView());
+        NavigationHelper.getInstance().showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FORTH_FUNCTION,null);
     }
 
     @Override
     public void navigateToPsychotypes() {
-        NavigationHelper.getInstance().showTypes(getActivity().getFragmentManager(), getNavigationView());
+        NavigationHelper.getInstance().showTypes(getActivity().getFragmentManager());
     }
 
     @Override
     public void navigateToTest() {
-        NavigationHelper.getInstance().showTest(getActivity().getFragmentManager(), getNavigationView());
+        NavigationHelper.getInstance().showTest(getActivity().getFragmentManager());
     }
 
     @Override
     public void navigateToAspectsAnfFunctions() {
-        NavigationHelper.getInstance().showAspectsAndFunctions(getActivity().getFragmentManager(), getNavigationView());
+        NavigationHelper.getInstance().showAspectsAndFunctions(getActivity().getFragmentManager());
     }
 
     @Override
     public void navigateToRelationships() {
-        NavigationHelper.getInstance().showRelationships(getActivity().getFragmentManager(), getNavigationView());
+        NavigationHelper.getInstance().showRelationships(getActivity().getFragmentManager());
     }
 }

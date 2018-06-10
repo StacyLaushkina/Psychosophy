@@ -28,14 +28,14 @@ public class PsychotypesFragment extends BaseFragment {
     }
 
     private void initialize(View view){
-        setTitle();
+        initialize();
 
         RecyclerView recyclerView = getTypesRecyclerView(view);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), getColumnAmount()));
 
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.basic_margin);
         recyclerView.addItemDecoration(new SpacesPsychotypeItemDecoration(spacingInPixels));
-        recyclerView.setAdapter(new PsychotypesAdapter(Psychotype.values(), getActivity(), getFragmentManager(), getNavigationView()));
+        recyclerView.setAdapter(new PsychotypesAdapter(Psychotype.values(), getActivity(), getFragmentManager()));
     }
 
     public int getColumnAmount() {
@@ -46,6 +46,11 @@ public class PsychotypesFragment extends BaseFragment {
     @Override
     protected String getTitle(){
         return getResources().getString(R.string.psychotypes);
+    }
+
+    @Override
+    protected int getNavigationItemId(){
+        return R.id.nav_psychotypes;
     }
 
     private RecyclerView getTypesRecyclerView(View view){

@@ -28,7 +28,7 @@ public class PsychotypeOverviewDescriptionFragment extends BaseFragment implemen
         binding.setViewModel(getViewModel());
         binding.setNavigator(this);
 
-        setTitle();
+        initialize();
         return binding.getRoot();
     }
 
@@ -38,28 +38,33 @@ public class PsychotypeOverviewDescriptionFragment extends BaseFragment implemen
     }
 
     @Override
+    protected int getNavigationItemId(){
+        return R.id.nav_psychotypes;
+    }
+
+    @Override
     public void navigateToFirstFunction(){
         // Switch between drawer's tabs, so level of activity's fragment manager is needed
         NavigationHelper.getInstance().showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FIRST_FUNCTION,
-                                       getPsychotype().getFunctions()[0], getNavigationView());
+                                       getPsychotype().getFunctions()[0]);
     }
 
     @Override
     public void navigateToSecondFunction(){
         NavigationHelper.getInstance().showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.SECOND_FUNCTION,
-                                       getPsychotype().getFunctions()[1], getNavigationView());
+                                       getPsychotype().getFunctions()[1]);
     }
 
     @Override
     public void navigateToThirdFunction(){
         NavigationHelper.getInstance().showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.THIRD_FUNCTION,
-                                       getPsychotype().getFunctions()[2], getNavigationView());
+                                       getPsychotype().getFunctions()[2]);
     }
 
     @Override
     public void navigateToForthFunction(){
         NavigationHelper.getInstance().showFunctions(getActivity().getFragmentManager(), FunctionsAdapter.FORTH_FUNCTION,
-                                       getPsychotype().getFunctions()[3], getNavigationView());
+                                       getPsychotype().getFunctions()[3]);
     }
 
     private DescriptionViewModel getViewModel(){

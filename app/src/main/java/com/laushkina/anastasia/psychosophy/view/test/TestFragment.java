@@ -62,7 +62,7 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
     }
 
     private void initialize(View view){
-        setTitle();
+        initialize();
         viewModel = new TestViewModel(presenter.getNextQuestionText(this));
 
         // Initialize questions
@@ -103,12 +103,12 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
 
     @Override
     public void showExceptionResultDescription(){
-        NavigationHelper.getInstance().showTestResults(null, getFragmentManager(), getNavigationView());
+        NavigationHelper.getInstance().showTestResults(null, getFragmentManager());
     }
 
     @Override
     public void showTypeDescription(Psychotype[] psychotypes) {
-        NavigationHelper.getInstance().showTestResults(psychotypes, getFragmentManager(), getNavigationView());
+        NavigationHelper.getInstance().showTestResults(psychotypes, getFragmentManager());
     }
 
     @Override
@@ -119,6 +119,11 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
     @Override
     protected String getTitle(){
         return getResources().getString(R.string.test);
+    }
+
+    @Override
+    protected int getNavigationItemId(){
+        return R.id.nav_test;
     }
 
     private ProgressBar getProgressBar(View view){

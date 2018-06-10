@@ -104,6 +104,7 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
             default: throw new AssertionError();
         }
     }
+
     private String getFunctionTitle(){
         return getResources().getString(R.string.common_description_title);
     }
@@ -136,12 +137,17 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
         slidingUpPanel.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
     }
 
+    private Function getRequestedFunction(){
+        return getArguments() == null ? null : (Function)getArguments().getSerializable(requestedFunctionExtra);
+    }
+
     @Override
     protected String getTitle() {
         throw new UnsupportedOperationException();
     }
 
-    private Function getRequestedFunction(){
-        return getArguments() == null ? null : (Function)getArguments().getSerializable(requestedFunctionExtra);
+    @Override
+    protected int getNavigationItemId(){
+        return R.id.nav_functions;
     }
 }

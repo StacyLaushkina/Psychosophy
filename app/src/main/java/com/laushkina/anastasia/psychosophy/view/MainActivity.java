@@ -1,6 +1,8 @@
 package com.laushkina.anastasia.psychosophy.view;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,6 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.laushkina.anastasia.psychosophy.R;
+import com.laushkina.anastasia.psychosophy.view.introduction.IntroductionFragment;
+import com.laushkina.anastasia.psychosophy.view.test.TestFragment;
 
 public class MainActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -49,10 +53,14 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
 
         switch (screen) {
             case test:
-                NavigationHelper.getInstance().showTest(getFragmentManager(), getNavigationView());
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, new TestFragment())
+                        .commit();
                 break;
             case introduction:
-                NavigationHelper.getInstance().showIntroduction(getFragmentManager(), getNavigationView());
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, new IntroductionFragment())
+                        .commit();
         }
     }
 
@@ -75,25 +83,25 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
     private void showSelectedScreen(int selectedItem){
         switch (selectedItem) {
             case R.id.nav_introduction:
-                NavigationHelper.getInstance().showIntroduction(getFragmentManager(), getNavigationView());
+                NavigationHelper.getInstance().showIntroduction(getFragmentManager());
                 break;
             case R.id.nav_test:
-                NavigationHelper.getInstance().showTest(getFragmentManager(), getNavigationView());
+                NavigationHelper.getInstance().showTest(getFragmentManager());
                 break;
             case R.id.nav_psychotypes:
-                NavigationHelper.getInstance().showTypes(getFragmentManager(), getNavigationView());
+                NavigationHelper.getInstance().showTypes(getFragmentManager());
                 break;
             case R.id.nav_relationships:
-                NavigationHelper.getInstance().showRelationships(getFragmentManager(), getNavigationView());
+                NavigationHelper.getInstance().showRelationships(getFragmentManager());
                 break;
             case R.id.nav_functions:
-                NavigationHelper.getInstance().showFunctions(getFragmentManager(), getNavigationView());
+                NavigationHelper.getInstance().showFunctions(getFragmentManager());
                 break;
             case R.id.nav_about:
-                NavigationHelper.getInstance().showAbout(getFragmentManager(), getNavigationView());
+                NavigationHelper.getInstance().showAbout(getFragmentManager());
                 break;
             case R.id.nav_aspects_and_functions:
-                NavigationHelper.getInstance().showAspectsAndFunctions(getFragmentManager(), getNavigationView());
+                NavigationHelper.getInstance().showAspectsAndFunctions(getFragmentManager());
 
         }
     }
@@ -109,8 +117,7 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = getNavigationView();
-        navigationView.setNavigationItemSelectedListener(this);
+        getNavigationView().setNavigationItemSelectedListener(this);
     }
 
     private Toolbar getToolbar(){

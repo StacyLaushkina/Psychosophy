@@ -28,7 +28,7 @@ public class FunctionsFragment extends BaseFragment {
     }
 
     private void initialize(View view){
-        setTitle();
+        initialize();
 
         TabLayout tabLayout = view.findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.first_function_title)));
@@ -64,6 +64,11 @@ public class FunctionsFragment extends BaseFragment {
     @Override
     protected String getTitle(){
         return getResources().getString(R.string.functions);
+    }
+
+    @Override
+    protected int getNavigationItemId(){
+        return R.id.nav_functions;
     }
 
     private Integer getRequestedTab(){

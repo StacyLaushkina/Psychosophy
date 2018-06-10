@@ -45,7 +45,7 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
     }
 
     private void initialize(View view){
-        setTitle();
+        initialize();
 
         initSpinner(getFirstTypeSpinner(view), getResources().getString(R.string.relationships_first_type_prompt));
         initSpinner(getSecondTypeSpinner(view), getResources().getString(R.string.relationships_second_type_prompt));
@@ -123,6 +123,11 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
     @Override
     protected String getTitle(){
         return getResources().getString(R.string.relationships);
+    }
+
+    @Override
+    protected int getNavigationItemId(){
+        return R.id.nav_relationships;
     }
 
     private Spinner getFirstTypeSpinner(View view){

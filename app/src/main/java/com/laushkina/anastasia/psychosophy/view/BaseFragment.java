@@ -11,16 +11,28 @@ public abstract class BaseFragment extends Fragment {
 
     protected abstract CharSequence getTitle();
 
-    public void setTitle(){
+    protected abstract int getNavigationItemId();
+
+    public void initialize(){
+        setToolbar();
+        setNavigationItemId();
+    }
+
+    private void setToolbar(){
         TextView toolbar = getToolbar();
         toolbar.setText(getTitle());
+    }
+
+    private void setNavigationItemId(){
+        NavigationView navigationView = getNavigationView();
+        navigationView.setCheckedItem(getNavigationItemId());
     }
 
     private TextView getToolbar(){
         return getActivity().findViewById(R.id.toolbar_title);
     }
 
-    public NavigationView getNavigationView(){
+    private NavigationView getNavigationView(){
         return (NavigationView) getActivity().findViewById(R.id.nav_view);
     }
 }

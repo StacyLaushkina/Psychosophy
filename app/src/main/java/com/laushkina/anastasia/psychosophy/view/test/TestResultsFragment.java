@@ -29,7 +29,7 @@ public class TestResultsFragment extends BaseFragment {
     }
 
     private void initialize(View view){
-        setTitle();
+        initialize();
 
         Psychotype[] testResult = getTestResults();
         getResultsDescriotionTextView(view).setText(getTestResultsDescription(testResult));
@@ -38,7 +38,7 @@ public class TestResultsFragment extends BaseFragment {
 
         RecyclerView recyclerView = getResultsRecyclerView(view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setAdapter(new PsychotypesAdapter(testResult, getActivity(), getFragmentManager(), getNavigationView()));
+        recyclerView.setAdapter(new PsychotypesAdapter(testResult, getActivity(), getFragmentManager()));
     }
 
     private String getTestResultsDescription(Psychotype[] results){
@@ -54,6 +54,11 @@ public class TestResultsFragment extends BaseFragment {
     @Override
     protected String getTitle(){
         return getResources().getString(R.string.test_results);
+    }
+
+    @Override
+    protected int getNavigationItemId(){
+        return R.id.nav_test;
     }
 
     private RecyclerView getResultsRecyclerView(View view){

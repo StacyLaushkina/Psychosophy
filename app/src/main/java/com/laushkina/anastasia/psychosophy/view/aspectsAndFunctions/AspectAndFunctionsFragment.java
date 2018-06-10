@@ -27,7 +27,7 @@ public class AspectAndFunctionsFragment extends BaseFragment {
     }
 
     private void initialize(View view){
-        setTitle();
+        initialize();
         aspectsAndFunctionsPager = getAspectsAndFunctionsPager(view);
         aspectsAndFunctionsPager.setAdapter(new AspectAndFunctionsAdapter(getChildFragmentManager()));
         aspectsAndFunctionsPager.addOnPageChangeListener(
@@ -102,5 +102,10 @@ public class AspectAndFunctionsFragment extends BaseFragment {
     @Override
     protected String getTitle(){
         return getResources().getString(R.string.aspects_and_functions);
+    }
+
+    @Override
+    protected int getNavigationItemId(){
+        return R.id.nav_aspects_and_functions;
     }
 }

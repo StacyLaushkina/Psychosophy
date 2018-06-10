@@ -43,11 +43,16 @@ public class AboutFragment extends BaseFragment{
         Linkify.addLinks(functionGeneralAddressLink, Linkify.WEB_URLS);
         functionGeneralAddressLink.setLinkTextColor(getResources().getColor(R.color.colorPrimaryDark));
 
-        setTitle();
+        initialize();
     }
 
     @Override
     protected String getTitle(){
         return getResources().getString(R.string.about);
+    }
+
+    @Override
+    protected int getNavigationItemId(){
+        return R.id.nav_about;
     }
 }

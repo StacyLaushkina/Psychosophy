@@ -36,23 +36,24 @@ public final class NavigationHelper {
         return instance;
     }
 
+    // Selected page is saved for keeping it when onSaveInstanceState() happens
     public int getSelectedPage(){
         return selectedPage;
     }
 
-    public void showTest(FragmentManager manager, NavigationView navigationView) {
-        changeContent(new TestFragment(), manager, navigationView, R.id.nav_test, false);
+    public void showTest(FragmentManager manager) {
+        changeContent(new TestFragment(), manager, R.id.nav_test, false);
     }
 
-    public void showTypes(FragmentManager manager, NavigationView navigationView){
-        changeContent(new PsychotypesFragment(), manager, navigationView, R.id.nav_psychotypes, false);
+    public void showTypes(FragmentManager manager){
+        changeContent(new PsychotypesFragment(), manager, R.id.nav_psychotypes, false);
     }
 
-    public void showFunctions(FragmentManager manager, NavigationView navigationView){
-        changeContent(new FunctionsFragment(), manager, navigationView, R.id.nav_functions, false);
+    public void showFunctions(FragmentManager manager){
+        changeContent(new FunctionsFragment(), manager, R.id.nav_functions, false);
     }
 
-    public void showFunctions(FragmentManager manager, int requestedTab, Function requestedFunction, NavigationView navigationView){
+    public void showFunctions(FragmentManager manager, int requestedTab, Function requestedFunction){
         Bundle bundle = new Bundle(2);
         bundle.putInt(com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment.REQUESTED_TAB, requestedTab);
         bundle.putSerializable(FunctionsDescriptionFragment.requestedFunctionExtra, requestedFunction);
@@ -60,46 +61,46 @@ public final class NavigationHelper {
         com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment fragment = new com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment();
         fragment.setArguments(bundle);
 
-        changeContent(fragment, manager, navigationView, R.id.nav_functions, false);
+        changeContent(fragment, manager, R.id.nav_functions, false);
     }
 
-    public void showAbout(FragmentManager manager, NavigationView navigationView){
-        changeContent(new AboutFragment(), manager, navigationView, R.id.nav_about, false);
+    public void showAbout(FragmentManager manager){
+        changeContent(new AboutFragment(), manager, R.id.nav_about, false);
     }
 
-    public void showIntroduction(FragmentManager manager, NavigationView navigationView){
-        changeContent(new IntroductionFragment(), manager, navigationView, R.id.nav_introduction, false);
+    public void showIntroduction(FragmentManager manager){
+        changeContent(new IntroductionFragment(), manager, R.id.nav_introduction, false);
     }
 
-    public void showTestResults(Psychotype[] results, FragmentManager manager, NavigationView navigationView){
+    public void showTestResults(Psychotype[] results, FragmentManager manager){
         Bundle bundle = new Bundle(1);
         bundle.putParcelableArray(TestResultsFragment.testResultsExtra, results);
 
         TestResultsFragment fragment = new TestResultsFragment();
         fragment.setArguments(bundle);
 
-        changeContent(fragment, manager, navigationView, R.id.nav_test, true);
+        changeContent(fragment, manager, R.id.nav_test, true);
     }
 
-    public void showTypeDescription(Psychotype type, FragmentManager manager, NavigationView navigationView) {
+    public void showTypeDescription(Psychotype type, FragmentManager manager) {
         Bundle bundle = new Bundle(1);
         bundle.putSerializable(PsychotypesFragment.psychotypeExtra, type);
 
         PsychotypeDescriptionFragment fragment = new PsychotypeDescriptionFragment();
         fragment.setArguments(bundle);
-        changeContent(fragment, manager, navigationView, R.id.nav_psychotypes, true);
+        changeContent(fragment, manager, R.id.nav_psychotypes, true);
     }
 
-    public void showRelationships(FragmentManager manager, NavigationView navigationView){
-        changeContent(new RelationshipsFragment(), manager, navigationView, R.id.nav_relationships, false);
+    public void showRelationships(FragmentManager manager){
+        changeContent(new RelationshipsFragment(), manager, R.id.nav_relationships, false);
     }
 
-    public void showAspectsAndFunctions(FragmentManager manager, NavigationView navigationView){
-        changeContent(new AspectAndFunctionsFragment(), manager, navigationView, R.id.nav_aspects_and_functions, false);
+    public void showAspectsAndFunctions(FragmentManager manager){
+        changeContent(new AspectAndFunctionsFragment(), manager, R.id.nav_aspects_and_functions, false);
     }
 
-    private void changeContent(Fragment fragment, FragmentManager manager,
-                               NavigationView navigationView, int checkedItemId, boolean doForceChange){
+    private void changeContent(Fragment fragment, FragmentManager manager, int checkedItemId, boolean doForceChange){
+        // Do not recreate fragment -- keep all changes in it
         if (selectedPage == checkedItemId && !doForceChange) return;
 
         // Insert the fragment by replacing any existing fragment
@@ -109,6 +110,5 @@ public final class NavigationHelper {
                 .commit();
 
         selectedPage = checkedItemId;
-        navigationView.setCheckedItem(checkedItemId);
     }
 }
