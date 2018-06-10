@@ -3,14 +3,11 @@ package com.laushkina.anastasia.psychosophy.view.functions;
 import android.databinding.DataBindingUtil;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.SlidingPaneLayout;
-import android.text.SpannableString;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ScrollView;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.FragmentFunctionsDescriptionBinding;
@@ -25,6 +22,7 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
 
     private FunctionViewModel viewModel;
     private SlidingUpPanelLayout slidingUpPanel;
+    private ScrollView descriptionScrollView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
@@ -46,6 +44,7 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
 
         // Sliding panel is unique for each tab - so it should be initialized every time
         slidingUpPanel = rootView.findViewById(R.id.sliding_layout);
+        descriptionScrollView = rootView.findViewById(R.id.function_description_scroller);
     }
 
     @Override
@@ -54,7 +53,7 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
         Function requestedFunction = getRequestedFunction();
         if (requestedFunction == null) return;
 
-        onFullDescriptionRequested(getFullDescription(requestedFunction), getTitle(requestedFunction), getImage(requestedFunction));
+        onFunctionDescriptionRequested(getFullDescription(requestedFunction), getTitle(requestedFunction), getImage(requestedFunction));
     }
 
     private FunctionViewModel getViewModel(Drawable functionImage){
@@ -111,30 +110,36 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
 
 
     public void onEmotionClick(){
-        onFullDescriptionRequested(getFullDescription(Function.Emotion), getEmotionTitle(), getImage(Function.Emotion));
+        onFunctionDescriptionRequested(getFullDescription(Function.Emotion), getEmotionTitle(), getImage(Function.Emotion));
     }
 
     public void onLogicClick(){
-        onFullDescriptionRequested(getFullDescription(Function.Logic), getLogicTitle(), getImage(Function.Logic));
+        onFunctionDescriptionRequested(getFullDescription(Function.Logic), getLogicTitle(), getImage(Function.Logic));
     }
 
     public void onPhysicsClick(){
-        onFullDescriptionRequested(getFullDescription(Function.Physics), getPhysicsTitle(), getImage(Function.Physics));
+        onFunctionDescriptionRequested(getFullDescription(Function.Physics), getPhysicsTitle(), getImage(Function.Physics));
     }
 
     public void onWillClick(){
-        onFullDescriptionRequested(getFullDescription(Function.Will), getWillTitle(), getImage(Function.Will));
+        onFunctionDescriptionRequested(getFullDescription(Function.Will), getWillTitle(), getImage(Function.Will));
     }
 
-    private void onFullDescriptionRequested(CharSequence fullDescription, String title, Drawable image){
+    private void onFunctionDescriptionRequested(CharSequence fullDescription, String title, Drawable image){
         viewModel.setFunctionDescription(TextStylezer.style(fullDescription, getActivity()));
         viewModel.setFunctionTitle(title);
         viewModel.setFunctionImage(image);
         collapseBottomNavigation();
+        scrollToTheTop();
     }
 
     private void collapseBottomNavigation(){
         slidingUpPanel.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
+
+    }
+
+    private void scrollToTheTop(){
+        descriptionScrollView.smoothScrollTo(0, 0);
     }
 
     private Function getRequestedFunction(){

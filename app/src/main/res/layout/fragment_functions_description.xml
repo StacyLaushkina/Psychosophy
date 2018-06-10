@@ -35,7 +35,7 @@
                     android:layout_height="@dimen/function_image_size"
                     android:src="@{viewModel.functionImage}"
                     android:scaleType="centerInside"
-                    android:padding="@dimen/basic_margin"/>
+                    android:layout_margin="@dimen/basic_margin"/>
 
                 <TextView
                     android:id="@+id/function_description_title"

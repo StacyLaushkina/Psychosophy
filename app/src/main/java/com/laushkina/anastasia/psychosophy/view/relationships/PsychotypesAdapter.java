@@ -1,6 +1,7 @@
 package com.laushkina.anastasia.psychosophy.view.relationships;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,12 +15,14 @@ import com.laushkina.anastasia.psychosophy.view.psychotypeDescription.Psychotype
 public class PsychotypesAdapter extends ArrayAdapter<Psychotype> {
 
     private int resourceLayout;
+    private int firstItemColor;
     private String promtTest;
 
-    public PsychotypesAdapter(@NonNull Context context, int resource, Psychotype[] psychotypes, String promtTest) {
+    PsychotypesAdapter(@NonNull Context context, int resource, Psychotype[] psychotypes, String promtTest, int firstItemColor) {
         super(context, resource, psychotypes);
         this.resourceLayout = resource;
         this.promtTest = promtTest;
+        this.firstItemColor = firstItemColor;
     }
 
     @Override
@@ -27,7 +30,8 @@ public class PsychotypesAdapter extends ArrayAdapter<Psychotype> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(resourceLayout, null);
         }
-        ((TextView) convertView.findViewById(android.R.id.text1)).setText(getText(position));
+
+        initText(convertView, position);
         return convertView;
     }
 
@@ -37,8 +41,18 @@ public class PsychotypesAdapter extends ArrayAdapter<Psychotype> {
             convertView = LayoutInflater.from(getContext()).inflate(resourceLayout, null);
         }
 
-        ((TextView) convertView.findViewById(android.R.id.text1)).setText(getText(position));
+        initText(convertView, position);
         return convertView;
+    }
+
+    private void initText(View convertView, int position){
+        TextView textView = convertView.findViewById(android.R.id.text1);
+        textView.setText(getText(position));
+        if (position == 0) {
+            textView.setTextColor(firstItemColor);
+        } else  {
+            textView.setTextColor(Color.BLACK);
+        }
     }
 
     private CharSequence getText(int position){

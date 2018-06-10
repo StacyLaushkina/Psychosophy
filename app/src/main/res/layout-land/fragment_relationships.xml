@@ -12,17 +12,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/spinner_container"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/relationships_spinner_landscape_width"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_centerInParent="true">
-            <ImageView
-                android:id="@+id/image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/collaboration"/>
             <TextView
                 android:id="@+id/select_types_hint"
                 android:layout_width="match_parent"
@@ -30,16 +25,13 @@
                 android:gravity="center"
                 style="@style/SubTitleTextStyle"
                 android:text="@string/relationships_select_hint"
-                android:padding="@dimen/basic_margin"
-                android:layout_below="@+id/image"/>
+                android:padding="@dimen/basic_margin"/>
 
             <LinearLayout
-                android:id="@+id/first_spinner_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/color_primary_border_background"
-                android:layout_margin="@dimen/basic_margin"
-                android:layout_below="@+id/select_types_hint">
+                android:layout_margin="@dimen/basic_margin">
                 <Spinner
                     android:id="@+id/first_type_spinner"
                     android:layout_width="match_parent"
@@ -50,22 +42,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/color_primary_border_background"
-                android:layout_margin="@dimen/basic_margin"
-                android:layout_below="@+id/first_spinner_container">
+                android:layout_margin="@dimen/basic_margin">
                 <Spinner
                     android:id="@+id/second_type_spinner"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/relationships_spinner_height"/>
             </LinearLayout>
 
-        </RelativeLayout>
+        </LinearLayout>
 
         <ScrollView
             android:id="@+id/relationships_scroller"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            android:layout_below="@+id/spinner_container">
+            android:layout_toEndOf="@+id/spinner_container">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

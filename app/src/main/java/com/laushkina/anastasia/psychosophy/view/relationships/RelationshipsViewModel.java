@@ -43,14 +43,14 @@ public class RelationshipsViewModel extends BaseObservable {
     }
 
     public void refreshWith(RelationshipsViewModel newValue){
-        setFirstFunctionRelationshipsTitle(newValue.firstFunctionRelationshipsTitle.toString());
-        setFirstFunctionRelationships(newValue.firstFunctionRelationships.toString());
-        setSecondFunctionRelationshipsTitle(newValue.secondFunctionRelationshipsTitle.toString());
-        setSecondFunctionRelationships(newValue.secondFunctionRelationships.toString());
-        setThirdFunctionRelationshipsTitle(newValue.thirdFunctionRelationshipsTitle.toString());
-        setThirdFunctionRelationships(newValue.thirdFunctionRelationships.toString());
-        setForthFunctionRelationshipsTitle(newValue.forthFunctionRelationshipsTitle.toString());
-        setForthFunctionRelationships(newValue.forthFunctionRelationships.toString());
+        setFirstFunctionRelationshipsTitle(newValue.firstFunctionRelationshipsTitle);
+        setFirstFunctionRelationships(newValue.firstFunctionRelationships);
+        setSecondFunctionRelationshipsTitle(newValue.secondFunctionRelationshipsTitle);
+        setSecondFunctionRelationships(newValue.secondFunctionRelationships);
+        setThirdFunctionRelationshipsTitle(newValue.thirdFunctionRelationshipsTitle);
+        setThirdFunctionRelationships(newValue.thirdFunctionRelationships);
+        setForthFunctionRelationshipsTitle(newValue.forthFunctionRelationshipsTitle);
+        setForthFunctionRelationships(newValue.forthFunctionRelationships);
     }
 
     @Bindable
@@ -58,8 +58,12 @@ public class RelationshipsViewModel extends BaseObservable {
         return firstFunctionRelationships;
     }
 
-    public void setFirstFunctionRelationships(String firstFunctionRelationships) {
-        this.firstFunctionRelationships = Html.fromHtml(firstFunctionRelationships);
+    private void setFirstFunctionRelationships(String firstFunctionRelationships) {
+        setFirstFunctionRelationships(Html.fromHtml(firstFunctionRelationships));
+    }
+
+    private void setFirstFunctionRelationships(CharSequence firstFunctionRelationships) {
+        this.firstFunctionRelationships = firstFunctionRelationships;
         notifyPropertyChanged(BR.firstFunctionRelationships);
     }
 
@@ -68,8 +72,12 @@ public class RelationshipsViewModel extends BaseObservable {
         return secondFunctionRelationships;
     }
 
-    public void setSecondFunctionRelationships(String secondFunctionRelationships) {
-        this.secondFunctionRelationships = Html.fromHtml(secondFunctionRelationships);
+    private void setSecondFunctionRelationships(String secondFunctionRelationships) {
+        setSecondFunctionRelationships(Html.fromHtml(secondFunctionRelationships));
+    }
+
+    private void setSecondFunctionRelationships(CharSequence secondFunctionRelationships) {
+        this.secondFunctionRelationships = secondFunctionRelationships;
         notifyPropertyChanged(BR.secondFunctionRelationships);
     }
 
@@ -78,8 +86,12 @@ public class RelationshipsViewModel extends BaseObservable {
         return thirdFunctionRelationships;
     }
 
-    public void setThirdFunctionRelationships(String thirdFunctionRelationships) {
-        this.thirdFunctionRelationships = Html.fromHtml(thirdFunctionRelationships);
+    private void setThirdFunctionRelationships(String thirdFunctionRelationships) {
+        setThirdFunctionRelationships(Html.fromHtml(thirdFunctionRelationships));
+    }
+
+    private void setThirdFunctionRelationships(CharSequence thirdFunctionRelationships) {
+        this.thirdFunctionRelationships = thirdFunctionRelationships;
         notifyPropertyChanged(BR.thirdFunctionRelationships);
     }
 
@@ -88,8 +100,12 @@ public class RelationshipsViewModel extends BaseObservable {
         return forthFunctionRelationships;
     }
 
-    public void setForthFunctionRelationships(String forthFunctionRelationships) {
-        this.forthFunctionRelationships = Html.fromHtml(forthFunctionRelationships);
+    private void setForthFunctionRelationships(String forthFunctionRelationships) {
+        setForthFunctionRelationships(Html.fromHtml(forthFunctionRelationships));
+    }
+
+    private void setForthFunctionRelationships(CharSequence forthFunctionRelationships) {
+        this.forthFunctionRelationships = forthFunctionRelationships;
         notifyPropertyChanged(BR.forthFunctionRelationships);
     }
 
@@ -98,8 +114,12 @@ public class RelationshipsViewModel extends BaseObservable {
         return firstFunctionRelationshipsTitle;
     }
 
-    public void setFirstFunctionRelationshipsTitle(String firstFunctionRelationshipsTitle) {
-        this.firstFunctionRelationshipsTitle = Html.fromHtml(firstFunctionRelationshipsTitle);
+    private void setFirstFunctionRelationshipsTitle(String firstFunctionRelationshipsTitle) {
+        setFirstFunctionRelationshipsTitle(Html.fromHtml(firstFunctionRelationshipsTitle));
+    }
+
+    private void setFirstFunctionRelationshipsTitle(CharSequence firstFunctionRelationshipsTitle) {
+        this.firstFunctionRelationshipsTitle = firstFunctionRelationshipsTitle;
         notifyPropertyChanged(BR.firstFunctionRelationshipsTitle);
     }
 
@@ -108,8 +128,12 @@ public class RelationshipsViewModel extends BaseObservable {
         return secondFunctionRelationshipsTitle;
     }
 
-    public void setSecondFunctionRelationshipsTitle(String secondFunctionRelationshipsTitle) {
-        this.secondFunctionRelationshipsTitle = Html.fromHtml(secondFunctionRelationshipsTitle);
+    private void setSecondFunctionRelationshipsTitle(String secondFunctionRelationshipsTitle) {
+        setSecondFunctionRelationshipsTitle(Html.fromHtml(secondFunctionRelationshipsTitle));
+    }
+
+    private void setSecondFunctionRelationshipsTitle(CharSequence secondFunctionRelationshipsTitle) {
+        this.secondFunctionRelationshipsTitle = secondFunctionRelationshipsTitle;
         notifyPropertyChanged(BR.secondFunctionRelationshipsTitle);
     }
 
@@ -118,8 +142,12 @@ public class RelationshipsViewModel extends BaseObservable {
         return thirdFunctionRelationshipsTitle;
     }
 
-    public void setThirdFunctionRelationshipsTitle(String thirdFunctionRelationshipsTitle) {
-        this.thirdFunctionRelationshipsTitle = Html.fromHtml(thirdFunctionRelationshipsTitle);
+    private void setThirdFunctionRelationshipsTitle(String thirdFunctionRelationshipsTitle) {
+        setThirdFunctionRelationshipsTitle(Html.fromHtml(thirdFunctionRelationshipsTitle));
+    }
+
+    private void setThirdFunctionRelationshipsTitle(CharSequence thirdFunctionRelationshipsTitle) {
+        this.thirdFunctionRelationshipsTitle = thirdFunctionRelationshipsTitle;
         notifyPropertyChanged(BR.thirdFunctionRelationshipsTitle);
     }
 
@@ -128,8 +156,12 @@ public class RelationshipsViewModel extends BaseObservable {
         return forthFunctionRelationshipsTitle;
     }
 
-    public void setForthFunctionRelationshipsTitle(String forthFunctionRelationshipsTitle) {
-        this.forthFunctionRelationshipsTitle = Html.fromHtml(forthFunctionRelationshipsTitle);
+    private void setForthFunctionRelationshipsTitle(String forthFunctionRelationshipsTitle) {
+        setForthFunctionRelationshipsTitle(Html.fromHtml(forthFunctionRelationshipsTitle));
+    }
+
+    private void setForthFunctionRelationshipsTitle(CharSequence forthFunctionRelationshipsTitle) {
+        this.forthFunctionRelationshipsTitle = forthFunctionRelationshipsTitle;
         notifyPropertyChanged(BR.forthFunctionRelationshipsTitle);
     }
 }

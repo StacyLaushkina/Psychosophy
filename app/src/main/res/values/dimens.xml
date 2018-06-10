@@ -18,8 +18,9 @@
     <dimen name="function_image_size">90dp</dimen>
     <dimen name="psychotype_full_image_size">160dp</dimen>
     <dimen name="psychotype_card_size">150dp</dimen>
-    <dimen name="welcome_button_width">150dp</dimen>
+    <dimen name="welcome_button_width">200dp</dimen>
     <dimen name="function_button_landscape_width">150dp</dimen>
+    <dimen name="relationships_spinner_landscape_width">250dp</dimen>
 
     <dimen name="text_size_large">20sp</dimen>
     <dimen name="text_size_big">17sp</dimen>
