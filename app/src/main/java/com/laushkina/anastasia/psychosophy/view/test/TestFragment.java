@@ -47,7 +47,9 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
     @Override
     public void onSaveInstanceState(Bundle bundle){
         super.onSaveInstanceState(bundle);
-        bundle.putBundle(TEST_STATE_EXTRA, presenter.getTestState());
+        if (isVisible()) {
+            bundle.putBundle(TEST_STATE_EXTRA, presenter.getTestState());
+        }
     }
 
     @Override

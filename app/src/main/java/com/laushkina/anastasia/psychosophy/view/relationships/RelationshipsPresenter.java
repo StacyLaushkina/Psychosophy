@@ -1,6 +1,7 @@
 package com.laushkina.anastasia.psychosophy.view.relationships;
 
 import android.content.Context;
+import android.view.View;
 
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.relationships.RelationshipsCalculator;
@@ -31,10 +32,11 @@ public class RelationshipsPresenter {
 
     RelationshipsViewModel calcRelationships(Psychotype fistType, Psychotype secondType, IRelationshipsResultObserver observer){
         if (fistType == null || secondType == null){
-            observer.showHint();
+            // TODO animation rollback
+            observer.setHintAndImageVisibility(View.VISIBLE);
             return new RelationshipsViewModel();
         }
-        observer.hideHint();
+        observer.setHintAndImageVisibility(View.GONE);
         return calcRelationships(fistType, secondType, observer.getContext());
     }
 
@@ -54,7 +56,7 @@ public class RelationshipsPresenter {
         return new RelationshipsViewModel(fistFunctionRelationTitle, fistFunctionRelation,
                                           secondFunctionRelationTitle, secondFunctionRelation,
                                           thirdFunctionRelationTitle, thirdFunctionRelation,
-                                          forthFunctionRelationTitle, forthFunctionRelation);
+                                          forthFunctionRelationTitle, forthFunctionRelation, View.VISIBLE);
     }
 
     private static String getFunctionRelationship(Function firstFunction, Psychotype firstType, Psychotype secondType, Context context){

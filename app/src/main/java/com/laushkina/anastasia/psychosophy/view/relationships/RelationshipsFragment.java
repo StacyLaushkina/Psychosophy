@@ -65,13 +65,13 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-        if(position == 0) return;
-
         Psychotype firstSelected = getFirstType();
-        if (firstSelected == null) return;
-
         Psychotype secondSelected = getSecondType();
-        if (secondSelected == null) return;
+
+        if (firstSelected == null || secondSelected == null) {
+            onPromtItemSelected(firstSelected, secondSelected);
+            return;
+        }
 
         animateTypesSelection();
         calculate(firstSelected, secondSelected);
@@ -79,14 +79,27 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
         getRelationshipsContainer().scrollTo(0, 0);
     }
 
-    private void animateTypesSelection(){
+    private void onPromtItemSelected(Psychotype firstSelected, Psychotype secondSelected){
+        boolean wasPromptAlreadySelected =  getRelationshipsContainer().getVisibility() != View.VISIBLE;
+        if (wasPromptAlreadySelected) return;
+
+        setHintAndImageVisibility(View.VISIBLE);
+
+        // Animate slide to the middle of the screen
         Display display = ((WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
         int rotation = display.getRotation();
-        TranslateAnimation animation = getAnimation(rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180);
+        TranslateAnimation animation = getPromtSelectedAnimation(rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180);
         getSpinnersContainer().startAnimation(animation);
     }
 
-    private TranslateAnimation getAnimation(boolean isPortrait){
+    private void animateTypesSelection(){
+        Display display = ((WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+        int rotation = display.getRotation();
+        TranslateAnimation animation = getTypesSelectedAnimation(rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180);
+        getSpinnersContainer().startAnimation(animation);
+    }
+
+    private TranslateAnimation getTypesSelectedAnimation(boolean isPortrait){
         DisplayMetrics metrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
@@ -108,6 +121,40 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
                 layoutParams.removeRule(RelativeLayout.CENTER_IN_PARENT);
                 if (!isPortrait) {
                     layoutParams.addRule(RelativeLayout.CENTER_VERTICAL);
+                }
+                getSpinnersContainer().setLayoutParams(layoutParams);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });
+
+        anim.setDuration(ANIMATION_TIME);
+        return anim;
+    }
+
+    private TranslateAnimation getPromtSelectedAnimation(boolean isPortrait){
+        DisplayMetrics metrics = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+
+        TranslateAnimation anim;
+        if (isPortrait) {
+            anim = new TranslateAnimation(0,0, 0, metrics.heightPixels / 2);
+        } else {
+            anim = new TranslateAnimation(0, 0, 0, 0);
+        }
+
+        anim.setAnimationListener(new TranslateAnimation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                getRelationshipsContainer().setVisibility(View.GONE);
+                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)getSpinnersContainer().getLayoutParams();
+                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+                if (!isPortrait) {
+                    layoutParams.removeRule(RelativeLayout.CENTER_VERTICAL);
                 }
                 getSpinnersContainer().setLayoutParams(layoutParams);
             }
@@ -175,13 +222,8 @@ public class RelationshipsFragment extends BaseFragment implements AdapterView.O
     }
 
     @Override
-    public void hideHint() {
-        getActivity().findViewById(R.id.select_types_hint).setVisibility(View.GONE);
-    }
-
-    @Override
-    public void showHint() {
-        getActivity().findViewById(R.id.select_types_hint).setVisibility(View.VISIBLE);
+    public void setHintAndImageVisibility(int visibility) {
+        viewModel.setImageAndHintVisibility(visibility);
     }
 
     @Override

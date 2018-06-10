@@ -2,7 +2,9 @@ package com.laushkina.anastasia.psychosophy.view.relationships;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
+import android.opengl.Visibility;
 import android.text.Html;
+import android.view.View;
 
 import com.laushkina.anastasia.psychosophy.BR;
 
@@ -16,6 +18,8 @@ public class RelationshipsViewModel extends BaseObservable {
     private CharSequence forthFunctionRelationshipsTitle;
     private CharSequence forthFunctionRelationships;
 
+    private int imageAndHintVisibility;
+
     RelationshipsViewModel(){
         firstFunctionRelationshipsTitle = "";
         firstFunctionRelationships = "";
@@ -25,13 +29,15 @@ public class RelationshipsViewModel extends BaseObservable {
         thirdFunctionRelationships = "";
         forthFunctionRelationshipsTitle = "";
         forthFunctionRelationships = "";
+        imageAndHintVisibility = View.VISIBLE;
     }
 
     //TODO builder?
     RelationshipsViewModel(String firstTitle, String firstDescription,
                            String secondTitle, String secondDescription,
                            String thirdTitle, String thirdDescription,
-                           String forthTitle, String forthDescription){
+                           String forthTitle, String forthDescription,
+                           int imageAndHintVisibility){
         setFirstFunctionRelationshipsTitle(firstTitle);
         setFirstFunctionRelationships(firstDescription);
         setSecondFunctionRelationshipsTitle(secondTitle);
@@ -40,6 +46,7 @@ public class RelationshipsViewModel extends BaseObservable {
         setThirdFunctionRelationships(thirdDescription);
         setForthFunctionRelationshipsTitle(forthTitle);
         setForthFunctionRelationships(forthDescription);
+        setImageAndHintVisibility(imageAndHintVisibility);
     }
 
     public void refreshWith(RelationshipsViewModel newValue){
@@ -163,5 +170,15 @@ public class RelationshipsViewModel extends BaseObservable {
     private void setForthFunctionRelationshipsTitle(CharSequence forthFunctionRelationshipsTitle) {
         this.forthFunctionRelationshipsTitle = forthFunctionRelationshipsTitle;
         notifyPropertyChanged(BR.forthFunctionRelationshipsTitle);
+    }
+
+    @Bindable
+    public int getImageAndHintVisibility() {
+        return imageAndHintVisibility;
+    }
+
+    public void setImageAndHintVisibility(int imageAndHintVisibility) {
+        this.imageAndHintVisibility = imageAndHintVisibility;
+        notifyPropertyChanged(BR.imageAndHintVisibility);
     }
 }

@@ -19,10 +19,11 @@
             android:orientation="vertical"
             android:layout_centerInParent="true">
             <ImageView
-                android:id="@+id/image"
+                android:id="@+id/relationships_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/collaboration"/>
+                android:src="@drawable/collaboration"
+                android:visibility="@{relationships.imageAndHintVisibility}"/>
             <TextView
                 android:id="@+id/select_types_hint"
                 android:layout_width="match_parent"
@@ -31,7 +32,8 @@
                 style="@style/SubTitleTextStyle"
                 android:text="@string/relationships_select_hint"
                 android:padding="@dimen/basic_margin"
-                android:layout_below="@+id/image"/>
+                android:layout_below="@+id/relationships_image"
+                android:visibility="@{relationships.imageAndHintVisibility}"/>
 
             <LinearLayout
                 android:id="@+id/first_spinner_container"
