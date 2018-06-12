@@ -41,6 +41,11 @@ public final class NavigationHelper {
         return selectedPage;
     }
 
+    //Navigation can me made through helper and back button
+    public void setSelectedPage(int page){
+        this.selectedPage = page;
+    }
+
     public void showTest(FragmentManager manager) {
         changeContent(new TestFragment(), manager, R.id.nav_test, false);
     }
@@ -79,6 +84,7 @@ public final class NavigationHelper {
         TestResultsFragment fragment = new TestResultsFragment();
         fragment.setArguments(bundle);
 
+        // Showing test results doesn't change selected page - so force update is needed
         changeContent(fragment, manager, R.id.nav_test, true);
     }
 
@@ -86,6 +92,7 @@ public final class NavigationHelper {
         Bundle bundle = new Bundle(1);
         bundle.putSerializable(PsychotypesFragment.psychotypeExtra, type);
 
+        // Showing concrete psychotype doesn't change selected page - so force update is needed
         PsychotypeDescriptionFragment fragment = new PsychotypeDescriptionFragment();
         fragment.setArguments(bundle);
         changeContent(fragment, manager, R.id.nav_psychotypes, true);
@@ -108,7 +115,5 @@ public final class NavigationHelper {
                 .replace(R.id.content_frame, fragment)
                 .addToBackStack(null)
                 .commit();
-
-        selectedPage = checkedItemId;
     }
 }

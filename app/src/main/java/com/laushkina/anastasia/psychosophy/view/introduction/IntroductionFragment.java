@@ -32,6 +32,7 @@ public class IntroductionFragment extends BaseFragment implements IIntroductionN
     private IntroductionViewModel getViewModel(){
         IntroductionViewModel viewModel = new IntroductionViewModel();
         viewModel.setPsychosophyDefinition(getPsychosophyDefinition());
+        viewModel.setPsychosophyAspects(getPsychosophyAspects());
         viewModel.setPersonalitiesDescription(getPersonalitiesDescription());
         viewModel.setRelationshipsDescription(getRelationshipsDescription());
 
@@ -40,6 +41,10 @@ public class IntroductionFragment extends BaseFragment implements IIntroductionN
 
     private CharSequence getPsychosophyDefinition(){
         return Html.fromHtml(getResources().getString(R.string.introduction_psychosophy_definition));
+    }
+
+    private CharSequence getPsychosophyAspects(){
+        return Html.fromHtml(getResources().getString(R.string.introduction_psychosophy_definition_aspects));
     }
 
     private CharSequence getPersonalitiesDescription(){

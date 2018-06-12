@@ -18,7 +18,7 @@
     <string name="test_question_logic_seventh">Вам интересна научная информация?</string>
     <string name="test_question_logic_eighth">Радуют ли Вас проявления сильной мысли?</string>
     <string name="test_question_logic_ninth">Вы уверенно чувствуете себя во время дискуссий?</string>
-    <string name="test_question_logic_tenth">Сами Вы верите в строгость своих логических построений?</string>
+    <string name="test_question_logic_tenth">Сами Вы верите в верность своих логических построений?</string>
     <string name="test_question_emotion_first">Вы считаете себя эмоциональным человеком?</string>
     <string name="test_question_emotion_second">Вы любите театр?</string>
     <string name="test_question_emotion_third">Вы влюбчивы?</string>
@@ -38,7 +38,7 @@
     <string name="test_question_physics_seventh">Вы собственник?</string>
     <string name="test_question_physics_eighth">Можно ли Вас назвать гурманом?</string>
     <string name="test_question_physics_ninth">Вас заботит Ваше здоровье?</string>
-    <string name="test_question_physics_tenth">Вы сексуальны?</string>
+    <string name="test_question_physics_tenth">Вы считаете себя привлекательным?</string>
     <string name="test_question_will_first">Вы считаете себя волевым человеком?</string>
     <string name="test_question_will_second">Вам легко руководить людьми?</string>
     <string name="test_question_will_third">Вы человек независимый?</string>

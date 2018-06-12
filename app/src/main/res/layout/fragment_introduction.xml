@@ -34,6 +34,15 @@
                 android:text="@{viewModel.psychosophyDefinition}"
                 android:layout_below="@+id/psychosophy_title"/>
 
+            <TextView
+                android:id="@+id/psychosophy_aspects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:text="@{viewModel.psychosophyAspects}"
+                android:layout_marginTop="@dimen/basic_margin"
+                android:layout_below="@+id/psychosophy_definition"/>
+
             <!-- FUNCTIONS -->
             <LinearLayout
                 android:id="@+id/function_buttons"
@@ -41,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="1.0"
-                android:layout_below="@+id/psychosophy_definition"
+                android:layout_below="@+id/psychosophy_aspects"
                 android:layout_margin="@dimen/basic_margin">
 
                 <Button
@@ -108,12 +117,21 @@
                 android:text="@{viewModel.personalitiesDescription}"
                 android:layout_below="@+id/aspects_and_functions_button"/>
 
+            <TextView
+                android:id="@+id/psychotypes_pseudonyms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MediumSizeTextStyle"
+                android:text="@string/introduction_psychosophy_pseudonyms"
+                android:layout_marginTop="@dimen/basic_margin"
+                android:layout_below="@+id/psychotypes_description"/>
+
             <LinearLayout
                 android:id="@+id/psychotypes_buttons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_below="@+id/psychotypes_description"
+                android:layout_below="@+id/psychotypes_pseudonyms"
                 android:gravity="center">
 
                 <Button
@@ -153,8 +171,7 @@
                 style="@style/InTextButtonStyle"
                 android:layout_below="@+id/relationships_description"
                 android:layout_centerInParent="true"
-                android:padding="@dimen/basic_margin"
-                android:layout_margin="@dimen/basic_margin"/>
+                android:padding="@dimen/basic_margin"/>
 
         </RelativeLayout>
     </ScrollView>

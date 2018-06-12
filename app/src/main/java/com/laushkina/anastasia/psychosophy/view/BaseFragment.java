@@ -26,6 +26,7 @@ public abstract class BaseFragment extends Fragment {
     private void setNavigationItemId(){
         NavigationView navigationView = getNavigationView();
         navigationView.setCheckedItem(getNavigationItemId());
+        NavigationHelper.getInstance().setSelectedPage(getNavigationItemId());
     }
 
     private TextView getToolbar(){
