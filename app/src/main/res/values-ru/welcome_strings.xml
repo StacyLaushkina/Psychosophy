@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_test">Пройти тест</string>
+    <string name="study_theory">Узнать больше</string>
+</resources>

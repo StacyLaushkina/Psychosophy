@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="introduction_title">Психософия это</string>
+    <string name="introduction_psychosophy_definition"><![CDATA[
+    \tГуманистическое мировоззрение на отношения между людьми, в основе которого лежит психическая типология А. Ю. Афанасьева.
+    Она также изучает приоритеты человека, его собственные представления о своем внутреннем мире и своих возможностях.
+    ]]></string>
+
+    <string name="introduction_psychosophy_definition_bases"><![CDATA[
+    \tВ ней имеется 4 основания: <i>Воля, Логика, Эмоция, Физика.</i>
+    С философской точки зрения им соответствуют: <i>Дух, Разум, Душа и Тело.</i>
+    ]]></string>
+
+    <string name="introduction_psychosophy_bases">
+    \tКаждое основание типологии занимает определенную ступень в иерархии психического типа,
+        что влияет на ценности и поведение человека.
+    </string>
+    <string name="introduction_psychosophy_bases_and_functions">Про основания и функции</string>
+
+    <string name="introduction_psychosophy_personalities"><![CDATA[
+    \tПсихотип личности (по Афанасьеву) обозначается первыми буквами названия оснований,
+    начиная с первого (наиболее выраженного в поведении и ценностях) и до четвертого.
+    Всего существует 24 возможных психотипов личности.
+    ]]></string>
+
+    <string name="introduction_psychosophy_pseudonyms"><![CDATA[
+     \tПомимо этого, существуют псевдонимы типов. Например, тип с порядком оснований \"Воля, Логика, Эмоция, Физика\" обозначается ВЛЭФ и имеет псевдоним \"Сократ\".
+    ]]></string>
+
+    <string name="introduction_psychosophy_psychotypes_button">Все психотипы</string>
+    <string name="introduction_psychosophy_my_psychotype_button">Узнать свой тип</string>
+
+    <string name="introduction_psychosophy_relationships"><![CDATA[
+        \tВозможны различные варианты отношений между представителями различных типов.
+        Их взаимодополняемость зависит от положения того или иного основания в структуре приоритетов каждого типа.
+    ]]></string>
+    <string name="introduction_psychosophy_relationships_button">Про отношения</string>
+</resources>

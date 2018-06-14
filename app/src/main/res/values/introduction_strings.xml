@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="introduction_title">Психософия это</string>
+    <string name="introduction_title">Psychosophy is</string>
     <string name="introduction_psychosophy_definition"><![CDATA[
-    \tГуманистическое мировоззрение на отношения между людьми, в основе которого лежит психическая типология А. Ю. Афанасьева.
-    Она также изучает приоритеты человека, его собственные представления о своем внутреннем мире и своих возможностях.
+    \tA humanistic worldview on relations between people, based on the psychical typology of A. Yu. Afanasyev.
+    It also studies the person\'s priorities, his own ideas about his inner world and his capabilities.
     ]]></string>
 
     <string name="introduction_psychosophy_definition_bases"><![CDATA[
-    \tВ ней имеется 4 основания: <i>Воля, Логика, Эмоция, Физика.</i>
-    С философской точки зрения им соответствуют: <i>Дух, Разум, Душа и Тело.</i>
+    \tIt has 4 bases: <i> Will, Logic, Emotion, Physics. </i>
+    From a philosophical point of view, they correspond to: <i> Spirit, Mind, Soul and Body. </i>
     ]]></string>
 
     <string name="introduction_psychosophy_bases">
-    \tКаждое основание типологии занимает определенную ступень в иерархии психического типа,
-        что влияет на ценности и поведение человека.
+    \tEach base of typology occupies a certain step in the hierarchy of the psychic type,
+         which affects the values and behavior of a person.
     </string>
-    <string name="introduction_psychosophy_bases_and_functions">Про основания и функции</string>
+    <string name="introduction_psychosophy_bases_and_functions">About the bases and functions</string>
 
     <string name="introduction_psychosophy_personalities"><![CDATA[
-    \tПсихотип личности (по Афанасьеву) обозначается первыми буквами названия оснований,
-    начиная с первого (наиболее выраженного в поведении и ценностях) и до четвертого.
-    Всего существует 24 возможных психотипов личности.
+    \tThe personality psychotype (according to Afanasyev) is denoted by the first letters of the name of the grounds,
+    beginning with the first (most expressed in behavior and values) and up to the fourth.
+    In total, there are 24 possible personality psychotypes.
     ]]></string>
 
     <string name="introduction_psychosophy_pseudonyms"><![CDATA[
-     \tПомимо этого, существуют псевдонимы типов. Например, тип с порядком оснований "Воля, Логика, Эмоция, Физика" обозначается ВЛЭФ и имеет псевдоним \"Сократ\".
+    \tIn addition, there are type aliases.
+    For example, the type with the order of the bases \"Will, Logic, Emotion, Physics\" is denoted by VLEF and has a pseudonym \"Socrates\".
     ]]></string>
 
-    <string name="introduction_psychosophy_psychotypes_button">Все психотипы</string>
-    <string name="introduction_psychosophy_my_psychotype_button">Узнать свой тип</string>
+    <string name="introduction_psychosophy_psychotypes_button">All psychotypes</string>
+    <string name="introduction_psychosophy_my_psychotype_button">Find your type</string>
 
     <string name="introduction_psychosophy_relationships"><![CDATA[
-        \tВозможны различные варианты отношений между представителями различных типов.
-        Их взаимодополняемость зависит от положения того или иного основания в структуре приоритетов каждого типа.
+        \tDifferent variants of relations between representatives of different types are possible.
+        Their complementarity depends on the position of one or another reason in the structure of each type of priorities.
     ]]></string>
-    <string name="introduction_psychosophy_relationships_button">Про отношения</string>
+    <string name="introduction_psychosophy_relationships_button">About relationships</string>
 </resources>

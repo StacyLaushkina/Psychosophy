@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Психософия</string>
+
+    <string name="test">Тест</string>
+    <string name="test_results">Результаты теста</string>
+    <string name="psychotypes">Психотипы</string>
+    <string name="psychotype_description">Описание псхотипа</string>
+    <string name="relationships">Отношения</string>
+    <string name="about">О программе</string>
+    <string name="introduction">Коротко о главном</string>
+    <string name="functions">Функции</string>
+    <string name="bases_and_functions">Основания и функции</string>
+
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+</resources>
