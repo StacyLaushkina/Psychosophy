@@ -70,17 +70,17 @@ public class RelationshipsToStringFormatter {
             case Eros_4_2_Physics: return resources.getString(R.string.eros_4_2_physics);
 
 
-            case Agape_1_4_Emotion: return resources.getString(R.string.agape_1_4_will);
+            case Agape_1_4_Emotion: return resources.getString(R.string.agape_1_4_emotion);
             case Agape_1_4_Logic: return resources.getString(R.string.agape_1_4_logic);
             case Agape_1_4_Will: return resources.getString(R.string.agape_1_4_will);
             case Agape_1_4_Physics: return resources.getString(R.string.agape_1_4_physics);
 
-            case Agape_2_3_Emotion: return resources.getString(R.string.agape_2_3_will);
+            case Agape_2_3_Emotion: return resources.getString(R.string.agape_2_3_emotion);
             case Agape_2_3_Logic: return resources.getString(R.string.agape_2_3_logic);
             case Agape_2_3_Will: return resources.getString(R.string.agape_2_3_will);
             case Agape_2_3_Physics: return resources.getString(R.string.agape_2_3_physics);
 
-            case Agape_3_2_Emotion: return resources.getString(R.string.agape_3_2_will);
+            case Agape_3_2_Emotion: return resources.getString(R.string.agape_3_2_emotion);
             case Agape_3_2_Logic: return resources.getString(R.string.agape_3_2_logic);
             case Agape_3_2_Will: return resources.getString(R.string.agape_3_2_will);
             case Agape_3_2_Physics: return resources.getString(R.string.agape_3_2_physics);
@@ -157,17 +157,17 @@ public class RelationshipsToStringFormatter {
             case Eros_4_2_Physics: return resources.getString(R.string.eros_4_2_physics_title);
 
 
-            case Agape_1_4_Emotion: return resources.getString(R.string.agape_1_4_will_title);
+            case Agape_1_4_Emotion: return resources.getString(R.string.agape_1_4_emotion_title);
             case Agape_1_4_Logic: return resources.getString(R.string.agape_1_4_logic_title);
             case Agape_1_4_Will: return resources.getString(R.string.agape_1_4_will_title);
             case Agape_1_4_Physics: return resources.getString(R.string.agape_1_4_physics_title);
 
-            case Agape_2_3_Emotion: return resources.getString(R.string.agape_2_3_will_title);
+            case Agape_2_3_Emotion: return resources.getString(R.string.agape_2_3_emotion_title);
             case Agape_2_3_Logic: return resources.getString(R.string.agape_2_3_logic_title);
             case Agape_2_3_Will: return resources.getString(R.string.agape_2_3_will_title);
             case Agape_2_3_Physics: return resources.getString(R.string.agape_2_3_physics_title);
 
-            case Agape_3_2_Emotion: return resources.getString(R.string.agape_3_2_will_title);
+            case Agape_3_2_Emotion: return resources.getString(R.string.agape_3_2_emotion_title);
             case Agape_3_2_Logic: return resources.getString(R.string.agape_3_2_logic_title);
             case Agape_3_2_Will: return resources.getString(R.string.agape_3_2_will_title);
             case Agape_3_2_Physics: return resources.getString(R.string.agape_3_2_physics_title);

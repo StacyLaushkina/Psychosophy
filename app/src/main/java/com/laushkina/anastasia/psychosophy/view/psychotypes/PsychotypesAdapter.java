@@ -2,7 +2,6 @@ package com.laushkina.anastasia.psychosophy.view.psychotypes;
 
 import android.app.FragmentManager;
 import android.content.Context;
-import android.support.design.widget.NavigationView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;

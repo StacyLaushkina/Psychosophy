@@ -10,7 +10,7 @@ public interface ITestResultsObserver {
     void showExceptionResultDescription();
     void showTypeDescription(Psychotype[] psychotype);
 
-    void showGroupOfQuestions(List<CharSequence> questionSet, boolean isPrevEnabled);
+    void showGroupOfQuestions(List<CharSequence> questionSet, boolean isPrevEnabled, int progress, String nextButtonText);
     void showNextButton();
 
     Context getContext();

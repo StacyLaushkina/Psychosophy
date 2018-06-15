@@ -21,8 +21,12 @@ public class TestQuestion implements Parcelable {
 
     protected TestQuestion(Parcel in) {
         text = in.readString();
-        type = Function.valueOf(in.readString());
-        answer = TestAnswer.valueOf(in.readString());
+
+        String function = in.readString();
+        type = function == null ? null : Function.valueOf(function);
+
+        String testAnswer = in.readString();
+        answer = testAnswer == null ? null : TestAnswer.valueOf(testAnswer);
     }
 
     public static final Creator<TestQuestion> CREATOR = new Creator<TestQuestion>() {
@@ -61,7 +65,7 @@ public class TestQuestion implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(text);
-        parcel.writeString(type.name());
+        parcel.writeString(type == null ? null : type.name());
         parcel.writeString(answer == null ? null : answer.name());
     }
 }

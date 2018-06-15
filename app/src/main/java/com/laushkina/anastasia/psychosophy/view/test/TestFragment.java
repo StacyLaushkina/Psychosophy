@@ -59,8 +59,7 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
         Bundle savedState = bundle == null ? null : bundle.getBundle(TEST_STATE_EXTRA);
         if (savedState == null) return;
 
-        presenter.restoreFromSavedState(savedState);
-        viewModel.setProgress(presenter.getProgress());
+        presenter.restoreFromSavedState(savedState, this);
     }
 
     private void initialize(View view){
@@ -89,10 +88,12 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
     }
 
     @Override
-    public void showGroupOfQuestions(List<CharSequence> questionSet, boolean isPrevEnabled) {
+    public void showGroupOfQuestions(List<CharSequence> questionSet, boolean isPrevEnabled, int progress,
+                                     String nextButtonText) {
+        getQuestionsRecycler().scrollToPosition(0);
         adapter.setQuestions(questionSet);
-        viewModel.setProgress(presenter.getProgress());
-        viewModel.setNextButtonText(presenter.getNextQuestionText(this));
+        viewModel.setProgress(progress);
+        viewModel.setNextButtonText(nextButtonText);
         viewModel.setPrevButtonText(getResources().getString(R.string.prev_question_title));
         viewModel.setPrevEnabled(isPrevEnabled);
         viewModel.setNextEnabled(false);
@@ -134,5 +135,9 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
 
     private RecyclerView getQuestionsRecycler(View view){
         return view.findViewById(R.id.test_questions_recycler);
+    }
+
+    private RecyclerView getQuestionsRecycler(){
+        return getActivity().findViewById(R.id.test_questions_recycler);
     }
 }

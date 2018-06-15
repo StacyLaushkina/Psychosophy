@@ -1,8 +1,11 @@
 package com.laushkina.anastasia.psychosophy.view.test;
 
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.laushkina.anastasia.psychosophy.R;
@@ -50,9 +53,16 @@ class TestPresenter {
         return state;
     }
 
-    void restoreFromSavedState(Bundle state){
-        questions = (TestQuestion[]) state.getParcelableArray(QUESTIONS_SAVED_STATE_EXTRA);
+    void restoreFromSavedState(Bundle state, ITestResultsObserver resultsObserver){
+
+        // TODO  not working when process is killed in background, but working when change orientation - why?
+        Parcelable[] answers = state.getParcelableArray(QUESTIONS_SAVED_STATE_EXTRA);
+        questions = Arrays.copyOf(answers, answers.length, TestQuestion[].class);
+
         amountOfFinishedQuestions = state.getInt(AMOUNT_OF_FINISHED_SAVED_STATE_EXTRA, 0);
+
+        resultsObserver.showGroupOfQuestions(getNextAnswers(), isPrevButtonEnabled(), getProgress(),
+                getNextQuestionText(resultsObserver));
     }
 
     List<CharSequence> getFirstGroupOfQuestions(ITestResultsObserver resultsObserver){
@@ -81,12 +91,14 @@ class TestPresenter {
             return;
         }
 
-        resultsObserver.showGroupOfQuestions(getNextAnswers(), true);
+        resultsObserver.showGroupOfQuestions(getNextAnswers(), isPrevButtonEnabled(), getProgress(),
+                                             getNextQuestionText(resultsObserver));
     }
 
     void onPrevQuestionsRequested(ITestResultsObserver resultsObserver){
         amountOfFinishedQuestions -= QUESTIONS_IN_GROUP;
-        resultsObserver.showGroupOfQuestions(getNextAnswers(), amountOfFinishedQuestions > 0);
+        resultsObserver.showGroupOfQuestions(getNextAnswers(), isPrevButtonEnabled(),
+                                             getProgress(), getNextQuestionText(resultsObserver));
     }
 
     String getNextQuestionText(ITestResultsObserver resultsObserver){
@@ -99,6 +111,10 @@ class TestPresenter {
             questions[amountOfFinishedQuestions + i].setAnswer(answers[i]);
         }
         amountOfFinishedQuestions += QUESTIONS_IN_GROUP;
+    }
+
+    public boolean isPrevButtonEnabled(){
+        return amountOfFinishedQuestions > 0;
     }
 
     int getProgress(){
