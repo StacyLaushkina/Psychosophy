@@ -32,7 +32,7 @@ public class IntroductionFragment extends BaseFragment implements IIntroductionN
     private IntroductionViewModel getViewModel(){
         IntroductionViewModel viewModel = new IntroductionViewModel();
         viewModel.setPsychosophyDefinition(getPsychosophyDefinition());
-        viewModel.setPsychosophyAspects(getPsychosophyAspects());
+        viewModel.setPsychosophyBases(getPsychosophyBases());
         viewModel.setPersonalitiesDescription(getPersonalitiesDescription());
         viewModel.setRelationshipsDescription(getRelationshipsDescription());
 
@@ -43,8 +43,8 @@ public class IntroductionFragment extends BaseFragment implements IIntroductionN
         return Html.fromHtml(getResources().getString(R.string.introduction_psychosophy_definition));
     }
 
-    private CharSequence getPsychosophyAspects(){
-        return Html.fromHtml(getResources().getString(R.string.introduction_psychosophy_definition_aspects));
+    private CharSequence getPsychosophyBases(){
+        return Html.fromHtml(getResources().getString(R.string.introduction_psychosophy_definition_bases));
     }
 
     private CharSequence getPersonalitiesDescription(){
@@ -96,8 +96,8 @@ public class IntroductionFragment extends BaseFragment implements IIntroductionN
     }
 
     @Override
-    public void navigateToAspectsAnfFunctions() {
-        NavigationHelper.getInstance().showAspectsAndFunctions(getActivity().getFragmentManager());
+    public void navigateToBasesAndFunctions() {
+        NavigationHelper.getInstance().showBasesAndFunctions(getActivity().getFragmentManager());
     }
 
     @Override

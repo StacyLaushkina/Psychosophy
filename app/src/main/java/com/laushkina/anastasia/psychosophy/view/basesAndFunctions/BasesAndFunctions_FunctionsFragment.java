@@ -1,4 +1,4 @@
-package com.laushkina.anastasia.psychosophy.view.aspectsAndFunctions;
+package com.laushkina.anastasia.psychosophy.view.basesAndFunctions;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -10,15 +10,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.laushkina.anastasia.psychosophy.R;
-import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 
-public class AspectsAndFunctions_FunctionsFragment extends Fragment{
+public class BasesAndFunctions_FunctionsFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
         super.onCreateView(inflater, container, savedInstanceState);
 
-        View view = inflater.inflate(R.layout.fragment_aspects_and_functions_functions, container, false);
+        View view = inflater.inflate(R.layout.fragment_bases_and_functions_functions, container, false);
         initialize(view);
         return view;
     }

@@ -8,11 +8,11 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/aspects_title"
+            android:id="@+id/bases_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/TitleTextStyle"
-            android:text="@string/aspects_title"
+            android:text="@string/bases_title"
             android:layout_gravity="center"
             android:layout_margin="@dimen/basic_margin"/>
 
@@ -28,11 +28,11 @@
                 android:src="@drawable/ic_will"
                 android:layout_margin="@dimen/basic_margin"
                 android:scaleType="centerInside"
-                android:layout_alignTop="@+id/aspects_info_will"
-                android:layout_alignBottom="@+id/aspects_info_will"/>
+                android:layout_alignTop="@+id/bases_info_will"
+                android:layout_alignBottom="@+id/bases_info_will"/>
 
             <TextView
-                android:id="@+id/aspects_info_will"
+                android:id="@+id/bases_info_will"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/MediumSizeTextStyle"
@@ -59,11 +59,11 @@
                 android:src="@drawable/ic_logic"
                 android:layout_margin="@dimen/basic_margin"
                 android:scaleType="centerInside"
-                android:layout_alignTop="@+id/aspects_info_logic"
-                android:layout_alignBottom="@+id/aspects_info_logic"/>
+                android:layout_alignTop="@+id/bases_info_logic"
+                android:layout_alignBottom="@+id/bases_info_logic"/>
 
             <TextView
-                android:id="@+id/aspects_info_logic"
+                android:id="@+id/bases_info_logic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/MediumSizeTextStyle"
@@ -90,11 +90,11 @@
                 android:src="@drawable/ic_emotion"
                 android:layout_margin="@dimen/basic_margin"
                 android:scaleType="centerInside"
-                android:layout_alignTop="@+id/aspects_info_emotion"
-                android:layout_alignBottom="@+id/aspects_info_emotion"/>
+                android:layout_alignTop="@+id/bases_info_emotion"
+                android:layout_alignBottom="@+id/bases_info_emotion"/>
 
             <TextView
-                android:id="@+id/aspects_info_emotion"
+                android:id="@+id/bases_info_emotion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/MediumSizeTextStyle"
@@ -121,11 +121,11 @@
                 android:src="@drawable/ic_physics"
                 android:layout_margin="@dimen/basic_margin"
                 android:scaleType="centerInside"
-                android:layout_alignTop="@+id/aspects_info_physics"
-                android:layout_alignBottom="@+id/aspects_info_physics"/>
+                android:layout_alignTop="@+id/bases_info_physics"
+                android:layout_alignBottom="@+id/bases_info_physics"/>
 
             <TextView
-                android:id="@+id/aspects_info_physics"
+                android:id="@+id/bases_info_physics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/MediumSizeTextStyle"

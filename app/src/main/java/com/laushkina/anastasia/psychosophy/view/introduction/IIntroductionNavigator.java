@@ -7,6 +7,6 @@ public interface IIntroductionNavigator {
     void navigateToForthFunction();
     void navigateToPsychotypes();
     void navigateToTest();
-    void navigateToAspectsAnfFunctions();
+    void navigateToBasesAndFunctions();
     void navigateToRelationships();
 }

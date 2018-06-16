@@ -1,6 +1,7 @@
 package com.laushkina.anastasia.psychosophy.view.test;
 
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,6 +14,8 @@ import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 import com.laushkina.anastasia.psychosophy.view.psychotypes.PsychotypesAdapter;
+
+import java.util.Arrays;
 
 public class TestResultsFragment extends BaseFragment {
 
@@ -48,7 +51,8 @@ public class TestResultsFragment extends BaseFragment {
     }
 
     private Psychotype[] getTestResults(){
-        return (Psychotype[]) getArguments().getParcelableArray(testResultsExtra);
+        Parcelable[] answers =  getArguments().getParcelableArray(testResultsExtra);
+        return Arrays.copyOf(answers, answers.length, Psychotype[].class);
     }
 
     @Override

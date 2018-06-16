@@ -2,7 +2,7 @@ package com.laushkina.anastasia.psychosophy.view.introduction;
 
 public class IntroductionViewModel {
     private CharSequence psychosophyDefinition;
-    private CharSequence psychosophyAspects;
+    private CharSequence psychosophyBases;
     private CharSequence personalitiesDescription;
     private CharSequence relationshipsDescription;
 
@@ -32,11 +32,11 @@ public class IntroductionViewModel {
         this.relationshipsDescription = relationshipsDescription;
     }
 
-    public CharSequence getPsychosophyAspects() {
-        return psychosophyAspects;
+    public CharSequence getPsychosophyBases() {
+        return psychosophyBases;
     }
 
-    public void setPsychosophyAspects(CharSequence psychosophyAspects) {
-        this.psychosophyAspects = psychosophyAspects;
+    public void setPsychosophyBases(CharSequence psychosophyBases) {
+        this.psychosophyBases = psychosophyBases;
     }
 }

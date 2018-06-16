@@ -7,8 +7,8 @@
             android:title="@string/introduction"/>
 
         <item
-            android:id="@+id/nav_aspects_and_functions"
-            android:title="@string/aspects_and_functions"/>
+            android:id="@+id/nav_bases_and_functions"
+            android:title="@string/bases_and_functions"/>
 
         <item
             android:id="@+id/nav_test"

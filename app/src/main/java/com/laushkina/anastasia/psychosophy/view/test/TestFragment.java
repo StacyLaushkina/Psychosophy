@@ -55,7 +55,6 @@ public class TestFragment extends BaseFragment implements ITestResultsObserver, 
     @Override
     public void onViewStateRestored(Bundle bundle) {
         super.onViewStateRestored(bundle);
-
         Bundle savedState = bundle == null ? null : bundle.getBundle(TEST_STATE_EXTRA);
         if (savedState == null) return;
 

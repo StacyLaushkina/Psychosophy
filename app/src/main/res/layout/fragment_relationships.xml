@@ -76,7 +76,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="start"
+                    android:gravity="center"
                     style="@style/SubTitleTextStyle"
                     android:text="@{relationships.firstFunctionRelationshipsTitle}"
                     android:padding="@dimen/basic_margin"/>
@@ -92,7 +92,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="start"
+                    android:gravity="center"
                     style="@style/SubTitleTextStyle"
                     android:text="@{relationships.secondFunctionRelationshipsTitle}"
                     android:padding="@dimen/basic_margin"/>
@@ -108,7 +108,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="start"
+                    android:gravity="center"
                     style="@style/SubTitleTextStyle"
                     android:text="@{relationships.thirdFunctionRelationshipsTitle}"
                     android:padding="@dimen/basic_margin"/>
@@ -124,7 +124,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="start"
+                    android:gravity="center"
                     style="@style/SubTitleTextStyle"
                     android:text="@{relationships.forthFunctionRelationshipsTitle}"
                     android:padding="@dimen/basic_margin"/>

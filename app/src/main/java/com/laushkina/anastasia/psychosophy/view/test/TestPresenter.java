@@ -2,7 +2,6 @@ package com.laushkina.anastasia.psychosophy.view.test;
 
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -54,8 +53,6 @@ class TestPresenter {
     }
 
     void restoreFromSavedState(Bundle state, ITestResultsObserver resultsObserver){
-
-        // TODO  not working when process is killed in background, but working when change orientation - why?
         Parcelable[] answers = state.getParcelableArray(QUESTIONS_SAVED_STATE_EXTRA);
         questions = Arrays.copyOf(answers, answers.length, TestQuestion[].class);
 

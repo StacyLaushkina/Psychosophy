@@ -1,4 +1,4 @@
-package com.laushkina.anastasia.psychosophy.view.aspectsAndFunctions;
+package com.laushkina.anastasia.psychosophy.view.basesAndFunctions;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,15 +12,15 @@ import android.widget.TextView;
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 
-public class AspectAndFunctionsFragment extends BaseFragment {
+public class BasesAndFunctionsFragment extends BaseFragment {
 
-    private ViewPager aspectsAndFunctionsPager;
+    private ViewPager basesAndFunctionsPager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
         super.onCreateView(inflater, container, savedInstanceState);
 
-        View view = inflater.inflate(R.layout.fragment_aspects_and_functions, container, false);
+        View view = inflater.inflate(R.layout.fragment_bases_and_functions, container, false);
         initialize(view);
 
         return view;
@@ -28,9 +28,9 @@ public class AspectAndFunctionsFragment extends BaseFragment {
 
     private void initialize(View view){
         initialize();
-        aspectsAndFunctionsPager = getAspectsAndFunctionsPager(view);
-        aspectsAndFunctionsPager.setAdapter(new AspectAndFunctionsAdapter(getChildFragmentManager()));
-        aspectsAndFunctionsPager.addOnPageChangeListener(
+        basesAndFunctionsPager = getBasesAndFunctionsPager(view);
+        basesAndFunctionsPager.setAdapter(new BasesAndFunctionsAdapter(getChildFragmentManager()));
+        basesAndFunctionsPager.addOnPageChangeListener(
                 new ViewPager.OnPageChangeListener() {
                     @Override
                     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
@@ -44,17 +44,17 @@ public class AspectAndFunctionsFragment extends BaseFragment {
                     public void onPageScrollStateChanged(int state) {}
                 }
         );
-        getSwitchLayout(view).setOnClickListener(v -> switchPage(aspectsAndFunctionsPager.getCurrentItem()));
+        getSwitchLayout(view).setOnClickListener(v -> switchPage(basesAndFunctionsPager.getCurrentItem()));
     }
 
     private void switchPage(int current){
         switch (current) {
-            case AspectAndFunctionsAdapter.FUNCTIONS: {
-                aspectsAndFunctionsPager.setCurrentItem(AspectAndFunctionsAdapter.ASPECTS);
+            case BasesAndFunctionsAdapter.FUNCTIONS: {
+                basesAndFunctionsPager.setCurrentItem(BasesAndFunctionsAdapter.BASES);
                 break;
             }
-            case AspectAndFunctionsAdapter.ASPECTS:{
-                aspectsAndFunctionsPager.setCurrentItem(AspectAndFunctionsAdapter.FUNCTIONS);
+            case BasesAndFunctionsAdapter.BASES:{
+                basesAndFunctionsPager.setCurrentItem(BasesAndFunctionsAdapter.FUNCTIONS);
                 break;
             }
         }
@@ -64,16 +64,16 @@ public class AspectAndFunctionsFragment extends BaseFragment {
         TextView switchText = getSwitchText();
 
         switch (current) {
-            case AspectAndFunctionsAdapter.ASPECTS: {
+            case BasesAndFunctionsAdapter.BASES: {
                 getMoreImageButton().setVisibility(View.VISIBLE);
                 getLessImageButton().setVisibility(View.INVISIBLE);
                 switchText.setText(getResources().getString(R.string.functions_title));
                 break;
             }
-            case AspectAndFunctionsAdapter.FUNCTIONS:{
+            case BasesAndFunctionsAdapter.FUNCTIONS:{
                 getMoreImageButton().setVisibility(View.INVISIBLE);
                 getLessImageButton().setVisibility(View.VISIBLE);
-                switchText.setText(getResources().getString(R.string.aspects_title));
+                switchText.setText(getResources().getString(R.string.bases_title));
                 break;
             }
         }
@@ -95,17 +95,17 @@ public class AspectAndFunctionsFragment extends BaseFragment {
         return view.findViewById(R.id.switch_layout);
     }
 
-    private ViewPager getAspectsAndFunctionsPager(View view){
-        return view.findViewById(R.id.aspects_and_functions_pager);
+    private ViewPager getBasesAndFunctionsPager(View view){
+        return view.findViewById(R.id.bases_and_functions_pager);
     }
 
     @Override
     protected String getTitle(){
-        return getResources().getString(R.string.aspects_and_functions);
+        return getResources().getString(R.string.bases_and_functions);
     }
 
     @Override
     protected int getNavigationItemId(){
-        return R.id.nav_aspects_and_functions;
+        return R.id.nav_bases_and_functions;
     }
 }

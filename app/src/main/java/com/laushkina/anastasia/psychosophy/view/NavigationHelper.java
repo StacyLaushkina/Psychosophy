@@ -3,14 +3,12 @@ package com.laushkina.anastasia.psychosophy.view;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.test.Function;
 import com.laushkina.anastasia.psychosophy.view.about.AboutFragment;
-import com.laushkina.anastasia.psychosophy.view.aspectsAndFunctions.AspectAndFunctionsFragment;
-import com.laushkina.anastasia.psychosophy.view.aspectsAndFunctions.AspectsAndFunctions_FunctionsFragment;
+import com.laushkina.anastasia.psychosophy.view.basesAndFunctions.BasesAndFunctionsFragment;
 import com.laushkina.anastasia.psychosophy.view.functions.FunctionsDescriptionFragment;
 import com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment;
 import com.laushkina.anastasia.psychosophy.view.introduction.IntroductionFragment;
@@ -34,11 +32,6 @@ public final class NavigationHelper {
             instance = new NavigationHelper();
         }
         return instance;
-    }
-
-    // Selected page is saved for keeping it when onSaveInstanceState() happens
-    public int getSelectedPage(){
-        return selectedPage;
     }
 
     //Navigation can me made through helper and back button
@@ -102,8 +95,8 @@ public final class NavigationHelper {
         changeContent(new RelationshipsFragment(), manager, R.id.nav_relationships, false);
     }
 
-    public void showAspectsAndFunctions(FragmentManager manager){
-        changeContent(new AspectAndFunctionsFragment(), manager, R.id.nav_aspects_and_functions, false);
+    public void showBasesAndFunctions(FragmentManager manager){
+        changeContent(new BasesAndFunctionsFragment(), manager, R.id.nav_bases_and_functions, false);
     }
 
     private void changeContent(Fragment fragment, FragmentManager manager, int checkedItemId, boolean doForceChange){

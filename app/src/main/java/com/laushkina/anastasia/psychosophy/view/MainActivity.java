@@ -1,8 +1,6 @@
 package com.laushkina.anastasia.psychosophy.view;
 
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -20,8 +18,6 @@ import com.laushkina.anastasia.psychosophy.view.test.TestFragment;
 public class MainActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String SCREEN_NAME_EXTRA = "main_activity_screen_name";
-    private static final String SAVED_PAGE_EXTRA = "main_activity_saved_page";
-    private static final int PAGE_WAS_NOT_SAVED = -1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,10 +26,7 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
 
         initializeLeftMenu();
 
-        int savedPage = savedInstanceState == null ? PAGE_WAS_NOT_SAVED : savedInstanceState.getInt(SAVED_PAGE_EXTRA, PAGE_WAS_NOT_SAVED);
-        if (savedPage != PAGE_WAS_NOT_SAVED){
-            showSelectedScreen(savedPage);
-        } else {
+        if (savedInstanceState == null){
             openRequestedContent(getIntent());
         }
     }
@@ -62,12 +55,6 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
                         .replace(R.id.content_frame, new IntroductionFragment())
                         .commit();
         }
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle bundle){
-        super.onSaveInstanceState(bundle);
-        bundle.putInt(SAVED_PAGE_EXTRA, NavigationHelper.getInstance().getSelectedPage());
     }
 
     @Override
@@ -100,8 +87,8 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
             case R.id.nav_about:
                 NavigationHelper.getInstance().showAbout(getFragmentManager());
                 break;
-            case R.id.nav_aspects_and_functions:
-                NavigationHelper.getInstance().showAspectsAndFunctions(getFragmentManager());
+            case R.id.nav_bases_and_functions:
+                NavigationHelper.getInstance().showBasesAndFunctions(getFragmentManager());
 
         }
     }

@@ -2,7 +2,6 @@ package com.laushkina.anastasia.psychosophy.view;
 
 import android.app.Fragment;
 import android.support.design.widget.NavigationView;
-import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import com.laushkina.anastasia.psychosophy.R;
