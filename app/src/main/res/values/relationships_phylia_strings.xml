@@ -94,7 +94,7 @@
     \tКоэффициент взаимной дополняемости: 1.
     ]]></string>
 
-    <string name="philia_2_logic_title">2 Физика - 2 Физика.</string>
+    <string name="philia_2_logic_title">2 Логика - 2 Логика.</string>
 
     <string name="philia_2_logic"><![CDATA[
     \tПри одинаковом культурном уровне и общих интересах Вам интересно и комфортно друг с другом.
@@ -142,7 +142,7 @@
      \tКоэффициент взаимной дополняемости: 0.9
     ]]></string>
 
-    <string name="philia_3_emotion_title">2 Эмоция - 2 Эмоция.</string>
+    <string name="philia_3_emotion_title">3 Эмоция - 3 Эмоция.</string>
 
     <string name="philia_3_emotion"><![CDATA[
     \tВ эмоциональной сфере Вы с партнером испытываете одинаковые трудности:
@@ -217,7 +217,7 @@
     \tКоэффициент взаимной дополняемости: 0
     ]]></string>
 
-    <string name="philia_4_logic_title">4 Воля - 4 Воля.</string>
+    <string name="philia_4_logic_title">4 Логика - 4 Логика.</string>
 
     <string name="philia_4_logic"><![CDATA[
     \tВ теоретических вопросах Ваш партнер, как и Вы, всегда опирается на мнение авторитетов.
