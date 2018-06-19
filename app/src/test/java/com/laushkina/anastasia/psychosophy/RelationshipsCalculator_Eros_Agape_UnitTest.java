@@ -142,7 +142,7 @@ public class RelationshipsCalculator_Eros_Agape_UnitTest {
     // Agape 4 - 1
     @Test
     public void Agape41Emotion() throws Exception {
-        Relationship relationship = RelationshipsCalculator.getRelationship(Function.Emotion, Psychotype.Aristippus, Psychotype.Ghazali);
+        Relationship relationship = RelationshipsCalculator.getRelationship(Function.Emotion, Psychotype.Goethe, Psychotype.Pushkin);
         assertEquals(Relationship.Agape_4_1_Emotion, relationship);
     }
 
