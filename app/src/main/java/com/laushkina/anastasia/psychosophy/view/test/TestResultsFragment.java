@@ -51,8 +51,8 @@ public class TestResultsFragment extends BaseFragment {
     }
 
     private Psychotype[] getTestResults(){
-        Parcelable[] answers =  getArguments().getParcelableArray(testResultsExtra);
-        return Arrays.copyOf(answers, answers.length, Psychotype[].class);
+        Parcelable[] answers = getArguments().getParcelableArray(testResultsExtra);
+        return answers == null ? null : Arrays.copyOf(answers, answers.length, Psychotype[].class);
     }
 
     @Override
