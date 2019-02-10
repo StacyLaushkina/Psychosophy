@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="theory_author_info">Основоположником психософии является Афанасьев Александр Юрьевич, описавший её в своей книге \"Синтаксис любви\".</string>
+
+    <string name="developer_info">Разработчик: Лаушкина А.К.</string>
+    <string name="developer_link">stacy.laushkina.developer@gmail.com</string>
+
+    <string name="designer_info">Дизайн: Гладкова А.В.</string>
+    <string name="designer_info_link">Lilo2296@gmail.com</string>
+
+    <string name="afanasiev_info">При поддерже Афанасьевой Е.К.</string>
+    <string name="afanasiev_info_link">http://www.aleafan.org</string>
+
+    <string name="relationships_info">Описания отношений:</string>
+    <string name="relationships_info_link">http://психософия.com</string>
+
+    <string name="introduction_info">Вступление:</string>
+    <string name="introduction_info_link">http://typologies.ru</string>
+
+    <string name="function_general_info">Общее описание функций:</string>
+    <string name="function_general_info_link">https://habr.com/company/oleg-bunin/blog/349530/</string>
+</resources>

@@ -1,280 +1,277 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="eros_1_3_will_title">1 Воля - 3 Воля.</string>
+    <string name="eros_1_3_will_title">1 Will - 3 Will.</string>
 
     <string name="eros_1_3_will"><![CDATA[
-    \tВаш партнер слишком капризен для Вас, с одной стороны он обижается на Вас за то, что Вы постоянно принимаете какие-то решения,
-    а с другой стороны сам он вообще не способен принять никакого решения.
-    Но, даже если Вы и достигните компромисса в каком-то решении, Ваш партнер при случае обязательно напомнит,
-    что это была Ваша инициатива, и в случае неудачи обязательно этим попрекнет.
-    Подобное положение вещей может вас очень раздражать.
+    \tYour partner is too capricious for you, on the one hand he takes offense at you for constantly making some decisions,
+    on the other hand, he himself is not able to take any decision at all.
+    But even if you reach a compromise in some decision, your partner will remind you on occasion,
+    that it was your initiative, and in case of failure, he will definitely reproach this.
+    This state of affairs can annoy you a lot.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tНикогда не говорите прямо о своих желаниях и решениях, всегда сначала спросите партнера, чего бы он хотел.
-    Как правило, сам он ничего вразумительного Вам не ответит, но атмосфера обсуждения его успокоит.
-    После чего предложите ему несколько вариантов и обрисуйте в выгодном свете то, которое Вы уже сами приняли.
+    \t<b>Recommendations for interaction:</b><br>
+    \tNever speak directly about your desires and decisions, always first ask your partner what he would like.
+    As a rule, he himself will not answer you intelligibly, but the atmosphere of the discussion will calm him down.
+    After that, offer him several options and draw in the favorable light the one that you yourself have already accepted.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.
+    \tThe ratio of mutual complementarity: 0.
     ]]> </string>
 
-    <string name="eros_1_3_emotion_title">1 Эмоция - 3 Эмоция.</string>
+    <string name="eros_1_3_emotion_title">1 Emotion - 3 Emotion.</string>
 
     <string name="eros_1_3_emotion"><![CDATA[
-    \tВаш партнер кажется Вам неуравновешенным и эмоционально неустойчивым человеком,
-    который не может и не хочет научиться справляться со своим эмоциональным состоянием.
-    Ваш партнер может демонстрировать обиду на вас, замыкаться в себе, изредка соглашаясь на выяснение отношений,
-    да и то, только лишь затем, чтобы обвинить Вас в черствости и нечуткости.
-    Подобные упреки Вас самого могут очень сильно обидеть, ведь на самом деле Вы совершенно не черствый,
-    а наоборот. Проблема лишь в том, что Вы не в состоянии донести до партнера Ваши чувства так, чтобы он в них поверил.
-    Иногда вам кажется, что Вы шагаете по минному полю, общаясь с вашим партнером на те темы, которые по-настоящему вас волнуют.
-    Иногда ваша первая естественная эмоциональная реакция на какое-либо событие или информацию может вызвать у вашего партнера совершенно непредсказуемую и неадекватную реакцию.
+    \tYour partner seems to you an unbalanced and emotionally unstable person,
+    who can not and does not want to learn to cope with their emotional state.
+    Your partner may show offense to you, withdraw into himself, occasionally agreeing to clarify the relationship,
+    and even then, only to accuse you of callousness and insensitivity.
+    Such reproaches can offend you very much, because in fact you are not at all stale,
+    and vice versa. The only problem is that you are not able to convey to your partner your feelings so that he believes in them.
+    Sometimes it seems to you that you are walking through a minefield, communicating with your partner on those topics that really concern you.
+    Sometimes your first natural emotional reaction to an event or information may cause your partner to have a completely unpredictable and inadequate reaction.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tПостарайтесь сдерживаться в своих эмоциональных проявлениях.
-    Помните, что Ваш партнер очень раним в эмоциональной сфере.
-    Отследите и запомните список \"запретных тем\", по которым Вам не стоит высказывать свою точку зрения.
-    Составьте себе список фраз, которые гарантированно успокаивают Вашего партнера: \"Я тебя люблю!\", \"Ты самый замечательный(ая)!\",
-    \"Как здорово ты все придумал(а)!\" и произносите их тогда, когда Вам кажется, что Ваш партнер этого ждет
-    (со временем Вы можете научиться это определять), даже если Вы в данный момент не испытываете эмоциональной потребности их произнести и Вам кажется,
-    что ваши слова прозвучат фальшиво.
+    \t<b>Recommendations for interaction:</b><br>
+    \tTry to control your emotional expressions.
+    Remember that your partner is very emotional.
+    Track and memorize the list of \ "forbidden topics \", on which you should not express your point of view.
+    Make yourself a list of phrases that are guaranteed to reassure your partner: \"I love you!\", \"You are the most wonderful!\",
+    \"How cool you thought of everything!\". Pronounce them when it seems to you that your partner is waiting for this
+    (over time, you can learn to define it), even if you are not currently experiencing the emotional need to pronounce them and you think that your words will sound fake.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.
+    \tThe ratio of mutual complementarity: 0.
     ]]> </string>
 
-    <string name="eros_1_3_physics_title">1 Физика - 3 Физика.</string>
+    <string name="eros_1_3_physics_title">1 Physics - 3 Physics.</string>
 
     <string name="eros_1_3_physics"><![CDATA[
-    \tПоначалу эти отношения кажутся для вас вполне нормальными.
-    Ваш партнер довольно робок в материальных вопросах, он боится обременять посторонних своими проблемами.
-    Комфортность для Вас в подобных отношениях целиком зависит от того, насколько Ваш партнер готов \"жертвовать собой\".
-    Причем жертвы эти будут исключительно у него в голове, с Вашей же точки зрения никаких жертв Вы особо от него не требуете.
-    Партнер может вдруг начать жаловаться на ваш эгоизм, на то, что он не получает от вас никакой помощи.
-    Он может Вас раздражать своими постоянными надуманными бытовыми проблемами, переживаний по поводу своей внешности, финансов и т.п.
+    \tAt first, this relationship seems quite normal to you.
+    Your partner is rather timid in material matters, he is afraid of burdening outsiders with his own problems.
+    Comfortability for you in such a relationship depends entirely on how your partner is ready to \"sacrifice himself\".
+    Moreover, these victims will be exclusively in his head; from your point of view, you don’t demand any sacrifices from him.
+    A partner may suddenly begin to complain about your egoism, that he does not receive any help from you.
+    He can annoy you with his constant contrived domestic problems, worries about his appearance, finances, etc.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tВоспринимайте серьезно и постарайтесь реагировать на жалобы и просьбы партнера в физической помощи.
-    Для него это отнюдь не пустяки, а действительно серьезная проблема.
+    \t<b>Recommendations for interaction:</b><br>
+    \tTake it seriously and try to respond to complaints and requests from your partner for physical assistance.
+    For him, this is not a trifle, but a really serious problem.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.
+    \tThe ratio of mutual complementarity: 0.
     ]]> </string>
 
-    <string name="eros_1_3_logic_title">1 Логика - 3 Логика.</string>
+    <string name="eros_1_3_logic_title">1 Logic - 3 Logic.</string>
 
     <string name="eros_1_3_logic"><![CDATA[
-    \tВаш партнер иногда кажется вам излишне придирчивым и недоверчивым к Вашим словам,
-    неспособным усвоить по любому вопросу одну единственно верную точку зрения и успокоиться на этом.
-    Вас могут раздражать его попытки втянуть Вас в спор или рассуждения по вопросам, в которых Вы для себя уже все решили.
-    Он может начать критиковать ваши высказывания, не соглашаться с Вашим мнением, не предлагая взамен вообще никакого мнения.
+    \tYour partner sometimes seems unnecessarily picky and mistrustful of your words,
+    unable to assimilate one single correct point of view on any matter and calm down on this.
+    You may be annoyed by his attempts to draw you into an argument or reasoning on issues in which you have already decided everything for yourself.
+    He may begin to criticize your statements, disagree with your opinion, without offering any opinion in return.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tОтнеситесь серьезно к переживаниям вашего партнера по поводу логичности его высказываний, по поводу логичности любой информации вообще.
-    Для него это действительно проблема, которую ему хочется обсудить.
-    В любых разговорах ему важно не только ваше мнение по какому-то вопросу, но и объяснения, почему Вы пришли к такому выводу.
-    Постарайтесь помнить об этом, и не ленитесь объяснять ход своих мыслей.
+    \t<b>Recommendations for interaction:</b><br>
+    \tTake seriously the feelings of your partner about the consistency of his statements, about the consistency of any information at all.
+    For him, this is really a problem that he wants to discuss.
+    In any conversations, it is important to him not only your opinion on a certain issue, but also an explanation of why you came to this conclusion.
+    Try to remember this, and do not be lazy to explain the course of their thoughts.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.
+    \tThe ratio of mutual complementarity: 0.
     ]]> </string>
 
-    <string name="eros_2_4_logic_title">2 Логика - 4 Логика.</string>
+    <string name="eros_2_4_logic_title">2 Logic - 4 Logic.</string>
 
     <string name="eros_2_4_logic"><![CDATA[
-    \tВаш партнер не может в должной мере поддержать Вашу страсть к рассуждениям на разные темы.
-    Ему хочется конкретики - Вашего четкого мнения по любому вопросу, а Вам - процесса,
-    т.е. поговорить, обсудить и вместе прийти к какому-то мнению.
-    Вам может казаться, что партнер недостаточно откликается на Ваше предложение поговорить и вообще недооценивает вас в этом плане.
+    \tYour partner cannot adequately support your passion for reasoning on various topics.
+    He wants specifics - your clear opinion on any issue, and you - the process, talk, discuss and come to some opinion together.
+    It may seem to you that the partner does not respond enough to your offer to talk and underestimates you in this regard.
     <br><br>
 
-     \t<b>Рекомендации по взаимодействию:</b><br>
-     \tНе пытайтесь разговорить Вашего партнера, лучше, если Вы найдете себе более подходящего собеседника.
+     \t<b>Recommendations for interaction:</b><br>
+     \tDo not try to talk to your partner, it is better if you find yourself a more suitable interlocutor.
      <br><br>
 
-     \tКоэффициент взаимной дополняемости: 0.5
+     \tThe ratio of mutual complementarity: 0.5
     ]]></string>
 
-    <string name="eros_2_4_will_title">2 Воля - 4 Воля.</string>
+    <string name="eros_2_4_will_title">2 Will - 4 Will.</string>
 
     <string name="eros_2_4_will"><![CDATA[
-    \tВаш партнер не любит проявлять инициативу и ждет ее от вас.
-    Вам хочется уточнить цели партнера, согласовать с Вашими, проявить внимание к желаниям партнера,
-    а Ваш партнер воспринимает Ваши вопросы с недоумением и некоторой досадой.
-    Вы не чувствуете, что востребованы в этом вопросе, что несколько разочаровывает.
+    \tYour partner does not like to take the initiative and is waiting for it from you.
+    You want to clarify the goals of the partner, coordinate with yours, show attention to the wishes of the partner,
+    and your partner takes your questions with bewilderment and some annoyance.
+    You do not feel that you are in demand in this matter, which is somewhat disappointing.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tБерите инициативу в свои руки, не спрашивайте партнера, чего он хочет, лучше говорите ему о том, чего хотите Вы,
-    и сразу же приступайте к реализации своего желания. Если партнеру понравится ваше намерение, он присоединится к Вам и будет вам помогать,
-    если же нет - не пытайтесь изменить по ходу свое решение, пытаясь подстроиться под желания партнера,
-    т.к. в подобном случае Вы будете выглядеть в глазах партнера человеком, который сам не знает чего он хочет,
-    а значит - человеком ненадежным, т.е. на решения которого нельзя положиться.
+    \t<b>Recommendations for interaction:</b><br>
+    \tTake the initiative in your own hands, do not ask your partner what he wants, better tell him what you want,
+    and immediately proceed to the realization of his desire. If the partner likes your intention, he will join you and will help you,
+    if not, do not try to change your decision along the way, trying to adjust to the partner’s wishes,
+    because in this case, you will look like a man in the eyes of a partner who himself does not know what he wants,
+    which means unreliable person, i.e. whose decisions cannot be relied upon.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.7
+    \tThe ratio of mutual complementarity: 0.7
     ]]></string>
 
-    <string name="eros_2_4_physics_title">2 Физика - 4 Физика.</string>
+    <string name="eros_2_4_physics_title">2 Physics - 4 Physics.</string>
 
     <string name="eros_2_4_physics"><![CDATA[
-    \tВаш партнер кажется Вам излишне суетливым в материальных вопросах.
-    Вместо того, чтобы просто взять и что-то делать (или не делать),
-    он начинает заводить на эту тему разговоры, спрашивать ваше мнение, что вас может утомлять.
+    \tYour partner seems to you unnecessarily fussy in material matters.
+    Instead of just taking and doing something (or not doing it), he begins to talk about this topic, asking for your opinion that you may be tired.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tПросите партнера более четко излагать свои предложения, без лишних обсуждений.
+    \t<b>Recommendations for interaction:</b><br>
+    \tAsk your partner to more clearly state their proposals, without any further discussion.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.5
+    \tThe ratio of mutual complementarity: 0.5
     ]]></string>
 
-    <string name="eros_2_4_emotion_title">2 Эмоция - 4 Эмоция.</string>
+    <string name="eros_2_4_emotion_title">2 Emotion - 4 Emotion.</string>
 
     <string name="eros_2_4_emotion"><![CDATA[
-    \tВам трудно влиять на эмоциональное состояние партнера, когда, например, на Ваш взгляд он грустит, или о чем-то переживает.
-    Вы настроены на обсуждение и подстройку в эмоциональном плане, а вашему партнеру этого не нужно.
-    Поэтому Вам кажется, что Ваши старания уходят впустую, и это разочаровывает Вас, Вы чувствуете себя невостребованным.
+    \tIt is difficult for you to influence the emotional state of a partner when, for example, in your opinion, he is sad or worries about something.
+    You are set up to discuss and adjust emotionally, but your partner does not need this.
+    Therefore, it seems to you that your efforts are being wasted, and this disappoints you, you feel unclaimed.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tУважайте эмоциональное состояние вашего партнера, не пытайтесь его \"спасать\". Взаимодействуйте с ним через другие функции.
+    \t<b>Recommendations for interaction:</b><br>
+    \tRespect the emotional state of your partner, do not try to \"save\". Interact with him through other functions.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.5
+    \tThe ratio of mutual complementarity: 0.5
     ]]></string>
 
-    <string name="eros_3_1_will_title">3 Воля - 1 Воля.</string>
+    <string name="eros_3_1_will_title">3 Will - 1 Will.</string>
 
     <string name="eros_3_1_will"><![CDATA[
-    \tВаш партнер поначалу привлекает вас уверенностью в своих желаниях, в том, чего он хочет от жизни и как он добива6ется желаемого,
-    вам может показаться, что, сблизившись с партнером, он точно так же будет относится и к вашим желаниям, однако спустя некоторое время выясняется,
-    что Ваше мнение совершенно не учитывается.
-    Даже если вдруг в Ваших желаниях обнаруживается несогласие, и Вы высказываете его, ожидая уступок и компромиссов,
-    Ваш партнер уходит от обсуждения, просто делая все по-своему.
-    На Ваши упреки он может объяснить, что он сделал все для блага вас обоих, но в Ваших глазах его действия выглядят как эгоизм и нежеланием прислушаться к Вашему мнению.
+    \tYour partner initially attracts you with confidence in his desires, in what he wants from life and how he achieves the desired,
+    it may seem to you that when you get close to your partner, it will also apply to your desires in the same way, but after a while it turns out
+    that your opinion is completely ignored.
+    Even if suddenly in your desires there is disagreement, and you express it, expecting concessions and compromises,
+    your partner leaves from the discussion, just doing everything in their own way.
+    He can explain to your reproaches that he did everything for the good of both of you, but in your eyes his actions look like egoism and unwillingness to listen to your opinion.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tЭто очень тяжелые отношения, в первую очередь для вас.
-    Попробуйте донести до Вашего партнера, что для Вас важно соблюдение определенного ритуала, прежде чем он будет принимать какое-либо решение:
-    чтобы он произносил определенные фразы: \"Как ты относишься к тому, если мы поступим таким образом…\", \"Не будешь ли ты возражать против…\" и т.п.
+    \t<b>Recommendations for interaction:</b><br>
+    \tThis is a very difficult relationship, first of all for you.
+    Try to convey to your partner that it is important for you to follow a certain ritual before he makes any decision:
+    so that he utters certain phrases: \"How do you feel about if we act in this way…\", \"Would you mind…\", etc.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.
+    \tThe ratio of mutual complementarity: 0.
     ]]></string>
 
-    <string name="eros_3_1_emotion_title">3 Эмоция - 1 Эмоция.</string>
+    <string name="eros_3_1_emotion_title">3 Emotion - 1 Emotion.</string>
 
     <string name="eros_3_1_emotion"><![CDATA[
-    \tВы можете испытывать к своему партнеру двойственные чувства:
-    с одной стороны, он кажется Вам эгоистом, не заботящимся о Ваших чувствах и эмоциях, а с другой стороны,
-    вам хочется быть таким же уверенным и во всем, что касается сферы эмоций, отношений, духовной стороны жизни и т.п.
-    Это очень болезненные, в первую очередь - для Вас, отношения.
-    Вам может казаться, что эмоциональность партнера поможет вам самому раскрепоститься, стать увереннее в себе,
-    однако партнер не помогает Вам справиться со своими переживаниями, но вместо этого пытается диктовать свои собственные.
-    Такая ситуация может Вас очень разочаровывать в Вашем партнере, периодически Вы даже сомневаетесь в истинности его чувств к вам.
+    \tYou may have mixed feelings for your partner:
+    on the one hand, he seems to you to be an egoist, not caring about your feelings and emotions, and on the other hand,
+    you want to be as confident in everything that concerns the sphere of emotions, relationships, the spiritual side of life, etc.
+    This is a very painful relationship, first of all for you.
+    It may seem to you that the partner’s emotionality will help you to relax, to become more self-confident,
+    however, the partner does not help you cope with your experiences, but instead tries to dictate your own.
+    This situation may disappoint you very much in your partner, from time to time you even doubt the truth of his feelings towards you.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tОсновную нагрузку по нормализации отношений придется взять на себя вашему партнеру.
-    Вам же просто нужно понять и поверить в то, что на самом деле Ваш партнер не эгоист, и что его, с Вашей точки зрения,
-    \"эмоциональная нечуткость\" на самом деле таковой не является, это просто присущий ему стиль поведения, который он практически не в силах изменить.
+    \t<b>Recommendations for interaction:</b><br>
+    \tThe main burden on the normalization of relations will have to take on your partner.
+    You just need to understand and believe that in fact your partner is not an egoist, and that, in your opinion,
+    \"emotional insensitivity\" actually is not, it is just his inherent style of behavior, which he almost can not change.
     <br><br>
 
-     \tКоэффициент взаимной дополняемости: 0.
+     \tThe ratio of mutual complementarity: 0.
     ]]></string>
 
-    <string name="eros_3_1_logic_title">3 Логика - 1 Логика.</string>
+    <string name="eros_3_1_logic_title">3 Logic - 1 Logic.</string>
 
     <string name="eros_3_1_logic"><![CDATA[
-    \tВаш партнер, с одной стороны, привлекает Вас своей уверенностью в свое правоте,
-    а с другой стороны Вам очень не хватает объяснений от него, каким образом у него возникла эта уверенность,
-    и почему он так уверен в своей правоте.
-    Ваши попытки узнать это, или, что еще хуже, Ваши сомнения и критика подобной уверенности может привести к серьезным проблемам в отношениях.
+    \tYour partner, on the one hand, attracts you with its self-righteousness,
+    on the other hand, you really miss the explanation from him about how he got this confidence,
+    and why he is so self-righteous.
+    Your attempts to learn this, or, even worse, your doubts and criticism of such confidence can lead to serious problems in the relationship.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tНе спорьте с партнером и не критикуйте его манеру высказываний, попросите его, по возможности, аргументировать свое мнение.
+    \t<b>Recommendations for interaction:</b><br>
+    \tDo not argue with a partner and do not criticize his manner of expression, ask him, if possible, to argue his opinion.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.
+    \tThe ratio of mutual complementarity: 0.
     ]]></string>
 
-    <string name="eros_3_1_physics_title">3 Физика - 1 Физика.</string>
+    <string name="eros_3_1_physics_title">3 Physics - 1 Physics.</string>
 
     <string name="eros_3_1_physics"><![CDATA[
-    \tЭто тяжелые для вас отношения.
-    Ваш партнер кажется Вам эгоистом, который заботится только о своем благе и о своих потребностях.
-    Вы пытаетесь периодически обратить его внимание на себя, на свои нужды и желания, однако делаете это очень неумело,
-    поскольку Вам трудно сформулировать чего же Вы на самом деле хотите и в чем именно Вы испытываете дискомфорт.
-    Большое значение в том, насколько комфортными будут отношения играет ваш предыдущий опыт, например, полученные в семье,
-    или с другими партнерами и насколько Ваш опыт совпадает с материальными потребностями Вашего партнера.
-    Если они совпадут - отношения будут менее дискомфортными для вас.
+    \tThis is a difficult relationship for you.
+    Your partner seems to you to be an egoist who cares only about his own welfare and his needs.
+    You try to periodically draw his attention to yourself, your needs and desires, but you do it very ineptly,
+    because it is difficult for you to formulate what you really want and what exactly you are experiencing discomfort.
+    Of great importance is how comfortable your relationship will be with your previous experience, for example, those received in a family,
+    or with other partners and how much your experience coincides with the material needs of your partner.
+    If they match - the relationship will be less uncomfortable for you.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tПостарайтесь четко сформулировать свои жалобы и претензии, не бойтесь обсуждать свои проблемы,
-    касающиеся быта, здоровья, внешности, материального обеспечения и т.п. с партнером.
+    \t<b>Recommendations for interaction:</b><br>
+    \tTry to articulate your complaints and complaints, do not be afraid to discuss your problems,
+    relating to life, health, appearance, material support, etc. with a partner.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.
+    \tThe ratio of mutual complementarity: 0.
     ]]></string>
 
-    <string name="eros_4_2_physics_title">4 Физика - 2 Физика.</string>
+    <string name="eros_4_2_physics_title">4 Physics - 2 Physics.</string>
 
     <string name="eros_4_2_physics">@string/eros_2_4_physics</string>
 
-    <string name="eros_4_2_will_title">4 Воля - 2 Воля.</string>
+    <string name="eros_4_2_will_title">4 Will - 2 Will.</string>
 
     <string name="eros_4_2_will"><![CDATA[
-    \tВы ожидаете от партнера четких решений и четкого выражения своих желаний,
-    однако Ваш партнер почти никогда не говорит прямо, чего он хочет, всегда вначале пытается выяснить у Вас,
-    каковы Ваши желания и намерения, чтобы подстроиться под них.
-    Это заставляет Вас усомниться в надежности партнера, т.к. люди, не говорящие прямо о своих решениях, не вызывают у Вас доверия.
+    \tYou expect a clear decision from the partner and a clear expression of your desires,
+    however, your partner almost never says directly what he wants, always first trying to find out from you
+    what are your desires and intentions to adapt to them.
+    It makes you doubt the reliability of the partner, because people who do not speak directly about their decisions, do not cause you to trust.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tПопросите партнера всегда четко излагать свои решения, объясните ему, что Вам легче выбрать что-то из уже сформулированных решений,
-    чем проявлять инициативы и предлагать что-то свое.
+    \t<b>Recommendations for interaction:</b><br>
+    \tAsk your partner to always clearly state your decisions, explain to him that it is easier for you to choose one of the already formulated decisions,
+    than take the initiative and offer something of their own.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.5
+    \tThe ratio of mutual complementarity: 0.5
     ]]></string>
 
-    <string name="eros_4_2_logic_title">4 Логика - 2 Логика.</string>
+    <string name="eros_4_2_logic_title">4 Logic - 2 Logic.</string>
 
     <string name="eros_4_2_logic"><![CDATA[
-    \tВы не совсем понимаете, зачем так много говорить на темы, которые того не стоят.
-    Какое-то время Вы еще можете поддерживать диалог с партнером, но довольно быстро Вам это надоедает,
-    так как в мире много более интересных и важных вещей, чем прояснения по десятому кругу точности и правомерности какого-то суждения.
-    Болтливость партнера может вызывать у вас чувство досады.
+    \tYou do not quite understand why there is so much to talk about topics that are not worth it.
+    For some time you can still maintain a dialogue with a partner, but rather quickly you get tired of it,
+    since there are many more interesting and important things in the world than clarifications on the tenth circle of accuracy and legitimacy of some judgment.
+    Talk partner can make you feel annoyed.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tОбъясните партнеру, что Вам сложно так много времени уделять беседам.
+    \t<b>Recommendations for interaction:</b><br>
+    \tExplain to your partner that it’s difficult for you to spend so much time talking.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.5
+    \tThe ratio of mutual complementarity: 0.5
     ]]></string>
 
-    <string name="eros_4_2_emotion_title">4 Эмоция - 2 Эмоция.</string>
+    <string name="eros_4_2_emotion_title">4 Emotion - 2 Emotion.</string>
 
     <string name="eros_4_2_emotion"><![CDATA[
-    \tВам может быть немного скучно с Вашим партнером, он может казаться лицемерным и неискренним в своих эмоциях, поскольку не высказывает прямо, что он чувствует.
+    \tВYou may be a little bored with your partner, he may seem hypocritical and insincere in his emotions, because he does not express directly what he feels.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tПринимайте вашего партнера таким как есть.
+    \t<b>Recommendations for interaction:</b><br>
+    \tAccept your partner as you are.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.5
+    \tThe ratio of mutual complementarity: 0.5
     ]]></string>
 
 </resources>

@@ -5,929 +5,890 @@
     <string name="third_function_title">III</string>
     <string name="forth_function_title">IV</string>
 
-    <string name="common_description_title">Общее описание</string>
-    <string name="functions_at_position_hint">Узнать больше</string>
+    <string name="common_description_title">General description</string>
+    <string name="functions_at_position_hint">Learn more</string>
 
-    <string name="first_emotion_name">I Эмоция (романтик)</string>
-    <string name="first_emotion_short_name">I ЭМОЦИЯ</string>
-    <string name="second_emotion_name">II Эмоция (актер)</string>
-    <string name="second_emotion_short_name">II ЭМОЦИЯ</string>
-    <string name="third_emotion_name">III Эмоция (сухарь)</string>
-    <string name="third_emotion_short_name">III ЭМОЦИЯ</string>
-    <string name="forth_emotion_name">IV Эмоция (зевака)</string>
-    <string name="forth_emotion_short_name">IV ЭМОЦИЯ</string>
-    <string name="first_logic_name">I Логика (догматик)</string>
-    <string name="first_logic_short_name">I ЛОГИКА</string>
-    <string name="second_logic_name">II Логика (ритор)</string>
-    <string name="second_logic_short_name">II ЛОГИКА</string>
-    <string name="third_logic_name">III Логика (скептик)</string>
-    <string name="third_logic_short_name">III ЛОГИКА</string>
-    <string name="forth_logic_name">IV Логика (школяр)</string>
-    <string name="forth_logic_short_name">IV ЛОГИКА</string>
-    <string name="first_physics_name"> I Физика (собственник)</string>
-    <string name="first_physics_short_name"> I ФИЗИКА</string>
-    <string name="second_physics_name">II Физика (труженик)</string>
-    <string name="second_physics_short_name">II ФИЗИКА</string>
-    <string name="third_physics_name">III Физика (недотрога)</string>
-    <string name="third_physics_short_name">III ФИЗИКА</string>
-    <string name="forth_physics_name">IV Физика (лентяй)</string>
-    <string name="forth_physics_short_name">IV ФИЗИКА</string>
-    <string name="first_will_name">I Воля (царь)</string>
-    <string name="first_will_short_name">I ВОЛЯ</string>
-    <string name="second_will_name">II Воля (дворянин)</string>
-    <string name="second_will_short_name">II ВОЛЯ</string>
-    <string name="third_will_name">III Воля (мещанин)</string>
-    <string name="third_will_short_name">III ВОЛЯ</string>
-    <string name="forth_will_name">IV Воля (крепостной)</string>
-    <string name="forth_will_short_name">IV ВОЛЯ</string>
+    <string name="first_emotion_name">I Emotion (romantic)</string>
+    <string name="first_emotion_short_name">I EMOTION</string>
+    <string name="second_emotion_name">II Emotion (actor)</string>
+    <string name="second_emotion_short_name">II EMOTION</string>
+    <string name="third_emotion_name">III Emotion (rusk)</string>
+    <string name="third_emotion_short_name">III EMOTION</string>
+    <string name="forth_emotion_name">IV Emotion (gawkers)</string>
+    <string name="forth_emotion_short_name">IV EMOTION</string>
+    <string name="first_logic_name">I Logics (dogmatist)</string>
+    <string name="first_logic_short_name">I LOGIC</string>
+    <string name="second_logic_name">II Logics (ritor)</string>
+    <string name="second_logic_short_name">II LOGIC</string>
+    <string name="third_logic_name">III Logics (skeptic)</string>
+    <string name="third_logic_short_name">III LOGIC</string>
+    <string name="forth_logic_name">IV Logics (pupil)</string>
+    <string name="forth_logic_short_name">IV LOGIC</string>
+    <string name="first_physics_name"> I Physics (owner)</string>
+    <string name="first_physics_short_name"> I PHYSICS</string>
+    <string name="second_physics_name">II Physics (toiler)</string>
+    <string name="second_physics_short_name">II PHYSICS</string>
+    <string name="third_physics_name">III Physics (touchy)</string>
+    <string name="third_physics_short_name">III PHYSICS</string>
+    <string name="forth_physics_name">IV Physics (sluggard)</string>
+    <string name="forth_physics_short_name">IV PHYSICS</string>
+    <string name="first_will_name">I Will (king)</string>
+    <string name="first_will_short_name">I WILL</string>
+    <string name="second_will_name">II Will (nobleman)</string>
+    <string name="second_will_short_name">II WILL</string>
+    <string name="third_will_name">III Will (bourgeois)</string>
+    <string name="third_will_short_name">III WILL</string>
+    <string name="forth_will_name">IV Will (serf)</string>
+    <string name="forth_will_short_name">IV WILL</string>
 
     <string name="first_emotion_description"><![CDATA[
-        \t\"Половодье чувств\", \"душевная буря\", \"вулканическая страсть\" - всем этим \"романтик\" наделен с рождения.
-        <i>Громкий, заразительный смех, обильное извержение слез</i> - избыточность 1-й эмоции может с легкостью заразить человека своим настроением.
-        \"Романтик\" всегда выражает свои чувства с сильным перебором, поэтому, при разговоре с ним зачастую нужно сбросить 20-30%
-        эмоционального накала, чтобы получить достаточно точную и ясную картину переживаний.
+        \t\"Flood of feelings\", \"mental storm\", \"volcanic passion\" - all this \ "romantic\" is vested from birth.
+        <i>Loud, contagious laughter, plentiful eruption of tears</i> - redundancy of the 1st emotion can easily infect a person with his mood.
+        \"Romantic\" always expresses his feelings with a strong exaggeration, therefore, when talking with him, you often need to reset 20-30%
+        of emotional glow in order to get a fairly accurate and clear picture of the experiences.
         <br><br>
 
-        \tОчаровательное описание специфической неадекватности своей 1-й Эмоции дала в одном интервью американская актриса Лайза Минелли.
-        <blockquote> <b>-Искусственны ли ваши переживания?</b>
-                        -Нет, конечно, но густо припудрены и раскрашены. Если я влюбляюсь, я говорю в первый же вечер:
-                        \"Я не могу жить без тебя, не исчезай из моей жизни, я не смогу без тебя\".
-                        <b>-Вы лжете?</b>
-                        -Это все слишком перемешано: и да, и нет. Утром, если он уходит, я могу забыть про него и не вспоминать весь день.
-                         А с другой стороны, мне правда кажется, что, уйди он навсегда, я бы умерла!</blockquote>
+        \tA charming description of the specific inadequacy of her 1st Emotion was given in one interview by American actress Liza Minnelli.
+        <blockquote> <b>- Are your emotions simulated?</b><br>
+                        - No, of course, but heavily powdered and painted. If I fall in love, I say the first evening:
+                        "I can not live without you, do not disappear from my life."<br>
+                        <b>- Are you lying?</b><br>
+                        - This is all too mixed: yes and no. In the morning, if he leaves, I can forget about him and not remember all day.
+                         And on the other hand, I really think that, if he's gone forever, I would die!</blockquote>
 
-        \tДля \"романтика\" радость - не радость, а маниакал, печаль - не печаль, а депрессия.
-        Однако, большая часть этих переживаний остается внутри и до окружающих доходят лишь отголоски состояний.
-        Происходит это потому, что <i>1-я эмоция не склонна делиться чувствами</i>, предпочитает смаковать их в одиночку, являя собой актера и зрителя в одном лице.
+        \tFor \"romantic\" joy is not joy, but maniacal, sadness is not sadness, but depression.
+        However, most of these experiences remain inside and only the echoes of states reach the surrounding people.
+        It happens because <i> the 1st Emotion is not inclined to share feelings</i>, prefers to savor them alone, showing himself as an actor and a viewer in one person.
         <br><br>
 
-        \tКогда сила переживаний \"романтика\" достигает своего пика (результата), нередко происходит выброс эмоций.
-        И здесь его может ждать все, что угодно. Дело в том, что формы проявления пика 1-й эмоции многообразны.
-        Они могут принять художественную форму (поэзия, живопись, музыка, танец), за которыми нередко приходят слава, признание и т. п.,
-        а могут никак не оформиться, точнее, оформиться в виде потока слез, бессвязных выкриков или нечленораздельных воплей.
+        \tWhen the power of emotions of \"romantic\" reaches its peak (result), they are often ejected.
+        And here, you can expect everything from him. The fact is that the forms of manifestation of the peak of the 1st Emotion are manifold.
+        They can take an artistic form (poetry, painting, music, dance), after which glory, recognition, etc., often come,
+        but they can not take shape, or rather, take the form of a stream of tears, incoherent or inarticulate cries.
         <br><br>
 
-        \tПлаксивость - наиболее ранняя примета 1-й эмоции.
-        Однако нормальная для ребенка-\"романтика\" реакция слезами на кризисы и давление извне
-        редко бывает правильно понято окружающими и порождает презрительные характеристики типа: \"плакса-вакса\", \"рева-корова\" и т.д.
-        А так как с годами у \"романтиков\" в порядке функций ничего не меняется, то <i> постоянное третирование по этому поводу способно навязать
-        им что-то вроде комплекса эмоциональной сверхполноценности.</i>
+        \tTearfulness is the earliest sign of the first Emotion.
+        However, the normal for \"romantic\" child reaction in crises and pressure from outside, which are tears,
+        rarely is correctly understood by others. Moreover, it becomes the reason of teasing and contemptuous characteristics.
+        And since nothing changes in the order of functions with the years of \"romantics\", then <i>the constant pressure on this trait is able to impose
+        they having something like a complex of emotional supercompleteness.</i>
         <br><br>
 
-        \tОдна женщина с таким \"комплексом\" писала психиатру: <br><br>
-        <blockquote>Плачу над книгами и в кино, плачу при звуках оркестра, слушая песни.
-        Достаточно увидеть по телевизору девочку в веночке…Малейшие неприятности - и опять слезы. Я сама себя уже стала ненавидеть за них,
-        они въелись в мой голос, чувствую себя какой-то дефективной.</blockquote>
+        \tOne woman with such a \"complex\" wrote to the psychiatrist: <br><br>
+        <blockquote>I cry over books and at the cinema, cry at the sounds of the orchestra, listening to the songs.
+        It's enough to see a girl in a wreath on TV… The slightest trouble - and again tears. I already began to hate myself for them,
+        I can not get rid of them, I feel somehow defective.</blockquote>
 
-        \tУтешением автору письма может послужить то обстоятельство, что она в своих страданиях не одинока,
-        и даже великие люди часто не могли справиться со своей плаксивостью.
-        <i>\"Романтик\" - поэт. Поэт даже тогда, когда не пишет стихов или не пишет вообще.</i></blockquote>
+        \tConsolation to the author of the letter can be the circumstance that she is not alone in her sufferings,
+        and even great people often could not cope with their crying.
+        <i>\"Romantic\" is a poet. A poet even when he does not write poetry or writes at all.</i>
     ]]></string>
 
     <string name="second_emotion_description"><![CDATA[
-        \tВ какой бы тональности не выражал свои чувства \"актер\", в повышенной ли, в пониженной ли - он всегда будет адекватен ситуации,
-        всегда пойдет от факта к эмоции, а не наоборот, как это обычно делает \"романтик\".
-        2-я эмоция – это актер кино.
-        Огромным её достоинством является постоянное стремление к обогащению своей палитры чувств.
+        \tIn whatever tonality an \"actor\" express their feelings, whether in increased or reduced - it will always be adequate to the situation,
+        will always go from fact to emotion, and not vice versa, as is usually done by the \"romantic\".
+        The second e motion is a movie actor.
+        Its immense dignity is a constant desire to enrich its own sense-palette.
         <br><br>
 
-        \tОбъединяющее начало всех носителей 2-й эмоции заключается в жгучем, никогда не насыщаемом аппетите на всякого рода художественную и около художественную продукцию.
-        Диапазон тут огромен: от заучивания тысяч священных текстов до вполне серьезного собирания анекдотов, спичей, застольных прибауток.
-        Дело вкуса и воспитания.
-        Но принцип один: <i>желание и возможность, благодаря обработке художественной информации, быть душой общества.</i>
+        \tThe unifying beginning of all the carriers of the 2nd emotion is the burning, never satiated appetite for all sorts of artistic and artistic products.
+        The range here is huge: from memorizing thousands of sacred texts to a very serious gathering of anecdotes, speeches.
+        A matter of taste and upbringing.
+        But the principle is one: <i> the desire and opportunity, through the processing of artistic information, to be the soul of society. </i>
         <br><br>
 
-        \t2-я эмоция может постоять за себя. Тот, кто пытался предъявлять \"актеру\" какие-либо счета, лезть со своими претензиями,
-        обычно очень скоро начинал жалеть о своей затее.
-        Потому что, за вычетом 2-й логики, только 2-я эмоция столь виртуозно владеет искусством \"отбрехаться\",
-        \"отбрить\", \"припечатать\", \"облаять\" и т.д.
+        \tThe second Emotion can fend for itself. Anyone who has tried to present to the \"actor\" any accounts, to climb with his claims, usually very soon began to regret his idea.
+        Because, after deduction of the second logic, only the second emotion masterfully mastered the art of eloquence.
         <br><br>
 
-        \tЯзык - родная, естественная для 2-й эмоции стихия, и горе тому, кто выберет полем битвы с \"актером\" именно ее.
-        Точность слова, меткость выражения - не далекая цель, а нормальное состояние "актера", независимо от культурного уровня.
+        \tLanguage - native, natural for the second Emotion element, and woe to someone who chooses it as the field of battle with the \"actor\".
+        The accuracy of the word, the accuracy of expression - not a distant goal, but the normal state of the \"actor\", regardless of the cultural level.
         <br><br>
 
-        \tКогда Н.В. Гоголь, помянув нецензурное прозвище одного из героев "Мертвых душ" и сравнив в этой связи русский язык с другими европейскими языками,
-        писал, что:
-        <blockquote>Нет слова, которое было бы так замашисто, бойко, так вырвалось бы из-под самого сердца, так бы кипело и живо трепетало,
-        как метко сказанное русское слово.</blockquote>
-        \tТо нисколько не льстил русскому народу, а только констатировал преобладание в его среде 2-й эмоции.
+        \tWhen N.V. Gogol, remembering the obscene nickname of one of the heroes of \"Dead Souls\" and comparing in this connection the Russian language
+        with other European languages, wrote that:
+        <blockquote>But there is no word that would be so briskly so would break out from under the heart, so it would boil and quiver like a well-spoken Russian word.</blockquote>
+        \tHe did not flatter the Russian people at all, but only stated the predominance of the second Emotion in his environment.
         <br><br>
 
-        \tОднако, реальность такова, что, если \"актер\" не занят в сфере обслуживания чувств - религиозной, мистической, художественной, развлекательной -
-        <i>общество мало ценит его дарование</i>. Человеческий быт - такая вещь, что ценятся в нем более Физика, Воля, иногда - Логика, но не Эмоция.
-        Мало того, обладателю 2-й эмоции приходится в обыденной жизни иногда чувствовать по отношению к себе брезгливость и даже неприязнь.
-        Происходит это потому, что вторая функция - лучшая сторона человеческой натуры, и если в обществе она мало востребована,
-        то человек волей-неволей оказывается развернутым к окружающим остальными, не сказать, плохими, но и не лучшими своими сторонами.
+        \tHowever, the reality is that if the \"actor\" is not engaged in the service of feelings - religious, mystical, artistic, entertaining -
+        <i>society does not appreciate its talent </i>. Human life is such a thing that more is valued in it more physics, will, sometimes logic, but not emotion.
+        Moreover, the owner of the second emotion in everyday life sometimes has to feel disgust and even dislike towards himself.
+        This is because the second function is the best side of human nature, and if it is not in high demand in society,
+        then the person willy-nilly turns to the people, not to say, bad, but not the best part of their personality.
     ]]></string>
 
     <string name="third_emotion_description"><![CDATA[
-        \t3-я эмоция - самое беззащитное в мире существо. Нет ни этики, ни права,
-        способных хотя бы гипотетически взяться за защиту \"сухаря\" от наиболее болезненных для него ударов: истерик и вообще эмоциональных экзекуций.
-        Беззащитность 3-й эмоции перед бурным извержением чувств воспринимается нами не более как казус, чудачество, но никак не личная драма.
-        А напрасно.
+        \tThe third e motion is the most helpless thing in the world. There is no ethics, no right,
+        capable at least hypothetically to take up the defense of \"rusk\" from the most painful blows for him: hysterics and generally emotional executions.
+        Defenselessness of the third Emotion before the turbulent eruption of feelings is perceived by us as nothing more than an incident, eccentricity, but not a personal drama.
+        But in vain.
         <br><br>
 
-        \tЗдесь подлинная трагедия, вдвойне мучительная, потому что абсолютно непонятна и невидима для окружающих.
-        В ответ на истерические вопли, 3 –я эмоция успевает лишь зажать уши и пробормотать: \"Бери, бери все, но, Бога ради, замолчи…\"
+        \tHere is a true tragedy, doubly painful, because it is absolutely incomprehensible and invisible to others.
+        In response to hysterical cries, the 3rd Emotion has time to clamp its ears and mutter: \"Take it, take everything, but, for God\'s sake, stop this… \"
 
-        <blockquote>Только без эмоций!</blockquote>
-        \t Фраза, с которой \"сухарь\" обычно вступает в конфликт, даже произнесенная категоричным тоном, на самом деле представляет собой не требование,
-        а тайную мольбу о снисхождении к слабости, тщетную попытку прикрыть в драке больное место.
+        <blockquote>Only without emotions!</blockquote>
+        \tThe phrase with which the \"rusk\" usually comes into conflict, even pronounced in a categorical tone, is in fact not a requirement,
+        and a secret plea for indulgence towards weakness, a vain attempt to cover up a sore spot in the fight.
         <br><br>
 
-        \tЛев Толстой, воссоздавая образ несчастного Каренина в своем знаменитом романе, был поразительно точен в пригляде за 3-й эмоцией.
-        <blockquote> Никто, кроме самых близких людей к Алексею Александровичу, не знал, что этот с виду самый холодный и рассудительный человек имел одну,
-        противоречащую общему складу характера, слабость.
-        Алексей Александрович не мог равнодушно слышать и видеть слезы ребенка или женщины.
-        Вид слез приводил его в растерянное состояние, и он терял совершенно способность соображения.</blockquote>
+        \tLeo Tolstoy, recreating the image of the unhappy Karenin in his famous novel, was strikingly accurate in looking after the third emotion.
+        <blockquote> Nobody, except the closest people to Alexey Alexandrovich, did not know that this seemingly coldest and most reasonable man had one, contradictory to the general character, weakness.
+        Alexey Alexandrovich could not indifferent to hear and see the tears of a child or a woman.
+        The sight of tears led him into a confused state, and he lost completely the faculty of consideration.</blockquote>
 
-        \t<i>\"Непроницаемость\"</i> – слово, которое наиболее точно передает претензии к 3-й эмоции со стороны близко оказавшихся к ней людей.
-        При первом знакомстве на эту черту редко обращается внимание, \"сухари\" в данной ситуации чрезвычайно удобные, надежные, интересные люди,
-        в обществе которых не ощущается сколько-нибудь серьезный дискомфорт.
+        \t<i>\"Impenetrability\"</i> is the word that most accurately conveys the claims to the third Emotion from the people who are close to it.
+        At the first acquaintance, this is rarely drawn attention, \"rusk\" are, in this situation, extremely comfortable, reliable, interesting people.
+        In communication with them, there is no serious discomfort.
         <br><br>
 
-        \tИначе дело складывается при серьезном сближении, не говоря уже о совместной жизни.
-        Непроницаемость 3-й эмоции обнаруживает себя как болезненная и даже пугающая черта.
-        С \"сухарем\" можно вступать в брак, растить детей, строить дом, и при этом никогда не знать, как он к тебе относится.
+        \tOtherwise, the situation develops with a serious rapprochement, not to mention the joint life.
+        The impenetrability of the third Emotion reveals itself as a painful and even frightening feature.
+        You can marry, raise children, build a house, and never know how the \"rusk\" treats you.
         <br><br>
 
-        \tГлухая стена эмоциональной невыразительности вырастает перед каждым, кому важно выяснить отношение к себе.
-        Только оказавшись рядом с \"сухарем\" понимаешь, сколь важным инструментом в поведении и отношениях является эмоция,
-        и как ее может не хватать для самого элементарного общежития, как мучительно переживается хроническая непроницаемость \"сухаря\".
+        \tA blank wall of emotional inexpressiveness grows before everyone who needs to figure out the attitude towards himself.
+        Only being close to the \"rusk\" you understand how important an instrument in behavior and relationships is emotion.
+        And how it may be missed for the most elementary communication, how painfully experienced is the chronic impenetrability of the \"rusk\".
         <br><br>
 
-        \tКроме того, что \"сухарь\" редко женится (выходит замуж), он еще и редко заводит детей.
-        Источник проблемы все тот же - беззащитность перед эмоциональным давлением.
-        У детей одно средство воздействия на мир - крик, а он - самое мучительное для 3-й эмоции средство воздействия.
+        \tIn addition, that \"rusk\" rarely marries (getting married), he also rarely gets children.
+        The source of the problem is the same - defenselessness before emotional pressure.
+        Children have one means of influencing the world - a cry, and he is the most painful means of influence for the third emotion.
+        The \"rusk\" itself is the ideal child. It is as if specially created for bad parents.
         <br><br>
-
-        \tОстается удивляться, как вообще выживает в таких условиях 3-я Эмоция, но факт остается фактом, - \"сухари\", хоть и в малом числе,
-        нарушая принципы естественного отбора, продолжают жить среди нас, подтверждая давнюю мысль, что природа не терпит пустоты.
-        Сам \"сухарь\" - идеальный ребенок. Он как бы специально создан для плохих родителей.
     ]]></string>
 
     <string name="forth_emotion_description"><![CDATA[
-        \tЗвание \"зеваки\" 4-я эмоция получила потому, что она не столько производит, сколько потребляет художественную продукцию.
-        Хотя и среди \"зевак\" - художники не редкость (пример великого Гёте будет здесь достаточно выразителен), все-таки в художественной сфере
-        они более ориентированы на потребление, чем на творчество: \"зевака\" - наилучший читатель, слушатель, зритель.
+        \tThe rank of \"gawker\" the fourth emotion got because talking about art products, it does not produce as much as consumes.
+        Although among the \"gawkers\" artists are not uncommon (an example of the great Goethe will be here quite expressive), all the same in the artistic sphere
+        they are more consumption-oriented other than creativity. \"Gawker\" is the best reader, listener, spectator.
         <br><br>
 
-        \tОн <i>всеяден, зеркален</i> в своем художественном восприятии, поэтому на какой бы ступени функциональной иерархии ни стояла эмоция у художника,
-        вынесшего на суд \"зеваки\" свое творение, он всегда найдет благодарный и адекватный отклик.
+        \tHe <i> is omnivorous, mirror </i> in his artistic perception, therefore on whatever step of the functional hierarchy the emotion of the artist stood,
+        he will always find a grateful and adequate response from the \"gawker\".
         <br><br>
 
-        \t4-я эмоция - эмоционально беспартийна.
-        И гром 1-й эмоции, и разлив 2-й эмоции, и шепот 3-й эмоции - все приемлет тонкая, чувствительная душа \"зеваки\".
-        Существует для него лишь качество, но не стилевая направленность произведения, что позволяет зачастую 4-й эмоции выступать в роли
-        квалифицированного и беспристрастного критика.
+        \tThe 4th emotion is emotionally non-party.
+        And the thunder of the first emotion, and the spill of the second emotion, and the whisper of the third emotion - everything is accepted by a thin, sensitive soul \"gawker\".
+        There is only quality for him, but not the style of the work, which often allows the 4th emotion to act in a role qualified and impartial critic.
         <br><br>
 
-        \tЗамечательным свойством 4-ой эмоции является то, что в жизни \"зеваки\" есть период, когда чувствительность его выглядит не отнюдь не последней
-        в его внутренней иерархии, а наоборот - первой.
-        Ощущение в себе 4 -й эмоции как 1-й связанно с эндокринной системой и обязано особым режимом работы
-        гормонального механизма, приходящейся на подростковый период, т.е. период между 15-ю и 25-ю годами.
+        \tThe remarkable property of the 4th emotion is that in the life of \"gawker\" there is a period when its sensitivity does not look at all the last
+        in its internal hierarchy, but on the contrary - the first.
+        Feeling of the 4th emotion as the 1st connected with the endocrine system and is bound by a special mode of operation
+        hormonal mechanism, which falls on the adolescent period, i.e. the period between the 15th and 25th years.
         <br><br>
 
-        \t\"Зевака\" эмоционально не свободен.
-        И Наполеон, с его 4-й эмоцией, нередко жаловался, что близкие приноровились
-        в корыстных целях хватать его за это зависимое место. Он говорил французскому дипломату Коленкуру:
-        <blockquote>Я не раз испытал это с Жозефиной, которая постоянно обращалась ко мне с разными просьбами и даже ловила меня врасплох своими слезами,
-        при виде которых я соглашался на многое, в чем должен был бы отказать.</blockquote>
+        \t\"Gawker\" is not emotionally free.
+        And Napoleon, with his 4th emotion, often complained that the loved ones had adapted
+        for the mercenary purposes of catching him for this dependent place. He spoke to the French diplomat Colencourt:
+        <blockquote>I have often experienced this with Josefina, who constantly appealed to me with various requests and even caught me by surprise with her tears,
+        at the sight of which I agreed to much, what should be refused.</blockquote>
 
-        \t Вместе с тем, крайне поверхностным выглядело бы представление о 4-й эмоции, как о совершенном эмоциональном хамелеоне,
-        абсолютно бесцветном в пору свободы от внешнего эмоционального воздействия.
-        Действительно, 4-я Эмоция очень зависима и слаба перед лицом чужой экспансии чувств, но из этого <i>не следует, что сама по себе она бездушна и слепа.</i>
+        \tAt the same time, it would be extremely superficial to imagine the 4th emotion as a perfect emotional chameleon,
+        absolutely colorless at the time of freedom from external emotional impact.
+        Indeed, the 4th emotion is very dependent and weak in the face of another's expansion of feelings, but from this <i>it does not mean that it is soulless and blind.</i>
         <br><br>
 
-        \tДругое дело, что выяснить, какова она сама по себе, удается редко - в минуты одиночества - только тогда обнаруживается,
-        какие силы, глубины и богатства в ней таятся.
-        Одна беда: случается это не часто.
-        За стеной включается магнитофон, и нога \"зеваки\" невольно начинает отбивать ритм, во дворе разражается слезами ребенок,
-        и глаза \"зеваки\" увлажняются, в комнату \"зеваки\" с яростным воплем врывается прекрасная его половина и немедленно получает в ответ равный по ярости вопль.
-        И пошло - и поехало…
+        \tAnother thing is that it is rarely possible to find out what it is by itself - in moments of loneliness - only then it is revealed,
+        what forces, depths and riches in it are hidden.
+        One trouble: it does not happen often.
+        Behind the wall the tape recorder is turned on, and the foot of the \"gawker\" involuntarily begins to beat the rhythm, in the yard a child bursts into tears,
+        and the eyes of the \"gawker\" are moistened, the beautiful half of him bursts into the room with the furious cry, and immediately receives in response a rage equal in rage.
     ]]></string>
 
     <string name="first_logic_description"><![CDATA[
-        \t\"Догматик\" может оказаться и мудрецом, и непроходимым тупицей.
-        1-ю логику объединяет <i>результативность мышления</i>, а каковы результаты - дело сугубо индивидуальное.
+        \t\"Dogmatist\" may be a wise person, and an impenetrable dumbass.
+        The first logic focuses on <i> the effectiveness of thinking </i>, and what are the results - this is a purely individual question.
         <br><br>
 
-        \tСреди внешних примет 1-й логики наиболее заметной и показательной является однозначно утвердительная форма общения.
-        Монологовость 1-й логики непреодолима.
-        По счастью, \"догматик\" не болтлив, обладает способностью слышать и не торопится высказываться по всякой из предложенных тем.
+        \tAmong the external signs of the 1st logic, the most significant and indicative is the unequivocally affirmative form of communication.
+        Monologue of the 1st logic is irresistible.
+        Fortunately, \"dogmatist\" is not talkative, has the ability to hear and does not hurry to speak on any of the proposed topics.
         <br><br>
 
-        \tОн позволяет себе начать монолог лишь в комфортных условиях, т.е. в связи с проблематикой, в которой считает себя компетентным.
-        В этом, думаю, проявляется свойственная 1-й логике осторожность.
-        Общаться вне утвердительной формы она не умеет, а обнаружение при кавалерийском наскоке на тему несостоятельности своей Первой -
-        опорной и наиболее мощной функции - чревато саморазрушением личности.
+        \tHe allows himself to start a monologue only in comfortable conditions, i.e. in connection with the problems in which he considers himself competent.
+        This manifests the prudence inherent in the first logic.
+        Communicate outside the affirmative form, it can not, and the discovery during the cavalry assault the insolvency of its first - and the most powerful function - is fraught with self-destruction of the person.
         <br><br>
 
-        \tДругая причина молчания 1-й логики: отсутствие дара и вкуса к дискуссии.
-        В спорах с \"догматиком\" истина не рождается, она либо утверждается, либо отметается.
-        Третьего не дано.
-        Обычно он отправляется на диспут с домашней заготовкой - дубиной абсолютной истины, которой иногда весьма эффективно глушит своего оппонента.
+        \tAnother reason for the silence of the 1st logic is the lack of talent and taste to the discussion.
+        In disputes with the \"dogmatist\" truth is not born, it is either asserted or rejected.
+        Usually he goes to the debate with a cudgel of absolute truth, which sometimes very effectively jamming his opponent.
         <br><br>
 
-        \t\"Догматик\" вообще тугодум - стайер, а не спринтер интеллекта.
-        Он не обладает вкусом к дискуссии и без крайней нужды в нее не вступает.
-        Дарвин признавался:<br><br>
-        <blockquote>Я не наделен способностью схватывать на лету или остротой ума, так поражающими нас в одаренных людях, например, в Гексли.
-        Соответственно я неважный критик.</blockquote>
+        \t\"Dogmatist\" is generally a stayer, and not a sprinter of intelligence.
+        Darwin admitted:<br><br>
+        <blockquote>I am not endowed with the ability to grasp on the fly or the sharpness of the mind, which amazes us in gifted people, for example, in Huxley.
+        Accordingly, I\'m not a good critic.</blockquote>
 
-        \tТретья причина молчания 1-й логики: неприязнь к праздной болтовне, гипотезам и вообще частному мнению.
-        \"Догматик\" взыскует абсолютной истины, а не мнения.
-        Только абсолютная истина может быть положена кирпичом в ту интеллектуальную опору, что строит для себя 1-я Логика.
+        \tThe third reason for the silence of the 1st logic: dislike of idle chatter, hypotheses and generally private opinion.
+        \"Dogmatist\" is seeking an absolute truth, not opinion.
+        Only absolute truth can be put by a brick in that intellectual support that the 1st Logic builds for itself.
         <br><br>
 
-        \tОднако, и сам \"догматик\" бывает автором гипотез.
-        Для 1-й Логики мысль первична и самодостаточна, она объективна и не нуждается в каких-либо костылях.
-        Идти от концепции к факту, а не наоборот - обычный для 1-й логики образ действия.
-        Естественным выглядит при таком образе мысли и то, что для \"догматика\" нет тягостней зрелища, чем вид сраженной фактом теории.
+        \tHowever, even the \"dogmatist\" himself is the author of hypotheses.
+        For the 1st logic, thought is primary and self-sufficient, it is objective and does not need any crutches.
+        Go from concept to fact, and not vice versa - the usual way for the first logic of the action.
+        It is natural for such an image of thought and for the fact that there is no more painful sight for the \"dogmatist\" than the kind of theory that has been struck by the fact.
         <br><br>
 
-        \tОднажды, беседуя с Гексли о природе трагического, кто-то упомянул Спенсера.
-        <blockquote>\"Ха!\"- вскричал Гексли,-\"…трагедия в спенсеровском представлении - это дедукция, умерщвленная фактом.\"</blockquote>
+        \tOnce, when talking with Huxley about the nature of the tragic, someone mentioned Spencer.
+        <blockquote>\"Ha!\" Cried Huxley, \"The tragedy in Spencer\'s view is deduction, which was mortified by the fact.\"</blockquote>
 
-        \t\"Догматик\" крайне резко реагирует на всякую очевидную глупость, бессмыслицу, алогизм, белиберду,
-        другими Логиками воспринимаемые обычно достаточно снисходительно.
-        Заведомая бессмыслица, то есть, прямое издевательство над лучшей, важнейшей стороной психики \"догматика\" практически сразу же выбивает его из колеи,
-        доводя до бешенства, до истерики.
+        \t\"Dogmatist\" reacts extremely sharply to any obvious stupidity, nonsense, alogism, rubbish, other logics perceived usually fairly lenient.
+        Knowing nonsense, that is, direct mockery of the best, most important aspect of the psyche \"dogmatist\" almost immediately knocked him out of the rut,
+        leading up to rabies, to hysterics.
         <br><br>
 
-        \tМышление 1-й логики, может быть, не самое лучшее в мире, но, точно, <i>самое честное</i>.
+        \tThe thinking of the 1st logic may not be the best in the world, but, for sure, <i> the most honest</i> one.
 
-        \tОчень узнаваем почерк \"догматика\".
-        Он некрасив, трудно читаем и по своим принципам приближается к стенографии.
+        \tWe very much recognize the handwriting of \"dogmatist\".
+        It is ugly, difficult to read and, according to his principles, approaches shorthand.
      ]]></string>
 
     <string name="second_logic_description"><![CDATA[
-        \t\"Ритор\"- большой любитель поговорить.
-        Общение - воздух и хлеб 2-й логики.
+        \t\"Ritor\" is a great fan of talking.
+        Communication is air and bread of the second logic.
         <br><br>
 
-        \tСекрет этого искусства - в способности и желании не просто высказаться, но, прежде всего,
-        вовлечь собеседника в разговор, сделать интеллектуальное пиршество совместным.
-        Способ: прикинуться дурачком и начать общение с фразы, подобной знаменитой сократовской:
+        \tThe secret of this art is in ability and desire not only to speak out, but, first of all,
+        to involve the interlocutor in conversation, to make intellectual feast together.
+        Method: to pretend to be a fool and start communicating with a phrase similar to the famous Socratic:
 
-        <blockquote>Я знаю только то, что я ничего не знаю.</blockquote>
-        \tТрудно представить, кто отказался бы проглотить такую наживку.
+        <blockquote>I only know that I do not know anything.</blockquote>
+        \tIt is hard to imagine who would refuse to swallow such a bait.
         <br><br>
 
-        \tЕще одно замечательное и драгоценное качество, свойственное всем \"риторам\" без исключения - это здоровый цинизм.
-        2-я логика не верит ни в Бога, ни в черта, ни в партийные программы, ни в научные доктрины - ни во что.
-        Все аксиоматичное, догматичное, попав в жернова полушарий \"риторского\" мозга, быстро теряет свою абсолютность
-        и делается простым объектом интеллектуальных манипуляций.
+        \tAnother wonderful and precious quality, characteristic of all \"ritors\" without exception is a healthy cynicism.
+        The second logic does not believe in God, in the line, in the party programs, or in scientific doctrines - in anything.
+        All the axiomatic, dogmatic, having got into the millstones of the cerebral hemispheres of the \"ritor\'s\" brain, quickly loses its absoluteness
+        and becomes a mere object of intellectual manipulation.
         <br><br>
 
-        \tДля \"ритора\" нет ни запретов, ни рамок, ни правил, удерживающих свободную игру мысли.
-        Все подвергается суду 2-й логики, но этот суд милостив и редко выносит окончательный приговор (разве что явной глупости).
-        Приговор - это результат, конец процесса, которым так дорожит 2-я логика.
-        Поэтому цинизм ее высказываний лишен агрессивных, категоричных ноток, это цинизм беспартийного, свободомыслящего человека.
+        \tFor the "ritor" there are no prohibitions, no frames, no rules that keep the free game of thought.
+        Everyone is subject to the trial of the second logic, but this court is gracious and seldom makes the final verdict (except that she is obviously stupid).
+        The sentence is the result, the end of the process, which is so dear to the 2-nd logic.
+        Therefore, the cynicism of her statements is devoid of aggressive, categorical notes, it is the cynicism of a non-party, free-thinking person.
         <br><br>
 
-        \tОпровергать сегодня сказанное вчера - нормальное состояние \"ритора\".
-        За примером далеко ходить не надо - Ленин.
+        \tTo refute today what was said yesterday is the normal state of the "ritor".
+        You do not have to go far for an example - Lenin.
         <blockquote>
-        За свою жизнь он так много наговорил противоположного, что ленинцы до сих пор не могут решить,
-        какие из его высказываний следует считать директивными.
-        Великий полемист, Ленин каждый раз умудрялся делать чрезвычайно убедительной мысль, прямо противоречащую той,
-        которую он еще недавно с не меньшим блеском отстаивал.</blockquote>
+        During his life, he talked so much of the opposite that the Leninists still can not decide,
+        which of his statements should be considered directives.
+        A great polemicist, Lenin always managed to make an extremely convincing thought, directly contradicting the one,
+        which he still defended with no less brilliance.</blockquote>
 
-        \tНельзя не восхититься широтой интересов 2-й Логики.
-        Не знает себе равных 2-я логика и в качестве комментатора, истолкователя чужих идей.
+        \tIt is impossible not to admire the breadth of the interests of the 2nd Logic.
+        He does not know the equal of the second logic and as a commentator, interpreter of other people's ideas.
         <br><br>
 
-        \tЕдинственный, пожалуй, недостаток 2-й логики, являющийся продолжением ее достоинств,
-        заключается в том, что мышление “ритора” скорее тяготеет к тактике, чем к стратегии.
-        \"Ритор\" не большой охотник до письменного изложения своих взглядов.
-        И это понятно.
-        <i>Его страсть - живое общение, а не сражение с мертвым листом бумаги.</i>
-        Единственно, когда 2-я логика охотно обращается к бумаге - это во время вынужденного одиночества.
-        Именно будучи обреченной на молчание, она обращается к такому суррогату, как бумага.
+        \tThe only, perhaps, disadvantage of the second logic, which is a continuation of its advantages,
+        is that the thinking of the \"ritor\" tends toward tactics rather than strategy.
+        \"Ritor\" is not great in writing out his own views.
+        And this is understandable.
+        <i>His passion is living communication, and not a battle with a dead sheet of paper.</i>
+        The only thing when the 2nd logic willingly turns to paper is during compelled loneliness.
+        Just being doomed to silence, it turns to such a surrogate as paper.
         <br><br>
 
-        \tЕще одна заметная и забавная черта характера 2-й логики - страсть делать пометки в книгах, особенно библиотечных.
-        Читая с карандашом, она обильно уснащает страницы чертами, восклицательными и вопросительными знаками и т.д.
-        Обычно феномен страсти к чирканью в книгах объясняется двояко: либо бескультурьем, либо желанием прочнее запечатлеть
-        в памяти наиболее важные места.
-        Но в действительности истоки этой страсти иные.
-        Пометки в книгах - типичная для 2-й логики <i>форма общения</i>, послание всем грядущим безымянным обладателям книги,
-        попытка заочного обмена мнениями.
+        \tAnother notable and fun feature of the nature of the 2nd logic is the passion to make notes in books, especially library books.
+        Reading with a pencil, it abundantly equips pages with features, exclamation and question marks, etc.
+        Usually the phenomenon of passion for chirping in books is explained in two ways: either lack of culture, or a desire to more firmly capture
+        the most important places in memory.
+        But in reality the origins of this passion are different.
+        The notes in the books are typical of the 2nd logic <i> form of communication</i>, the message to all future nameless owners of the book,
+        an attempt to exchange opinions in absentia.
     ]]></string>
 
     <string name="third_logic_description"><![CDATA[
-        \tЗвание \"скептика\" заслуживает любой обладатель 3-й логики, независимо от уровня образования и степени философской подготовки.
-        Обычный, бытовой \"скептик\" - это молчаливый, очень осторожный в посылках и выводах человек,
-        с неприязнью и иронией относящийся к разного рода категоричным суждениям.
+        \tThe title of \"skeptic\" deserves any holder of the 3rd logic, regardless of the level of education and the degree of philosophical preparation.
+        The usual, everyday \"skeptic\" - is a silent, very cautious person in the premises and conclusions,
+        with hostility and irony related to all sorts of categorical judgments.
         <br><br>
 
-        \tИспытывая почти панический страх перед острым, азартным спором, \"скептик\" в то же время, как никто,
-        ценит неспешную, благожелательную, вольную беседу, в которой нет победителей и побежденных,
-        а значит, нет и <i>деления на умных и дураков</i> (попасть в последние 3-я Логика боится более всего).
+        \tExperiencing an almost panic fear of an acute, gambling dispute, \"skeptic\", at the same time, like no one,
+        appreciates a leisurely, benevolent, free-flowing conversation in which there are no winners and losers,
+        and therefore, there is no <i> division into clever and fools </i> (getting into the last group the 3rd logic is afraid most of all).
         <br><br>
 
-        \tЦенит она, даже прямо сказать, пустую болтовню, в которой процесс гораздо дороже результата.
-        Здесь-то обнаруживается, что мнимый молчун на самом деле чудовищно многословен, что нет для него большей радости,
-        чем тихо, почти шепотом, журчать и журчать, перебирая, подобно бусинкам четок, тему за темой.
+        \tIt appreciates, frankly speaking, meaningless chatter, in which the process is much more valuable than the result.
+        Here it is found out that the alleged silent is in fact monstrously verbose, that there is no greater joy for it,
+        than quietly, almost in a whisper, murmur and murmur, sorting, like the beads of the beads, theme by theme.
         <br><br>
 
-        \tМышление 3-й логика - некий лабиринт, в котором <i>все пути одинаково приемлемы, а выхода нет.</i>
+        \tThinking of the third logic is a kind of labyrinth in which <i>all paths are equally acceptable, but there is no way out.</i>
+        Special topic is the relationship actual thinking and the speech.
+        The key here can serve as the phrase of one owner of the 3rd logic:
+        <blockquote>I can not think and speak at the same time.</blockquote>
 
-        \tОсобая тема: отношение между собственно мышлением и речью.
-        Ключом здесь может послужить фраза одного обладателя 3-й логики:
-        <blockquote>Я не могу думать и говорить одновременно.</blockquote>
-
-        \tМежду интеллектуальным продуктом и его реализацией постоянно образуются зазоры,
-        которые приходится заполнять всяким мусором, чтобы скрыть дефект.
-        Поэтому одной из характерных примет 3-й логики является изобилие в речи всякого рода сорных слов,
-        междометий, мычаний и подобных им попыток выиграть время на обдумывание, при соблюдении видимости непрерывности речевого потока.
+        \tBetween the intellectual product and its implementation, gaps are constantly formed,
+        they have to fill up with all kinds of garbage to hide the defect.
+        Therefore, one of the characteristic features of the third logic is the abundance of all sorts of weird words in speech.
+        Interjections, mooing and similar attempts exists to gain some time for deliberation, and giving the effect of continuous speech flow.
         <br><br>
 
-        \tПредставление о чувствах, переживаемых 3-й логикой, когда она оказывается на кафедре,
-        дают отрывки из одного письма к психиатру:
-        <blockquote>Я преподаю в техническом вузе.
-        Уже шестой месяц читаю курс лекций по своей специальности.
-        \"Читаю\" - сказано неверно.
-        Не читаю, а мучаюсь и мучаю слушателей.
-        Выхожу к слушателям, как статуя командора.
-        Все прекрасно и удивительно: язык не ворочается, в позвоночнике кол, на плечах тяжесть египетской пирамиды,
-        а в мозгах - что там в мозгах, уже черт поймет.
-        Дымовая завеса. Забываю половину материала, никакие конспекты не помогают.</blockquote>
+        \tThe idea of the feelings experienced by the third logic, when it is at the department,
+        give excerpts from one letter to a psychiatrist:
+        <blockquote>I teach at a technical college.
+        For the sixth month I've been lecturing in my specialty.
+        \"I teach\" - it is said incorrectly.
+        I do not teach, but I suffer and torment listeners.
+        I go out to listeners like a statue of a commander.
+        Everything is beautiful and amazing: the tongue does not turn, there is a count in the spine, on the shoulders the weight of the Egyptian pyramid,
+        and in the brains - what\'s in the brains, the devil will already understand.
+        Smoke screen. I forget half the material, no synopsises help.</blockquote>
 
-        \tЕсли \"скептик\" обращается к политике, то его первым делом характеризуют стабильно натянутые отношения с прессой.
-        В демократических системах политик - \"скептик\" обычно спасается от прессы бегством, как это делал президент Рейган.
+        \tIf the \"skeptic\" turns to politics, then his first thing is characterized by stably strained relations with the press.
+        In democratic systems, a politician - a \"skeptic\" - usually escapes from the press as President Reagan did.
         <br><br>
 
-        \t3-я логика - главный потребитель кроссвордов, логических задач и тестов.
-        Вся эта интеллектуальная продукция - идеальный полигон, на котором 3-я логика может без помех и риска
-        серьезных травм проверить себя, выяснить, насколько объективно внутреннее ощущение своей умственной неполноценности.
+        \t3rd logic is the main consumer of crosswords, logical tasks and tests.
+        All this intellectual production is the ideal testing ground on which the 3rd logic can be without interference and risk
+        serious traumas to check themselves, to find out how objective is the internal sense of their mental inferiority.
     ]]></string>
 
     <string name="forth_logic_description"><![CDATA[
-         \tВольно или невольно, но о 4-й логике может сложиться впечатление как о функции заведомо умственно беспомощной и отсталой.
-         Это совсем не так.
+         \tWilly-nilly or involuntarily, but about the 4th logic one can get the impression of a function that is knowingly mentally helpless and backward.
+         It\'s not like that at all.
          <br><br>
 
-         \tСуть проблематики  4-й логики  заключается не в низком качестве ее функционирования,
-         а в том, что ее <i>обладатель отводит Логике в своей внутренней иерархии ценностей последнее место.</i>
+         \tThe essence of the problems of the 4th logic is not the low quality of its functioning,
+         but in the fact <i>the owner takes the last place to logic in its internal hierarchy of values. </i>
          <br><br>
 
-         \tНа примере Пушкина легко увидеть одну из специфических черт 4-й логики: сочетание качественной работы логического аппарата
-         с полным безумием.
-         <blockquote> Пушкин - блестящий полемист, проигрывал в карты всем, кто умел держать их в руках.</blockquote>
+         \tOn the example of Pushkin it is easy to see one of the specific features of the 4th logic: the combination of the qualitative work of the logical apparatus
+         with complete madness.
+         <blockquote>Pushkin was a brilliant polemicist, losing cards to all who knew how to hold them in their hands.</blockquote>
 
-         \tЗдесь нет ничего парадоксального.
-         Полемический дар его открывался в безмятежной обстановке дружеского кружка.
-         Тогда как крупная карточная игра сама по себе вела к дискомфорту, напряжению ситуации, при которых,
-         по законам Четвертых функций, <i>4-й логика Пушкина отключалась</i>, и вся внутренняя энергетика сосредотачивалась
-         в Эмоции -  <i>функции, стоящей первой<i/> в его внутренней иерархии.
-         А результат игры в карты, опирающейся на эмоции, легко предсказать заранее.
+         \tThere is nothing paradoxical about this.
+         His polemic gift was opened in the serene atmosphere of a friendly atmosphere.
+         While a large card game itself led to discomfort, the tension of the situation, in which,
+         according to the laws of the Fourth Functions, <i> Pushkin\'s 4th logic was turned off</i>, and all internal power engineering was focused
+         in emotion - <i>the function, which is the first</i> in its internal hierarchy.
+         And the result of playing cards, based on emotions, is easy to predict in advance.
          <br><br>
 
-         \t И так, в зависимости от ситуации, живет любой \"школяр\"- умница и глупец в одном лице.
-         4-й логике трудно дается самостоятельная умственная работа, вообще включение интеллекта без непосредственной
-          и очевидной в том потребности.
-          <br><br>
-
-         \tМозг \"школяра\" прагматичен, вперед и вширь смотреть не любит и быстро плесневеет без толчков извне.
-         По внешнему виду 4-й логика почти не отличается от 2-й.
-         Она также интеллектуально беспартийна; легко усваивает, принимает, воспроизводит, развивает любые взгляды:
-         догматические, диалектические, скептические…
-         <i>4-я Логика также свободна и бесстрашна в своих посылках и выводах, как и 2-я.</i>
+         \tAnd so, depending on the situation, there lives any \"schoolboy\" - clever and foolish in one person.
+         4th logic is difficult to give independent mental work, in general, the inclusion of intelligence without immediate and obvious in that need.
          <br><br>
 
-         \tИ отдадим должное, всеядность, сочетаемая с бесстрашием, - основной и очень весомый козырь в руках \"школяра\".
-         Быстро отличить 4-ю логику от 2-й позволяют две вещи.
-         1. Идеология \"школяра\" совершенно оторвана от его жизни, и он никак не склонен следовать тому, что сам постулирует.
-         2. Врожденный скепсис.
+         \tThe brain of a \"schoolboy\" is pragmatic, does not like to look forward and breadth, and quickly molds without pushes from outside.
+         In appearance, the 4th logic is almost the same as the second.
+         It is also intellectually non-party; easily absorbs, accepts, reproduces, develops any views: dogmatic, dialectical, skeptical…
+         <i>The 4th logic is also free and fearless in its assumptions and conclusions, like the 2nd.</i>
          <br><br>
 
-         \tОднако, не стоит путать его с активным скепсисом 3-й логики.
-         \"Школярский\" скепсис беззуб.
-          Пастернак однажды заметил:
-         <blockquote>Заниматься всю жизнь интеллектуальной деятельностью все равно, что всю жизнь питаться горчицей.</blockquote>
+         \tAnd give due, omnivorous, combined with fearlessness is the main and very powerful trump card in the hands of \"schoolboy\".
+         Quickly to distinguish 4-th logic from the second allow two things.
+         1. The ideology of \"schoolboy\" is completely divorced from his life, and he is not inclined to follow what he himself postulates.
+         2. Congenital skepticism.
+         <br><br>
 
-          \tСкепсис 4-й логики - не энергичное отрицание действенности интеллектуального начала в человеке, а простое равнодушие к нему.
-          Чехов, у которого была 4 логика писал:
-          <blockquote>Политического, религиозного и философского мировоззрения у меня нет; я меняю его ежемесячно…</blockquote>
+         \tHowever, do not confuse it with the active skepticism of the 3rd logic.
+         Skepticism of \"schoolboy\" is toothless.
+         Pasternak once remarked:
+         <blockquote>To be engaged all life intellectual activity all the same, that all life to eat mustard.</blockquote>
 
-          \tОдним словом, \"школяр\" - энергичный лишь по нужде, праздно любопытствующий, внутренне совершенно раскованный,
-          интеллектуальный хамелеон.
-          И здесь всего его плюсы и минусы.
-          <br><br>
+         \tThe skepticism of the 4th logic is not a vigorous denial of the effectiveness of the intellectual principle in person, but a mere indifference to it.
+         Chekhov, who had 4 logics, wrote:
+         <blockquote>I do not have a political, religious and philosophical worldview; I change it monthly…</blockquote>
 
-          \tВ утешение \"школяру\" необходимо добавить, что он - чемпион.
-          Среди населения земли он численно превосходит все другие Логики.
+         \tIn a word, the \"schoolboy\" is energetic only in need, idly curious, internally completely uninhibited, intellectual chameleon.
+         And here all its pluses and minuses.
+         <br><br>
+
+         \tIn consolation \"schoolboy\" it is necessary to add that he is a champion.
+         Among the world\'s population, he is numerically superior to all other logics.
     ]]></string>
 
     <string name="first_physics_description"><![CDATA[
-        \tРослые, дородные люди среди 1-й Физики преобладают.
-        Они любит дорогие, броские ткани и меха, пышный, подчеркивающий и без того мощные формы, силуэт.
-        Они не знают меры в отделке платья, будь она по-настоящему дорогая или мишурная: брошь - так уж с кулак величиной, цепочка или перстень - так уж толщиной в палец…
-        Кратко можно сказать, что стиль в одежде 1-й Физики близок к стилю мафиози, какими их принято изображать в мировом кино.
+        \tTall, burly men prevail among the owners of 1st physics.
+        They love expensive, catchy fabrics and furs, magnificent, emphasizing already powerful forms, silhouette.
+        They do not know the measures in finishing the dress, whether it\'s really expensive or tawdry: a brooch - as big as fist of size, a chain or a ring - as thick as a finger…
+        In short we can say that the style of the clothes of the 1st physicist is close to the style of the mafiosi, as they are usually portrayed in the world cinema.
         <br><br>
 
-        \tУгадать в ребенке \"собственника\" можно довольно рано.
-        Если в дворовой песочнице ребенок, у которого сосед утащил игрушку, молча,
-        без всяких предварительных переговоров врезает обидчику по уху, то родителей можно поздравить: у их ребенка 1-я Физика.
+        \tYou can guess an \"owner\" in a child quite early.
+        If in a yard sandbox a child, whose neighbor has dragged a toy, silently, without any preliminary negotiations,
+        hits the offender on the ear, then the parents can be congratulated: their child has the 1st physics.
         <br><br>
 
-        \tПервые внешние приметы 1-й Физики начинают проступать с подросткового возраста:
-        расширяются плечи и бедра, крупнеют и обретают сочность черты лица, дополняемые густой, пышной шапкой волос.
-        Однако, рано и бурно расцветающая 1-я Физика имеет свойство столь же рано и столь же бурно отцветать.
+        \tThe features of bodily plastics are universal: the "owner", if not in a hurry, acts slowly and majestically.
+        He, too, can spend hours in the same pose, without experiencing any appreciable inconvenience.
         <br><br>
 
-        \tОсобенности телесной пластики универсальны: \"собственник\", если никуда не спешит, выступает неспешно и величественно.
-        Он, также, часами может пребывать в одной и той же позе, не испытывая при этом заметных неудобств.
+        \t\"Owner\" is a touch hippopotamus.
+        Due to thick-skinnedness, he is physiologically not jealous, and he himself can not be attributed to ideals of fidelity.
+        The nature of \"owner\'s\" sexuality is such that he may cheating, as if not cheating.
         <br><br>
 
-        \t\"Собственник\" - сенсорный бегемот.
-        В силу толстокожести, он физиологически не ревнив, и его самого нельзя отнести к образцам верности.
-        Природа сексуальности \"собственника\" такова, что он изменяет, как бы не изменяя.
+        \tAs for the immediate tastes of the 1st Physicist, by virtue of her sensory thick-skinnedness it likes bright colors,
+        but it does not distinguish halftones and shades.
+        Has a predilection for rough, heavy, spicy food.
+        It attracts tart and intense smells.
         <br><br>
 
-        \tЧто касается непосредственно вкусов 1-й Физики, то в силу своей сенсорной толстокожести она любит яркие, бьющие по глазам цвета,
-        но плохо отличает полутона и оттенки.
-        Имеет пристрастие к грубой, тяжелой, острой пище.
-        Ее влекут терпкие, бьющие в нос запахи.
+        \tThe first physics is usually attributed to the most criminogenic category of citizens.
+        This is due to the fact that the first, unconscious impulse in the event of problems provokes the \"owners\" to solve them through illegal actions.
+        And not always external and internal brakes are strong enough to overcome this temptation.
         <br><br>
 
-        \tПервую Физику принято относить к наиболее криминогенной категории граждан.
-        Это связано с тем, что первый, бессознательный импульс при возникновении проблем провоцирует \"собственников\"
-        к решению их посредством противоправных действий.
-        И не всегда внешние и внутренние тормоза оказываются достаточно сильны, чтобы такой соблазн преодолеть.
+        \t\"Owner\" is a monstrously gambler, and the prospect of instant, effortless enrichment has almost magical power over him.
+        Therefore, he is the first victim of all kinds of financial scams, lotteries, gambling, etc.
+        Any \"owner\" is a complete materialist, better than anyone who knows his own profit and the value of money.
         <br><br>
 
-        \t\"Собственник\" чудовищно азартный игрок, и перспектива мгновенного, не требующего усилий обогащения имеет над ним почти волшебную силу.
-        Поэтому он - первая жертва всякого рода финансовых афер, лотерей, азартных игр и т.д.
-        Любой \"собственник\" - законченный материалист, лучше, чем кто-либо, знающий свою выгоду и цену денег.
+        \tNaturally, sports are among the main occupations and interests of the 1st physicist.
+        However, the \"owner\" accepts the sport not unconditionally, and not entirely.
+        The first function is efficient, therefore 1st physics loves combat sports, with an emphasis not so much on the process of struggle, but on the result.
+        Bodybuilding is the closest to the 1st physics: who is more abundant and more revealing will show redundancy
+        flesh is extremely appealing to those experiencing the same psychic sensations \"proprietor\".
         <br><br>
 
-        \tЕстественно, что спорт входит в число основных занятий и интересов 1-й Физики.
-        Однако \"собственник\" принимает спорт не безусловно, и не целиком.
-        1 Функция результативна, поэтому 1-я Физика любит спортивные единоборства, с уклоном не столько на процесс борьбы,
-        сколько на результат.
-        Внутренне ближе всего 1-й Физике бодибилдинг: кто обильнее и рельефнее продемонстрирует избыточность
-        плоти чрезвычайно импонирует испытывающему те же психические ощущения \"собственнику\".
-        <br><br>
-
-        \t\"Собственника\" нельзя назвать \"трудоголиком\" или азартным работником, испытывающим удовольствие от работы.
-        Обычно не принимая слишком близко к сердцу чужие боли и беды, он, как никто, остро переживает собственные имущественные и физические потери.
-        Даже незначительные удары по Физике - опоре его личности - воспринимаются им зачастую едва ли не как гибель Вселенной.
-
+        \t\"Owner\" can not be called a \"workaholic\" or a gambler who enjoys work.
+        Usually, not taking too much to heart other people's pains and troubles, he, like no one, is acutely experiencing his own property and physical losses.
+        Even minor attacks on physics - the backbone of his personality - are often perceived by him as almost the death of the universe.
      ]]></string>
 
     <string name="second_physics_description"><![CDATA[
-        \tВторая Физика живет движением, поэтому простота, нормативность и красота для нее так же естественны, как для рыбы естественно дыхание в воде.
-        Узнать 2-ю физику легче всего по любви к чистоте.
-        Стоит лишь войти в блещущий чистотой и порядком дом, в котором она непременно живет.
+        \tThe second physics lives by movement, therefore simplicity, normativity and beauty are just as natural for it as for fish it is natural to breathe in water.
+        It is easy to recognise the second physics by the love of purity.
+        One has only to enter into a house shining with purity and order, in which it lives by all means.
         <br><br>
 
-        \tХарактеристики, типичные для второй функции как таковой, - сила, разнообразие, процессионность, диалог, гибкость - можно распознать и во второй Физике.
-        \"Труженик\" - существо в физическом смысле чрезвычайно контактное.
-        Он любит касаться, гладить, ухаживать за людьми и предметами, которые считает своими, родственными, близкими.
+        \tCharacteristics which are typical to the second function as such - power, diversity, processivity, dialogue, flexibility - can also be recognized in the second physics.
+        \"Toiler\" is the creature who in the physical sense is extremely contact.
+        He likes to touch, palm, take care of people and objects, which he considers to be his.
 
-        \tВторая Физика - единственный подлинный \"трудоголик\".
-        Труд нужен и дорог ей сам по себе, зачастую независимо от размеров воздаяния.
-        А в вопросах преображений, улучшений у них и вовсе действует какой-то особый тип мышления.
+        \tThe second physics is the only true \"workaholic\".
+        Labor is needed and dear to it in itself, often regardless of the size of the profit.
+        And in matters of transformations, improvements, they do have some special type of thinking.
         <br><br>
 
-        \tЗнает 2-я Физика и толк в любви: она - лучший на свете любовник, если иметь в виду чисто физический смысл этого слова.
-        В любви \"труженик\" неутомим, уверен в себе и в своем праве на лидерство в этой сфере, многогранен, нестандартен, находчив, естественен, терпим, благожелателен,
-        отзывчив, дорожит всеми её аспектами без изъятия, с самого начала до самого конца.
+        \t2nd physics knows how to love: it is the best lover in the world, if we bear in mind the purely physical meaning of this word.
+        In love, the \"toiler\" is indefatigable, confident in himself and in his right to leadership in this field, multifaceted,
+        unconventional, resourceful, natural, tolerant, benevolent, responsive, cherishes all its aspects without exception, from the very beginning to the very end.
         <br><br>
 
-        \tВторая Физика знает цену деньгам, умеет и любит их зарабатывать.
-        Финансовый крах, конечно, не проходит для нее безболезненно, однако он для нее не смертелен, не выбивает \"труженика\" из седла.
+        \tThe second physics knows the value of money, knows how and loves to earn it.
+        Financial collapse, of course, does not pass for it painlessly, but it is not fatal for it, does not knock out the \"toiler\" from the saddle.
         <br><br>
 
-        \tС точки зрения симпатий к политико-экономическим моделям, \"труженика\" лучше всего причислить к \"социал-демократам\".
-        Насилие из корыстных побуждений вообще внутренне чуждо \"труженику\".
-        Поэтому даже когда он в силу обстоятельств становится на путь насилия, \"социал-демократ\" в нем не умирает,
-        \"труженик\" просто трансформируется в  \"Робин Гуда\" - социал-демократа с уголовным уклоном, и тем как бы примиряется с собой.
+        \tFrom the point of view of sympathy for political and economic models, the \"laborer\" is best classified as \"social democrats\".
+        Violence from selfish motives is generally internally alien to the \"toiler\".
+        Therefore, even when, due to circumstances, he takes the path of violence, the \"social-democrat\" does not die in him,
+        the \"toiler\" simply transforms into \"Robin Hood\" - a social democrat with a criminal bias, and so as to be reconciled with himself.
 
      ]]></string>
 
     <string name="third_physics_description"><![CDATA[
-        \tСверхранимость \"недотроги\" определяет все её поведенческие, правовые, экономические, эстетические и иные аспекты жизни.
-        Если в детстве 3-й Физике сопутствуют побои, болезни, голод, то это часто настолько рафинирует ее,
-        изначально рафинированную, что физическая чувствительность \"недотроги\" вообще выходит за пределы общедоступного и общепонятного.
+        \tSupersusibility \"touchy\" determines all of its behavioral, legal, economic, aesthetic and other aspects of life.
+        If in childhood the 3rd Physics is accompanied by beatings, illnesses, hunger, it often so refines it,
+        originally refined, that the physical sensitivity of the \"touchy\" is generally beyond the limits of the generally available and generally understood.
         <br><br>
 
-        \t3-я Физика очень мнительна и с постоянным вниманием вслушивается в работу собственного организма, предпочтение отдает профилактике,
-        закаливанию и укреплению организма.
-        Главными изобретателями и потребителями йоги, сыроедения, моржевания, лечебного голодания, разного рода гимнастик и т.п. являются именно \"недотроги\".
-        Страх за себя и привычка вслушиваться в собственный организм, в силу процессионности 3-й Физики, обычно обращаются на других и
-        дают миру непримиримых борцов за чистоту природы, активных пропагандистов здорового образа жизни и первоклассных врачей.
+        \t3rd Physics is very suspicious and with constant attention listens to the work of their own organism, preference is given to prevention, hardening and strengthening the body.
+        The main inventors and consumers of yoga, raw food, winter swimming, therapeutic starvation, various kinds of gymnastics, etc. are exactly \"touchy\".
+        Fear for oneself and the habit of listening to one\'s own organism, due to the processability of the 3rd physicist, usually turn to others and
+        give the world irreconcilable fighters for the purity of nature, active propagandists of a healthy lifestyle and first-class doctors.
         <br><br>
 
-        \t\"Недотрога\" - существо в высшей степени брачное: в поисках дополнительных уровней защиты, она торопится вступить в брак,
-        пытаясь законом прикрыть свое ранимое тело.
-        Любовь 3-й Физики к детям безгранична и порой принимает чрезмерные формы.
-        \"Недотрога\", видя в деторождении не просто ценность, а ценность абсолютную, независящую от времени, пространства и обстоятельств,
-        бывает плодовита нерасчетливо и бездумно.
+        \t\"Touchy\" is a very marital essence: in search of additional levels of protection, he hurries to marry, trying to cover up his vulnerable body by law.
+        The love of the 3rd physicist for children is boundless and sometimes takes excessive forms.
+        \"Touchy\", seeing in procreation not just value, but an absolute, independent of time, space and circumstances value,
+        it is fecund notoriously and thoughtlessly.
         <br><br>
 
-        \t3-я Физика ревнует физиологической ревностью.
-        В свете сказанного о 3-й Физике нетрудно догадаться, что она необычайно законопослушна.
-        С точки зрения предпочтений в социально-экономической политике, 3-я Физика ближе всего к званию \"коммуниста\".
-        Суть заключается в том, что \"недотрога\" внутренне ближе всего уравнительно-распределительная система.
-        Природа коммунистических симпатий 3-й Физики достаточно прозрачна: она чувствует себя самым слабым и наиболее ранимым звеном общества.
+        \t3rd Physics is jealous in terms of physiological jealousy.
+        In light of what has been said about the 3rd Physics, it is not hard to guess that it is unusually law-abiding.
+        From the point of view of preferences in socio-economic policy, the third physics is closest to the rank of \"communist\".
+        The bottom line is that the "touchy" is the closest thing to the leveling and distribution system.
+        The nature of the \"communist\" sympathies of the 3rd physicist is quite clear: it feels itself to be the weakest and most vulnerable element in society.
         <br><br>
 
-        \t\"Недотрога\" очень неважный боец, худший, чем кто-либо.
-        Дело в том, что он, говоря откровенно, трусоват.
-        Насколько трусость 3-й Физики оказывается заметной для посторонних, зависит от многих условий,
-        но то, что ей меньше чем кому-либо хочется подвергать силовому испытанию свое и без того от рождения как бы израненное тело - это точно.
-        Из страха же 3-я Физика бывает в бою (если его не избежать) слишком жестока.
-        Боязнь получить травму глушит в ней жалость и чувство меры, поэтому, коль дело доходит до драки, превышение необходимой самообороны - обычное для 3-й Физики явление.
-        Впрочем, драться \"недотроге\" приходится крайне редко.
-        Рукоприкладство и в быту, и в политике для нее мало приемлемый и наиболее бесперспективный способ решения проблем.
-
+        \t\"Touchy\" is a very unimportant fighter, worse than anyone.
+        The fact is that, frankly speaking, he is a coward.
+        How much the cowardice of the 3rd physicist turns out to be noticeable to outsiders depends on many conditions,
+        but the fact that it is less than someone who wants to subject his or her body as a force test is for sure.
+        Out of fear, 3rd physicist happens in battle (if it can not be avoided) is too cruel.
+        Fear of getting hurt suppresses pity and sense of proportion in it, therefore, as far as the fight goes,
+        the excess of necessary self-defense is usual for the 3rd physicist phenomenon.
+        However, it is extremely rare to fight \"touchy\".
+        Assault and in the home, and in politics for it little acceptable and most unpromising way to solve problems.
     ]]></string>
 
     <string name="forth_physics_description"><![CDATA[
-        \t4-я Физика обычно хороша собой своей тонкостью и бледностью.
-        Чаще \"лентяй\" - худой, тонкокостный человек, \"астеник\".
-        Однако попадаются среди 4-й Физики и люди крупного, атлетического телосложения.
-        Замечательное свойство красоты 4-й Физики заключается еще и в том, что время не властно над ней.
-        Обычное для 4-й Физики чувство ранней дряхлости в молодые годы, бывает, странно контрастирует со свежим, здоровым обликом.
+        \t4th physics is usually pretty with its subtlety and pallor.
+        More often \"lazy\" is a slim, thin-boned person, \"asthenic\".
+        However, among the 4th physicists there are also people of large, athletic build.
+        A remarkable property of the beauty of the 4th physics is also the fact that time is not powerful over it.
+        The usual sense of early aging for the 4th physics is, strangely, in contrast to a fresh, healthy appearance.
         <br><br>
 
-        \tГрусть чаще других чувств читается в глазах \"лентяя\".
-        4-я Физика рождается и умирает с ощущением изначальной трагичности бытия, с ощущением беды.
-        Ожидание катастрофы, дурные предчувствия типичны для 4-й Физики, и слова \"кошмар\",\"печаль\", \"тоска\" - излюбленные в ее словаре.
+        \tSadness is more often than other senses read in the eyes \"lazy\".
+        4th physics is born and dies with a sense of the original tragedy of being, with a sense of misfortune.
+        Waiting for a catastrophe, bad forebodings are typical for the 4th physics, and the words \"nightmare\", \"sadness\", \"melancholy\" are favorites in her vocabulary.
         <br><br>
 
-        \tУ \"лентяя\" какая-то таинственная связь с луной.
-        Как луна светит слабым, лишь отраженным светом, так и \"лентяй\", по закону Четвертых функций, - лишь отражение вышестоящих, автономных физических энергетик.
+        \tThe \"lazy\" one has some mysterious connection with the moon.
+        As the moon shines weak, only reflected light, and \"lazy\", according to the law of the Fourth Functions, is only a reflection of higher, autonomous physical energetics.
         <br><br>
 
-        \tТермин \"лентяй\" отражает не столько манеру поведения, сколько психологическую ориентацию личности.
-        Наоборот, внешне 4-я Физика зачастую выглядит большой труженицей.
-        Она усидчива, невзыскательна, бесстрашна в трате сил, исполнительна в точно отведенных ей рамках.
+        \tThe term \"lazy\" reflects not so much the manner of behavior, but as the psychological orientation of the individual.
+        On the contrary, apparently the 4th physics often looks like a hard worker.
+        It is plodding, unpretentious, fearless in wasting its strength, and it is executive within the limits of her allotted.
         <br><br>
 
-        \tОщущение ослабленности в себе физического начала живет в \"лентяе\" с рождения, впрочем, мало его беспокоя.
-        \"Лентяй\" - существо абсолютно бесстрашное.
-        Бесшабашная храбрость 4-й Физики со стороны смотрится замечательным достоинством, но на самом деле не является таковым.
-        Подставлять под бой Четвертую функцию, т.е. то, чем менее всего дорожишь - не велик подвиг.
-        Кроме того, как у всякой добродетели, у храбрости \"лентяя\" есть своя оборотная сторона: не щадя себя, он не склонен щадить и других.
+        \tSensation of the weakenedness of the physics sphere lives in \"lazy\" people since birth, however, it does not bother him much.
+        \"Lazy\" is the creature who is absolutely fearless.
+        The reckless bravery of the 4th physicist looks from the side a remarkable dignity, but in fact is not so.
+        The fourth function, that is, then the least you value, the feat is not great.
+        In addition, as with every virtue, courage \"lazy\" has its downside: not sparing himself, he is not inclined to spare others.
         <br><br>
 
-        \tАскетизм - экономическая программа 4-й Физики.
-        \"Лентяй\" действительно без напряжения обходится минимумом, но из этого не следует, что ему претит роскошь.
-        Он слишком безразличен к физическому пласту жизни, чтобы всерьез относиться к проблеме личного уровня потребления,
-        обусловленного более обстоятельствами и средой, нежели желаниями и усилиями самого \"лентяя\".
+        \tAsceticism is the economic program of the 4th physics.
+        \"Lazy\" can live with minimum of comfort without much stress, but it does not follow from this that he is oppressed by luxury.
+        He is too indifferent to the physical layer of life to take seriously the problem of the personal level of consumption.
         <br><br>
 
-        \tНапример, Эйнштейн, обеспечив себе под старость самый элементарный достаток,
-        мог использовать чек на 15000 долларов от Рокфеллеровского Фонда в качестве книжной закладки.
-        \"Лентяй\" - беспроигрышный политик.
-        Будучи храбрецом, он не рискует сломать себе шею на том, на чем обычно и ломается шея политика: деньги и женщины.
+        \tFor example, Einstein, having provided for himself for old age the most elementary prosperity,
+        could use a check for $15,000 from the Rockefeller Foundation as a book bookmark.
+        The \"Lazy\" is a win-win politician.
+        Being a brave person, he does not risk breaking his neck on what the policy of the neck usually breaks: money and women.
     ]]></string>
 
     <string name="first_will_description"><![CDATA[
-        \tПервая воля - прирожденный лидер: для нее управлять людьми так же легко и естественно, как дышать.
-        Она рождается с двухслойной картиной мироздания: есть верх и низ.
-        Предчувствие 1-й Волей своего избранничества - это программа, характер, образ и смысл ее жизни.
+        \tThe first will is a born leader: for it to manage people is as easily and naturally as breathing.
+        It is born with a two-layer picture of the universe: there is a top and a bottom.
+        The premonition of the 1st will to be the chosen one is its program, character, image and meaning of its life.
         <br><br>
 
-        \tПринадлежность к высшему из двух миров вносит некоторые коррективы в представления 1-й Воли о нормах права и этики.
-        \"Царя\" ни в коем случае нельзя назвать существом аморальным, он чтит закон и не любит нарушать сложившиеся в обществе нормы,
-        но некоторая раздвоенность, связанная с двухступенчатой картиной мироздания, в этике и праве 1-й Воли присутствует.
+        \tBelonging to the highest of the two worlds makes some adjustments to the representation on the rules of law and ethics of the 1st will.
+        \"King\" in any case can not be called an immoral creature, he honors the law and does not like to violate the norms prevailing in society,
+        but some duality associated with the two-stage picture of the universe, in ethics and law of the 1st will does exist.
         <br><br>
 
-        \tБезусловное исполнение всех правил, по ее мнению, необходимо для существ, принадлежащих ко второму, низшему миру.
-        Что касается существ высшего мира, то для них соблюдение норм права и морали должно, но не безусловно.
+        \tUnconditional compliance with all the rules, in its opinion, is necessary for beings belonging to the second, the lower world.
+        As for the beings of the upper world, for them the rule of law and morality must be observed, but not unconditionally.
         <br><br>
 
-        \t Первая Воля относится к окружающим ровно, не различая чинов и званий.
-        Формально,1-я Воля - сторонница равенства.
-        Но равенства своеобразного, где все уравнены не в правах, а в бесправии перед ней.
+        \tThe first will refers to the surrounding smoothly, with no distinction between ranks and titles.
+        Formally, the 1st will is a supporter of equality.
+        But equality of a kind, where not all have equal rights, and injustice in front of it.
         <br><br>
 
-        \tЖизнь \"царя\" изначала трагична.
-        Беда заключается в том, что 1-я Воля дозволяет расположенным ниже функциям реализовываться только в \"царственных\", иерархически приподнятых формах.
-        Еще один трагический мотив жизни \"царя\" заключен в его волюнтаристском лозунге:
-        <blockquote>Если захотеть, то все получится!</blockquote>
+        \tLife of the \"King\" is tragic from the beginning.
+        The trouble is that the 1st will allows the functions below to be implemented only in \"royal\", hierarchically elevated forms.
+        Another tragic motive of life of the \"King\" is contained in his voluntarist slogan:
+        <blockquote>If you want, you will succeed!</blockquote>
 
-        \tТрагизм тут заключен в самой не реалистичности лозунга, заведомом отказе от компромисса со средой, природой, миром, обществом, чужими волями и желаниями.
-        \"Если захотеть, то все получится!\" – кричит 1-я Воля, писая против ветра, но брызги летят вовсе не туда, куда хочет Воля, а туда, куда дует ветер.
+        \tThe tragedy here lies in the very unrealistic slogan, the deliberate refusal to compromise with the environment, nature, the world, society, other people's will and desires.
+        \"If you want, you will succeed!\" – the 1st will shouts, pissing against the wind, but the spray does not fly at all where the will wants, but where the wind blows.
         <br><br>
 
-        \tНичто так не живит 1-ю Волю как власть.
-        1-я Воля любит власть, любит чистой, лишенной посторонних примесей любовью.
-        Власть для нее не средство достижения богатства или реализации давних задумок, а цель, ценная сама по себе.
-        Конечно, гибель карьеры или отсутствие перспектив воспринимаются 1-й Волей трагически.
+        \tNothing invigorates the 1st the will as authority.
+        1st will loves the power, with a pure, devoid of impurities love.
+        Power for it is not a means of achieving wealth or realizing old ideas, but a goal valuable in itself.
+        Of course, the death of a career or a perceived lack of prospects, for the 1st will be tragic.
         <br><br>
 
-        \tПервая Воля рождается лидером.
-        Но, может быть, еще более, чем уверенным в своем праве на власть, рождается \"царь\", уверенным в своем праве на неповиновение.
+        \tThe first Will is born leader.
+        But maybe even more than confident in their right to power, born \"King\", confident in their right to disobedience.
         <br><br>
 
-        \tНеуправляемость - наиболее ранняя примета 1-й Воли.
-        Дети -\"цари\" самые упрямые, самые трудные дети на свете.
-        Договориться с ними практически невозможно, насилие не действует, слезы бесполезны.
+        \tUncontrollability is the earliest sign of the 1st will.
+         \"Kings\" children are the most stubborn, the most difficult children in the world.
+        It is almost impossible to agree with them, violence does not work, tears are useless.
         <br><br>
 
-        \t\"Царь\" - удивительное существо, он никогда не расслабляется.
-        <i>Самоконтроль его абсолютен.</i>
-        Словно рыцарь, закованный в доспехи своей железной воли, проходит по жизни \"царь\", чуждый страстям, соблазнам, слабостям, привязанностям.
-        1-я Воля - создание необычайно цельное, сделанное как бы из одного камня, и это человек глубоко одинокий.
+        \t\"King\" is an amazing creature, he never relaxes.
+        <i>His self-control is absolute.</i>
+        Like a knight, clad in the armor of his iron will, \"King\" passes through life, alien to passions, temptations, weaknesses, attachments.
+        1st will create an extremely solid, made of a single stone, and a person deeply lonely.
     ]]></string>
 
     <string name="second_will_description"><![CDATA[
-        \tНеприятие диктата, стремление к полноценному диалогу при принятии решений - это и есть процессионность 2-й Воли.
-        Воплощением того же \"дворянства\" является и так называемое \"делегирование ответственности\".
-        Чуждая тяге к мелочной опеке, 2-я Воля, не снимая в целом ответственности с себя, стремится поделиться ею со всеми участниками дела,
-        предоставив им полную свободу форм реализации.
+        \tThe rejection of dictatorship, the desire for full-fledged dialogue when making decisions - this is procession of the 2nd will.
+        The embodiment of the same \"nobility\ "is the so-called \"delegation of responsibility\".
+        Alien to the craving for petty guardianship, the 2nd will, without removing the responsibility from itself, seeks to share it with all participants,
+        giving them complete freedom of forms of implementation.
         <br><br>
 
-        \t В одном из писем Гёте сообщал:
-        <blockquote>Я занят воспитанием моего внука.
-        Оно состоит в том, что я позволяю ему делать решительно все, что ему заблагорассудится, и надеюсь таким способом образовать его прежде,
-        чем вернутся родители.</blockquote>
+        \tIn a letter Goethe reported:
+        <blockquote>I'm busy raising my grandson.
+        It is that I allow him to do resolutely whatever he pleases, and I hope in this way to form him before,
+        than my parents will be here.</blockquote>
 
-        \t<i>Внутренняя свобода и способность освобождать других - вот подлинная норма второй Воли.<i>
+        \t<i>Internal freedom and the ability to free others are the true norm of the second Will.</i>
         <br><br>
 
-        \t\"Дворянин\" - баловень судьбы.
-        Основа человеческой психики - Воля - занимает в его порядке функций лучшую, вторую строку и тем обеспечивает
-        обладателю 2-й Воли неведомый другим душевный комфорт.
-        Сила и гибкость 2-й Воли придают личности редкую цельность и бесстрашие перед жизнью.
+        \t\"Nobleman\" - the darling of destiny.
+        The basis of the human psyche - the will - takes in its order of functions the best, the second line and thus provides
+        the holder of the 2nd will, unknown to others, peace of mind.
+        The strength and flexibility of the 2nd will give a person of rare integrity and courage for life.
         <br><br>
 
-        \tУ \"дворянина\" - большое сердце.
-        2-й Воле способна по-настоящему любить, ведь подлинная любовь - самоотдача.
+        \t\"Nobleman\" has a big heart.
+        2nd will is able to truly love, because genuine love is commitment.
         <br><br>
 
-        \tПростота и открытость 2-й Воли не всегда оказывается ей на благо.
-        Во-первых, нечестные люди порой этими душевными свойствами пользуются.
-        А во-вторых, создается по-своему заслуженный образ существа, достаточно наивного, примитивного, ограниченного,
-        очень уж просто понимающего людей, что совершеннейшая правда, растущая из богатырского душевного здоровья \"дворянина\" и обычного человеческого эгоцентризма,
-        весь мир толкующего на свой образец.
+        \tThe simplicity and openness of the 2nd Will is not always to its benefit.
+        First, dishonest people sometimes use these spiritual properties.
+        And secondly, it creates a well-deserved image of the creature, rather naive, primitive, limited,
+        who very easily can understand people. Which is true, growing out of the heroic spiritual health of a \"Nobleman \" and ordinary human egocentrism
+        which is interpreting the whole world to its sample.
         <br><br>
 
-        \t2-я Воля бесстрашна в отношениях с людьми.
-        Те, кто пытаются экспериментировать с характером \"дворянина\" и пробовать его на зуб, просто забывают достаточно банальную истину:
-        слабость могут позволить себе только очень сильные люди.
+        \t2nd Will is fearless in relationships with people.
+        Those who are trying to experiment with the character of a \"Nobleman\" and try to taste it, simply forget the fairly banal truth: only very strong people can afford weakness.
         <br><br>
 
-        \tЛьстить \"дворянину\" столь же бесполезно, как и унижать, но чувство собственного достоинства, независимости было у них очень велико.
-        Отношение 2-й Воли к славе также лучше передать одной коротенькой цитатой из Пастернака:
-        <blockquote>Быть знаменитым некрасиво.</blockquote>
+        \tFlattering a \"Nobleman\" is as useless as humiliating, but they have a great sense of self-esteem and independence.
+        The attitude of the 2nd Will to glory is also better to be conveyed by one short quote from Pasternak:
+        <blockquote>It is ugly to be famous.</blockquote>
 
-        \tПо большому счету \"дворянин\" жаждет не славы, а полной самореализации.
+        \tBy and large, \"Nobleman\" is eager not for fame, but for complete self-realization.
         <br><br>
 
-        \tПервой внешней приметой 2-й Воли, как вообще всех Воль, является взгляд.
-        Взгляд \"дворянина\" доброжелателен и несколько рассеян.
-        Он как бы говорит:
-        <blockquote>Все спокойно, я рад знакомству, но, если хотите, я на продолжении его настаивать не стану.</blockquote>
+        \tThe first external sign of the 2nd will, like the will of all, is the look.
+        The look of \"Nobleman\" is benevolent and somewhat distracted.
+        It seems to say:
+        <blockquote>Everything is calm, I am glad to meet you, but if you want, I will not insist on continuing it.</blockquote>
     ]]></string>
 
     <string name="third_will_description"><![CDATA[
-         \tТотальная ранимость - отличительная и наиболее пугающая черта психики \"мещанина\".
-         Будучи неспособной защитить себя, она зачастую обрекает себя на потаенную злобу, агрессивность, скрытность и одиночество.
+         \tTotal vulnerability is a distinctive and most frightening trait of the psyche \"Bourgeois\".
+         Being unable to protect herself, he often condemns himself to hidden anger, aggressiveness, secrecy and loneliness.
          <br><br>
 
-         \tПо-настоящему только к психике \"мещанина\" применим термин \"комплекс\", так как она действительно представляет собой целый комплекс болячек,
-         ожогов и язв, грозящий разрастись в одну многофункциональную гноящуюся рану.
-         Поэтому и средства самозащиты у 3-й Воли имеют вид комплексного универсального набора.
+         \tReally, the term \"complex\" only applies the mind of \"Bourgeois\" as it really is a whole range of ills,
+         burns and ulcers, threatening to grow into one multifunctional festering wound.
+         Therefore, means of self-defense of 3rd will have a complete universal set.
          <br><br>
 
-         \tУ каждой Третьей функции есть свой \"фиговый листок\".
-         Есть он и у 3-ей Воли - это лицемерие.
-         Но так как у \"мещанина\" уязвим весь порядок функций, ему приходится прикрывать себя целиком,
-         всем опахалом из существующих \"фиговых листов\": то юродствуя, то ханжествуя, то иронизируя, то впадая в глубочайший скепсис.
+         \tEvery Third function has its \"fig leaf\".
+         The 3rd will also has it - this is hypocrisy.
+         But since the entire order of functions of \"Bourgeois\" is vulnerable, he has to cover himself entirely,
+         all of the existing pigeon leaf figs: now idiot, now hypocritically, now ironically, now falling into the deepest skepticism.
          <br><br>
 
-         \tЛожь - самая ранняя и самая верная примета 3-й Воли.
-         Она врет часто, автоматически, импульсивно, глупо, бессмысленно.
-         Ложь для \"мещанина\" - универсальное орудие самозащиты и самоутверждения и потому обнажается при первой же мнимой или реальной угрозе,
-         а равно при первой же возможности пустить пыль в глаза.
+         \tLying is the earliest and surest sign of the 3rd will.
+         It lies often, automatically, impulsively, stupidly, senselessly.
+         A lie for the \"bourgeois\" is a universal tool of self-defense and self-affirmation and therefore is exposed at the first imaginary or real threat,
+         as well as at the first opportunity to splurge.
          <br><br>
 
-         \tПритворство, лицедейство, а прямее сказать, лицемерие - неотъемлемая часть все той же склонности 3-й Воли ко лжи.
-         3-я Воля - прирожденный актер театра, который лучше назвать не \"социальным\", а \"иерархическим\", потому что \"мещанин\"
-         лицедействует не только в обществе, но и в семье.
+         \tPretense, and more directly to say, hypocrisy, is an integral part of the same tendency of the 3rd will to lie.
+         The 3rd will is a born actor of the theater, which is better called not \"social\", but \"hierarchical\", because \"Bourgeois\"
+         acting not only in society, but also in the family.
          <br><br>
 
-         \t\"Мещанин\" природный агент-двойник, потому что ни противостоять чему-то, ни принадлежать чему-то до конца у него не хватает духа,
-         Воли - и в этом единственная и главная причина его парадоксальной раздвоенности личности.
+         \t\"Bourgeois\" is a natural double agent, because he does not have enough spirit to oppose or belong to something,
+         will - and this is the only and main reason for his paradoxical duality of personality.
          <br><br>
 
-         \tНевозможно описать все, что, на взгляд \"мещанина\", имеет значение при определении места в жизни:
-         место на космической лестнице, место на лестнице природы, возраст, пол, раса, национальность, религия, происхождение,
-         должность, внешность, имущественное положение, профессия, образование и множество других, казалось бы, не заметных глазу слагаемых,
-         позволяющих \"мещанину\" найти каждому особое место в его кастовой картине мира.
+         \tIt is impossible to describe everything that, in the eyes of \"Bourgeois\", is important in determining a place in life:
+         place on the space ladder, place on the ladder of nature, age, gender, race, nationality, religion, origin,
+         position, appearance, property status, profession, education and many other seemingly inconspicuous items,
+         allowing \"bourgeois\" to find each a special place in his caste picture of the world.
          <br><br>
 
-         \t3-я Воля любит и ненавидит Власть.
-         3-я Воля завидует, ненавидит и в тоже время бессознательно и почти бескорыстно льнет к Власти, норовит подольше побыть в Ее поле.
-         Она принципиально не признает своих ошибок и вин.
-         Она обожает титулы, звания, дипломы, наград.
+         \t3rd will loves and hates power.
+         It envies, hates and at the same time unconsciously and almost disinterestedly clings to the power, strives to stay longer in its field.
+         3rd will basically does not recognize their mistakes.
+         It loves titles, diplomas and awards.
     ]]></string>
 
     <string name="forth_will_description"><![CDATA[
-        \t\"Крепостные\" - самые милые люди на свете.
-        В их поле дышится легко, как ни в каком другом, их поле можно проходить насквозь, въезжать на танке - сопротивления не будет.
-        Потому так легко дышится в поле \"крепостного\" - оно разряжено.
+        \t\"Serfs\" are the cutest people in the world.
+        It is easy to breathe in their field, as if in any other, their field can be passed through.
+        You can even enter there in a tank - there will be no resistance.
+        Because it is so easy to breathe in the field \"serf\" - it is discharged.
         <br><br>
 
-        \tКартина мироздания, живущая в душе 4-й Воли, практически повторяет соответствующую картину 1-й Воли,
-        т.е. весь мир - это иерархия, состоящая из двух ступеней: верхней и нижней.
-        Разница в том, что \"крепостной\" автоматически помещает себя не на верхнюю, как \"царь\", а на нижнюю ее ступень,
-        <i>отводя себе роль пасомого, подчиненного, ребенка.</i>
-        Отсюда одна из примет 4-й Воли - ее безвременная детскость.
+        \tThe picture of the universe, living in the soul of the 4th will, practically repeats the corresponding picture of the 1st will:
+        the whole world is a hierarchy consisting of two levels: upper and lower.
+        The difference is that \"Serf\" automatically places itself not on the top, as \"King\", but on its lower degree,
+        <i>taking the role of a flock.</i>
+        From here, one of the 4th will be its untimely childishness.
         <br><br>
 
-        \tБезграничная откровенность - ахиллесова пята \"крепостного\".
-        Заниженная самооценка - несравненный, бесценный дар.
-        Она делает жизнь \"крепостного\" как ни у кого легкой, безоблачной, а психику такой устойчивой, что даже время,
-        непременно оставляющее зарубки на нашей душе, развинчивающее психический механизм, над 4-й Волей не властно.
+        \tLimitless frankness is the achilles heel of \"Serf\".
+        Low self-esteem is an incomparable, priceless gift.
+        It makes life of \"Serf\" light, cloudless, and the psyche is so stable that even time is not powerful over the 4th will.
         <br><br>
 
-        \tСемья - первая из общественных ячеек, которой \"крепостной\" раз и навсегда доверяет свою волю.
-        Возраст, положение в обществе никак не влияют на его место в семье, он до конца дней чувствует себя ребенком
-        своих родителей и даже не пытается со временем стать с ними на одну ногу.
+        \tThe family is the first of the public cells, which \"serf \" once and for all entrusts its will.
+        Age, position in society does not affect his place in the family, he feels like a child until the end of his days
+        and not even trying to eventually become equal with them.
 
-        <blockquote>Два приятеля, уже успевшие пожить и поседеть мужчины, по сию пору скрывают от родителей свое пристрастие к табаку,
-        будто ничего не изменилось с той счастливой детской поры, когда их могли наказать за найденные в кармане сигареты.</blockquote>
+        <blockquote>Two friends, men who have already managed to live and turn gray, to this day hide their addiction to tobacco from their parents,
+        as if nothing had changed since that happy childish time when they could be punished for cigarettes found in their pockets.</blockquote>
 
-        \tДальше - школа, где \"крепостной\" выделяется примерностью своего поведения.
+        \tNext is the school, where \"Serf\" stands out exemplary of their behavior.
         <br><br>
 
-        \t4-я Воля - вернейшая супруга, лояльнейшая подчиненная.
-        Но вот парадокс, именно \"крепостной\" часто выглядит со стороны страшным бунтарем и оппозиционером.
-        Например, \"мягкий, как воск\", Бухарин считался едва ли не хроническим и почти официальным главой оппозиции Ленину,
-        Молотов - единственный, кто открыто спорил со Сталиным, и это при том, что у обоих была 4-я Воля.
+        \tThe 4th will is the most faithful spouse, the loyal subordinate.
+        But the paradox, namely, \"serf\" often looks like a terrible rebel and oppositionist.
+        For example, \"soft as wax\", Bukharin was considered almost chronic and almost official head of the opposition to Lenin.
+        Molotov was the only one who openly argued with Stalin, and this despite the fact that both had the 4th will.
         <br><br>
 
-        \tТомас Манн говорил:
-        <blockquote>Добровольное рабство - это и есть свобода.</blockquote>
-
-        \tДанный афоризм, как ни к кому, приложим к 4-й Воле.
-        <i>Добровольное и искреннее</i> рабство дает ей право на свободное, прямое самовыражение остальных, стоящих выше функций.
+        \t\"Serf\" is not the master of himself, rock and inertia rule the whole fate.
+        In addition to simplicity, openness, and selflessness, the 4th will is characterized by a sincere unwillingness to take on serious responsibility.
         <br><br>
 
-        \t\"Крепостной\" не хозяин себе, его судьбой целиком правят рок и инерция.
-        Кроме простоты, открытости, беззаветности 4-ю Волю отличает искреннее нежелание брать на себя серьезную ответственность.
-        <br><br>
-
-        \t4-я Воля и сама бывает несказанно удивлена, оказавшись на вершине общественной пирамиды или какой-либо серьезной структуры.
-        Дарвин совершенно искренне писал:
-        <blockquote>Поистине удивительно, что человек таких скромных способностей, как я, мог в ряде
-        существенных вопросов оказать значительное влияние на взгляды людей науки. </blockquote>
+        \tThe 4th will itself is unspeakably surprised to be at the top of a public pyramid or some serious structure.
+        Darwin quite sincerely wrote:
+        <blockquote>It is truly amazing that a person of such modest abilities as I could in a number of
+        significant issues have a significant impact on the views of people of science. </blockquote>
     ]]></string>
 
     <string name="first_function_description"><![CDATA[
-        \tЭто самая главная, сильная и типичная сторона нашей натуры, наше самое главное оружие выживания.
-        <i>Опора личности, фундамент психики.</i>
-        <i>Всегда выставлена напоказ.</i>
-        <i>Формулирует личную цель в жизни, смысл жизни, систему ценностей, мы смотрим на мир в первую очередь через призму 1-й функции.</i>
+        \tThis is the most important, strong and typical side of our nature, our most important weapon of survival.
+        <i>Support personality, the foundation of the psyche.</i>
+        <i>Always on display.</i>
+        <i>Formulates a personal goal in life, the meaning of life, the value system, we look at the world first of all through the prism of the 1st function.</i>
         <br><br>
 
-        \tЭто главное наше оружие в конфликтах: семейных, рабочих — любых.
-        Всегда включается первой (первая реакция).
-        При любой опасности, если у человека первая функция:
-        <i>физика</i>, то он либо сильно бьет, либо быстро убегает;
-        <i>логика</i>, то он сразу осмысливает ситуацию и находит вариант решения;
-        <i>эмоция</i>, то он начинает фонтанировать и орать так, что враги сами разбегутся.
+        \tThis is our main weapon in conflicts: family, workers - any.
+        Always turns on first (first reaction).
+        With any danger, if a person has the first function:
+        <i>physics</i>, then he either hits hard or runs away quickly;
+        <i>logics</i>, then he immediately interprets the situation and finds a solution;
+        <i>emotion</i>, then he begins to gush and scream so that the enemies themselves will scatter.
         <br><br>
 
-        \tК тому же, оружие нужно нам не только для борьбы с врагами.
-        Например, есть оружие в наших любовных задачах, когда нужно продолжить свой род.
-        Это тоже задача выживания, которая нам дана от природы и которую каждая 1-я функция решает по-своему:
-        <i>1-я логика</i> постарается поразить своим умом;
-        <i>1-я физика</i> продемонстрирует свою внешность — красоту, силу, накачанные мышцы, материальный достаток;
-        <i>1-я эмоция</i> будет петь серенады и читать стихи;
-        <i>1-я воля</i> просто возьмет за руку и скажет: \"Пойдём со мной!\"
+        \tIn addition, we need weapons not only to fight the enemies.
+        For example, there are weapons which we may use in our love tasks, when you need to continue your kind.
+        This is also the task of survival, which is given to us by nature and which each 1st function solves in its own way:
+        <i>1st logic</i> try to hit your mind;
+        <i>1st physics</i> will demonstrate its appearance - beauty, strength, pumped muscles, material wealth;
+        <i>1st emotion</i>will sing serenades and read poems;
+        <i>1st will</i> just take his hand and say: \"Come with me!\"
         <br><br>
 
-        \tПервая функция — очень сильная, но у нее есть одна проблема. <b>Она избыточна и груба.</b>
-        <i>1-Эмоциональный</i> человек склонен к истерикам по любому поводу.
-        <i>1-Логичный</i> человек — откровенный зануда. Он не способен слышать чужую точку зрения, если она не совпадает с его собственной.
-        <i>1-Физичный</i> человек жаден и агрессивен. Так среди воров и бандитов много 1-физичных людей.
-        Он также склонен к обжорству и еще многим другим приятным вещам, которые дает физика.
-        <i>1-Вольный</i> человек грубо давит на всех остальных, ломает их об колено, требует, чтобы всё было по его воле и не слушает никого, кроме себя.
+        \tThe first function is very strong, but it has one problem. <b> It is redundant and gross. </b>
+        <i>1-emotional</i> a person is prone to tantrums on any occasion.
+        <i>1-logical</i> person - frank bore. He is not able to hear another point of view, if it does not coincide with his own.
+        <i>1-physical</i> person is greedy and aggressive. So among the thieves and gangsters there are many 1-physical people.
+        He is also prone to gluttony and many other pleasant things that physics gives.
+        <i>1-will</i> a person rudely puts pressure on everyone else, breaks them on the knee, demands that everything be according to his will and not listen to anyone but himself.
         <br><br>
 
-        \tПервая функция - это кувалда.
-        Это не очень тонкий инструмент, наиболее подходящий для того, чтобы пробивать стены.
-        Но это не часовая отвертка для починки тонких механизмов.
+        \tThe first function is a sledgehammer.
+        This is not a very thin instrument, the most suitable for punching walls.
+        But this is not an hour-long screwdriver for repairing fine mechanisms.
      ]]></string>
 
     <string name="second_function_description"><![CDATA[
-        \tИдеальная функция в нашем психотипе — самая лучшая и здоровая часть натуры человека:
-        <i>Не ставит цели в жизни, но является основным инструментом их достижения.</i>
-        <i>Не бросается в глаза ни себе, ни окружающим.</i>
-        <i>Процессная</i>, в отличие от первой функции, умеет слушать других и коммуницировать с ними.
-        Она ровна такая, какая должна быть в идеале — ее не слишком много и не слишком мало.
+        \tThe ideal function in our psycho-type is the best and most healthy part of human nature.
+        <i>It does not set goals in life, but it is the main tool for achieving them.</i>
+        <i>Is not conspicuous neither themselves nor others.</i>
+        <i>Is process-centric</i> and, unlike the first function, it is able to listen to others and communicate with them.
+        It is smooth such what should be ideally — it not too much and not too little.
         <br><br>
 
-        \tНапример, самый лучший актер — это человек не с первой эмоцией, а со второй, потому что он,
-        когда надо, заплачет, а когда надо засмеется, причем между этими событиями может пройти 2 секунды времени.
+        \tFor example, the best actor is a person not with the first emotion, but with the second.
+        When necessary, he can cry or laugh, and it can take only 2 seconds of your time between these events.
         <br><br>
 
-        \tСамый лучший логик — это человек со второй логикой, а не с первой потому, что первый обычно рассуждает так:
-        <blockquote>Я тут самый умный.
-        Поэтому либо слушайте, что я вам говорю, либо сами виноваты.</blockquote>
-        \tА вторая логика скажет:
-        <blockquote>Интересно и ваше мнение послушать, давайте обсудим!</blockquote>
+        \tThe most logical person is one with the second logic, not with the first because, that the first usually thinks so:
+        <blockquote>I'm the smartest here. Therefore, either listen to what I am telling you, or are to blame.</blockquote>
+        \tAnd the second logic will say:
+        <blockquote>It is interesting and your opinion to listen, let's discuss!</blockquote>
 
-        \tВторая воля — это человек, которого трудно сломать, согнуть, но при этом он сам не давит на других людей.
-        Вторая физика — это самые трудолюбивые, энергичные и жизнеспособные люди.
+        \tThe second will is a person whom it is difficult to break, bend, but at the same time he does not put pressure on other people.
+        The second physics is the most industrious, energetic and viable people.
         <br><br>
 
-        \t2-ю функция - это река, которая, как Волга, бесконечно и долго течет, и ты всегда знаешь, что в ней вода не кончится.
-        Так и наша 2-я функция.
-        Она, как хорошее здоровье — мы его вообще не замечаем потому, что считаем, что оно неисчерпаемо, пока не случится какая-то проблема.
+        \tThe 2nd function is a river that, like the Volga, flows endlessly and for a long time, and you always know that the water will not end in it.
+        So is our 2nd function.
+        It is like good health - we don’t notice it at all because we believe that it is inexhaustible until some kind of problem happens.
     ]]></string>
 
     <string name="third_function_description"><![CDATA[
-        \tКак вы понимаете, нам в чем-то должно не повезти — все люди имеют не только достоинства, но и недостатки.
-        Точнее, у нас есть то, что мы считаем своими недостатками, о чем мы с детства думаем, что мы в этом не очень удались.
+        \tAs you understand, we must be unlucky about something - all people have not only advantages, but also disadvantages.
+        More precisely, we have what we consider to be our shortcomings, about which we have been thinking from childhood that we have not been very successful in this.
         <br><br>
 
-        \tМы смотрим на других людей, и видим, что у них это развито круто, а у нас этого нет.
-        И начинаем им либо завидовать, либо в них влюбляться, либо у них учиться и пр.
-        Это как раз третья функция:
-        <i>Корень нашей неуверенности в себе;</i>
-        <i>Главная причина наших комплексов неполноценности, обид, конфликтов.</i>
-        <i>Источник любви и ненависти, дискомфорта, ощущения нереализованности.</i><br><br>
+        \tWe look at other people, and we see that they have developed this coolly, but we do not have it.
+        And we begin to either envy them, or fall in love with them, or learn from them, etc.
+        This is the third function:
+        <i>The root of our self-doubt;</i>
+        <i>The main reason for our inferiority complexes, insults, conflicts.</i>
+        <i>The source of love and hate, discomfort, feelings of lack of realization.</i><br><br>
 
-        \tЕсли у человека 3-я логика, он не уверен, что он достаточно умен и компетентен.
-        Если у человека 3-я эмоция, он не уверен, что он достаточно раскован, открыт, не зажат и т.д.
-        Если у человека 3-я воля, он все время боится, что его недостаточно уважают и ценят.
-        Если у человека 3-я физика, он не уверен в своей красоте, мужественности, а также в том, что он достаточно обеспечен.
-        Девушка постоянно сомневается, красива ли она, хотят ли ее мужчины. Мужчины точно также сомневаются насчет мнения девушек о себе.
+        \tIf a person has 3rd logic, he is not sure that he is smart and competent enough.
+        If a person has the 3rd emotion, he is not sure that he is relaxed enough, opened, not clamped, etc.
+        If a person has the 3rd will, he is always afraid that he is not respected and valued enough.
+        If a person has a 3rd physics, he is not sure of his beauty, masculinity, and that he is sufficiently provided.
+        A girl constantly doubts whether she is beautiful, whether her men want her. Men similarly doubt about the opinion of girls about themselves.
         <br><br>
 
-        \tМы всегда боимся удара по 3-й функции:
-        3-я логика боится обвинения в глупости,
-        3-я физика — физического насилия,
-        3-я воля — унижений,
-        3-я эмоция — истерик.
+        \tWe are always afraid of hitting the 3rd function:
+        3rd logic afraid of accusations of stupidity,
+        3rd physics-physical violence,
+        3rd will — humiliation,
+        3rd emotion-hysterical.
         <br><br>
 
-        \tЭто выливается в очень разные вещи.
-        Дело в том, что <i>третья функция такая же процессная, как и вторая.</i>
-        Процессность третьей означает, что человеку надо постоянно доказывать, что у него с этим все в порядке.
-        Первая и четвертая функция результативные — доказал себе, и все нормально.
+        \tThis translates into very different things.
+        The fact is that <i> the third function is the same process-oriented as the second one.</i>
+        The process of the third means that a person must constantly prove that he has everything in order.
+        The first and fourth functions are effective-/"I proved to myself, and everything is fine/".
         <br><br>
 
-        \tПоскольку у нас это самое больное место, мы его всегда стараемся прикрыть, как футболисты во время стенки прикрывают свое самое чувствительное место.
-        Так и мы постоянно ходим, прикрыв фиговым листком нашу третью функцию.
-        Говорят, что нижние функции (3-4) — условно слабые, но на самом деле слабая только четвертая функция.
-        Третья очень сильна потому, что она —<i> драйвер и движитель нашего саморазвития.<i>
+        \tSince we have this most painful place, we always try to cover it, as the players cover their most sensitive place during the wall.
+        And we constantly go, having covered with a fig leaf our third function.
+        It is said that the lower functions (3-4) are conditionally weak, but in fact only the fourth function is weak.
+        The third is very strong because it is the <i> driver and the engine of our self-development.</i>
         <br><br>
 
-        \tНапример, кто чаще всего ходит в спортивный зал или занимается экстремальными видами спорта,
-        мучает себя на всяких биатлонах, триатлонах и прочих марафонах? — 3-физичные люди!
-        Кто самые красивые и утонченные девушки? — 3-физичные!
-        2-физичная уверена в своей красоте, она знает, что с ней все в порядке.
-        А 3-физичная будет всю жизнь это доказывать.
-        Кто больше всего читает и учится? — 3-логичные!
-        Кто самый утонченный музыкант? — 3-эмоциональный!
+        \tFor example, who often goes to the gym or engaged in extreme sports,
+        tortures themselves on curiously biathlon, triathlon and other marathons? 3-physical people!
+        Who are the most beautiful and sophisticated girls? 3-physical!
+        2-physical are sure in their beauty, they knows, that with it all in order.
+        A 3-physical will prove it all my life.
+        Who reads and learns the most? 3-logical!
+        Who is the most refined musician? 3-emotional!
         <br><br>
 
-        <blockquote>Сравните музыку Тома Йорка из Radiohead(3 эмоция) и Фредди Меркьюри(1 эмоция).
-        У кого музыка тоньше и изящней?</blockquote>
+        <blockquote>Compare the music of Tom York from Radiohead (3 emotion) and Freddie Mercury (1 emotion).
+        Whose music is more elegant?</blockquote>
 
-        \tКстати, кто самые крутые менеджеры? 3-вольные.
-        Они гибкие, не уверенные в себе, но тщательно это скрывают — поэтому очень много работают над собой.
-        Еще они прекрасные манипуляторы потому, что понимают людей гораздо лучше и тоньше, чем остальные.
+        \tBy the way, who are the coolest managers? 3-will ones.
+        They are flexible, not confident, but carefully hide it — so a lot of work on themselves.
+        They are also great manipulators because they understand people much better and thinner than others.
     ]]></string>
 
     <string name="forth_function_description"><![CDATA[
-       \tУ каждого из нас есть эта функция, но <i>она нам не важна.</i>
-       Есть и есть.
-       Например, спросишь человека:
-       <blockquote><b>-Какая твоя любимая музыка?</b>
-       -Да разная! Я разную музыку люблю!</blockquote>
+       \tEach of us has this function, but <i>it is not important to us.</i>
+       For example, ask a person:
+       <blockquote><b>-What is your favorite music?</b><br>
+       -Different! I love various music!</blockquote>
 
-       \tУ него 4-я эмоция — он будет слушать то, что дадут.
-       Четвертая функция — это пустячок.
-       Мы ей пользуемся, конечно, когда надо.
+       \tHe has 4th emotion - he will listen to what they give.
+       The fourth function is a kickshaw. We use it, of course, but when necessary.
        <br><br>
 
-       \tЕсть 4-я логика, и мозги работают нормально.
-       У человека с 4-й физикой есть тело, правда? Значит, есть физика.
-       И 4-я эмоция существует.
-       Но это как бы не важно — мы не паримся по этому поводу и не получаем от нее большого удовольствия - потому и не развиваем эту функцию.
+       \tThere is 4th logic, and brains work normally.
+       A person with 4th physics has a body, right? So there is physics.
+       And the 4th emotion exists.
+       But it doesn’t seem to matter - we don’t steam ourselves and don\'t get much pleasure from it - so we don’t develop this function.
        <br><br>
 
-       \tИнтересно, что в экстремальных условиях 4-я функция отключается.
-       То есть у человека с 4-й физикой в кризисной ситуации просто отнимутся ноги, и он не сможет двинуться с места.
-       Человек с 4-й логикой перестанет вообще соображать.
+       \tInterestingly, in extreme conditions, the 4th function is disabled.
+       That is, a person with a 4th physicist in a crisis situation will simply have his legs taken away and he will not be able to move.
+       The person with the 4th logic will stop thinking altogether.
        <br><br>
 
-       \tКстати, воинам очень хорошо иметь 4-ю эмоцию потому, что в экстремальных ситуациях они не теряют самообладания.
-       Александр Македонский или Наполеон бросались в бой совершенно без страха, у них отключались эмоции.
-       Это и хорошо, и плохо, в зависимости от ситуации.
+       \tBy the way, it's very good for the soldiers to have the 4th emotion because in extreme situations they do not lose their temper.
+       Alexander of Macedon or Napoleon rushed into battle completely without fear, their emotions turned off.
+       This is both good and bad, depending on the situation.
     ]]></string>
 </resources>

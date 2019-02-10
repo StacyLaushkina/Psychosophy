@@ -1,287 +1,286 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="philia_1_will_title">1 Воля - 1 Воля.</string>
+    <string name="philia_1_will_title">1 Will - 1 Will.</string>
 
     <string name="philia_1_will"><![CDATA[
-    \tВаш партнер, как и Вы, всегда четко знает, чего он хочет, и привык выполнять свои желания.
-    Если Ваши желания не вступают в противоречия, а еще лучше, если ваши желания совпадают,
-    то это качество очень помогает вам в совместной деятельности.
-    Если же ваши желания принципиально не совпадают или противоречат друг другу, то это может привести к разрыву в отношениях.
+    \tYour partner, like you, always clearly knows what he wants, and he is used to fulfilling his desires.
+    If your desires do not conflict, and even better if your desires are the same,
+    then this quality greatly helps you in joint activities.
+    If your desires do not fundamentally coincide or contradict each other, then this may lead to a break in the relationship.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tЕсли Вы уже начали общаться друг с другом,
-    это означает, что Ваши желания уже не вступают в противоречие.
-    Если же противоречие возникло, старайтесь каждый самостоятельно исполнять свое желание, не рассчитывая на взаимную поддержку.
+    \t<b>Recommendations for interaction:</b><br>
+    \tIf you have already started to communicate with each other,
+    this means that your desires no longer conflict.
+    If the contradiction has arisen, try each to fulfill their desire independently, not counting on mutual support.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.5
+    \tThe ratio of mutual complementarity: 0.5
     ]]></string>
 
-    <string name="philia_1_emotion_title">1 Эмоция - 1 Эмоция.</string>
+    <string name="philia_1_emotion_title">1 Emotion - 1 Emotion.</string>
 
     <string name="philia_1_emotion"><![CDATA[
-    \tВы очень похожи со своим партнером тем, что оба \"мыслите сердцем\" и именно по этой причине вам бывает очень легко понять друг друга.
-    Однако, взаимопонимание будет длиться ровно до тех пор, пока эмоции, вызванные тем или иным фактом, у Вас будут схожими.
-    В реальности же Вас ждет частое несовпадение эмоциональных подъемов и спадов, вплоть до противоположного:
-    Вы радуетесь какому-либо событию, а у Вашего партнера оно вызывает злость и раздражение.
-    При этом каждый из Вас будет считать именно свое эмоциональное видение единственно верным.
-    В результате в отношениях возможны обиды и ссоры, в лучшем случае - эмоциональная усталость друг от друга и отчуждение.
+    \tYou are very similar with your partner to the fact that both \"think with your heart\" and it is for this reason that it is very easy for you to understand each other.
+    However, the mutual understanding will last exactly as long as the emotions caused by one or another fact, you will be similar.
+    In reality, you will find frequent inconsistencies between emotional highs and lows, up to the opposite:
+    you rejoice at any event, and it causes anger and irritation at your partner.
+    At the same time, each of you will consider your emotional vision to be the only true one.
+    As a result, insults and quarrels are possible in the relationship, at best - emotional fatigue from each other and alienation.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tПри благоприятном расположении остальных функций и взаимном стремлении сохранить хорошие отношения Вам будет легче найти взаимопонимание.
-    Постарайтесь помнить, что Ваш партнер может не разделять Вашу эмоциональную реакцию.
-    Если хотите переубедить его, направить его эмоции в другое русло - используйте для этого другие функции.
+    \t<b>Recommendations for interaction:</b><br>
+    \tWith a favorable arrangement of other functions and a mutual desire to maintain good relations, it will be easier for you to find mutual understanding.
+    Try to remember that your partner may not share your emotional reaction.
+    If you want to convince him, to direct his emotions in a different direction - use for this other functions.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.5
+    \tThe ratio of mutual complementarity: 0.5
     ]]></string>
 
-    <string name="philia_1_logic_title">1 Логика - 1 Логика.</string>
+    <string name="philia_1_logic_title">1 Logic - 1 Logic.</string>
 
     <string name="philia_1_logic"><![CDATA[
-    \tВы очень похожи с Вашим партнером в категоричности Ваших высказываний и умозаключений.
-    Как правило, подобная категоричность, если она вступает в конфликт с Вашим мнением, может оттолкнуть Вас от партнера еще на самой начальной стадии отношений.
-    Однако, если этого не произошло, значит ваши точки зрения по многим вопросам совпадают.
-    В дальнейшем Вас может раздражать упрямство Вашего партнера и нежелание прислушиваться к Вашему мнению.
-    У вас не будет долгих споров, просто если вдруг выяснится, что ваши позиции по каким-то вопросам серьезно расходятся, это будет большой проблемой для ваших отношений.
+    \tYou are very similar with your partner in the categorical nature of your statements and conclusions.
+    As a rule, this categoricalness, if it comes into conflict with your opinion, can alienate you from your partner at the very initial stage of the relationship.
+    However, if this does not happen, then your points of view on many issues coincide.
+    In the future, your partner’s stubbornness and unwillingness to listen to your opinion can irritate you.
+    You will not have long disputes, just if it suddenly turns out that your positions on any issues are seriously diverging, this will be a big problem for your relationship.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tВыясняйте свои позиции по важным для Вас вопросам.
-    Если в них же вдруг обнаружится несовпадение, постарайтесь решить, насколько оно для Вас принципиально.
-    Возможно, для сохранения хороших отношений Вам придется навсегда запретить себе затрагивать в обсуждениях данный \"спорный\" вопрос.
+    \t<b>Recommendations for interaction:</b><br>
+    \tFind out your position on important issues for you.
+    If there is a mismatch in them, try to decide how important it is for you.
+    It is possible that in order to maintain good relations you will have to ban yourself forever from touching upon this \"controversial\" question in the discussions.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.5
+    \tThe ratio of mutual complementarity: 0.5
     ]]></string>
 
-    <string name="philia_1_physics_title">1 Физика - 1 Физика.</string>
+    <string name="philia_1_physics_title">1 Physics - 1 Physics.</string>
 
     <string name="philia_1_physics"><![CDATA[
-    \tКомфорт в ваших отношениях сохраняется ровно до тех пор, пока Ваши физические привычки и потребности совпадают.
-    Однако если в чем-то возникнет противоречие, и физически потребности Вашего партнера начнут ущемлять Ваши собственные,
-    это может стать серьезной причиной для конфликта, вплоть до разрыва отношений.
+    \tComfort in your relationship is maintained exactly as long as your physical habits and needs coincide.
+    However, if a contradiction arises in something, and physically the needs of your partner will begin to infringe upon your own,
+    this can be a serious cause for conflict, even to the end of a relationship.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tВо-первых, если Вам уже удалось сблизиться, то это говорит, что противоречия, которые могут возникнуть в Ваших отношениях,
-    не такие уж и серьезные и ваш союз способен продержать еще очень долго, не доставляя вам особых неудобств.
-    Если все-таки возникают бытовые разногласия (например, Вы - жаворонок, а ваш партнер - сова, Вы не любите мыть посуду, и он тоже не любит),
-    не пытайтесь договориться с партнером, чтобы он Вам в чем-то уступил и поступился своими привычками, у него это все равно вряд ли получится.
-    Многие вопросы решаются чисто физически - раздельные комнаты, увеличение жилплощади, найм домработницы и т.п.
+    \t<b>Recommendations for interaction:</b><br>
+    \tFirst, if you have already managed to get close, then he says that the contradictions that may arise in your relationship,
+    not so serious and your union is able to hold on for a very long time, without giving you any particular inconvenience.
+    If, however, domestic disagreements arise (for example, you are a lark, and your partner is an owl, you do not like to wash the dishes, and he also does not like)
+    do not try to negotiate with a partner so that he will give you something and give up his habits, he is unlikely to succeed.
+    Many questions are solved purely physically - separate rooms, an increase in living space, hiring a housekeeper, etc.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.7
+    \tThe ratio of mutual complementarity: 0.7
     ]]></string>
 
-    <string name="philia_2_physics_title">2 Физика - 2 Физика.</string>
+    <string name="philia_2_physics_title">2 Physics - 2 Physics.</string>
 
     <string name="philia_2_physics"><![CDATA[
-    \tВам довольно легко прийти к взаимопонимаю в бытовых и материальных вопросах.
-    Вы оба любите трудиться и готовы учитывать чужие физические потребности.
-    Некоторые разногласия возможны, если у Вас разные представления о необходимом уровне материального обеспечения,
-    однако они легко вами решаются.
-    Минус в этих отношениях - Вам может не хватать чувства благодарности от партнера за Ваши советы.
+    \tIt is quite easy for you to come to an understanding in everyday and material matters.
+    Both of you love to work and are ready to take into account other people\'s physical needs.
+    Some differences are possible if you have different ideas about the required level of material support,
+    however, they are easily resolved by you.
+    The disadvantage of this relationship is that you may lack a sense of gratitude from your partner for your advice.
     <br><br>
 
-    \t <b>Рекомендации по взаимодействию:</b><br>
-    Вам не придется совершать никаких особых усилий в материальных вопросах.
+    \t <b>Recommendations for interaction:</b><br>
+    You do not have to make any special effort in material matters.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 1.
+    \tThe ratio of mutual complementarity: 1.
     ]]></string>
 
-    <string name="philia_2_logic_title">2 Логика - 2 Логика.</string>
+    <string name="philia_2_logic_title">2 Logic - 2 Logic.</string>
 
     <string name="philia_2_logic"><![CDATA[
-    \tПри одинаковом культурном уровне и общих интересах Вам интересно и комфортно друг с другом.
-    Ваш партнер для Вас - идеальный собеседник, всегда готовый доставить и вам и себе удовольствие подробно обсудить интересующую вас проблему.
+    \tWith the same cultural level and common interests you are interested and comfortable with each other.
+    Your partner is an ideal interlocutor for you, always ready to deliver both you and yourself the pleasure to discuss in detail the problem you are interested in.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tДанное сочетание не требует от партнеров каких-либо особенных усилий.
+    \t<b>Recommendations for interaction:</b><br>
+    \tThis combination does not require any special efforts from partners.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 1.
+    \tThe ratio of mutual complementarity: 1.
     ]]></string>
 
-    <string name="philia_2_will_title">2 Воля - 2 Воля.</string>
+    <string name="philia_2_will_title">2 Will - 2 Will.</string>
 
     <string name="philia_2_will"><![CDATA[
-    \tВы и Ваш партнер одинаково с уважением относитесь к желаниям друг друга.
-    Желая чего-либо, Вы всегда спрашиваете мнение партнера по данному вопросу.
-    Она проблема: Вы можете так увлечься уточнением деталей и вариантов исполнения желания, что до результата дело может дойти очень нескоро.
+    \tYou and your partner treat each other\'s wishes equally.
+    If you want something, you always ask for the opinion of a partner on this issue.
+    She is a problem: You can be so keen on refining the details and options for the fulfillment of a desire, that the outcome can be very short.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tДанное сочетание не требует от партнеров каких-либо особенных усилий, и, более того,
-    филия по второй воле сглаживает при не слишком благоприятные сочетания по другим основаниям.
+    \t<b>Recommendations for interaction:</b><br>
+    \tThis combination does not require any special efforts from partners, and, moreover,
+    secondary will filia smoothes with not very favorable combinations for other reasons.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 1.3
+    \tThe ratio of mutual complementarity: 1.3
     ]]></string>
 
-    <string name="philia_2_emotion_title">2 Эмоция - 2 Эмоция.</string>
+    <string name="philia_2_emotion_title">2 Emotion - 2 Emotion.</string>
 
     <string name="philia_2_emotion"><![CDATA[
-    \tВаш партнер в эмоциональной сфере очень похож на вас.
-    Вы одинаково чутки к эмоциональному состоянию партнера, стремитесь поддерживать ровный эмоциональный фон в общении,
-    никому не навязываете свое эмоциональное видение.
-    Это ровные и благоприятные в эмоциональном плане отношения.
-    Единственное неудобство - отсутствие эмоционального \"драйва\" и невозможность \"поиграть в спасателя\",
-    поскольку Ваш партнер не нуждается в вашей поддержке в эмоциональном плане.
+    \tYour emotional partner is very much like you.
+    You are equally sensitive to the emotional state of the partner, strive to maintain an even emotional background in communication,
+    do not impose your emotional vision on anyone.
+    This is a smooth and emotional relationship.
+    The only inconvenience is the lack of emotional \"drive\" and the impossibility of \"playing a lifeguard\",
+    because your partner doesn't need your emotional support.
     <br><br>
 
-     \t<b>Рекомендации по взаимодействию:</b><br>
-     \tЭмоциональная сфера не доставит вам особых хлопот, поэтому в этом плане Вам не придется совершать никаких специальных усилий.
+     \t<b>Recommendations for interaction:</b><br>
+     \tThe emotional sphere will not cause you much trouble, so in this regard you will not have to make any special efforts.
      <br><br>
 
-     \tКоэффициент взаимной дополняемости: 0.9
+     \tThe ratio of mutual complementarity: 0.9
     ]]></string>
 
-    <string name="philia_3_emotion_title">3 Эмоция - 3 Эмоция.</string>
+    <string name="philia_3_emotion_title">3 Emotion - 3 Emotion.</string>
 
     <string name="philia_3_emotion"><![CDATA[
-    \tВ эмоциональной сфере Вы с партнером испытываете одинаковые трудности:
-    Вы оба не чувствуете уверенности в этой области.
-    При благоприятном расположении прочих функций, эта особенность заставит вас просто быть более
-    осторожными в проявлении своих чувств.
-    Может быть, ваш союз будет слишком чопорным и сухим, однако только сохраняя эмоциональную нейтральность
-    Вы сможете нормально взаимодействовать.
-    В противном случае вас ждут взаимные обиды и упреки, эмоционально отдаление друг от друга.
+    \tIn the emotional sphere, you and your partner are experiencing the same difficulties:
+    you both do not feel confident in this area.
+    With a favorable arrangement of other functions, this feature will make you just be more careful in manifesting their feelings.
+    Maybe your union will be too prim and dry, but only maintaining emotional neutrality.
+    You will be able to interact normally.
+    Otherwise, mutual insults and reproaches, emotional distancing from each other, await you.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tПостарайтесь сдерживать эмоции, попробуйте обсудить ваши проблемы, что именно вас задевает,
-    договориться, какие темы Вы не будете затрагивать в совместных обсуждениях.
+    \t<b>Recommendations for interaction:</b><br>
+    \tTry to hold back emotions, try to discuss your problems, what exactly hurts you,
+    agree on which topics you will not discuss in joint discussions.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.1
+    \tThe ratio of mutual complementarity: 0.1
     ]]></string>
 
-    <string name="philia_3_logic_title">3 Логика - 3 Логика.</string>
+    <string name="philia_3_logic_title">3 Logic - 3 Logic.</string>
 
     <string name="philia_3_logic"><![CDATA[
-    \tВаш партнер похож на вас тем, что так же, как и Вы, уверен, что ни в чем нельзя быть уверенным.
-    Вдвоем вы найдете, кого совместно покритиковать за излишнюю категоричность мнения и за претензию на истинность.
-    Такое единство позиций вас сблизит.
-    Одно но: вы не в состоянии помочь друг другу в формировании и прояснении вашего собственного мнения.
-    Максимум, что вы можете сделать - это сгладить переживания характерные для третьей позиции, отказом от долгих дискуссий на эту тему.
+    \tYour partner is like you, just as you are sure that you cannot be sure about anything.
+    Together you will find someone to jointly criticize for overly categorical opinions and for claiming truth.
+    Such a unity of positions will bring you closer.
+    But one thing: you are not able to help each other in forming and clarifying your own opinion.
+    The maximum that you can do is to smooth out the experiences that are characteristic of the third position, by refusing long discussions on this topic.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tВоздерживайтесь от упреков и критики мнений друг друга.
+    \t<b>Recommendations for interaction:</b><br>
+    \tRefrain from reproaching and criticizing the opinions of each other.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.1
+    \tThe ratio of mutual complementarity: 0.1
      ]]></string>
 
-    <string name="philia_3_physics_title">3 Физика - 3 Физика.</string>
+    <string name="philia_3_physics_title">3 Physics - 3 Physics.</string>
 
     <string name="philia_3_physics"><![CDATA[
-    \tВаш партнер, так же, как и Вы не уверен в себе во всех вопросах, связанных с материальным миром.
-    Вы хотели бы получить от него поддержку и помощь, но сталкиваетесь с точно такой же беспомощностью.
-    Иногда это приводит к взаимным упрекам и обидам.
-    Особенно острым конфликт может быть при разном жизненном опыте, касающимся бытовых привычек, уровня обеспечения и т.п…
-    Однако при равных физических запросах ваш союз может быть довольно бесконфликтным.
+    \tYour partner, just as you are not sure of yourself in all matters related to the material world.
+    You would like to receive support and help from him, but you face exactly the same helplessness.
+    Sometimes this leads to recriminations and offenses.
+    Conflict can be especially acute with different life experiences related to everyday habits, the level of support, etc…
+    However, with equal physical demands, your union can be quite conflict-free.
     <br><br>
 
-     \t<b>Рекомендации по взаимодействию:</b><br>
-     \tОбсуждайте ваши проблемы вместе, постарайтесь находить примеры того, как они решаются, делитесь друг с другом вашими находками.
-     Не критикуйте друг друга и не пытайтесь переложить друг на друга ответственность за решение материальных проблем.
-     Все бытовые дела решайте совместно.
+     \t<b>Recommendations for interaction:</b><br>
+     \tDiscuss your problems together, try to find examples of how they are solved, share your findings with each other.
+     Do not criticize each other and do not try to shift the responsibility for solving material problems.
+     All domestic affairs decide together.
      <br><br>
 
-     \tКоэффициент взаимной дополняемости: 0.7
+     \tThe ratio of mutual complementarity: 0.7
      ]]></string>
 
-    <string name="philia_3_will_title">3 Воля - 3 Воля.</string>
+    <string name="philia_3_will_title">3 Will - 3 Will.</string>
 
     <string name="philia_3_will"><![CDATA[
-    \tГлавная сложность в ваших отношениях - это обоюдное нежелание брать на себя ответственность за принятие решений и взаимная
-    обида что при этом не учитывается ваше мнение.
-    Это очень тяжелые отношения, каждый из вас ждет от партнера взаимных уступок, и в душе готов к ним, но нужно чтобы кто-то из вас сделал первый шаг.
-    В результате каждая попытка принять какое-то решение может до бесконечности затягиваться, а в каждом из вас будет нарастать обида на партнера за то,
-    что он не хочет ничего изменить в подобной ситуации.
+    \tThe main difficulty in your relationship is mutual unwillingness to take responsibility for decision making and mutual
+    resentment that this does not take into account your opinion.
+    This is a very difficult relationship, each of you is waiting for a partner to reciprocate,
+    and in the soul is ready for them, but it is necessary for someone of you to take the first step.
+    As a result, each attempt to take some kind of decision can be endlessly delayed, and in each of you the resentment towards your partner will increase
+    that he does not want to change anything in a similar situation.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tВсегда обсуждайте вслух ваши обиды, попробуйте договориться, что будете уступать друг другу по очереди,
-    обсуждайте вслух ваши желания и пытайтесь найти способ их реализации, не обвиняйте партнера в эгоизме, помните,
-    что он очень похож на Вас тем, что так же как и Вы не в состоянии четко выразить, чего он хочет.
+    \t<b>Recommendations for interaction:</b><br>
+    \tAlways talk out loud about your grievances, try to negotiate that you will give each other in turns,
+    discuss your desires out loud and try to find a way to realize them, do not blame your partner for selfishness, remember
+that he is very similar to you in that, just like you are not able to clearly express what he wants.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0
+    \tThe ratio of mutual complementarity: 0
     ]]></string>
 
-    <string name="philia_4_logic_title">4 Логика - 4 Логика.</string>
+    <string name="philia_4_logic_title">4 Logic - 4 Logic.</string>
 
     <string name="philia_4_logic"><![CDATA[
-    \tВ теоретических вопросах Ваш партнер, как и Вы, всегда опирается на мнение авторитетов.
-    При схожем интеллектуальном уровне и совпадении мнений по принципиальным вопросам,
-    это не должно вызвать больших проблем в отношениях.
-    Вы оба не любите длинных рассуждений, в теоретических вопросах вам нужен результат - готовое мнение.
-    Вам может не хватать взаимной уверенности в своей правоте.
+    \tIn theoretical issues, your partner, like you, always relies on the opinion of authorities.
+    With a similar intellectual level and coincidence of opinions on issues of principle,
+    this should not cause big problems in a relationship.
+    Both of you do not like long reasoning, in theoretical questions you need a result - a ready opinion.
+    You may lack mutual self-righteousness.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tЧитайте одни и те же книги, общайтесь с одними и теми же людьми, тогда в ваших убеждениях,
-    который формируются под влиянием окружения, не будет возникать серьезных разногласий.
+    \t<b>Recommendations for interaction:</b><br>
+    \tRead the same books, communicate with the same people, then in your beliefs,
+    which are formed under the influence of the environment, there will be no serious disagreements.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.7
+    \tThe ratio of mutual complementarity: 0.7
    ]]> </string>
 
-    <string name="philia_4_emotion_title">4 Эмоция - 4 Эмоция.</string>
+    <string name="philia_4_emotion_title">4 Emotion - 4 Emotion.</string>
 
     <string name="philia_4_emotion"><![CDATA[
-    \tВам скучно с Вашим партнером.
-    В этих отношениях вам придется постоянно подпитываться эмоционально где-то на стороне в совместных поездках,
-    общением с другими людьми.
-    Постарайтесь, что ваши развлечения были совместными, чтобы эмоциональные впечатления, которые Вы оттуда вынесете, были одинаковыми.
+    \tYou are bored with your partner.
+    In this relationship, you will have to constantly feed off emotionally somewhere on the side in joint trips, communicating with other people.
+    Make sure that your entertainment is shared, so that the emotional impressions you take from there will be the same.
     <br><br>
 
-     \t<b>Рекомендации по взаимодействию:</b><br>
-     \tСтарайтесь сделать так, чтобы у вас были общие развлечения и общий круг друзей.
+     \t<b>Recommendations for interaction:</b><br>
+     \tTry to make sure that you have common entertainment and a common circle of friends.
      <br><br>
 
-     \tКоэффициент взаимной дополняемости: 0.7
+     \tThe ratio of mutual complementarity: 0.7
     ]]> </string>
 
-    <string name="philia_4_will_title">4 Воля - 4 Воля.</string>
+    <string name="philia_4_will_title">4 Will - 4 Will.</string>
 
     <string name="philia_4_will"><![CDATA[
-    \tВы похожи с вашим партнером тем, что оба не можете проявить инициативу.
-    Принятие какого-либо решения для вас - очень долгий процесс, и это может доставлять вам множество неудобств,
-    поскольку множество дел может оставаться не сделанными, а важные решения могу не приниматься годами.
+    \tYou are alike with your partner in that both cannot take the initiative.
+    Making a decision for you is a very long process, and this can cause you a lot of inconvenience,
+    since many things can not be done, and important decisions can not be made for years.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tВашей паре нужен кто-то третий, кто придал бы ей импульс и побудил вас к действиям.
-    Это могут быть друзья или родственники.
-    Постарайтесь, чтобы такой человек устраивал вас обоих, иначе подобное вмешательство в ваши отношения может разрушить их.
+    \t<b>Recommendations for interaction:</b><br>
+    \tYour couple needs someone third who would give it a boost and encourage you to take action.
+    These can be friends or relatives.
+    Try to have such a person suit you both, otherwise such interference in your relationship may destroy them.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.7
+    \tThe ratio of mutual complementarity: 0.7
     ]]> </string>
 
-    <string name="philia_4_physics_title">4 Физика - 4 Физика.</string>
+    <string name="philia_4_physics_title">4 Physics - 4 Physics.</string>
 
     <string name="philia_4_physics"><![CDATA[
-    \tВ материальных вопросах Вы оба четко не представляете, чего именно хотите.
-    Поэтому в этом плане очень важен предыдущий опыт в этих вопросах, например, полученный в детстве.
+    \tIn material matters, you both have no clear idea what exactly you want.
+    Therefore, in this regard, previous experience in these matters, for example, obtained in childhood, is very important.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tЛучше всего, если определение необходимого для Вас уровня материального обеспечения займется кто-то третий,
-    это может быть домработница, родственники, которые бы следили за качеством Вашего питания, состоянием Вашего здоровья, жилья и т.п.
-    Желательно, чтобы это был один авторитетный для вас обоих человек, чтобы у вас не было разногласий в бытовых вопросах.
+    \t<b>Recommendations for interaction:</b><br>
+    \tBest of all, if the definition of the level of material support necessary for you is taken by someone third.
+    This could be a housekeeper, relatives, who would monitor the quality of your food, the state of your health, housing, etc.
+    It is desirable that this was one authoritative for both of you, so that you would not have differences in everyday matters.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.5
+    \tThe ratio of mutual complementarity: 0.5
     ]]> </string>
 
 </resources>

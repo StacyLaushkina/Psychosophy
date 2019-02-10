@@ -1,300 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="pseudo_philia_1_2_will_title">1 Воля - 2 Воля.</string>
+    <string name="pseudo_philia_1_2_will_title">1 Will - 2 Will.</string>
 
     <string name="pseudo_philia_1_2_will"><![CDATA[
-    \tВаш партнер, в отличие от Вас, настроен на постоянное обсуждение и сопоставление его и Ваших желаний.
-    Вас это может несколько напрягать, поскольку Вы не видите смысла в подобных разговорах:
-    если Вы что-то решили, то это уже не обсуждается, вам нужно только четкое согласие Вашего партнера, или такой же четкий отказ,
-    чтобы знать, рассчитывать на поддержку партнера или нет.
-    Если партнер поддерживает ваше решение, то проблем обычно не возникает - Вы оба начинаете его выполнять,
-    а вот если его желание не совпадает с Вашим, то вместо того, чтобы просто не согласиться, и поставить Вас в известность,
-    партнер начинает Вас \"уговаривать\", искать компромисс.
-    Вам это кажется излишним, поскольку Вы обычно не намерены менять свои решения, если они созрели, и подобные разговоры по вашему мнению -
-    просто лишняя трата времени и нервов.
+    \tYour partner, unlike you, is set up to constantly discuss and compare him and your desires.
+    He can strain you a little, since you do not see the point in such conversations:
+    if you have decided something, then this is no longer discussed, you only need the clear consent of your partner, or the same clear refusal,
+    to know, rely on partner support or not.
+    If the partner supports your decision, then problems usually do not arise - both of you start to fulfill it,
+    but if his desire does not coincide with yours, then instead of simply disagreeing and letting you know,
+    the partner starts you \ "to persuade \", to seek a compromise.
+    This seems unnecessary to you, since you usually do not intend to change your decisions if they are ripe, and such conversations in your opinion are
+    just a waste of time and nerves.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tДоговоритесь с партнером о том, что принятые Вами решения обсуждению не подлежат, но в свою очередь, всегда информируйте партнера о своих решениях.
+    \t<b>Recommendations for interaction:</b><br>
+    \tAgree with a partner that your decisions are not negotiable, but in turn, always inform the partner about your decisions.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.5
+    \tThe ratio of mutual complementarity: 0.5
     ]]> </string>
 
-    <string name="pseudo_philia_1_2_physics_title">1 Физика - 2 Физика.</string>
+    <string name="pseudo_philia_1_2_physics_title">1 Physics - 2 Physics.</string>
 
     <string name="pseudo_philia_1_2_physics"><![CDATA[
-    \tВас может раздражать чрезмерная активность Вашего партнера в материальных вопросах.
-    И чем больше Ваш партнер пытается втянуть Вас в свою бурную деятельность (ремонт, перестановка мебели, активный образ жизни, занятия спортом),
-    тем большее раздражение у Вас это вызывает.
+    \tYou may be irritated by your partner’s excessive activity in material matters.
+    And the more your partner is trying to draw you into his vigorous activity (repair, rearrangement of furniture, active lifestyle, playing sports),
+    the more annoying it causes you.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tПопытайтесь договориться с партнером, чтобы он направил свою активность в другое русло.
-    В принципе, это не должно вызвать особенных трудностей, поскольку Ваш партнер уважает чужие привычки.
+    \t<b>Recommendations for interaction:</b><br>
+    \tTry to negotiate with a partner so that he directs his activity in a different direction.
+    In principle, this should not cause any particular difficulties, since your partner respects other people's habits.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.5
+    \tThe ratio of mutual complementarity: 0.5
     ]]> </string>
 
-    <string name="pseudo_philia_1_2_emotion_title">1 Эмоция - 2 Эмоция.</string>
+    <string name="pseudo_philia_1_2_emotion_title">1 Emotion - 2 Emotion.</string>
 
     <string name="pseudo_philia_1_2_emotion"><![CDATA[
-    \tНе смотря на вроде бы общие сильные стороны, взаимопонимание в подобных отношениях затруднительно.
-    Несмотря на то, что Ваш партнер, с одной стороны, явно старается подыграть Вам в ваших эмоциях, с другой стороны, вместо того,
-    чтобы просто молча Вас выслушать, и впитать все, как губка, он перехватывает у вас инициативу, начинает рассуждать,
-    задавать вопросы, и пытается изменить ваше эмоционально состояние по своему усмотрению.
-    И делает он это вроде бы мягко и ненавязчиво, но Вас может очень раздражать подобная реакция на Ваши чувства и эмоции:
-    Вы чувствуете себя как совершенно нормальный человек, которого перепутали с душевнобольным и доставили на прием к психиатру.
-    Тот, с одной стороны, выслушивает Вас и поддакивает, а с другой - совершенно не воспринимает Ваше мнение всерьез.
-    При взаимодействии с другими людьми подобное качество - умение эмоционально подстроиться под собеседника,
-    всегда иметь наготове нужное слово или фразу в любой ситуации, может даже вызывать у Вас зависть,
-    поскольку Вы сами не в состоянии так быстро перестраивать свое внутреннее эмоциональное состояние.
+    \tDespite the seemingly common strengths, mutual understanding in such a relationship is difficult.
+    Despite the fact that your partner, on the one hand, is clearly trying to play along with your emotions, on the other hand, instead of
+    just to listen to you silently, and soak up everything like a sponge, he intercepts your initiative, begins to reason,
+    asking questions, and trying to change your emotional state on your own.
+    And he does it seems to be soft and unobtrusive, but you can be very annoyed by such a reaction to your feelings and emotions:
+    you feel like a perfectly normal person who has been confused with an insane and taken to an appointment with a psychiatrist.
+    He, on the one hand, listens to you and assents, but on the other - does not take your opinion at all seriously.
+    When interacting with other people, this quality - the ability to emotionally adapt to the interlocutor,
+    always have the right word or phrase ready in any situation, it may even make you jealous,
+    because you yourself are not able to quickly rebuild your inner emotional state.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tПостарайтесь понять, что на самом деле Ваш партнер не желает выставить Вас посмешищем, просто ему довольно трудно понять,
-    что ваше эмоциональное состояние для Вас настолько серьезно, что в него нельзя вмешиваться даже самым близким людям.
-    Не пытайтесь доказать партнеру важность Вашего эмоционального видения ситуации.
+    \t<b>Recommendations for interaction:</b><br>
+    \tTry to understand that in fact your partner does not want to make you ridiculed, it’s just rather difficult for him to understand
+    that your emotional state is so serious for you that even the closest people cannot interfere with it.
+    Do not try to prove to the partner the importance of your emotional vision of the situation.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.2
+    \tThe ratio of mutual complementarity: 0.2
     ]]> </string>
 
-    <string name="pseudo_philia_1_2_logic_title">1 Логика - 2 Логика.</string>
+    <string name="pseudo_philia_1_2_logic_title">1 Logic - 2 Logic.</string>
 
     <string name="pseudo_philia_1_2_logic"><![CDATA[
-    \tВас может несколько раздражать желание партнера обсуждать и обсуждать темы, которые, как Вы считаете, уже прояснены.
-    Любовь Вашего партнера к разговорам на любые темы и его стремление втянуть Вас в диалог может Вас утомлять.
+    \tYou may be somewhat annoyed by the partner’s desire to discuss and discuss topics that you think have already been clarified.
+    Your partner\'s love of talking on any topic and his desire to draw you into a dialogue may tire you.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tДонесите до Вашего партнера свое нежелание участвовать в длительных обсуждениях.
-    Если Вам не интересно выслушивать разглагольствования Вашего партнера - не слушайте их, он сам это заметит и перестанет Вам надоедать.
+    \t<b>Recommendations for interaction:</b><br>
+    \tReport to your partner your unwillingness to engage in lengthy discussions.
+    If you are not interested in listening to your partner's ranting, do not listen to them, he will notice it and stop bothering you.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.6
+    \tThe ratio of mutual complementarity: 0.6
     ]]> </string>
 
-    <string name="pseudo_philia_2_1_logic_title">2 Логика - 1 Логика.</string>
+    <string name="pseudo_philia_2_1_logic_title">2 Logic - 1 Logic.</string>
 
     <string name="pseudo_philia_2_1_logic"><![CDATA[
-    \tВаш партнер кажется вам слишком категоричным и зацикленным на своей точке зрения.
-    Вам кажется ошибочным подобное состояние и поэтому Вы пытаетесь показать партнеру и другие взгляды на какую-то проблему,
-    стремясь тем самым расширить его кругозор, стать терпимей к взглядам, отличающимся от его собственных.
-    Однако, чем больше Вы стараетесь, тем меньше Ваш партнер прислушивается к Вам. Иногда Ваши попытки его смешат, а иногда и раздражают.
+    \tYour partner seems to be too categorical and fixated on his point of view.
+    It seems to you that such a state of error is erroneous, and therefore you are trying to show your partner and other views on some problem,
+    thus striving to broaden his horizons, to become tolerant of views that differ from his own.
+    However, the more you try, the less your partner listens to you. Sometimes your attempts make him laugh, and sometimes they annoy him.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tНе пытайтесь смягчить категоричность Вашего партнера, он никогда не станет более терпимым к чужому мнению. Найдите себе других, более благодарных собеседников.
-    <br><br>
+    \t<b>Recommendations for interaction:</b><br>
+    \tDo not try to soften the categorical nature of your partner, he will never become more tolerant of the opinions of others.
+    Find other, more grateful people.<br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.6
+    \tThe ratio of mutual complementarity: 0.6
     ]]></string>
 
-    <string name="pseudo_philia_2_1_physics_title">2 Физика - 1 Физика.</string>
+    <string name="pseudo_philia_2_1_physics_title">2 Physics - 1 Physics.</string>
 
     <string name="pseudo_philia_2_1_physics"><![CDATA[
-    \tВаш партнер может показаться Вам слишком пассивным в бытовых вопросах.
-    Вы искренне хотите улучшить ваши (т.е. и свои, и его) материальные или бытовые условия, пытаетесь вовлечь его в какую-то деятельность
-    (ремонт, новое дело и т.п.), ждете, что он подхватит вашу инициативу, будет прислушиваться к Вашим советам и рекомендациям.
-    Однако партнер саботирует и гасит все Ваши начинания, а действовать в этой области начинает только тогда, когда он сам это решит.
-    Это может не доставлять Вам особых проблем, если у вас одинаковый уровень материальных запросов, или запросы вашего партнера превышают Ваши собственные.
-    Однако, если Вам хочется чего-то большего от жизни (больше доходов, лучшее жилье, более качественно питание и т.п.), то между вами возможны серьезные конфликты.
+    \tYour partner may seem too passive in everyday matters.
+    You sincerely want to improve your (i.e. both yours and yours) material or living conditions, try to engage him in some kind of activity
+    (repair, new business, etc.), expect him to pick up your initiative, listen to your advice and recommendations.
+    However, the partner sabotages and extinguishes all your undertakings, and begins to act in this area only when he himself decides.
+    This may not cause you any special problems if you have the same level of material requests, or your partner\'s requests exceed your own.
+    However, if you want something more from life (more income, better housing, better food, etc.), then serious conflicts between you are possible.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tЛучше всего для вас будет смириться с тем, что ваш партнер сам для себя решает, что ему нужно от жизни в материальном плане.
-    Не ждите, что он будет откликаться на Вашу инициативу что-то улучшить в своей жизни в материальном плане.
-    Если Вам и удастся заставить его что-то сделать для Вас, то лишь через другие функции, и возможно Вам будет стоить это больших усилий.
+    \t<b>Recommendations for interaction:</b><br>
+    \tThe best thing for you will be to accept the fact that your partner decides for himself what he needs from material life.
+    Do not expect that he will respond to your initiative to improve something in his life in material terms.
+    If you manage to get him to do something for you, then only through other functions, and perhaps it will cost you a lot of effort.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.5
+    \tThe ratio of mutual complementarity: 0.5
     ]]></string>
 
-    <string name="pseudo_philia_2_1_emotion_title">2 Эмоция - 1 Эмоция.</string>
+    <string name="pseudo_philia_2_1_emotion_title">2 Emotion - 1 Emotion.</string>
 
     <string name="pseudo_philia_2_1_emotion"><![CDATA[
-    \tВаш партнер кажется вам чересчур эмоциональным и зацикленным на своих эмоциях человеком.
-    Подобная зацикленность вызывает у Вас естественную реакцию - помочь партнеру с нею справиться, разрядить обстановку шуткой, отвлечь партнера,
-    показать альтернативные варианты эмоциональной реакции.
-    Однако вместо благодарности за понимание и поддержку, и желания сотрудничать с Вами, Ваш партнер становится еще более упрямым в своем мнении.
+    \tYour partner seems to be too emotional and a person fixated on his emotions.
+    Such obsession causes you a natural reaction - to help the partner with her cope, defuse the situation with a joke, distract the partner,
+    show alternative emotional responses.
+    However, instead of gratitude for understanding and support, and the desire to cooperate with you, your partner becomes even more stubborn in his opinion.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tНе пытайтесь вызвать партнера на диалог, если Вам кажется, что он одержим какой-нибудь идеей, либо если Вам кажется, что излишне переживает по какому-то вопросу.
-    Лучше оставьте его в покое, позвольте ему \"перегореть\" самостоятельно.
+    \t<b>Recommendations for interaction:</b><br>
+    \tDo not try to call a partner for a dialogue if it seems to you that he is obsessed with an idea,
+    or if it seems to you that he is worrying too much about a certain issue.
+    It is better to leave him alone, let him \"burn out\" independently.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.3
+    \tThe ratio of mutual complementarity: 0.3
     ]]></string>
 
-    <string name="pseudo_philia_2_1_will_title">2 Воля - 1 Воля.</string>
+    <string name="pseudo_philia_2_1_will_title">2 Will - 1 Will.</string>
 
     <string name="pseudo_philia_2_1_will">@string/pseudo_philia_1_2_will</string>
 
-    <string name="pseudo_philia_3_4_emotion_title">3 Эмоция - 4 Эмоция.</string>
+    <string name="pseudo_philia_3_4_emotion_title">3 Emotion - 4 Emotion.</string>
 
     <string name="pseudo_philia_3_4_emotion"><![CDATA[
-    \tПоначалу Вас никак не задевает слабость партнера в эмоциональной сфере.
-    Как правило, на начальном этапе Вас привлекают его более высокие функции.
-    Однако, со временем недостаток эмоциональности начинает сказываться на ваших отношениях.
-    Ваш партнер кажется Вам слишком эмоционально-безразличным, слишком невнимательным к Вам и Вашим чувствам.
-    Когда Вам требуется эмоциональная поддержка, ласковое слово, душевное внимание ваш партнер ничем не может Вам помочь.
-    Он совершенно не понимает вашей потребности и не видит в ваших переживаниях проблемы.
-    И даже когда в ответ на ваши настойчивые неосознаваемые провокации он наконец-то выдает какую-то эмоциональную реакцию, она оказывается слишком слабой,
-    чтобы вас удовлетворить.
+    \tAt first, you do not touch the weakness of the partner in the emotional sphere.
+    As a rule, at the initial stage you are attracted by its higher functions.
+    However, over time, a lack of emotionality begins to affect your relationship.
+    Your partner seems to you too emotional, indifferent, too inattentive to you and your feelings.
+    When you need emotional support, a kind word, emotional attention, your partner cannot help you in any way.
+    He does not understand your need at all and does not see the problem in your experiences.
+    And even when, in response to your persistent unconscious provocations, he finally gives out some kind of
+    emotional reaction, it turns out to be too weak, to satisfy you.
     <br><br>
 
-     \t<b>Рекомендации по взаимодействию:</b><br>
-     \tНе требуйте от партнера невозможного.
-     Он все равно никогда не сможет стать для Вас достаточно чутким и внимательным.
-     Возможно, лучшим вариантом для Вас будет периодически общаться с людьми, имеющими 2-ю эмоцию.
-     Подобное общение сможет на некоторое время зарядить Вас оптимизмом и верой в себя.
+     \t<b>Recommendations for interaction:</b><br>
+     \tDo not demand from the partner the impossible.
+     He will never be able to be sensitive and attentive enough for you anyway.
+     Perhaps the best option for you will be to periodically communicate with people who have the 2nd emotion.
+     Such communication can charge you with optimism and faith in yourself for a while.
      <br><br>
 
-     \tКоэффициент взаимной дополняемости: 0.2
+     \tThe ratio of mutual complementarity: 0.2
     ]]> </string>
 
-    <string name="pseudo_philia_3_4_will_title">3 Воля - 4 Воля.</string>
+    <string name="pseudo_philia_3_4_will_title">3 Will - 4 Will.</string>
 
     <string name="pseudo_philia_3_4_will"><![CDATA[
-    \tВам порой кажется, что Ваш партнер вообще никогда ничего не хочет.
-    Вам очень не хватает от него инициативы.
-    И кажется, что партнера нужно постоянно заставлять, а Вам это очень тяжело дается.
-    На самом деле Ваш партнер настроен такой режим: Вы высказываете желание, а он либо соглашается с ним, либо не соглашается.
-    Поэтому чтобы достичь согласия, достаточно просто четко высказать свое желание вслух, а Вам это не всегда удается, т.к. сами Вы настроены на то,
-    чтобы партнер сам постоянными вопросами выяснял Ваше желание.
-    Но даже если Вы сконцентрировались и все-таки прямо высказали свое желание, Ваш партнер не всегда готов его поддержать, это вдвойне вас задевает.
+    \tSometimes it seems to you that your partner never wants anything at all.
+    You are lacking from him initiatives.
+    And it is very difficult.
+    In fact, your partner is set up such a regime: you express a desire, and he either agrees with him or does not agree.
+    Therefore, in order to reach agreement, it is enough just to clearly express your desire out loud,
+    but you do not always succeed, because you yourself are determined to so that the partner himself will find out your desire with constant questions.
+    But even if you concentrated and still directly expressed your desire, your partner is not always ready to support him, this doubly hurts you.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tПостарайтесь научиться четко и ясно излагать свои желания и не воспринимайте отказ партнера от выполнения этого желания, как личную обиду.
+    \t<b>Recommendations for interaction:</b><br>
+    \tTry to learn to clearly and clearly express your desires and do not take the partner’s refusal to fulfill this desire as a personal insult.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.1
+    \tThe ratio of mutual complementarity: 0.1
     ]]> </string>
 
-    <string name="pseudo_philia_3_4_logic_title">3 Логика - 4 Логика.</string>
+    <string name="pseudo_philia_3_4_logic_title">3 Logic - 4 Logic.</string>
 
     <string name="pseudo_philia_3_4_logic"><![CDATA[
-    \tКогда Вы в очередной раз начинаете сомневаться в каком-то мнении, оценке, суждении и ищете поддержку партнера,
-    он удивляется и не понимает, зачем так много суеты по такому несущественному вопросу.
-    В лучше случае, Вам передается ощущение незначимости ваших метаний.
-    В худшем - Вы остаетесь наедине со своими сомнениями без поддержки партнера и ощущаете одиночество и брошенность.
+    \tWhen you once again begin to doubt some opinion, assessment, judgment, and seek the support of a partner,
+    he is surprised and does not understand why there is so much fuss on such an insignificant matter.
+    In the best case, you get the feeling of insignificance of your throwing.
+    At worst - you are left alone with your doubts without the support of a partner and feel lonely and abandoned.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tНе требуйте от партнера невозможного, он, вероятнее всего, никогда не сможет развеять ваши сомнения в той форме,
-    в которой вам это необходимо.
-    Своими сомнениями делитесь в другими людьми, у которых Вы сможете найти поддержку.
+    \t<b>Recommendations for interaction:</b><br>
+    \tDo not demand from the partner the impossible, he most likely will never be able to dispel your doubts in the form in which you need it.
+    Share your doubts in other people with whom you can find support.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.2
+    \tThe ratio of mutual complementarity: 0.2
     ]]> </string>
 
-    <string name="pseudo_philia_3_4_physics_title">3 Физика - 4 Физика.</string>
+    <string name="pseudo_philia_3_4_physics_title">3 Physics - 4 Physics.</string>
 
     <string name="pseudo_philia_3_4_physics"><![CDATA[
-    \tВ материальных делах Вы очень нуждаетесь в поддержке и соучастии.
-    Вы пытаетесь привлечь партнера к выяснению ваших физических потребностей, ждете от него инициативу в этих вопросах.
-    Однако на практике Ваш партнер сам ждет от Вас инициативы - он ждет от Вас конкретных просьб, вместо невразумительных жалоб.
-    Вам кажется, что он слишком равнодушен к Вам, Вам бы хотелось, чтобы он был более заботливым и внимательным.
-    Вам хочется получить от него больше информации в практических вопросах, обсудить с ним свои страхи в физической сфере
-    (касающиеся здоровья, самочувствия, внешности финансового благополучия и т.п.).
+    \tIn material matters, you really need support and complicity.
+    You are trying to attract a partner to clarify your physical needs, expect an initiative from him in these matters.
+    However, in practice, your partner himself expects initiative from you - he expects specific requests from you, instead of unintelligible complaints.
+    It seems to you that he is too indifferent to you, you would like him to be more caring and attentive.
+    You want to get more information from him in practical matters, discuss your fears in the physical sphere with him
+    (concerning health, well-being, appearance of financial well-being, etc.).
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tНе пытайтесь требовать от партнера невозможного, ему действительно не интересны Ваши физические подробности.
-    Постарайтесь найти таких людей для общения, которые бы восполнили этот пробел в ваших отношениях (финансового консультанта, врача, портниху, парикмахера, и т.п.).
+    \t<b>Recommendations for interaction:</b><br>
+    \tDo not try to demand from the partner the impossible, he is really not interested in your physical details.
+    Try to find such people for communication, which would fill this gap in your relationship (financial adviser, doctor, dressmaker, hairdresser, etc.).
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.2
+    \tThe ratio of mutual complementarity: 0.2
     ]]> </string>
 
-    <string name="pseudo_philia_4_3_physics_title">4 Физика - 3 Физика.</string>
+    <string name="pseudo_philia_4_3_physics_title">4 Physics - 3 Physics.</string>
 
     <string name="pseudo_philia_4_3_physics"><![CDATA[
-    \tНа начальном этапе ваших отношений Ваш партнер привлекает вас своей активностью в материальных вопросах:
-    он кажется вам ярким, заботящимся о своей внешности, активным, практичным и хорошо ориентирующемся в материальном мире.
-    Однако спустя какое-то время Вы обнаруживаете, что вся его материальность - это мыльный пузырь,
-    который лопается при столкновении с малейшими физическими проблемами.
-    Ваш партнер испытывает неуверенность в вопросах финансов, быта, в своей внешности, образе жизни и т.п.
-    Он постоянно переживает по этому поводу, но чего конкретно он хочет - сформулировать не может.
-    Вам бы хотелось, чтобы Ваш партнер взял бы на себя заботу и о вашем физическом состоянии, и иногда
-    он даже начинает проявлять такую инициативу - например, он может начать Вас лечить, но делает все частенько неумело и неуверенно, что может Вас раздражать.
+    \tAt the initial stage of your relationship, your partner attracts you with his activity in material matters:
+    he seems bright to you, looking after his appearance, active, practical and well-versed in the material world.
+    However, after some time you discover that all of his materiality is a soap bubble,
+    which bursts when confronted with the slightest physical problems.
+    Your partner is not confident in matters of finances, life, appearance, lifestyle, etc.
+    He is constantly worried about this, but what specifically he wants - he cannot formulate.
+    You would like your partner to take care of your physical condition, and sometimes
+    he even begins to take such an initiative - for example, he may start treating you, but he often does everything ineptly and uncertainly, which may annoy you.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tНе отмахивайтесь от разговоров Вашего партнера на различные материальные, бытовые темы, они для него действительно важны.
-    Не говорите, что \"все это ерунда и не стоит об этом переживать\".
-    Для него это на самом деле не ерунда, а очень важные вопросы.
-    Если не можете ничем помочь, то хотя бы просто выслушайте его жалобы.
-    Постарайтесь успокоить его, используя другие более высокие функции.
+    \t<b>Recommendations for interaction:</b><br>
+    \tDo not dismiss your partner's conversations on various material, everyday topics, they are really important for him.
+    Do not say that \"all this is nonsense and you should not worry about it\".
+    For him, this is not really nonsense, but very important questions.
+    If you can not help, then at least just listen to his complaints.
+    Try to reassure him using other higher functions.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.3
+    \tThe ratio of mutual complementarity: 0.3
     ]]> </string>
 
-    <string name="pseudo_philia_4_3_logic_title">4 Логика - 3 Логика.</string>
+    <string name="pseudo_philia_4_3_logic_title">4 Logic - 3 Logic.</string>
 
     <string name="pseudo_philia_4_3_logic"><![CDATA[
-    \tВам трудно понять Вашего партнера, когда он начинает цепляться к терминам и определениям,
-    выискивать нелогичности и противоречия в чужих высказываниях, ввязывать в споры,
-    а потом расстраиваться, если его оппоненты одержали над ним верх.
-    Вам кажется, что он сам ищет себе приключений и трудностей, и излишне переживает,
-    что кто-то может посчитать его не слишком умным человеком.
-    Вам хочется помочь партнеру, успокоить, и вам кажется, что фразы: \"Да брось ты!\", \"Не стоит переживать\", \"Ну мало ли кто что сказал\" могут его успокоить.
-    В действительности подобные \"утешения\" еще больше расстраивают вашего партнера.
+    \tIt\’s hard for you to understand your partner when he starts to cling to terms and definitions
+    to seek out illogicalities and contradictions in other people\'s statements, to engage in arguments,
+    and then get upset if his opponents defeated him.
+    It seems to you that he himself is looking for adventures and difficulties, and he is worrying too much,
+    that someone might find him not a very smart person.
+    You want to help your partner, calm him down, and it seems to you that the phrases: \"Yes, come on!\", \"You shouldn’t worry\", \"Well, who knows what?\".
+    In fact, such \"comfort\" even more upset your partner.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tПостарайтесь понять, что для партнера его переживания действительно очень серьезны.
-    Каждый раз, когда он начинает \"париться\" по поводу свои умственных способностей, постарайтесь вникнуть в суть вопроса,
-    в понимании которого у партнера возникла проблема, не поленитесь обсудить его, высказать свое мнение,
-    обсудить альтернативные мнения.
-    Иногда достаточно периодически проводить подобные беседы, чтобы внушить партнеру спокойствие, запаса которого хватит ему до следующего кризиса.
+    \t<b>Recommendations for interaction:</b><br>
+    \tTry to understand that for a partner his experiences are really very serious.
+    Every time he starts to \"steam\" about his mental abilities, try to get to the heart of the matter,
+    in the understanding of which the partner had a problem, do not be lazy to discuss it, express your opinion,
+    discuss alternative opinions.
+    Sometimes it is enough to hold such conversations periodically in order to instill in the partner peace of mind that he has enough reserves for until the next crisis.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.3
+    \tThe ratio of mutual complementarity: 0.3
     ]]> </string>
 
-    <string name="pseudo_philia_4_3_emotion_title">4 Эмоция - 3 Эмоция.</string>
+    <string name="pseudo_philia_4_3_emotion_title">4 Emotion - 3 Emotion.</string>
 
     <string name="pseudo_philia_4_3_emotion"><![CDATA[
-    \tВаш партнер может показаться Вам достаточно интересным и эмоциональным человеком.
-    Однако спустя некоторое время после начала общения оказывается, что за этой эмоциональностью на самом деле кроется очень большая неуверенность в себе.
-    Партнер то намеками, то открыто начинает требовать от Вас эмоциональной поддержки, участия в своих эмоциональных переживаниях.
-    Это Вам кажется глупым и лишним, а со временем может даже начать раздражать.
-    Ваши попытки успокоить партнера оказываются несостоятельными.
-    Вы чувствуете, что явно не в состоянии помочь партнеру.
-    В то же время, он может пытаться влиять и на Ваше эмоционально состояние - начать шутить, смешить, но делает это неуклюже и при малейшем намеке с вашей стороны,
-    что Вам это не нравится, может обидеться и замкнуться в себе.
+    \tYour partner may seem like an interesting and emotional person.
+    However, some time after the start of communication, it turns out that behind this emotionality there is in fact a very big self-doubt.
+    The partner is hinting, then openly begins to demand from you emotional support, participation in their emotional experiences.
+    It seems stupid and superfluous to you, and with time it may even begin to annoy.
+    Your attempts to reassure your partner turn out to be untenable.
+    You feel that you are clearly unable to help your partner.
+    At the same time, he may try to influence your emotional state - start joking, make laugh,
+    but he does it awkwardly and at the slightest hint on your part, that you do not like it, can be offended and withdraw into itself.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tХоть реально Вы не в силах помочь партнеру, но постарайтесь хотя бы просто выслушать его жалобы, не отмахиваясь от них.
+    \t<b>Recommendations for interaction:</b><br>
+    \tAlthough really you can not help a partner, but try to at least just listen to his complaints, not waving from them.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.3
+    \tThe ratio of mutual complementarity: 0.3
     ]]> </string>
 
-    <string name="pseudo_philia_4_3_will_title">4 Воля - 3 Воля.</string>
+    <string name="pseudo_philia_4_3_will_title">4 Will - 3 Will.</string>
 
     <string name="pseudo_philia_4_3_will"><![CDATA[
-    \tВаш партнер может раздражать Вас своим нежеланием четко изложить свои желания и нежеланием проявлять инициативу и брать на себя ответственность.
-    Вы ожидаете от него четких и внятных решений, а он постоянно сомневается в том, чего он хочет, и пытается вызвать Вас на диалог,
-    который Вам кажется бессмысленным - Вам лень каждый раз решать головоломку: \"чего хочет Ваш партнер на самом деле\",
-    и Вам бы хотелось, чтобы он сам для себя это решал, а Вам излагал уже в готовом виде, как руководство к действию.
-    Ваш партнер в ваших глазах выглядит крайне ненадежным человеком, т.к. сначала он может высказать вслух одно решение, а через некоторое время - уже другое.
+    \tYour partner may annoy you with your unwillingness to clearly state your desires and unwillingness to take initiative and take responsibility.
+    You expect clear and intelligible decisions from him, and he constantly doubts what he wants and tries to call you to dialogue,
+    which seems senseless to you - you are too lazy to solve a puzzle every time: \"what does your partner really want\",
+    and you would like him to solve this for himself, and he set you up as a guide to action.
+    Your partner in your eyes looks like an extremely unreliable person, because at first he can say out loud one decision, and after a while - another.
     <br><br>
 
-    \t<b>Рекомендации по взаимодействию:</b><br>
-    \tКогда ваш партнер говорит о своем решении, переспрашивайте и уточняйте, окончательно ли оно, уверен ли он в своем желании.
+    \t<b>Recommendations for interaction:</b><br>
+    \tWhen your partner speaks about his decision, ask again and clarify whether it is final and sure of his desire.
     <br><br>
 
-    \tКоэффициент взаимной дополняемости: 0.1
+    \tThe ratio of mutual complementarity: 0.1
     ]]> </string>
 
 </resources>

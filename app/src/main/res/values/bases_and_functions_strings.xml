@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="bases_title">Основания в психософии</string>
+    <string name="bases_title">Psychosophical bases</string>
 
     <string name="bases_info_will"><![CDATA[
-    \t<b><i>Воля</i></b> — ощущения цели, смысла существования человека, его места в мире, восприятие жизненных задач и желаний.<br>
-    \tВоля – это стержень личности, движущая сила, которая заставляет изменять другие составляющие мира.
+    \t<b><i>Will</i></b> — sense of having an aim, a meaning of human existence, his place in the world, perception of life purposes and desires.<br>
+    \tWill is the kernel of the personality, its motive force, which forces to change other components of the world.
     ]]></string>
 
     <string name="bases_info_logic"><![CDATA[
-    \t<b><i>Логика</i></b>  — мир идей, всего того, что является продуктом деятельности ума человека вне зависимости от того, имеют ли они материальное воплощение или нет.<br>
-    \tПозиция Логики определяет степень субъективной ценности умозаключений, красоты и завершенности идей и концепций.
+    \t<b><i>Logic</i></b>  — a world of ideas, of all that is the product of the activity of the mind of man. It does not matter whether they have material embodiment or not.<br>
+    \tThe position of Logic determines the degree of subjective value of inferences, beauty and completeness of ideas and concepts.
     ]]></string>
 
     <string name="bases_info_emotion"><![CDATA[
-    \t<b><i>Эмоция</i></b> — сфера внутренних переживаний человека: чувств, эмоций.<br>
-    \tКроме этого, Эмоция отвечает за отношение к искусству и красоте окружающего мира в целом.
+    \t<b><i>Emotion</i></b> — sphere of inner experiences of a person: feelings, emotions.<br>
+    \tIn addition, Emotion is responsible for the attitude to the art and beauty of the surrounding world in general.
     ]]></string>
 
     <string name="bases_info_physics"><![CDATA[
-    \t<b><i>Физика</i></b> — мир всего материального.<br>
-    \tПозиция Физики отвечает за отношение к собственному телу и его потребностям, важность обладания материальными благами,
-    физическому труду и работе в целом, за биологическую агрессивность и готовность к силовому решению конфликтов.
+    \t<b><i>Physics</i></b> — the world of everything material.<br>
+    \tThe position of the physicist is responsible for the attitude to own body and its needs, the importance of owning material goods,
+     physical labor and work in general, for biological aggressiveness and readiness for the violent resolution of conflicts.
     ]]></string>
 
-    <string name="functions_title">Функции в психософии</string>
+    <string name="functions_title">Functions on psychosophy</string>
 
     <string name="functions_info_first"><![CDATA[
-    \t<b><i>I. \"Молот\"</i></b> – основная функция человека. По ней он более всего уверен и воспринимает ее как наиболее ценную.<br>
-    \tВ области этой функции человек часто проявляет себя с избытком, не замечая реакции окружающих.
+    \t<b><i>I. \"Hammer\"</i></b> is a basic human function. On it, he is most sure of himself and sees it as the most valuable.<br>
+    \tIn the field of this function, a person often manifests himself excessively, not noticing the reaction of others.
     ]]></string>
 
     <string name="functions_info_second"><![CDATA[
-    <b><i>II. \"Река\"</i></b></i> – нормативная функция.<br>
-    \tНаиболее умеренная и гармоничная, умеет соотносить свои интересы в данной области с интересами окружающих людей.
+    <b><i>II. \"River\"</i></b></i> is a normative function.<br>
+    \tThe most moderate and harmonious, knows how to relate their interests in this area to the interests of the surrounding people.
     ]]></string>
 
     <string name="functions_info_third"><![CDATA[
-    <b><i>III. \"Язва\"</i></b> – болезненная, беспокойная, неуверенная в себе.<br>
-    \tС одной стороны, человек испытывает потребность проявить себя в этой области, с другой – не уверен в своих силах и опасается критики и отрицательной оценки.<br>
-    \tС другой стороны, эта функция хорошо видит недостатки других в данной области и охотно их критикует.
+    <b><i>III. \"Sore\"</i></b> is painful, restless, uncertain.<br>
+    \tOn the one hand, a person feels the need to prove himself in this area, on the other, he is not confident in his abilities and is afraid of criticism and negative evaluation.<br>
+    \tIn addition, this function clearly sees the shortcomings of others in this field and willingly criticizes them.
     ]]></string>
 
     <string name="functions_info_forth"><![CDATA[
-    \t<b><i>IV. \"Пустячок\"</i></b> – наименее значимая для человека и поэтому спокойная и отрешенная.<br>
-    \tЧасто по ней человек не имеет собственных предпочтений в данной области и легко подстраивается под чужие.
+    \t<b><i>IV. \"Trifle\"</i></b> is the least significant for a person and therefore calm and detached.<br>
+    \tOften, according to it, a person does not have his own preferences in this area and easily adapts to others.
     ]]></string>
 
     <string name="functions_info"><![CDATA[
-    \tВсе функции можно разделить по трем признакам:
-    <b><i> результативные</i></b> (<b>I</b> и <b>IV</b>) и <b><i>процессионные</i></b> (<b>II</b> и <b>III</b>, причем <b>III</b> является суперпроцессионной);
-    <b><i>доминирующие</i></b> (<b>I</b> и <b>III</b>) и <b><i>подстраивающиеся</i></b> (<b>II</b> и <b>IV</b>);
-    <b><i>высокие</i></b> (<b>I</b> и <b>II</b>) и <b><i>низкие</i></b> (<b>III</b> и <b>IV</b>).
+    \tAll functions can be divided according to three criteria:
+    <b><i>the productive</i></b> (<b>I</b> and <b>IV</b>) and <b><i>the processional</i></b> (<b>II</b> and <b>III</b>, where <b> III </ b> is the super processional);
+    <b><i>the dominant</i></b> (<b>I</b> and <b>III</b>) and <b><i>the adjusting</i></b> (<b>II</b> and <b>IV</b>);
+    <b><i>the high</i></b> (<b>I</b> and <b>II</b>) and <b><i>the low</i></b> (<b>III</b> and <b>IV</b>).
     ]]></string>
 
 </resources>
