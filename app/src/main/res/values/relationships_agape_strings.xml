@@ -39,7 +39,7 @@
 
     <string name="agape_1_4_logic"><![CDATA[
     \tYour partner attracts you with his property to listen to your opinion, on the other hand,
-    you like it when a partner is able to absorb the essence of your conversations and express your own thoughts, but only more briefly.
+    you like it when a partner is able to absorb the essence of your conversations and express your own thoughts, but only more briefly.
     <br><br>
 
     \t<b>Recommendations for interaction:</b><br>
@@ -52,14 +52,13 @@
     <string name="agape_1_4_physics_title">1 Physics - 4 Physics.</string>
 
     <string name="agape_1_4_physics"><![CDATA[
-    \tYour partner attracts you because it does not interfere in the sphere of your material interests,
-    allows you to define your own needs.
+    \tYour partner attracts you because he does not interfere in the sphere of your material interests, allows you to define your own needs.
     Moreover, the partner actively supports your interests in the physical sphere, adapts to them and actively helps.
     <br><br>
 
     \t<b>Recommendations for interaction:</b><br>
-    \tDo not flatter yourself about the willingness of a partner to come to help and do not abuse it, because somewhere above in your partner
-    the bases \"Will\" and \"Logic\" are located, which will actively turn on if your partner thinks that you have gone too far.
+    \tDo not flatter yourself about the willingness of a partner to come to help and do not abuse him, because somewhere above in your partner
+    the bases \"Will\" and \"Logic\" are located, which will actively turn on if your partner thinks that you have gone too far.
     <br><br>
 
     \tThe ratio of mutual complementarity: 1.
@@ -69,13 +68,13 @@
 
     <string name="agape_2_3_logic"><![CDATA[
     \tYour partner attracts you by constantly provoking you to various discussions,
-    at the same time, you are given the opportunity to play the role of lead, i.e. You are in such discussions more competent and knowledgeable.
+    at the same time, you are given the opportunity to play the role of lead, i.e. You are in such discussions more competent and knowledgeable.
     This state of affairs, although it requires maximum concentration from you, allows you to fully demonstrate your abilities and therefore gives you great pleasure.
     <br><br>
 
     \t<b>Recommendations for interaction:</b><br>
     \tYour partner can sometimes be caustic and picky in various situations. Remember your leading role and do not be offended by your partner,
-    if he starts to slander and catch you on logical inconsistencies.
+    if he starts to slander and catch you on logical inconsistencies.
     <br><br>
 
     \tThe ratio of mutual complementarity: 1.
@@ -86,7 +85,7 @@
     <string name="agape_2_3_will"><![CDATA[
     \tThe initial stage of your relationship is greatly influenced by the experience of your partner’s previous relationship.
     If life constantly confronted a partner with people who disregarded his desires, then the partner can be incredulous in dealing with you,
-    looking for dirty tricks in your attitude.
+    looking for dirty tricks in your attitude.
     In this case, you will have to make a lot of efforts to prove to him that he should not be afraid of infringement of his rights on your part.
     Over time, your partner will begin to trust you and will be happy to respond to your initiative in realizing your desires.
     <br><br>
@@ -98,13 +97,13 @@
      \tThe ratio of mutual complementarity: 1.
      ]]> </string>
 
-    <string name="agape_2_3_emotion_title">2 Эмоция - 3 Эмоция.</string>
+    <string name="agape_2_3_emotion_title">2 Emotion - 3 Emotion.</string>
 
     <string name="agape_2_3_emotion"><![CDATA[
      \tYour partner is a very emotional person.
      And you, like anyone else, are able to help him gain self-confidence in emotional terms.
      Over time, your partner will be able to become your most devoted and appreciative friend,
-     gradually adopting your views and ways of emotional interaction with the outside world.
+     gradually adopting your views and ways of emotional interaction with the outside world.
      <br><br>
 
      \t<b>Recommendations for interaction:</b><br>
@@ -132,92 +131,93 @@
      \tThe ratio of mutual complementarity: 1.
     ]]></string>
 
-    <string name="agape_3_2_emotion_title">3 Эмоция - 2 Эмоция.</string>
+    <string name="agape_3_2_emotion_title">3 Emotion - 2 Emotion.</string>
 
     <string name="agape_3_2_emotion"><![CDATA[
-     \tВаш партнер идеально подходит для вас в эмоциональной сфере.
-     Это тот человек, который принимает Вас таким как есть, способен рассеять Ваши страхи и опасения,
-     в нужный момент придать Вам уверенность в себе и вселить оптимизм.
+     \tYour partner is perfect for you in the emotional field.
+     This is the person who accepts you as they are, is able to dispel your fears and concerns,
+     at the right moment to give you confidence and instill optimism.
      <br><br>
 
      \t<b>Recommendations for interaction:</b><br>
-     \tПрислушивайтесь к мнению и рекомендациям Вашего партнера в эмоциональном плане и доверяйте ему.
+     \tListen to the opinions and recommendations of your partner emotionally and trust him.
      <br><br>
 
      \tThe ratio of mutual complementarity: 1.
     ]]></string>
 
-    <string name="agape_3_2_logic_title">3 Логика - 2 Логика.</string>
+    <string name="agape_3_2_logic_title">3 Logic - 2 Logic.</string>
 
     <string name="agape_3_2_logic"><![CDATA[
-    \tВаш партнер всегда готов поддержать Ваше мнение, детализировать его и даже порассуждать за вас.
-    Это Вас успокаивает и вселяет уверенность.
-    Некатегоричность суждений партнера, гибкость и вариативность мыслей расслабляет,
-    помогает Вам с большей уверенностью декларировать свое мнение, не боясь категоричной отрицательной оценки.
+    \tYour partner is always ready to support your opinion, to detail it and even to speculate for you.
+    This calms you down and gives you confidence.
+    Uncategorized judgments of a partner, flexibility and variability of thoughts relax,
+    helps you to declare your opinion with greater confidence without fear of a categorical negative assessment.
     <br><br>
 
     \t<b>Recommendations for interaction:</b><br>
-    \tДоверяйте партнеру.
+    \tTrust the partner.
     <br><br>
 
     \tThe ratio of mutual complementarity: 1.
     ]]></string>
 
-    <string name="agape_3_2_will_title">3 Воля - 2 Воля.</string>
+    <string name="agape_3_2_will_title">3 Will - 2 Will.</string>
 
     <string name="agape_3_2_will"><![CDATA[
-    \tВаш партнер всегда чутко относится к вашим желаниям, и прежде чем проявить какую-то инициативу всегда интересуется вашим мнением.
-    Он склонен искать компромисс и подстраиваться под Ваши желания, в то же время он не требует от Вас излишней инициативы и если видит,
-    что Вы колеблетесь, всегда готов взять ее в свои руки, предварительно взяв Ваше согласие на то.
+    \tYour partner is always sensitive to your desires, and before taking any initiative, is always interested in your opinion.
+    He is inclined to seek a compromise and adapt himself to your desires, at the same time he does not
+    require excessive initiative from you and if he sees that you hesitate,
+    always ready to take it into your own hands, having previously accepted your consent to that.
     <br><br>
 
     \t<b>Recommendations for interaction:</b><br>
-    \tДоверяйте вашему партнеру, не бойтесь говорить с ним о своих желаниях и сомнениях.
+    \tTrust your partner, do not be afraid to talk with him about your desires and doubts.
     <br><br>
 
     \tThe ratio of mutual complementarity: 1.
     ]]></string>
 
-    <string name="agape_3_2_physics_title">3 Физика - 2 Физика.</string>
+    <string name="agape_3_2_physics_title">3 Physics - 2 Physics.</string>
 
     <string name="agape_3_2_physics"><![CDATA[
-    \tВаш партнер может стать вам настоящим помощником и защитником в материальном мире.
-    Вы можете не боясь пожаловаться  ему на Ваши трудности в этой сфере.
+    \tYour partner can be your real helper and protector in the material world.
+    You can not fear to complain to him about your difficulties in this area.
     <br><br>
 
     \t<b>Recommendations for interaction:</b><br>
-    \tВнимательно прислушивайтесь к его рекомендациям и советам, обсуждайте с ним Ваши сомнения и страхи.
+    \tListen carefully to his recommendations and advice, discuss your doubts and fears with him.
     <br><br>
 
     \tThe ratio of mutual complementarity: 1.
     ]]></string>
 
-    <string name="agape_4_1_physics_title">4 Физика - 1 Физика.</string>
+    <string name="agape_4_1_physics_title">4 Physics - 1 Physics.</string>
 
     <string name="agape_4_1_physics"><![CDATA[
-    \tВ вашем партнере Вас привлекает его уверенность в материальном мире, в своих материальных потребностях.
-    Ваш партнер кажется вам надежным, крепко стоящим на ногах, твердо понимающим, чего он хочет от жизни в материальном плане,
-    он постоянно \"транслирует\" эту уверенность так, что она передается и Вам.
+    \tIn your partner you are attracted by his confidence in the material world, in his material needs.
+    Your partner seems to you reliable, firmly standing on his feet, firmly understanding what he wants from life in material terms,
+    constantly \"broadcasts\" this confidence so that it is transmitted to you.
     <br><br>
 
     \t<b>Recommendations for interaction:</b><br>
-    \tПозвольте Вашему партнеру быть самим собой в его физических привычках и вкусах.
-    Вам легко будет подстроиться под него, если между вами не будут стоять другие авторитетные для Вас в материальных вопросах люди.
+    \tLet your partner be yourself in his physical habits and tastes.
+    It will be easy for you to adjust to it if there are no other people who are authoritative for you in material matters between you.
     <br><br>
 
     \tThe ratio of mutual complementarity: 1.
     ]]></string>
 
-    <string name="agape_4_1_will_title">4 Воля - 1 Воля.</string>
+    <string name="agape_4_1_will_title">4 Will - 1 Will.</string>
 
     <string name="agape_4_1_will"><![CDATA[
-    \tВаш партнер привлекает вас способностью принимать решения и действовать, когда у него возникает какое-либо желание.
-    При этом он избавляет Вас от необходимости проявлять инициативу.
-    Как правило, он предлагает что-то, а Вам остается только выбрать, соглашаться или нет.
+    \tYour partner attracts you with the ability to make decisions and act when he has a desire.
+    At the same time, he saves you from having to take the initiative.
+    As a rule, he offers something, and you just have to choose whether to agree or not.
     <br><br>
 
     \t<b>Recommendations for interaction:</b><br>
-    \tНе критикуйте решения Вашего партнера.
+    \tDo not criticize the decisions of your partner.
     <br><br>
 
     \tThe ratio of mutual complementarity: 1.
@@ -227,8 +227,8 @@
 
     <string name="agape_4_1_emotion"><![CDATA[
     \tEmotional sphere means relatively little for you and therefore if you chose this partner, most likely,
-    guided not by his emotionality, but by some other criteria.
-    However, your partner attracts you with its emotional brightness.
+    guided not by his emotionality, but by some other criteria.
+    However, your partner attracts you with his emotional brightness.
     You do not get bored with him, he entertains you, making your life emotionally rich and diverse.
     <br><br>
 
