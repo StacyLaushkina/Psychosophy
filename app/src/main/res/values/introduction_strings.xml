@@ -20,13 +20,12 @@
 
     <string name="introduction_psychosophy_personalities"><![CDATA[
     \tThe personality psychotype (according to Afanasyev) is denoted by the first letters of the name of the grounds,
-    beginning with the first (most expressed in behavior and values) and up to the fourth.
+    beginning with the first (most expressed in behavior and values) and up to the fourth.
     In total, there are 24 possible personality psychotypes.
     ]]></string>
 
     <string name="introduction_psychosophy_pseudonyms"><![CDATA[
-    \tIn addition, there are type aliases.
-    For example, the type with the order of the bases \"Will, Logic, Emotion, Physics\" is denoted by VLEF and has a pseudonym \"Socrates\".
+    \tIn addition, there are type aliases. For example, the type with the order of the bases \"Will, Logic, Emotion, Physics\" is denoted by WLEF and has a pseudonym \"Socrates\".
     ]]></string>
 
     <string name="introduction_psychosophy_psychotypes_button">All psychotypes</string>
