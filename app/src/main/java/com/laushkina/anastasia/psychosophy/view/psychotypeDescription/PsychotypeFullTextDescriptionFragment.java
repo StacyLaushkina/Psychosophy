@@ -19,8 +19,11 @@ public class PsychotypeFullTextDescriptionFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
         super.onCreateView(inflater, container, savedInstanceState);
 
-        FragmentPsychotypeFullTextDescriptionBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_psychotype_full_text_description,
-                container, false);
+        FragmentPsychotypeFullTextDescriptionBinding binding = DataBindingUtil.inflate(
+                inflater,
+                R.layout.fragment_psychotype_full_text_description,
+                container,
+                false);
         binding.setFullDescription(PsychotypeDescriptionGetter.getFull(getPsychotype(), getActivity()));
         return binding.getRoot();
     }
@@ -36,7 +39,7 @@ public class PsychotypeFullTextDescriptionFragment extends BaseFragment {
     }
 
     private Psychotype getPsychotype(){
-        return (Psychotype)getArguments().getSerializable(PsychotypesFragment.psychotypeExtra);
+        return (Psychotype) getArguments().getSerializable(PsychotypesFragment.psychotypeExtra);
     }
 
 }

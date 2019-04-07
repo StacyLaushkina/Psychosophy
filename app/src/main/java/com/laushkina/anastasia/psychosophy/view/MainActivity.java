@@ -1,6 +1,7 @@
 package com.laushkina.anastasia.psychosophy.view;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,7 +13,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.laushkina.anastasia.psychosophy.R;
+import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.view.introduction.IntroductionFragment;
+import com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeDescriptionFragment;
+import com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeFullTextDescriptionFragment;
+import com.laushkina.anastasia.psychosophy.view.psychotypes.PsychotypesFragment;
 import com.laushkina.anastasia.psychosophy.view.test.TestFragment;
 
 public class MainActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener {
@@ -41,7 +46,7 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
     private void openRequestedContent(Intent intent){
         if (intent.getExtras() == null) return;
 
-        Screen screen = (Screen)intent.getExtras().getSerializable(SCREEN_NAME_EXTRA);
+        Screen screen = (Screen) intent.getExtras().getSerializable(SCREEN_NAME_EXTRA);
         if (screen == null) return;
 
         switch (screen) {
@@ -53,6 +58,16 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
             case introduction:
                 getFragmentManager().beginTransaction()
                         .replace(R.id.content_frame, new IntroductionFragment())
+                        .commit();
+            case psychotypes:
+                Psychotype type = intent.getExtras().getParcelable(PsychotypesFragment.psychotypeExtra);
+                Bundle bundle = new Bundle(1);
+                bundle.putSerializable(PsychotypesFragment.psychotypeExtra, type);
+                Fragment fullDescription = new PsychotypeDescriptionFragment();
+                fullDescription.setArguments(bundle);
+
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, fullDescription)
                         .commit();
         }
     }

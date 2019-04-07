@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/widget_psychotype"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="100dp"
+    android:layout_width="wrap_content">
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+
+        <ImageView
+            android:id="@+id/psychotype_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/ic_elpw"
+            android:layout_above="@+id/psychotype_title"
+            android:gravity="center"
+            android:paddingTop="@dimen/basic_small_margin"
+            android:background="@drawable/white_ripple"/>
+
+        <TextView
+            android:id="@+id/psychotype_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/psychotype_description"
+            android:textColor="@color/tundora"
+            android:gravity="center"
+            android:padding="@dimen/basic_small_margin"/>
+
+    </RelativeLayout>
+</LinearLayout>

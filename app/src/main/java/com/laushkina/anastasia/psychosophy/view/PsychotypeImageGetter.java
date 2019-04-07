@@ -13,6 +13,13 @@ import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 public final class PsychotypeImageGetter {
 
     public static Drawable get(Psychotype psychotype, Context context) {
+        Bitmap src = BitmapFactory.decodeResource(context.getResources(), getSrcId(psychotype, context));
+        RoundedBitmapDrawable dr = RoundedBitmapDrawableFactory.create(context.getResources(), src);
+        dr.setCornerRadius(Math.min(src.getWidth(), src.getHeight()) / 2.0f);
+        return dr;
+    }
+
+    public static int getSrcId(Psychotype psychotype, Context context) {
         if (psychotype == null || context == null)
             throw new RuntimeException("Cannot get psychotype image");
 
@@ -69,10 +76,6 @@ public final class PsychotypeImageGetter {
             default:
                 throw new AssertionError("Cannot find image for type" + psychotype.name());
         }
-
-        Bitmap src = BitmapFactory.decodeResource(context.getResources(), resourceId);
-        RoundedBitmapDrawable dr = RoundedBitmapDrawableFactory.create(context.getResources(), src);
-        dr.setCornerRadius(Math.min(src.getWidth(), src.getHeight()) / 2.0f);
-        return dr;
+        return resourceId;
     }
 }
