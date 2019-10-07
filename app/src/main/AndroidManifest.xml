@@ -22,7 +22,7 @@
         <activity android:name=".view.MainActivity"
            android:launchMode="singleInstance" />
 
-        <receiver android:name=".view.Widget"
+        <receiver android:name=".view.widget.PsychotypesWidgetProvider"
             android:label="Psychosophy">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -30,6 +30,10 @@
             <meta-data android:name="android.appwidget.provider"
                 android:resource="@xml/widget_provider" />
         </receiver>
+
+        <service
+            android:name=".view.widget.PsychotypesWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
 
     </application>
 

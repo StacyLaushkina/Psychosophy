@@ -4,13 +4,13 @@
     android:layout_height="match_parent"
     android:background="#66ffffff">
 
-    <GridLayout
+    <ListView
         android:id="@+id/psychotypes_grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:columnCount="3"
         android:background="@drawable/color_primary_border_background">
 
-    </GridLayout>
+    </ListView>
 
 </LinearLayout>
