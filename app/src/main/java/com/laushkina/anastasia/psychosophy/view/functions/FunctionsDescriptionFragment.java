@@ -11,7 +11,7 @@ import android.widget.ScrollView;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.databinding.FragmentFunctionsDescriptionBinding;
-import com.laushkina.anastasia.psychosophy.domain.test.Function;
+import com.laushkina.anastasia.psychosophy.domain.test.PsychoFunction;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 import com.laushkina.anastasia.psychosophy.view.utils.TextStylezer;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
@@ -50,7 +50,7 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
     @Override
     public void onResume(){
         super.onResume();
-        Function requestedFunction = getRequestedFunction();
+        PsychoFunction requestedFunction = getRequestedFunction();
         if (requestedFunction == null) return;
 
         onFunctionDescriptionRequested(getFullDescription(requestedFunction), getTitle(requestedFunction), getImage(requestedFunction));
@@ -76,11 +76,11 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
     /**
      * @return image of concrete function : first logic or third physics
      */
-    public abstract Drawable getImage(Function function);
+    public abstract Drawable getImage(PsychoFunction function);
 
     public abstract CharSequence getFunctionDescription();
 
-    public abstract CharSequence getFullDescription(Function function);
+    public abstract CharSequence getFullDescription(PsychoFunction function);
 
     public abstract String getEmotionShortTitle();
     public abstract String getEmotionTitle();
@@ -94,7 +94,7 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
     public abstract String getWillShortTitle();
     public abstract String getWillTitle();
 
-    private String getTitle(Function function) {
+    private String getTitle(PsychoFunction function) {
         switch (function) {
             case Will: return getWillTitle();
             case Physics: return getPhysicsTitle();
@@ -110,19 +110,19 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
 
 
     public void onEmotionClick(){
-        onFunctionDescriptionRequested(getFullDescription(Function.Emotion), getEmotionTitle(), getImage(Function.Emotion));
+        onFunctionDescriptionRequested(getFullDescription(PsychoFunction.Emotion), getEmotionTitle(), getImage(PsychoFunction.Emotion));
     }
 
     public void onLogicClick(){
-        onFunctionDescriptionRequested(getFullDescription(Function.Logic), getLogicTitle(), getImage(Function.Logic));
+        onFunctionDescriptionRequested(getFullDescription(PsychoFunction.Logic), getLogicTitle(), getImage(PsychoFunction.Logic));
     }
 
     public void onPhysicsClick(){
-        onFunctionDescriptionRequested(getFullDescription(Function.Physics), getPhysicsTitle(), getImage(Function.Physics));
+        onFunctionDescriptionRequested(getFullDescription(PsychoFunction.Physics), getPhysicsTitle(), getImage(PsychoFunction.Physics));
     }
 
     public void onWillClick(){
-        onFunctionDescriptionRequested(getFullDescription(Function.Will), getWillTitle(), getImage(Function.Will));
+        onFunctionDescriptionRequested(getFullDescription(PsychoFunction.Will), getWillTitle(), getImage(PsychoFunction.Will));
     }
 
     private void onFunctionDescriptionRequested(CharSequence fullDescription, String title, Drawable image){
@@ -142,8 +142,8 @@ public abstract class FunctionsDescriptionFragment extends BaseFragment implemen
         descriptionScrollView.smoothScrollTo(0, 0);
     }
 
-    private Function getRequestedFunction(){
-        return getArguments() == null ? null : (Function)getArguments().getSerializable(requestedFunctionExtra);
+    private PsychoFunction getRequestedFunction(){
+        return getArguments() == null ? null : (PsychoFunction)getArguments().getSerializable(requestedFunctionExtra);
     }
 
     @Override

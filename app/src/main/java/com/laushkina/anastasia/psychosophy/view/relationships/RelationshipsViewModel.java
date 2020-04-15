@@ -99,7 +99,7 @@ public class RelationshipsViewModel extends BaseObservable {
 
     private void setThirdFunctionRelationships(CharSequence thirdFunctionRelationships) {
         this.thirdFunctionRelationships = thirdFunctionRelationships;
-        notifyPropertyChanged(BR.thirdFunctionRelationships);
+//        notifyPropertyChanged(BR.thirdFunctionRelationships);
     }
 
     @Bindable
@@ -113,7 +113,7 @@ public class RelationshipsViewModel extends BaseObservable {
 
     private void setForthFunctionRelationships(CharSequence forthFunctionRelationships) {
         this.forthFunctionRelationships = forthFunctionRelationships;
-        notifyPropertyChanged(BR.forthFunctionRelationships);
+//        notifyPropertyChanged(BR.forthFunctionRelationships);
     }
 
     @Bindable
@@ -127,7 +127,7 @@ public class RelationshipsViewModel extends BaseObservable {
 
     private void setFirstFunctionRelationshipsTitle(CharSequence firstFunctionRelationshipsTitle) {
         this.firstFunctionRelationshipsTitle = firstFunctionRelationshipsTitle;
-        notifyPropertyChanged(BR.firstFunctionRelationshipsTitle);
+//        notifyPropertyChanged(BR.firstFunctionRelationshipsTitle);
     }
 
     @Bindable
@@ -141,7 +141,7 @@ public class RelationshipsViewModel extends BaseObservable {
 
     private void setSecondFunctionRelationshipsTitle(CharSequence secondFunctionRelationshipsTitle) {
         this.secondFunctionRelationshipsTitle = secondFunctionRelationshipsTitle;
-        notifyPropertyChanged(BR.secondFunctionRelationshipsTitle);
+//        notifyPropertyChanged(BR.secondFunctionRelationshipsTitle);
     }
 
     @Bindable
@@ -155,7 +155,7 @@ public class RelationshipsViewModel extends BaseObservable {
 
     private void setThirdFunctionRelationshipsTitle(CharSequence thirdFunctionRelationshipsTitle) {
         this.thirdFunctionRelationshipsTitle = thirdFunctionRelationshipsTitle;
-        notifyPropertyChanged(BR.thirdFunctionRelationshipsTitle);
+//        notifyPropertyChanged(BR.thirdFunctionRelationshipsTitle);
     }
 
     @Bindable
@@ -169,7 +169,7 @@ public class RelationshipsViewModel extends BaseObservable {
 
     private void setForthFunctionRelationshipsTitle(CharSequence forthFunctionRelationshipsTitle) {
         this.forthFunctionRelationshipsTitle = forthFunctionRelationshipsTitle;
-        notifyPropertyChanged(BR.forthFunctionRelationshipsTitle);
+//        notifyPropertyChanged(BR.forthFunctionRelationshipsTitle);
     }
 
     @Bindable
@@ -179,6 +179,6 @@ public class RelationshipsViewModel extends BaseObservable {
 
     public void setImageAndHintVisibility(int imageAndHintVisibility) {
         this.imageAndHintVisibility = imageAndHintVisibility;
-        notifyPropertyChanged(BR.imageAndHintVisibility);
+//        notifyPropertyChanged(BR.imageAndHintVisibility);
     }
 }

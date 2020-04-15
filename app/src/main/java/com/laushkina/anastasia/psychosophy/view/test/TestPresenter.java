@@ -11,9 +11,9 @@ import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.test.AnswersValidation;
 import com.laushkina.anastasia.psychosophy.domain.test.PsychotypeCalculator;
-import com.laushkina.anastasia.psychosophy.domain.test.TestQuestion;
+import com.laushkina.anastasia.psychosophy.domain.test.QuestionsComposer;
 import com.laushkina.anastasia.psychosophy.domain.test.TestAnswer;
-import com.laushkina.anastasia.psychosophy.domain.test.QusetionsComposer;
+import com.laushkina.anastasia.psychosophy.domain.test.TestQuestion;
 
 import dagger.Module;
 import dagger.Provides;
@@ -35,12 +35,12 @@ class TestPresenter {
     }
 
     private void onTestResultRequested(ITestResultsObserver resultsObserver){
-        if (AnswersValidation.areValid(questions)) {
-            List<Psychotype> psychotypes = PsychotypeCalculator.calculate(questions);
+        if (AnswersValidation.Companion.areValid(questions)) {
+            List<Psychotype> psychotypes = PsychotypeCalculator.Companion.calculate(questions);
             if (psychotypes == null) {
                 resultsObserver.showExceptionResultDescription();
             } else {
-                resultsObserver.showTypeDescription(psychotypes.toArray(new Psychotype[psychotypes.size()]));
+                resultsObserver.showTypeDescription(psychotypes.toArray(new Psychotype[0]));
             }
         }
     }
@@ -54,6 +54,9 @@ class TestPresenter {
 
     void restoreFromSavedState(Bundle state, ITestResultsObserver resultsObserver){
         Parcelable[] answers = state.getParcelableArray(QUESTIONS_SAVED_STATE_EXTRA);
+        if (answers == null) {
+            return;
+        }
         questions = Arrays.copyOf(answers, answers.length, TestQuestion[].class);
 
         amountOfFinishedQuestions = state.getInt(AMOUNT_OF_FINISHED_SAVED_STATE_EXTRA, 0);
@@ -63,7 +66,7 @@ class TestPresenter {
     }
 
     List<CharSequence> getFirstGroupOfQuestions(ITestResultsObserver resultsObserver){
-        questions = QusetionsComposer.compose(resultsObserver.getContext());
+        questions = QuestionsComposer.Companion.compose(resultsObserver.getContext());
         amountOfFinishedQuestions = 0;
         return getNextAnswers();
     }

@@ -1,6 +1,6 @@
-package com.laushkina.anastasia.psychosophy.domain.relationships;
+package com.laushkina.anastasia.psychosophy.domain.relationships
 
-public enum Relationship {
+enum class Relationship {
     // Philia first
     Philia_1_Logic,
     Philia_1_Emotion,
