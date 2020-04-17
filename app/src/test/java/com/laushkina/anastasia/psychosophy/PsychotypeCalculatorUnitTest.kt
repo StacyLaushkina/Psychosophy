@@ -25,11 +25,11 @@ class PsychotypeCalculatorUnitTest {
 
     @Test
     fun `check calculation result of two variants`() {
-        val answers = arrayOf(
-                TestQuestion(null, PsychoFunction.Logic, TestAnswer.No),
-                TestQuestion(null, PsychoFunction.Emotion, TestAnswer.Maybe),
-                TestQuestion(null, PsychoFunction.Physics, TestAnswer.Yes),
-                TestQuestion(null, PsychoFunction.Will, TestAnswer.No)
+        val answers = arrayOf<TestQuestion?>(
+                TestQuestion("", PsychoFunction.Logic, TestAnswer.No),
+                TestQuestion("", PsychoFunction.Emotion, TestAnswer.Maybe),
+                TestQuestion("", PsychoFunction.Physics, TestAnswer.Yes),
+                TestQuestion("", PsychoFunction.Will, TestAnswer.No)
         )
         val expected = listOf(Psychotype.Borgia, Psychotype.Dumas)
         assertTrue(areTypesEqual(expected, PsychotypeCalculator.calculate(answers)!!))
@@ -37,11 +37,11 @@ class PsychotypeCalculatorUnitTest {
 
     @Test
     fun `check calculation result of four variants`() {
-        val answers = arrayOf(
-                TestQuestion(null, PsychoFunction.Logic, TestAnswer.Yes),
-                TestQuestion(null, PsychoFunction.Emotion, TestAnswer.No),
-                TestQuestion(null, PsychoFunction.Physics, TestAnswer.No),
-                TestQuestion(null, PsychoFunction.Will, TestAnswer.Yes)
+        val answers = arrayOf<TestQuestion?>(
+                TestQuestion("", PsychoFunction.Logic, TestAnswer.Yes),
+                TestQuestion("", PsychoFunction.Emotion, TestAnswer.No),
+                TestQuestion("", PsychoFunction.Physics, TestAnswer.No),
+                TestQuestion("", PsychoFunction.Will, TestAnswer.Yes)
         )
         val expected = listOf(Psychotype.Einstein, Psychotype.Lao, Psychotype.Socrates, Psychotype.Lenin)
         assertTrue(areTypesEqual(expected, PsychotypeCalculator.calculate(answers)!!))
@@ -49,11 +49,11 @@ class PsychotypeCalculatorUnitTest {
 
     @Test
     fun `calculation result is null when answers are unreliable`() {
-        val answers = arrayOf(
-                TestQuestion(null, PsychoFunction.Logic, TestAnswer.No),
-                TestQuestion(null, PsychoFunction.Emotion, TestAnswer.No),
-                TestQuestion(null, PsychoFunction.Physics, TestAnswer.No),
-                TestQuestion(null, PsychoFunction.Will, TestAnswer.No)
+        val answers = arrayOf<TestQuestion?>(
+                TestQuestion("", PsychoFunction.Logic, TestAnswer.No),
+                TestQuestion("", PsychoFunction.Emotion, TestAnswer.No),
+                TestQuestion("", PsychoFunction.Physics, TestAnswer.No),
+                TestQuestion("", PsychoFunction.Will, TestAnswer.No)
         )
         assertEquals(null, PsychotypeCalculator.calculate(answers))
     }

@@ -52,19 +52,20 @@ enum class Psychotype(val functions: Array<PsychoFunction>) : Parcelable {
         fun resolve(functions: Array<PsychoFunction>): Psychotype? {
             var foundType: Psychotype? = null
             for (psychotype in values()) {
-                if (areFunctionsEqual(functions)) {
+                if (areFunctionsEqual(functions, psychotype.functions)) {
                     foundType = psychotype
+                    break
                 }
             }
             return foundType
         }
 
-        fun areFunctionsEqual(functions: Array<PsychoFunction>): Boolean {
-            return functions.size == 4
-                    && functions[0] === functions[0]
-                    && functions[1] === functions[1]
-                    && functions[2] === functions[2]
-                    && functions[3] === functions[3]
+        fun areFunctionsEqual(f1: Array<PsychoFunction>, f2: Array<PsychoFunction>): Boolean {
+            return f1.size == 4 && f2.size == 4
+                    && f1[0] === f2[0]
+                    && f1[1] === f2[1]
+                    && f1[2] === f2[2]
+                    && f1[3] === f2[3]
         }
     }
 

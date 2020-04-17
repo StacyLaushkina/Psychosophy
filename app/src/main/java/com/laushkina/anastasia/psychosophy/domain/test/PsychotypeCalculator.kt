@@ -7,13 +7,13 @@ class PsychotypeCalculator {
     private class Pair internal constructor(val function: PsychoFunction, val amount: Int)
 
     companion object {
-        fun calculate(questions: Array<TestQuestion>): List<Psychotype>? {
+        fun calculate(questions: Array<TestQuestion?>): List<Psychotype>? {
             val pairs = ArrayList<Pair>()
 
             val sums = IntArray(4)
             for (question in questions) {
-                val function = question.type
-                val answer = question.answer
+                val function = question?.type
+                val answer = question?.answer
                 if (function != null && answer != null) {
                     sums[function.getNumber()] += answer.number
                 }
