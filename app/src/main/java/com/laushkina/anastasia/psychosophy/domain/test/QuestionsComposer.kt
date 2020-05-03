@@ -8,7 +8,7 @@ class QuestionsComposer {
     companion object {
         private const val questionsAmount = 40
 
-        fun compose(context: Context): Array<TestQuestion> {
+        fun compose(context: Context): Array<TestQuestion?> {
             val result = ArrayList<TestQuestion>(questionsAmount)
             addLogicQuestions(result, context)
             addEmotionQuestions(result, context)
