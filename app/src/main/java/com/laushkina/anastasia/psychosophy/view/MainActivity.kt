@@ -1,24 +1,26 @@
 package com.laushkina.anastasia.psychosophy.view
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.navigation.NavigationView
+import android.util.Log
+import android.view.MenuItem
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.widget.Toolbar
-import android.view.MenuItem
+import com.google.android.material.navigation.NavigationView
 import com.laushkina.anastasia.psychosophy.R
 import com.laushkina.anastasia.psychosophy.view.introduction.IntroductionFragment
 import com.laushkina.anastasia.psychosophy.view.test.TestFragment
 
-class MainActivity: Activity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     companion object {
         const val SCREEN_NAME_EXTRA = "main_activity_screen_name"
+        const val TAG = "[MainActivity]"
     }
 
-    public override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -45,38 +47,48 @@ class MainActivity: Activity(), NavigationView.OnNavigationItemSelectedListener 
 
     // Only test and psychotypes fragments can be requested (from welcome activity)
     private fun openRequestedContent(intent: Intent) {
-        if (intent.extras == null) return
+        val screen =
+                if (intent.extras != null) intent.extras.getSerializable(SCREEN_NAME_EXTRA) as Screen
+                else null
 
-        when (intent.extras!!.getSerializable(SCREEN_NAME_EXTRA) as Screen) {
-            Screen.TEST -> fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame, TestFragment())
-                    .commit()
-            Screen.INTRODUCTION -> fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame, IntroductionFragment())
-                    .commit()
+        if (screen != null) {
+            when (screen) {
+                Screen.TEST -> supportFragmentManager.beginTransaction()
+                        .replace(R.id.content_frame, TestFragment())
+                        .commit()
+                Screen.INTRODUCTION -> supportFragmentManager.beginTransaction()
+                        .replace(R.id.content_frame, IntroductionFragment())
+                        .commit()
+                else -> Log.d(TAG, "Main activity was requested to open unknown content:$screen")
+            }
         }
     }
 
     private fun showSelectedScreen(selectedItem: Int) {
         when (selectedItem) {
-            R.id.nav_introduction -> NavigationHelper.instance.showIntroduction(fragmentManager)
-            R.id.nav_test -> NavigationHelper.instance.showTest(fragmentManager)
-            R.id.nav_psychotypes -> NavigationHelper.instance.showTypes(fragmentManager)
-            R.id.nav_relationships -> NavigationHelper.instance.showRelationships(fragmentManager)
-            R.id.nav_functions -> NavigationHelper.instance.showFunctions(fragmentManager)
-            R.id.nav_about -> NavigationHelper.instance.showAbout(fragmentManager)
-            R.id.nav_bases_and_functions -> NavigationHelper.instance.showBasesAndFunctions(fragmentManager)
+            R.id.nav_introduction -> NavigationHelper.instance.showIntroduction(supportFragmentManager)
+            R.id.nav_test -> NavigationHelper.instance.showTest(supportFragmentManager)
+            R.id.nav_psychotypes -> NavigationHelper.instance.showTypes(supportFragmentManager)
+            R.id.nav_relationships -> NavigationHelper.instance.showRelationships(supportFragmentManager)
+            R.id.nav_functions -> NavigationHelper.instance.showFunctions(supportFragmentManager)
+            R.id.nav_about -> NavigationHelper.instance.showAbout(supportFragmentManager)
+            R.id.nav_bases_and_functions -> NavigationHelper.instance.showBasesAndFunctions(supportFragmentManager)
         }
     }
 
     private fun initializeLeftMenu() {
         val toolbar = getToolbar()
-        // If activity doesn't have toolbar - no action is needed
 
+        setSupportActionBar(toolbar)
+        // If activity doesn't have toolbar - no action is needed
         val drawer = getDrawerLayout()
-        val toggle = ActionBarDrawerToggle(this, drawer, toolbar,
-                R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        drawer.setDrawerListener(toggle)
+        val toggle = ActionBarDrawerToggle(
+                this,
+                drawer,
+                toolbar,
+                R.string.navigation_drawer_open,
+                R.string.navigation_drawer_close)
+        drawer.addDrawerListener(toggle)
         toggle.syncState()
 
         getNavigationView().setNavigationItemSelectedListener(this)

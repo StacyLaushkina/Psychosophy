@@ -44,9 +44,13 @@ class TestResultsFragment: BaseFragment() {
 
         if (testResult == null) return
 
-        val recyclerView = getResultsRecyclerView(view)
-        recyclerView.layoutManager = LinearLayoutManager(activity)
-        recyclerView.adapter = PsychotypesAdapter(testResult, activity, fragmentManager)
+        val context = context
+        val fragmentManager = fragmentManager
+        if (context != null && fragmentManager != null) {
+            val recyclerView = getResultsRecyclerView(view)
+            recyclerView.layoutManager = LinearLayoutManager(activity)
+            recyclerView.adapter = PsychotypesAdapter(testResult, context, fragmentManager)
+        }
     }
 
     private fun getTestResultsDescription(results: Array<Psychotype>?): String {
@@ -55,7 +59,7 @@ class TestResultsFragment: BaseFragment() {
     }
 
     private fun getTestResults(): Array<Psychotype>? {
-        val answers = arguments.getParcelableArray(testResultsExtra)
+        val answers = arguments?.getParcelableArray(testResultsExtra)
         return if (answers == null) null else Arrays.copyOf(answers, answers.size, Array<Psychotype>::class.java)
     }
 

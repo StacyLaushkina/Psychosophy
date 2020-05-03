@@ -1,10 +1,10 @@
 package com.laushkina.anastasia.psychosophy.view.functions
 
-import android.app.Fragment
-import android.app.FragmentManager
 import android.content.Context
 import android.os.Bundle
-import androidx.legacy.app.FragmentPagerAdapter
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
 import com.laushkina.anastasia.psychosophy.R
 import com.laushkina.anastasia.psychosophy.domain.test.PsychoFunction
 

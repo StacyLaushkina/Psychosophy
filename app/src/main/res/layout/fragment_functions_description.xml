@@ -91,7 +91,7 @@
                     android:layout_width="1dp"
 
                     android:text="@{viewModel.emotionTitle}"
-                    android:onClick="@{() -> selectListener.onEmotionClick()}"
+                    android:onClick="@{(v) -> selectListener.onEmotionClick(v)}"
                     android:background="@color/colorPrimary"
                     android:textColor="@color/gallery"
                     android:ellipsize="end"
@@ -108,7 +108,7 @@
                     android:layout_width="1dp"
 
                     android:text="@{viewModel.logicTitle}"
-                    android:onClick="@{() -> selectListener.onLogicClick()}"
+                    android:onClick="@{(v) -> selectListener.onLogicClick(v)}"
                     android:background="@color/colorPrimary"
                     android:textColor="@color/gallery"
                     android:ellipsize="end"
@@ -126,7 +126,7 @@
                     android:layout_width="1dp"
 
                     android:text="@{viewModel.physicsTitle}"
-                    android:onClick="@{() -> selectListener.onPhysicsClick()}"
+                    android:onClick="@{(v) -> selectListener.onPhysicsClick(v)}"
                     android:background="@color/colorPrimary"
                     android:textColor="@color/gallery"
                     android:ellipsize="end"
@@ -142,7 +142,7 @@
                     android:layout_width="1dp"
 
                     android:text="@{viewModel.willTitle}"
-                    android:onClick="@{() -> selectListener.onWillClick()}"
+                    android:onClick="@{(v) -> selectListener.onWillClick(v)}"
                     android:background="@color/colorPrimary"
                     android:textColor="@color/gallery"
                     android:ellipsize="end"

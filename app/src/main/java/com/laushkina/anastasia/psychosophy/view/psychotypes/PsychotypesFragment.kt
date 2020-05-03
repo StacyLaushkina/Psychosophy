@@ -34,14 +34,16 @@ class PsychotypesFragment : BaseFragment() {
     }
 
     private fun initialize(view: View) {
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
         initialize()
 
         val recyclerView = getTypesRecyclerView(view)
-        recyclerView.setLayoutManager(GridLayoutManager(activity, getColumnAmount()))
+        recyclerView.layoutManager = GridLayoutManager(activity, getColumnAmount())
 
         val spacingInPixels = resources.getDimensionPixelSize(R.dimen.basic_margin)
         recyclerView.addItemDecoration(SpacesPsychotypeItemDecoration(spacingInPixels))
-        recyclerView.adapter = PsychotypesAdapter(Psychotype.values(), activity, fragmentManager)
+        recyclerView.adapter = PsychotypesAdapter(Psychotype.values(), view.context, fragmentManager)
     }
 
     private fun getTypesRecyclerView(view: View): RecyclerView {

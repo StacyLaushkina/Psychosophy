@@ -40,18 +40,18 @@ class PsychotypeDescriptionFragment: BaseFragment() {
                     override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
 
                     override fun onPageSelected(position: Int) {
-                        onPageChanged(position)
+                        onPageChanged(position, view)
                     }
 
                     override fun onPageScrollStateChanged(state: Int) {}
                 }
         )
 
-        getSwitchButton(view).setOnClickListener({ v -> switchPage(descriptionViewPager.getCurrentItem()) })
+        getSwitchButton(view).setOnClickListener { switchPage(descriptionViewPager.currentItem) }
     }
 
-    private fun onPageChanged(current: Int) {
-        val switchButton = getSwitchButton()
+    private fun onPageChanged(current: Int, view: View) {
+        val switchButton = getSwitchButton(view)
 
         when (current) {
             PsychotypeDescriptionAdapter.PREVIEW_DESCRIPTION -> {
@@ -80,13 +80,10 @@ class PsychotypeDescriptionFragment: BaseFragment() {
         return view.findViewById(R.id.description_pager)
     }
 
-    private fun getPsychotype(): Psychotype {
-        return arguments.getSerializable(PsychotypesFragment.psychotypeExtra) as Psychotype
+    private fun getPsychotype(): Psychotype? {
+        return arguments?.getSerializable(PsychotypesFragment.psychotypeExtra) as Psychotype
     }
 
-    private fun getSwitchButton(): ImageButton {
-        return activity.findViewById(R.id.switch_button)
-    }
 
     private fun getSwitchButton(view: View): ImageButton {
         return view.findViewById(R.id.switch_button)

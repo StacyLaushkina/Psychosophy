@@ -28,14 +28,14 @@ class RelationshipsPresenter {
         return typesWithFirstDefault
     }
 
-    internal fun calcRelationships(fistType: Psychotype?, secondType: Psychotype?, observer: IRelationshipsResultObserver): RelationshipsViewModel {
+    internal fun calcRelationships(fistType: Psychotype?, secondType: Psychotype?, observer: IRelationshipsResultObserver, context: Context): RelationshipsViewModel {
         if (fistType == null || secondType == null) {
             // TODO animation rollback
             observer.setHintAndImageVisibility(View.VISIBLE)
             return RelationshipsViewModel()
         }
         observer.setHintAndImageVisibility(View.GONE)
-        return calcRelationships(fistType, secondType, observer.getContext())
+        return calcRelationships(fistType, secondType, context)
     }
 
     private fun calcRelationships(fistType: Psychotype, secondType: Psychotype, context: Context): RelationshipsViewModel {

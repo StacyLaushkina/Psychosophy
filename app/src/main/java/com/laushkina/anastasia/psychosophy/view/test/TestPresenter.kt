@@ -1,5 +1,6 @@
 package com.laushkina.anastasia.psychosophy.view.test
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Parcelable
 import com.laushkina.anastasia.psychosophy.R
@@ -39,18 +40,17 @@ class TestPresenter {
         return state
     }
 
-    internal fun restoreFromSavedState(state: Bundle, resultsObserver: ITestResultsObserver) {
+    internal fun restoreFromSavedState(state: Bundle, resultsObserver: ITestResultsObserver, context: Context) {
         val answers = state.getParcelableArray(QUESTIONS_SAVED_STATE_EXTRA) ?: return
         questions = Arrays.copyOf(answers, answers.size, Array<TestQuestion>::class.java)
 
         amountOfFinishedQuestions = state.getInt(AMOUNT_OF_FINISHED_SAVED_STATE_EXTRA, 0)
 
-        resultsObserver.showGroupOfQuestions(getNextAnswers(), isPrevButtonEnabled(), getProgress(),
-                getNextQuestionText(resultsObserver))
+        resultsObserver.showGroupOfQuestions(getNextAnswers(), isPrevButtonEnabled(), getProgress(), getNextQuestionText(context))
     }
 
-    internal fun getFirstGroupOfQuestions(resultsObserver: ITestResultsObserver): List<CharSequence> {
-        questions = QuestionsComposer.compose(resultsObserver.getContext())
+    internal fun getFirstGroupOfQuestions(context: Context): List<CharSequence> {
+        questions = QuestionsComposer.compose(context)
         amountOfFinishedQuestions = 0
         return getNextAnswers()
     }
@@ -59,7 +59,7 @@ class TestPresenter {
         resultsObserver.showNextButton()
     }
 
-    internal fun onNextRequested(answers: Array<TestAnswer?>, resultsObserver: ITestResultsObserver) {
+    internal fun onNextRequested(answers: Array<TestAnswer?>, resultsObserver: ITestResultsObserver, context: Context) {
         saveAnswers(answers)
         val isTestFinished = amountOfFinishedQuestions == QUESTION_AMOUNT
         if (isTestFinished) {
@@ -67,21 +67,20 @@ class TestPresenter {
             return
         }
 
-        resultsObserver.showGroupOfQuestions(getNextAnswers(), isPrevButtonEnabled(), getProgress(),
-                getNextQuestionText(resultsObserver))
+        resultsObserver.showGroupOfQuestions(getNextAnswers(), isPrevButtonEnabled(), getProgress(), getNextQuestionText(context))
     }
 
-    internal fun onPrevQuestionsRequested(resultsObserver: ITestResultsObserver) {
+    internal fun onPrevQuestionsRequested(resultsObserver: ITestResultsObserver,
+                                          context: Context) {
         amountOfFinishedQuestions -= QUESTIONS_IN_GROUP
-        resultsObserver.showGroupOfQuestions(getNextAnswers(), isPrevButtonEnabled(),
-                getProgress(), getNextQuestionText(resultsObserver))
+        resultsObserver.showGroupOfQuestions(getNextAnswers(), isPrevButtonEnabled(), getProgress(), getNextQuestionText(context))
     }
 
-    internal fun getNextQuestionText(resultsObserver: ITestResultsObserver): String {
+    internal fun getNextQuestionText(context: Context): String {
         return if (amountOfFinishedQuestions < 39)
-            resultsObserver.getContext().resources.getString(R.string.next_question_title)
+            context.resources.getString(R.string.next_question_title)
         else
-            resultsObserver.getContext().resources.getString(R.string.finish_title)
+            context.resources.getString(R.string.finish_title)
     }
 
     private fun getProgress(): Int {

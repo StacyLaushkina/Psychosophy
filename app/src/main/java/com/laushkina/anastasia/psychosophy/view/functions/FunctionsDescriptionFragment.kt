@@ -1,5 +1,6 @@
 package com.laushkina.anastasia.psychosophy.view.functions
 
+import android.content.Context
 import androidx.databinding.DataBindingUtil
 import android.graphics.drawable.Drawable
 import android.os.Bundle
@@ -14,7 +15,7 @@ import com.laushkina.anastasia.psychosophy.view.BaseFragment
 import com.laushkina.anastasia.psychosophy.view.utils.TextStyler
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 
-abstract class FunctionsDescriptionFragment: BaseFragment(), IFunctionSelectListener {
+abstract class FunctionsDescriptionFragment : BaseFragment(), IFunctionSelectListener {
     companion object {
         const val requestedFunctionExtra = "requestedFunctionExtra"
     }
@@ -39,24 +40,49 @@ abstract class FunctionsDescriptionFragment: BaseFragment(), IFunctionSelectList
     override fun onResume() {
         super.onResume()
         val requestedFunction = getRequestedFunction() ?: return
+        val fragmentContext = context ?: return
 
-        onFunctionDescriptionRequested(getFullDescription(requestedFunction), getTitle(requestedFunction!!), getImage(requestedFunction))
+        onFunctionDescriptionRequested(
+                getFullDescription(requestedFunction),
+                getTitle(requestedFunction),
+                getImage(requestedFunction),
+                fragmentContext
+        )
     }
 
-    override fun onEmotionClick() {
-        onFunctionDescriptionRequested(getFullDescription(PsychoFunction.Emotion), getEmotionTitle(), getImage(PsychoFunction.Emotion))
+    override fun onEmotionClick(view: View) {
+        onFunctionDescriptionRequested(
+                getFullDescription(PsychoFunction.Emotion),
+                getEmotionTitle(),
+                getImage(PsychoFunction.Emotion),
+                view.context)
     }
 
-    override fun onLogicClick() {
-        onFunctionDescriptionRequested(getFullDescription(PsychoFunction.Logic), getLogicTitle(), getImage(PsychoFunction.Logic))
+    override fun onLogicClick(view: View) {
+        onFunctionDescriptionRequested(
+                getFullDescription(PsychoFunction.Logic),
+                getLogicTitle(),
+                getImage(PsychoFunction.Logic),
+                view.context
+        )
     }
 
-    override fun onPhysicsClick() {
-        onFunctionDescriptionRequested(getFullDescription(PsychoFunction.Physics), getPhysicsTitle(), getImage(PsychoFunction.Physics))
+    override fun onPhysicsClick(view: View) {
+        onFunctionDescriptionRequested(
+                getFullDescription(PsychoFunction.Physics),
+                getPhysicsTitle(),
+                getImage(PsychoFunction.Physics),
+                view.context
+        )
     }
 
-    override fun onWillClick() {
-        onFunctionDescriptionRequested(getFullDescription(PsychoFunction.Will), getWillTitle(), getImage(PsychoFunction.Will))
+    override fun onWillClick(view: View) {
+        onFunctionDescriptionRequested(
+                getFullDescription(PsychoFunction.Will),
+                getWillTitle(),
+                getImage(PsychoFunction.Will),
+                view.context
+        )
     }
 
     override fun getTitle(): String {
@@ -95,17 +121,17 @@ abstract class FunctionsDescriptionFragment: BaseFragment(), IFunctionSelectList
 
     private fun initialize(rootView: View) {
         val functionImage = getImage()
-        viewModel = getViewModel(functionImage)
+        viewModel = getViewModel(functionImage, rootView.context)
 
         // Sliding panel is unique for each tab - so it should be initialized every time
         slidingUpPanel = rootView.findViewById(R.id.sliding_layout)
         descriptionScrollView = rootView.findViewById(R.id.function_description_scroller)
     }
 
-    private fun getViewModel(functionImage: Drawable): FunctionViewModel {
+    private fun getViewModel(functionImage: Drawable, context: Context): FunctionViewModel {
         return FunctionViewModel.Builder()
                 .functionTitle(getFunctionTitle())
-                .functionDescription(TextStyler.style(getFunctionDescription(), activity))
+                .functionDescription(TextStyler.style(getFunctionDescription(), context))
                 .functionImage(functionImage)
                 .emotionTitle(getEmotionShortTitle())
                 .logicTitle(getLogicShortTitle())
@@ -127,8 +153,11 @@ abstract class FunctionsDescriptionFragment: BaseFragment(), IFunctionSelectList
         return resources.getString(R.string.common_description_title)
     }
 
-    private fun onFunctionDescriptionRequested(fullDescription: CharSequence, title: String, image: Drawable) {
-        viewModel.setFunctionDescription(TextStyler.style(fullDescription, activity))
+    private fun onFunctionDescriptionRequested(fullDescription: CharSequence,
+                                               title: String,
+                                               image: Drawable,
+                                               context: Context) {
+        viewModel.setFunctionDescription(TextStyler.style(fullDescription, context))
         viewModel.setFunctionTitle(title)
         viewModel.setFunctionImage(image)
         collapseBottomNavigation()
@@ -145,10 +174,9 @@ abstract class FunctionsDescriptionFragment: BaseFragment(), IFunctionSelectList
     }
 
     private fun getRequestedFunction(): PsychoFunction? {
-        if (arguments == null) {
-            return null
-        }
-        val functionExtra = arguments.getSerializable(requestedFunctionExtra)
+        val bundle = arguments ?: return null
+
+        val functionExtra = bundle.getSerializable(requestedFunctionExtra)
         return if (functionExtra == null) null else functionExtra as PsychoFunction
     }
 }

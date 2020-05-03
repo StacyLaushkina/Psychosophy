@@ -1,8 +1,8 @@
 package com.laushkina.anastasia.psychosophy.view
 
-import android.app.Fragment
-import android.app.FragmentManager
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.laushkina.anastasia.psychosophy.R
 import com.laushkina.anastasia.psychosophy.domain.Psychotype
 import com.laushkina.anastasia.psychosophy.domain.test.PsychoFunction
@@ -64,7 +64,7 @@ class NavigationHelper {
         changeContent(IntroductionFragment(), manager, R.id.nav_introduction, false)
     }
 
-    fun showTestResults(results: Array<Psychotype>?, manager: FragmentManager) {
+    fun showTestResults(results: Array<Psychotype>?, manager: FragmentManager?) {
         val bundle = Bundle(1)
         bundle.putParcelableArray(TestResultsFragment.testResultsExtra, results)
 
@@ -93,7 +93,11 @@ class NavigationHelper {
         changeContent(BasesAndFunctionsFragment(), manager, R.id.nav_bases_and_functions, false)
     }
 
-    private fun changeContent(fragment: Fragment, manager: FragmentManager, checkedItemId: Int, doForceChange: Boolean) {
+    private fun changeContent(fragment: Fragment, manager: FragmentManager?, checkedItemId: Int, doForceChange: Boolean) {
+        if (manager == null) {
+            return
+        }
+
         // Do not recreate fragment -- keep all changes in it
         if (selectedPage == checkedItemId && !doForceChange) return
 

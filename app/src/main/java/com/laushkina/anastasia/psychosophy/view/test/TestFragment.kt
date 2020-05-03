@@ -1,6 +1,5 @@
 package com.laushkina.anastasia.psychosophy.view.test
 
-import android.content.Context
 import androidx.databinding.DataBindingUtil
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -53,7 +52,7 @@ class TestFragment: BaseFragment(), ITestResultsObserver, ITypeCalculator {
         super.onViewStateRestored(bundle)
         val savedState = bundle?.getBundle(TEST_STATE_EXTRA) ?: return
 
-        presenter.restoreFromSavedState(savedState, this)
+        presenter.restoreFromSavedState(savedState, this, context!!)
     }
 
 
@@ -88,27 +87,29 @@ class TestFragment: BaseFragment(), ITestResultsObserver, ITypeCalculator {
     }
 
     override fun next() {
-        presenter.onNextRequested(adapter.getAnswers(), this)
+        val context = context
+        if (context != null) {
+            presenter.onNextRequested(adapter.getAnswers(), this, context)
+        }
     }
 
     override fun prev() {
-        presenter.onPrevQuestionsRequested(this)
-    }
-
-    override fun getContext(): Context {
-        return activity
+        val context = context
+        if (context != null) {
+            presenter.onPrevQuestionsRequested(this, context)
+        }
     }
 
     private fun initialize(view: View) {
         initialize()
         viewModel = TestViewModel()
-        viewModel.setNextButtonText(presenter.getNextQuestionText(this))
+        viewModel.setNextButtonText(presenter.getNextQuestionText(view.context))
 
         // Initialize questions
         val questionsRecycler = getQuestionsRecycler(view)
         questionsRecycler.layoutManager = LinearLayoutManager(activity)
         adapter = TestQuestionsAdapter(
-                presenter.getFirstGroupOfQuestions(this),
+                presenter.getFirstGroupOfQuestions(context!!),
                 object: TestQuestionsAdapter.OnAnswersSelectedListener {
                     override fun onAllAnswersSelected() {
                         presenter.onAnswerSelected(this@TestFragment)
@@ -120,10 +121,6 @@ class TestFragment: BaseFragment(), ITestResultsObserver, ITypeCalculator {
         getProgressBar(view).progressDrawable = resources.getDrawable(R.drawable.test_progress_drawable)
     }
 
-    private fun onAnswersSelected() {
-        presenter.onAnswerSelected(this)
-    }
-
     private fun getProgressBar(view: View): ProgressBar {
         return view.findViewById(R.id.test_progress)
     }
@@ -132,8 +129,9 @@ class TestFragment: BaseFragment(), ITestResultsObserver, ITypeCalculator {
         return view.findViewById(R.id.test_questions_recycler)
     }
 
+    // Must be called after onAttach() and before on detach() or NPE will happen
     private fun getQuestionsRecycler(): RecyclerView {
-        return activity.findViewById(R.id.test_questions_recycler)
+        return activity!!.findViewById(R.id.test_questions_recycler)
     }
 
 }

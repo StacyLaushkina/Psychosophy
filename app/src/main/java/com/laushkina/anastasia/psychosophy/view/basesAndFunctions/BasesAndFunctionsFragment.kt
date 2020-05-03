@@ -39,7 +39,7 @@ class BasesAndFunctionsFragment: BaseFragment() {
                     override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
 
                     override fun onPageSelected(position: Int) {
-                        onPageChanged(position)
+                        onPageChanged(position, view)
                     }
 
                     override fun onPageScrollStateChanged(state: Int) {}
@@ -59,33 +59,33 @@ class BasesAndFunctionsFragment: BaseFragment() {
         }
     }
 
-    private fun onPageChanged(current: Int) {
-        val switchText = getSwitchText()
+    private fun onPageChanged(current: Int, view: View) {
+        val switchText = getSwitchText(view)
 
         when (current) {
             BasesAndFunctionsAdapter.BASES -> {
-                getMoreImageButton().visibility = View.VISIBLE
-                getLessImageButton().visibility = View.INVISIBLE
+                getMoreImageButton(view).visibility = View.VISIBLE
+                getLessImageButton(view).visibility = View.INVISIBLE
                 switchText.text = resources.getString(R.string.functions_title)
             }
             BasesAndFunctionsAdapter.FUNCTIONS -> {
-                getMoreImageButton().visibility = View.INVISIBLE
-                getLessImageButton().visibility = View.VISIBLE
+                getMoreImageButton(view).visibility = View.INVISIBLE
+                getLessImageButton(view).visibility = View.VISIBLE
                 switchText.text = resources.getString(R.string.bases_title)
             }
         }
     }
 
-    private fun getMoreImageButton(): ImageButton {
-        return activity.findViewById(R.id.switch_more_button)
+    private fun getMoreImageButton(view: View): ImageButton {
+        return view.findViewById(R.id.switch_more_button)
     }
 
-    private fun getLessImageButton(): ImageButton {
-        return activity.findViewById(R.id.switch_less_button)
+    private fun getLessImageButton(view: View): ImageButton {
+        return view.findViewById(R.id.switch_less_button)
     }
 
-    private fun getSwitchText(): TextView {
-        return activity.findViewById(R.id.switch_text_view)
+    private fun getSwitchText(view: View): TextView {
+        return view.findViewById(R.id.switch_text_view)
     }
 
     private fun getSwitchLayout(view: View): View {

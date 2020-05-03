@@ -34,7 +34,7 @@ class FunctionsFragment: BaseFragment() {
         tabLayout.addTab(tabLayout.newTab().setText(resources.getString(R.string.third_function_title)))
         tabLayout.addTab(tabLayout.newTab().setText(resources.getString(R.string.forth_function_title)))
 
-        val adapter = FunctionsAdapter(childFragmentManager, activity, getRequestedFunction())
+        val adapter = FunctionsAdapter(childFragmentManager, view.context, getRequestedFunction())
         val pager = view.findViewById<ViewPager>(R.id.functions_pager)
         pager.adapter = adapter
 
@@ -50,7 +50,7 @@ class FunctionsFragment: BaseFragment() {
         })
 
         val requestedTab = getRequestedTab()
-        if (requestedTab !== NO_TAB_REQUESTED) {
+        if (requestedTab != NO_TAB_REQUESTED) {
             pager.currentItem = requestedTab
         }
     }
@@ -64,14 +64,14 @@ class FunctionsFragment: BaseFragment() {
     }
 
     private fun getRequestedTab(): Int {
-        return if (arguments == null) NO_TAB_REQUESTED else arguments.getInt(REQUESTED_TAB, NO_TAB_REQUESTED)
+        val bundle = arguments
+        return bundle?.getInt(REQUESTED_TAB, NO_TAB_REQUESTED) ?: NO_TAB_REQUESTED
     }
 
     private fun getRequestedFunction(): PsychoFunction? {
-        if (arguments == null) {
-            return null
-        }
-        val functionExtra = arguments.getSerializable(FunctionsDescriptionFragment.requestedFunctionExtra)
+        val bundle = arguments ?: return null
+
+        val functionExtra = bundle.getSerializable(FunctionsDescriptionFragment.requestedFunctionExtra)
         return if (functionExtra == null) null else functionExtra as PsychoFunction
     }
 

@@ -43,7 +43,7 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
         //Do nothing
     }
 
-    override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+    override fun onItemSelected(p0: AdapterView<*>?, view: View?, p2: Int, p3: Long) {
         val firstSelected = getFirstType()
         val secondSelected = getSecondType()
 
@@ -55,7 +55,7 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
         animateTypesSelection()
         calculate(firstSelected, secondSelected)
         // Scroll to the top
-        getRelationshipsContainer().scrollTo(0, 0)
+        getRelationshipsContainer()?.scrollTo(0, 0)
     }
 
     override fun setHintAndImageVisibility(visibility: Int) {
@@ -70,25 +70,24 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
         return R.id.nav_relationships
     }
 
-    override fun getContext(): Context {
-        return activity
-    }
-
     fun getFirstType(): Psychotype? {
         val firstTypeSpinner = getFirstTypeSpinner()
-        val selectedItem = firstTypeSpinner.selectedItem
+        val selectedItem = firstTypeSpinner?.selectedItem
         return if (selectedItem != null) selectedItem as Psychotype else null
     }
 
     fun getSecondType(): Psychotype? {
         val secondTypeSpinner = getSecondTypeSpinner()
-        val selectedItem = secondTypeSpinner.selectedItem
+        val selectedItem = secondTypeSpinner?.selectedItem
         return if (selectedItem != null) selectedItem as Psychotype else null
     }
 
     fun calculate(fistType: Psychotype, secondType: Psychotype) {
-        val relationships = presenter.calcRelationships(fistType, secondType, this)
-        viewModel.refreshWith(relationships)
+        val context = context
+        if (context != null) {
+            val relationships = presenter.calcRelationships(fistType, secondType, this, context)
+            viewModel.refreshWith(relationships)
+        }
     }
 
     private fun initialize(view: View) {
@@ -100,7 +99,7 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
 
     private fun initSpinner(spinner: Spinner, prompt: String) {
         val secondAdapter = PsychotypesAdapter(
-                activity,
+                spinner.context,
                 android.R.layout.simple_list_item_1,
                 presenter.getPsychotypes(),
                 prompt,
@@ -111,7 +110,7 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
     }
 
     private fun onPromtItemSelected() {
-        val wasPromptAlreadySelected = getRelationshipsContainer().visibility != View.VISIBLE
+        val wasPromptAlreadySelected = getRelationshipsContainer()?.visibility != View.VISIBLE
         if (wasPromptAlreadySelected) {
             return
         }
@@ -119,26 +118,33 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
         setHintAndImageVisibility(View.VISIBLE)
 
         // Animate slide to the middle of the screen
-        val display = (context.getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay
-        val rotation = display.rotation
-        val animation = getPromtSelectedAnimation(rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180)
-        getSpinnersContainer().startAnimation(animation)
+        val context = context
+        if (context != null) {
+            val display = (context.getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay
+            val rotation = display.rotation
+            val animation = getPromtSelectedAnimation(rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180)
+            getSpinnersContainer()?.startAnimation(animation)
+        }
     }
 
     private fun animateTypesSelection() {
-        val display = (context.getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay
+        val fragmentContext = context ?: return
+
+        val display = (fragmentContext.getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay
         val rotation = display.rotation
         val animation = getTypesSelectedAnimation(rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180)
-        getSpinnersContainer().startAnimation(animation)
+        getSpinnersContainer()?.startAnimation(animation)
     }
 
     private fun getTypesSelectedAnimation(isPortrait: Boolean): TranslateAnimation {
         val metrics = DisplayMetrics()
-        activity.windowManager.defaultDisplay.getMetrics(metrics)
+        activity?.windowManager?.defaultDisplay?.getMetrics(metrics)
+
+        val spinner = getSpinnersContainer()!!
 
         val anim: TranslateAnimation
         anim = if (isPortrait) {
-            TranslateAnimation(0f, 0f, 0f, (-getSpinnersContainer().getTop()).toFloat())
+            TranslateAnimation(0f, 0f, 0f, (-spinner.top).toFloat())
         } else {
             TranslateAnimation(0f, (-metrics.heightPixels / 2).toFloat(), 0f, 0f)
         }
@@ -147,13 +153,15 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
             override fun onAnimationStart(animation: Animation) {}
 
             override fun onAnimationEnd(animation: Animation) {
-                getRelationshipsContainer().visibility = View.VISIBLE
-                val layoutParams = getSpinnersContainer().layoutParams as RelativeLayout.LayoutParams
+                val relationships = getRelationshipsContainer() ?: return
+
+                relationships.visibility = View.VISIBLE
+                val layoutParams = spinner.layoutParams as RelativeLayout.LayoutParams
                 layoutParams.removeRule(RelativeLayout.CENTER_IN_PARENT)
                 if (!isPortrait) {
                     layoutParams.addRule(RelativeLayout.CENTER_VERTICAL)
                 }
-                getSpinnersContainer().layoutParams = layoutParams
+                spinner.layoutParams = layoutParams
             }
 
             override fun onAnimationRepeat(animation: Animation) {}
@@ -163,28 +171,31 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
         return anim
     }
 
-    private fun getPromtSelectedAnimation(isPortrait: Boolean): TranslateAnimation {
+    private fun getPromtSelectedAnimation(isPortrait: Boolean): TranslateAnimation? {
+        val activity = activity ?: return null
         val metrics = DisplayMetrics()
         activity.windowManager.defaultDisplay.getMetrics(metrics)
 
         val anim: TranslateAnimation
-        if (isPortrait) {
-            anim = TranslateAnimation(0f, 0f, 0f, (metrics.heightPixels / 2).toFloat())
+        anim = if (isPortrait) {
+            TranslateAnimation(0f, 0f, 0f, (metrics.heightPixels / 2).toFloat())
         } else {
-            anim = TranslateAnimation(0f, 0f, 0f, 0f)
+            TranslateAnimation(0f, 0f, 0f, 0f)
         }
 
         anim.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation) {}
 
             override fun onAnimationEnd(animation: Animation) {
-                getRelationshipsContainer().visibility = View.GONE
-                val layoutParams = getSpinnersContainer().layoutParams as RelativeLayout.LayoutParams
+                val spinner = getSpinnersContainer()!!
+
+                getRelationshipsContainer()?.visibility = View.GONE
+                val layoutParams = spinner.layoutParams as RelativeLayout.LayoutParams
                 layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT)
                 if (!isPortrait) {
                     layoutParams.removeRule(RelativeLayout.CENTER_VERTICAL)
                 }
-                getSpinnersContainer().layoutParams = layoutParams
+                spinner.layoutParams = layoutParams
             }
 
             override fun onAnimationRepeat(animation: Animation) {}
@@ -198,24 +209,24 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
         return view.findViewById(R.id.first_type_spinner)
     }
 
-    private fun getFirstTypeSpinner(): Spinner {
-        return activity.findViewById(R.id.first_type_spinner)
+    private fun getFirstTypeSpinner(): Spinner? {
+        return activity?.findViewById(R.id.first_type_spinner)
     }
 
     private fun getSecondTypeSpinner(view: View): Spinner {
         return view.findViewById(R.id.second_type_spinner)
     }
 
-    private fun getSecondTypeSpinner(): Spinner {
-        return activity.findViewById(R.id.second_type_spinner)
+    private fun getSecondTypeSpinner(): Spinner? {
+        return activity?.findViewById(R.id.second_type_spinner)
     }
 
-    private fun getSpinnersContainer(): View {
-        return activity.findViewById(R.id.spinner_container)
+    private fun getSpinnersContainer(): View? {
+        return activity?.findViewById(R.id.spinner_container)
     }
 
-    private fun getRelationshipsContainer(): View {
-        return activity.findViewById(R.id.relationships_scroller)
+    private fun getRelationshipsContainer(): View? {
+        return activity?.findViewById(R.id.relationships_scroller)
     }
 
 }

@@ -1,6 +1,5 @@
 package com.laushkina.anastasia.psychosophy.view.psychotypes
 
-import android.app.FragmentManager
 import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
@@ -8,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.FragmentManager
 
 import com.laushkina.anastasia.psychosophy.R
 import com.laushkina.anastasia.psychosophy.domain.Psychotype

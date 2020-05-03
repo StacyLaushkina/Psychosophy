@@ -31,7 +31,7 @@ class PsychotypeFullTextDescriptionFragment: BaseFragment() {
     }
 
     private fun getPsychotype(): Psychotype? {
-        val psychotype = arguments.getSerializable(PsychotypesFragment.psychotypeExtra)
+        val psychotype = arguments?.getSerializable(PsychotypesFragment.psychotypeExtra)
         return if (psychotype != null) psychotype as Psychotype else null
     }
 }

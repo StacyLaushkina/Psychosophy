@@ -6,6 +6,7 @@ import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 
 import com.laushkina.anastasia.psychosophy.R
 import com.laushkina.anastasia.psychosophy.databinding.FragmentIntroductionBinding
@@ -40,35 +41,53 @@ class IntroductionFragment: BaseFragment(), IIntroductionNavigator {
     }
 
     override fun navigateToFirstFunction() {
-        NavigationHelper.instance.showFunctions(activity.fragmentManager, FunctionsAdapter.FIRST_FUNCTION, null)
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
+        if (activity != null) {
+            NavigationHelper.instance.showFunctions(fragmentManager, FunctionsAdapter.FIRST_FUNCTION, null)
+        }
     }
 
     override fun navigateToSecondFunction() {
-        NavigationHelper.instance.showFunctions(activity.fragmentManager, FunctionsAdapter.SECOND_FUNCTION, null)
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
+        NavigationHelper.instance.showFunctions(fragmentManager, FunctionsAdapter.SECOND_FUNCTION, null)
     }
 
     override fun navigateToThirdFunction() {
-        NavigationHelper.instance.showFunctions(activity.fragmentManager, FunctionsAdapter.THIRD_FUNCTION, null)
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
+        NavigationHelper.instance.showFunctions(fragmentManager, FunctionsAdapter.THIRD_FUNCTION, null)
     }
 
     override fun navigateToForthFunction() {
-        NavigationHelper.instance.showFunctions(activity.fragmentManager, FunctionsAdapter.FORTH_FUNCTION, null)
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
+        NavigationHelper.instance.showFunctions(fragmentManager, FunctionsAdapter.FORTH_FUNCTION, null)
     }
 
     override fun navigateToPsychotypes() {
-        NavigationHelper.instance.showTypes(activity.fragmentManager)
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
+        NavigationHelper.instance.showTypes(fragmentManager)
     }
 
     override fun navigateToTest() {
-        NavigationHelper.instance.showTest(activity.fragmentManager)
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
+        NavigationHelper.instance.showTest(fragmentManager)
     }
 
     override fun navigateToBasesAndFunctions() {
-        NavigationHelper.instance.showBasesAndFunctions(activity.fragmentManager)
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
+        NavigationHelper.instance.showBasesAndFunctions(fragmentManager)
     }
 
     override fun navigateToRelationships() {
-        NavigationHelper.instance.showRelationships(activity.fragmentManager)
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
+        NavigationHelper.instance.showRelationships(fragmentManager)
     }
 
     private fun getViewModel(): IntroductionViewModel {

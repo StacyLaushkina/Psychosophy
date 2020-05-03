@@ -4,5 +4,4 @@ import android.content.Context
 
 interface IRelationshipsResultObserver {
     fun setHintAndImageVisibility(visibility: Int)
-    fun getContext(): Context
 }

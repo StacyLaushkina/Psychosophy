@@ -42,33 +42,41 @@ class PsychotypeOverviewDescriptionFragment: BaseFragment(), IFunctionsNavigator
     }
 
     override fun navigateToFirstFunction() {
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
         // Switch between drawer's tabs, so level of activity's fragment manager is needed
         NavigationHelper.instance.showFunctions(
-                activity.fragmentManager,
+                fragmentManager,
                 FunctionsAdapter.FIRST_FUNCTION,
                 getPsychotype().functions[0]
         )
     }
 
     override fun navigateToSecondFunction() {
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
         NavigationHelper.instance.showFunctions(
-                activity.fragmentManager,
+                fragmentManager,
                 FunctionsAdapter.SECOND_FUNCTION,
                 getPsychotype().functions[1]
         )
     }
 
     override fun navigateToThirdFunction() {
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
         NavigationHelper.instance.showFunctions(
-                activity.fragmentManager,
+                fragmentManager,
                 FunctionsAdapter.THIRD_FUNCTION,
                 getPsychotype().functions[2]
         )
     }
 
     override fun navigateToForthFunction() {
+        val fragmentManager = activity?.supportFragmentManager ?: return
+
         NavigationHelper.instance.showFunctions(
-                activity.fragmentManager,
+                fragmentManager,
                 FunctionsAdapter.FORTH_FUNCTION,
                 getPsychotype().functions[3]
         )
@@ -88,7 +96,7 @@ class PsychotypeOverviewDescriptionFragment: BaseFragment(), IFunctionsNavigator
     }
 
     private fun getPsychotype(): Psychotype {
-        return arguments.getSerializable(PsychotypesFragment.psychotypeExtra) as Psychotype
+        return arguments!!.getSerializable(PsychotypesFragment.psychotypeExtra) as Psychotype
     }
 
 }

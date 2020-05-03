@@ -1,14 +1,14 @@
 package com.laushkina.anastasia.psychosophy.view.psychotypeDescription
 
-import android.app.Fragment
-import android.app.FragmentManager
 import android.os.Bundle
-import androidx.legacy.app.FragmentPagerAdapter
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
 import com.laushkina.anastasia.psychosophy.domain.Psychotype
 import com.laushkina.anastasia.psychosophy.view.psychotypes.PsychotypesFragment
 
 class PsychotypeDescriptionAdapter(fm: FragmentManager,
-                                   private var psychotype: Psychotype?): FragmentPagerAdapter(fm) {
+                                   private var psychotype: Psychotype?): FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     fun setPsychotype(psychotype: Psychotype) {
         this.psychotype = psychotype
