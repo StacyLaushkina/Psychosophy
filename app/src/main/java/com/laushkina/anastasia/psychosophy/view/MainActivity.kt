@@ -47,9 +47,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     // Only test and psychotypes fragments can be requested (from welcome activity)
     private fun openRequestedContent(intent: Intent) {
-        val screen =
-                if (intent.extras != null) intent.extras.getSerializable(SCREEN_NAME_EXTRA) as Screen
-                else null
+        val extras = intent.extras
+        val screen = if (extras != null) extras.getSerializable(SCREEN_NAME_EXTRA) as Screen else null
 
         if (screen != null) {
             when (screen) {

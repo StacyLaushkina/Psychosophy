@@ -28,8 +28,12 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
 
-        val binding = DataBindingUtil.inflate<FragmentRelationshipsBinding>(inflater, R.layout.fragment_relationships,
-                container, false)
+        val binding = DataBindingUtil.inflate<FragmentRelationshipsBinding>(
+                inflater,
+                R.layout.fragment_relationships,
+                container,
+                false
+        )
         binding.relationships = viewModel
 
         presenter = DaggerRelationshipsComponent.create().getPresenter()
@@ -70,19 +74,19 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
         return R.id.nav_relationships
     }
 
-    fun getFirstType(): Psychotype? {
+    private fun getFirstType(): Psychotype? {
         val firstTypeSpinner = getFirstTypeSpinner()
         val selectedItem = firstTypeSpinner?.selectedItem
         return if (selectedItem != null) selectedItem as Psychotype else null
     }
 
-    fun getSecondType(): Psychotype? {
+    private fun getSecondType(): Psychotype? {
         val secondTypeSpinner = getSecondTypeSpinner()
         val selectedItem = secondTypeSpinner?.selectedItem
         return if (selectedItem != null) selectedItem as Psychotype else null
     }
 
-    fun calculate(fistType: Psychotype, secondType: Psychotype) {
+    private fun calculate(fistType: Psychotype, secondType: Psychotype) {
         val context = context
         if (context != null) {
             val relationships = presenter.calcRelationships(fistType, secondType, this, context)
@@ -100,8 +104,8 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
     private fun initSpinner(spinner: Spinner, prompt: String) {
         val secondAdapter = PsychotypesAdapter(
                 spinner.context,
-                android.R.layout.simple_list_item_1,
                 presenter.getPsychotypes(),
+                android.R.layout.simple_list_item_1,
                 prompt,
                 resources.getColor(R.color.boulder)
         )
@@ -228,5 +232,4 @@ class RelationshipsFragment: BaseFragment(), AdapterView.OnItemSelectedListener,
     private fun getRelationshipsContainer(): View? {
         return activity?.findViewById(R.id.relationships_scroller)
     }
-
 }

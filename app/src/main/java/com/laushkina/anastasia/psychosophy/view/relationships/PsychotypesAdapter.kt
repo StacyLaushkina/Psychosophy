@@ -11,34 +11,25 @@ import com.laushkina.anastasia.psychosophy.domain.Psychotype
 import com.laushkina.anastasia.psychosophy.view.psychotypeDescription.PsychotypeDescriptionGetter
 
 class PsychotypesAdapter(context: Context,
-                         private val resourceLayout: Int,
                          psychotypes: Array<Psychotype?>,
+                         private val resourceLayout: Int,
                          private val promtTest: String,
                          private val firstItemColor: Int): ArrayAdapter<Psychotype?>(context, resourceLayout, psychotypes) {
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View? {
-        var convertView = convertView
-        if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(resourceLayout, null)
-        }
+    override fun getView(position: Int, view: View?, parent: ViewGroup): View {
+        val convertView = view ?: LayoutInflater.from(context).inflate(resourceLayout, null)
 
-        initText(convertView!!, position)
+        initText(convertView, position)
         return convertView
     }
 
-    override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View? {
-        var newConvertView = convertView
-        if (newConvertView == null) {
-            newConvertView = LayoutInflater.from(context).inflate(resourceLayout, null)
-        }
-
-        initText(newConvertView!!, position)
-        return newConvertView
+    override fun getDropDownView(position: Int, view: View?, parent: ViewGroup): View? {
+        return getView(position, view, parent)
     }
 
     private fun initText(convertView: View, position: Int) {
         val textView = convertView.findViewById<TextView>(android.R.id.text1)
-        textView.setText(getText(position))
+        textView.text = getText(position)
         if (position == 0) {
             textView.setTextColor(firstItemColor)
         } else {

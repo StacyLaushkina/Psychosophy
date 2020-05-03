@@ -34,10 +34,12 @@ enum class Psychotype(val functions: Array<PsychoFunction>) : Parcelable {
     Twardowski(arrayOf(PsychoFunction.Will, PsychoFunction.Physics, PsychoFunction.Emotion, PsychoFunction.Logic));
 
     companion object {
+        private val DEFAULT = Augustine
+
         @JvmField
         val CREATOR = object : Parcelable.Creator<Psychotype> {
             override fun createFromParcel(parcel: Parcel): Psychotype {
-                return resolve(parcel)
+                return resolve(parcel) ?: DEFAULT
             }
 
             override fun newArray(size: Int): Array<Psychotype?> {
@@ -45,8 +47,9 @@ enum class Psychotype(val functions: Array<PsychoFunction>) : Parcelable {
             }
         }
 
-        fun resolve(input: Parcel): Psychotype {
-            return valueOf(input.readString())
+        fun resolve(input: Parcel): Psychotype? {
+            val parcelType = input.readString()
+            return if (parcelType != null) valueOf(parcelType) else null
         }
 
         fun resolve(functions: Array<PsychoFunction>): Psychotype? {
