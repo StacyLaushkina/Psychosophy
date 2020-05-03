@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.support.v13.app.FragmentPagerAdapter;
 
 import com.laushkina.anastasia.psychosophy.R;
-import com.laushkina.anastasia.psychosophy.domain.test.Function;
+import com.laushkina.anastasia.psychosophy.domain.test.PsychoFunction;
 
 public class FunctionsAdapter extends FragmentPagerAdapter {
 
@@ -17,10 +17,10 @@ public class FunctionsAdapter extends FragmentPagerAdapter {
     public static final int FORTH_FUNCTION = 3;
     private static final int PAGE_AMOUNT = 4;
 
-    private Function requestedFunction;
+    private PsychoFunction requestedFunction;
     private Context context;
 
-    FunctionsAdapter(FragmentManager fm, Context context, Function requestedFunction) {
+    FunctionsAdapter(FragmentManager fm, Context context, PsychoFunction requestedFunction) {
         super(fm);
         this.context = context;
         this.requestedFunction = requestedFunction;

@@ -5,7 +5,7 @@ import android.view.View;
 
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
 import com.laushkina.anastasia.psychosophy.domain.relationships.RelationshipsCalculator;
-import com.laushkina.anastasia.psychosophy.domain.test.Function;
+import com.laushkina.anastasia.psychosophy.domain.test.PsychoFunction;
 import com.laushkina.anastasia.psychosophy.view.utils.RelationshipsToStringFormatter;
 
 import dagger.Module;
@@ -59,11 +59,11 @@ public class RelationshipsPresenter {
                                           forthFunctionRelationTitle, forthFunctionRelation, View.VISIBLE);
     }
 
-    private static String getFunctionRelationship(Function firstFunction, Psychotype firstType, Psychotype secondType, Context context){
-        return RelationshipsToStringFormatter.getDescription(RelationshipsCalculator.getRelationship(firstFunction, firstType, secondType), context.getResources());
+    private static String getFunctionRelationship(PsychoFunction firstFunction, Psychotype firstType, Psychotype secondType, Context context){
+        return RelationshipsToStringFormatter.getDescription(RelationshipsCalculator.Companion.getRelationship(firstFunction, firstType, secondType), context.getResources());
     }
 
-    private static String getFunctionRelationshipTitle(Function firstFunction, Psychotype firstType, Psychotype secondType, Context context){
-        return RelationshipsToStringFormatter.getTitle(RelationshipsCalculator.getRelationship(firstFunction, firstType, secondType), context.getResources());
+    private static String getFunctionRelationshipTitle(PsychoFunction firstFunction, Psychotype firstType, Psychotype secondType, Context context){
+        return RelationshipsToStringFormatter.getTitle(RelationshipsCalculator.Companion.getRelationship(firstFunction, firstType, secondType), context.getResources());
     }
 }

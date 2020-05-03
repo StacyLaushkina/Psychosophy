@@ -4,7 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.text.Html;
 
 import com.laushkina.anastasia.psychosophy.R;
-import com.laushkina.anastasia.psychosophy.domain.test.Function;
+import com.laushkina.anastasia.psychosophy.domain.test.PsychoFunction;
 
 public class ThirdFunctionFragment extends FunctionsDescriptionFragment {
 
@@ -14,7 +14,7 @@ public class ThirdFunctionFragment extends FunctionsDescriptionFragment {
     }
 
     @Override
-    public Drawable getImage(Function function) {
+    public Drawable getImage(PsychoFunction function) {
         switch (function) {
             case Emotion: return getResources().getDrawable(R.drawable.ic_engine_emotion);
             case Logic: return getResources().getDrawable(R.drawable.ic_engine_logic);
@@ -31,16 +31,16 @@ public class ThirdFunctionFragment extends FunctionsDescriptionFragment {
 
     @Override
     public String getEmotionTitle() {
-        return FunctionTitleGetter.getThirdFunctionTitle(Function.Emotion, getResources());
+        return FunctionTitleGetter.getThirdFunctionTitle(PsychoFunction.Emotion, getResources());
     }
 
     @Override
     public String getEmotionShortTitle() {
-        return FunctionTitleGetter.getThirdFunctionShortTitle(Function.Emotion, getResources());
+        return FunctionTitleGetter.getThirdFunctionShortTitle(PsychoFunction.Emotion, getResources());
     }
 
     @Override
-    public CharSequence getFullDescription(Function function) {
+    public CharSequence getFullDescription(PsychoFunction function) {
         switch (function) {
             case Emotion: return Html.fromHtml(getResources().getString(R.string.third_emotion_description));
             case Logic: return Html.fromHtml(getResources().getString(R.string.third_logic_description));
@@ -52,32 +52,32 @@ public class ThirdFunctionFragment extends FunctionsDescriptionFragment {
 
     @Override
     public String getLogicShortTitle() {
-        return FunctionTitleGetter.getThirdFunctionShortTitle(Function.Logic, getResources());
+        return FunctionTitleGetter.getThirdFunctionShortTitle(PsychoFunction.Logic, getResources());
     }
 
     @Override
     public String getLogicTitle() {
-        return FunctionTitleGetter.getThirdFunctionTitle(Function.Logic, getResources());
+        return FunctionTitleGetter.getThirdFunctionTitle(PsychoFunction.Logic, getResources());
     }
 
     @Override
     public String getPhysicsShortTitle() {
-        return FunctionTitleGetter.getThirdFunctionShortTitle(Function.Physics, getResources());
+        return FunctionTitleGetter.getThirdFunctionShortTitle(PsychoFunction.Physics, getResources());
     }
 
     @Override
     public String getPhysicsTitle() {
-        return FunctionTitleGetter.getThirdFunctionTitle(Function.Physics, getResources());
+        return FunctionTitleGetter.getThirdFunctionTitle(PsychoFunction.Physics, getResources());
     }
 
     @Override
     public String getWillShortTitle() {
-        return FunctionTitleGetter.getThirdFunctionShortTitle(Function.Will, getResources());
+        return FunctionTitleGetter.getThirdFunctionShortTitle(PsychoFunction.Will, getResources());
     }
 
     @Override
     public String getWillTitle() {
-        return FunctionTitleGetter.getThirdFunctionTitle(Function.Will, getResources());
+        return FunctionTitleGetter.getThirdFunctionTitle(PsychoFunction.Will, getResources());
     }
 
 }

@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.laushkina.anastasia.psychosophy.R;
 import com.laushkina.anastasia.psychosophy.domain.Psychotype;
-import com.laushkina.anastasia.psychosophy.domain.test.Function;
+import com.laushkina.anastasia.psychosophy.domain.test.PsychoFunction;
 import com.laushkina.anastasia.psychosophy.view.about.AboutFragment;
 import com.laushkina.anastasia.psychosophy.view.basesAndFunctions.BasesAndFunctionsFragment;
 import com.laushkina.anastasia.psychosophy.view.functions.FunctionsDescriptionFragment;
@@ -51,7 +51,7 @@ public final class NavigationHelper {
         changeContent(new FunctionsFragment(), manager, R.id.nav_functions, false);
     }
 
-    public void showFunctions(FragmentManager manager, int requestedTab, Function requestedFunction){
+    public void showFunctions(FragmentManager manager, int requestedTab, PsychoFunction requestedFunction){
         Bundle bundle = new Bundle(2);
         bundle.putInt(com.laushkina.anastasia.psychosophy.view.functions.FunctionsFragment.REQUESTED_TAB, requestedTab);
         bundle.putSerializable(FunctionsDescriptionFragment.requestedFunctionExtra, requestedFunction);

@@ -5,7 +5,7 @@ import android.text.Html;
 import android.text.Spanned;
 
 import com.laushkina.anastasia.psychosophy.R;
-import com.laushkina.anastasia.psychosophy.domain.test.Function;
+import com.laushkina.anastasia.psychosophy.domain.test.PsychoFunction;
 
 public class FirstFunctionFragment extends FunctionsDescriptionFragment {
 
@@ -15,7 +15,7 @@ public class FirstFunctionFragment extends FunctionsDescriptionFragment {
     }
 
     @Override
-    public Drawable getImage(Function function) {
+    public Drawable getImage(PsychoFunction function) {
         switch (function) {
             case Emotion: return getResources().getDrawable(R.drawable.ic_hammer_emotion);
             case Logic: return getResources().getDrawable(R.drawable.ic_hammer_logic);
@@ -32,7 +32,7 @@ public class FirstFunctionFragment extends FunctionsDescriptionFragment {
 
 
     @Override
-    public Spanned getFullDescription(Function function) {
+    public Spanned getFullDescription(PsychoFunction function) {
         switch (function) {
             case Emotion: return Html.fromHtml(getResources().getString(R.string.first_emotion_description));
             case Logic: return Html.fromHtml(getResources().getString(R.string.first_logic_description));
@@ -44,41 +44,41 @@ public class FirstFunctionFragment extends FunctionsDescriptionFragment {
 
     @Override
     public String getEmotionTitle() {
-        return FunctionTitleGetter.getFirstFunctionTitle(Function.Emotion, getResources());
+        return FunctionTitleGetter.getFirstFunctionTitle(PsychoFunction.Emotion, getResources());
     }
     @Override
     public String getEmotionShortTitle() {
-        return FunctionTitleGetter.getFirstFunctionShortTitle(Function.Emotion, getResources());
+        return FunctionTitleGetter.getFirstFunctionShortTitle(PsychoFunction.Emotion, getResources());
     }
 
     @Override
     public String getLogicShortTitle() {
-        return FunctionTitleGetter.getFirstFunctionShortTitle(Function.Logic, getResources());
+        return FunctionTitleGetter.getFirstFunctionShortTitle(PsychoFunction.Logic, getResources());
     }
 
     @Override
     public String getLogicTitle() {
-        return FunctionTitleGetter.getFirstFunctionTitle(Function.Logic, getResources());
+        return FunctionTitleGetter.getFirstFunctionTitle(PsychoFunction.Logic, getResources());
     }
 
     @Override
     public String getPhysicsShortTitle() {
-        return FunctionTitleGetter.getFirstFunctionShortTitle(Function.Physics, getResources());
+        return FunctionTitleGetter.getFirstFunctionShortTitle(PsychoFunction.Physics, getResources());
     }
 
     @Override
     public String getPhysicsTitle() {
-        return FunctionTitleGetter.getFirstFunctionTitle(Function.Physics, getResources());
+        return FunctionTitleGetter.getFirstFunctionTitle(PsychoFunction.Physics, getResources());
     }
 
     @Override
     public String getWillShortTitle() {
-        return FunctionTitleGetter.getFirstFunctionShortTitle(Function.Will, getResources());
+        return FunctionTitleGetter.getFirstFunctionShortTitle(PsychoFunction.Will, getResources());
     }
 
     @Override
     public String getWillTitle() {
-        return FunctionTitleGetter.getFirstFunctionTitle(Function.Will, getResources());
+        return FunctionTitleGetter.getFirstFunctionTitle(PsychoFunction.Will, getResources());
     }
 
 }

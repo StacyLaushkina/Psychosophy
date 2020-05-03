@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.laushkina.anastasia.psychosophy.R;
-import com.laushkina.anastasia.psychosophy.domain.test.Function;
+import com.laushkina.anastasia.psychosophy.domain.test.PsychoFunction;
 import com.laushkina.anastasia.psychosophy.view.BaseFragment;
 
 public class FunctionsFragment extends BaseFragment {
@@ -74,7 +74,7 @@ public class FunctionsFragment extends BaseFragment {
         return getArguments() == null ? NO_TAB_REQUESTED : getArguments().getInt(REQUESTED_TAB, NO_TAB_REQUESTED);
     }
 
-    private Function getRequestedFunction(){
-        return getArguments() == null ? null : (Function)getArguments().getSerializable(FunctionsDescriptionFragment.requestedFunctionExtra);
+    private PsychoFunction getRequestedFunction(){
+        return getArguments() == null ? null : (PsychoFunction)getArguments().getSerializable(FunctionsDescriptionFragment.requestedFunctionExtra);
     }
 }
