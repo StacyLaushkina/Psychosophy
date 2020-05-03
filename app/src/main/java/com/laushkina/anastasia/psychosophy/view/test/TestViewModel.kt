@@ -1,7 +1,7 @@
 package com.laushkina.anastasia.psychosophy.view.test
 
-import android.databinding.BaseObservable
-import android.databinding.Bindable
+import androidx.databinding.BaseObservable
+import androidx.databinding.Bindable
 import com.laushkina.anastasia.psychosophy.BR
 
 class TestViewModel(private var isNextEnabled: Boolean,

@@ -1,7 +1,7 @@
 package com.laushkina.anastasia.psychosophy.view.relationships
 
-import android.databinding.BaseObservable
-import android.databinding.Bindable
+import androidx.databinding.BaseObservable
+import androidx.databinding.Bindable
 import android.text.Html
 import android.view.View
 import com.laushkina.anastasia.psychosophy.BR

@@ -1,6 +1,6 @@
 package com.laushkina.anastasia.psychosophy.view.functions
 
-import android.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater

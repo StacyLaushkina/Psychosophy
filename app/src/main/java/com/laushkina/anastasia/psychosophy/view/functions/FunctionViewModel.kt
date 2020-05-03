@@ -1,7 +1,7 @@
 package com.laushkina.anastasia.psychosophy.view.functions
 
-import android.databinding.BaseObservable
-import android.databinding.Bindable
+import androidx.databinding.BaseObservable
+import androidx.databinding.Bindable
 import android.graphics.drawable.Drawable
 import com.laushkina.anastasia.psychosophy.BR
 

@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Psychosophy.iml" filepath="$PROJECT_DIR$/Psychosophy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/Psychosophy-app.iml" filepath="$PROJECT_DIR$/app/Psychosophy-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personal-Psychosophy.iml" filepath="$PROJECT_DIR$/personal-Psychosophy.iml" />
     </modules>
   </component>
 </project>

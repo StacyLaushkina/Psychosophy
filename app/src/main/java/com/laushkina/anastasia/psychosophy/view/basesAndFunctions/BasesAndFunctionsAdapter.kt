@@ -2,7 +2,7 @@ package com.laushkina.anastasia.psychosophy.view.basesAndFunctions
 
 import android.app.Fragment
 import android.app.FragmentManager
-import android.support.v13.app.FragmentPagerAdapter
+import androidx.legacy.app.FragmentPagerAdapter
 
 class BasesAndFunctionsAdapter(fm: FragmentManager): FragmentPagerAdapter(fm) {
     companion object {

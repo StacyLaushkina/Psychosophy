@@ -3,7 +3,7 @@ package com.laushkina.anastasia.psychosophy.view
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.drawable.Drawable
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 import com.laushkina.anastasia.psychosophy.R
 import com.laushkina.anastasia.psychosophy.domain.Psychotype
 
